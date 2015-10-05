@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # So swirl does not repeat execution of plot commands
 AUTO_DETECT_NEWVAR <- FALSE
 
@@ -236,7 +235,7 @@ enhancedMatch <- function(fct,expr){
   expr <- match.call(fct, expr)
   return(expr)
 }
-=======
+
 # Put custom tests in this file.
 
 # Uncommenting the following line of code will disable
@@ -249,4 +248,3 @@ enhancedMatch <- function(fct,expr){
 # variables when appropriate. The answer test, creates_new_var()
 # can be used for for the purpose, but it also re-evaluates the
 # expression which the user entered, so care must be taken.
->>>>>>> origin/master
