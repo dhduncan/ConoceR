@@ -1,0 +1,6 @@
+file_ <- .pathtofile(course_ = "test", lesson_ = "1", file_ = "paquetes.png")
+try(dev.off(),silent=TRUE)
+par(mar=c(0,0,0,0))
+plot.new()
+plotArea <- par('fig')
+rasterImage(readPNG(file_),plotArea[1],plotArea[3],plotArea[2],plotArea[4],interpolate=FALSE)
