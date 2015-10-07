@@ -7,57 +7,101 @@
   Version: 2.3.1
 
 - Class: text
-  Output: En esta lección sencilla, consideramos unos principios básicos de la presentación eficaz de datos en gráficas. Los principios nos ayudan mostrar resultados y datos de manera atractiva y convencente. 
+  Output: En esta lección sencilla, consideramos unos principios básicos de la 
+  presentación eficaz de datos en gráficas. Los principios nos ayudan mostrar 
+  resultados y datos de manera atractiva y convencente. 
 
 - Class: text
-  Output: La selección de los principios debe mucho al gran libro "Beautiful Evidence" de Edward Tufte. Se encuentra este y otras joyas en su pagina web (www.edwardtufte.com).
+  Output: La selección de los principios debe mucho al gran libro 
+  "Beautiful Evidence" de Edward Tufte. Se encuentra este y otras joyas en su 
+  pagina web (www.edwardtufte.com).
 
 - Class: mult_question
-  Output: Para empezar, ¿cuál de las siguientes opciones crees no es un propósito importante de gráficar datos? 
-  AnswerChoices:  Mostrar comparaciones; Explicar o sugerir relaciones importantes y/o causales; Resumir datos de variables múltiples; ¡Todos son propósitos importantes!
+  Output: Para empezar, ¿cuál de las siguientes opciones crees no es un 
+  propósito importante de gráficar datos? 
+  AnswerChoices:  Mostrar comparaciones; Explicar o sugerir relaciones 
+  importantes y/o causales; Resumir datos de variables múltiples; ¡Todos son 
+  propósitos importantes!
   CorrectAnswer: ¡Todos son propósitos importantes!
   AnswerTests: omnitest(correctVal="¡Todos son propósitos importantes!")
-  Hint: Yo diría que todos son propósitos importantes, así que elegir esa opción si ya no hayas hecho.
+  Hint: Yo diría que todos son propósitos importantes, así que elegir esa opción
+  si ya no hayas hecho.
 
 - Class: text
-  Output: Creo que estes list@ para empezar. Gráficas se da una representación visual de datos. Se encuentra el sublimo, el aburrido y hasta el ridículo depende las habilidades del autor y su propósito. Nuestro propósito en estas lecciones es construir gráficas de propósitos analíticos.
+  Output: Creo que estes list@ para empezar. Gráficas se da una representación 
+  visual de datos. Se encuentra el sublimo, el aburrido y hasta el ridículo 
+  depende las habilidades del autor y su propósito. Nuestro propósito en estas 
+  lecciones es construir gráficas de propósitos analíticos.
   
 - Class: text
-  Output: ¿Qué quiere decir esto, un propósito analítico? Con gráficas o no, si queremos análizar algo, aunque todas personas no se dan cuenta del hecho, lo realizamos en base de una marca conceptual. En terminos sencillos una idea, creencia, pregunta, o hipótesis.
+  Output: ¿Qué quiere decir esto, un propósito analítico? Con gráficas o no, 
+  si queremos análizar algo, aunque todas personas no se dan cuenta del hecho, 
+  lo realizamos en base de una marco teórico. En terminos sencillos, una idea, 
+  creencia, pregunta, o hipótesis.
 
 - Class: text
-  Output: El primer principio es que las gráficas hagan alguna comparación. La evidencia que se relaciona o apoya a una creencia o hipótesis siempre se debe evaluar como relativa a una explicación alternativa (¡o más!).   
+  Output: El primer principio es que las gráficas hagan alguna comparación. 
+  La evidencia que se relaciona o apoya a una creencia o hipótesis siempre se 
+  debe evaluar como relativa a una explicación alternativa (¡o más!).   
   
 - Class: figure
-  Output: Debemos preguntarnos a nosotros mismos, o los demás cuando nos presenten evidencia en el servicio de una creencia o hipótesis - ¿en comparación a que? Para una aplicación cotidiana de esta idea, piénsa en los anuncios en que claman que su producto o precio es mejor que "otras marcas lideres". Nos invitan comparar, ¿lo cierto? (aunque sea de manera engañosa o no específica).
+  Output: Debemos preguntarnos a nosotros mismos, o los demás cuando nos 
+  presenten evidencia en el servicio de una creencia o hipótesis - 
+  ¿en comparación a que? Para una aplicación cotidiana de esta idea, piénsa en 
+  los anuncios en que claman que su producto o precio es mejor que 
+  "otras marcas lideres". Nos invitan comparar, ¿lo cierto? (aunque sea de 
+  manera implícita, engañosa o no específica).
   Figure: placeHolder.R
   FigureType: new
   
 - Class: figure
-  Output: Piense en la gráfica la que acaba de aparecer en la ventanilla de "Plots". Mostra la disminunición del número de casos por año de una enfermedad no especificada para un conjunto de hospitales que introducieron un procedimiento nuevo. (A propósito, este tipo de gráfica se denomina "boxplot" o diagrama de cajas; los renglones de lo alto y bajo de la caja marcan los percentiles de 25% (el 1° cuartíl) y 75% (la 3a cuartíl) de los datos, y el renglón pesádo dentro de la caja marca los 50% (la mediana o 2a cuartíl). Puesto que la caja esta por encima del 0, el número de casos se bajó. Esto es bueno, ¿lo cierto?
+  Output: Piense en la gráfica la que acaba de aparecer en la ventanilla de 
+  "Plots". Mostra la disminunición del número de casos por año de una enfermedad 
+  no especificada para un conjunto de hospitales que introducieron un 
+  procedimiento nuevo de la filtración del aire.
   Figure: uniVarPlot.R
   FigureType: new
+
+- Class: text
+  Output: (A propósito, este tipo de gráfica se denomina "boxplot" o diagrama 
+  de cajas; los renglones de lo alto y bajo de la caja marcan los 
+  percentiles de 25% (el 1° cuartíl) y 75% (la 3a cuartíl) de los datos, y el 
+  renglón pesádo dentro de la caja marca los 50% (la mediana o 2a cuartíl). 
+  Puesto que la caja esta por encima del 0, el número de casos se bajó. Esto es 
+  bueno, ¿lo cierto?
   
 - Class: mult_question
   Output: ¿La mediana (redondeada) corresponde a cuantos días menos cada año?
   AnswerChoices: 0; 1; 2; 4
   CorrectAnswer: 2
   AnswerTests: omnitest(correctVal="2")
-  Hint: La mediana (la 2a cuartíl) se indica el renglón pesádo dentro de la caja, lo que se encuentra en aproximadamente +2. Por lo tanto, la respuesta correcta es 2. Escríbalo y presione Intro ahora.  
+  Hint: La mediana (la 2a cuartíl) se indica el renglón pesádo dentro de la 
+  caja, lo que se encuentra en aproximadamente +2. Por lo tanto, la respuesta 
+  correcta es 2. Escríbalo y presione Intro ahora.  
 
 - Class: text
-  Output: Esta gráfica es algo informativa, pero a la vez nos niega interpretación. El eje Y clama mostrarnos cambio en el número de casos anuales, y implica que el cambio se debe a el procedimiento que alude la gráfica. ¿No sería mejor incluir una comparación?
+  Output: Esta gráfica es algo informativa, pero a la vez nos niega 
+  interpretación. El eje Y clama mostrarnos cambio en el número de casos 
+  anuales, y implica que el cambio se debe a el procedimiento que alude la 
+  gráfica. ¿No sería mejor incluir una comparación?
                                                                                                                                                                                                                                                 
 - Class: figure
-  Output: Like this? Heres a graphic which shows two boxplots, the one on the left showing the results for a control group that doesnt use an air cleaner alongside the previously shown boxplot.
+  Output: ¡Como esta! Haya acabado de aparecer una gráfica que muestra dos
+  diagramas de caja y bigote. La de la izquierda muestra los resultados de un
+   grupo de control que no usa filtración del aire y esa acompaña a la gráfica
+    que ya hemos visto.
   Figure: biVarPlot.R
   FigureType: new
   
 - Class: text
-  Output: By showing the two boxplots side by side, you can clearly see that using the air cleaner increases the number of symptom-free days for most asthmatic children. The plot on the right (using the air cleaner) is generally higher than the one on the left (the control group).
+  Output: Por presentar las dos diagramas una al lado de la otra, se sugiere 
+  claramente que el uso del aparato de filtrar el aire sube el número de días
+  no sintomáticos para la mayoria de niños quienes padecen a asma. Inferimos
+  eso porque los datos resumidos al lado derecho (con tratamiento de aire), por
+  lo general resultaron mayor que los de la izquerda (el grupo de control).
                                                                                                                                                                                                                                                    
 - Class: mult_question
-  Output: What does this graph NOT show you?
+  Output: Entre las siguientes opciones, que NO te muestra esta comparación?
   AnswerChoices:  Children in the control group had at most 3 symptom-free days; 75% of the children using the air cleaner had at most 3 symptom-free days; Half the chidren in the control group had no improvement; Using the air cleaner makes asthmatic children sicker
   CorrectAnswer: Using the air cleaner makes asthmatic children sicker
   AnswerTests: omnitest(correctVal="Using the air cleaner makes asthmatic children sicker")
