@@ -97,7 +97,7 @@
   CorrectAnswer: Etiquetas para los ejes más un título o subtítulo
   AnswerChoices: "Etiquetas para los ejes más un título o subtítulo; Etiquetas para cada eje; Un subtítulo (o 'caption' en inglés); Un título"
   AnswerTests: omnitest(correctExpr='Etiquetas para los ejes más un título o subtítulo')
-  Hint: "Piense en el primero ejemplo que te apareció en esta lección actual, llevó título Y etiquetas, verdad? La respuesta correcta es 'Etiquetas para los ejes más un título o subtítulo'."
+  Hint: "Piense en el primero ejemplo que hubieras visto en esta lección actual, llevó título Y etiquetas, verdad? La respuesta correcta es 'Etiquetas para los ejes más un título o subtítulo'."
 
 - Class: cmd_question
   Output: "¡Vamonos pues! Puesto que estamos construyendo la gráfica paso por paso, el comando que necesitamos existe para añadir texto al margen. Se denomina mtext, sigla para 'margin text'. Seguro que reconoces un argumento de esta función mtext. Para etiquetar el eje X, teclee mtext(side = 1, text='Casos') y pulse Intro."
