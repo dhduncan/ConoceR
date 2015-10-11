@@ -1,4 +1,4 @@
-file_ <- .pathtofile(course_ = "test", lesson_ = "1", file_ = "paquetes.png")
+file_ <- .pathtofile(course_ = "ConoceR", lesson_ = "Que_conozca_RStudio", file_ = "paquetes.png")
 try(dev.off(),silent=TRUE)
 par(mar=c(0,0,0,0))
 plot.new()
