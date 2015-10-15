@@ -9,11 +9,11 @@
 - Class: text
   Output: En esta lección sencilla, consideramos unos principios básicos de la 
   presentación eficaz de datos en gráficas. Los principios nos ayudan mostrar 
-  resultados y datos de manera atractiva y convencente. 
+  resultados y datos de manera atractiva y impactante. 
 
 - Class: text
   Output: La selección de los principios debe mucho al gran libro 
-  "Beautiful Evidence" de Edward Tufte. Se encuentra este y otras joyas en su 
+  'Beautiful Evidence' de Edward Tufte. Se encuentra este y otras joyas en su 
   pagina web (www.edwardtufte.com).
 
 - Class: mult_question
@@ -102,7 +102,7 @@
                                                                                                                                                                                                                                                    
 - Class: mult_question
   Output: Entre las siguientes opciones, que NO te muestra esta comparación?
-  AnswerChoices:  Children in the control group had at most 3 symptom-free days; 75% of the children using the air cleaner had at most 3 symptom-free days; Half the chidren in the control group had no improvement; Using the air cleaner makes asthmatic children sicker
+  AnswerChoices:  Los niños en el grupo de control, Children in the control group had at most 3 symptom-free days; 75% of the children using the air cleaner had at most 3 symptom-free days; Half the chidren in the control group had no improvement; Using the air cleaner makes asthmatic children sicker
   CorrectAnswer: Using the air cleaner makes asthmatic children sicker
   AnswerTests: omnitest(correctVal="Using the air cleaner makes asthmatic children sicker")
   Hint: Since the boxplot on the right shows that the number of symptom-free days increases with air cleaner use, the graph does NOT show that use makes the children sicker.
