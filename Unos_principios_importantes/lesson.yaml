@@ -102,18 +102,28 @@
                                                                                                                                                                                                                                                    
 - Class: mult_question
   Output: Entre las siguientes opciones, que NO te muestra esta comparación?
-  AnswerChoices:  Los niños en el grupo de control, Children in the control group had at most 3 symptom-free days; 75% of the children using the air cleaner had at most 3 symptom-free days; Half the chidren in the control group had no improvement; Using the air cleaner makes asthmatic children sicker
-  CorrectAnswer: Using the air cleaner makes asthmatic children sicker
-  AnswerTests: omnitest(correctVal="Using the air cleaner makes asthmatic children sicker")
-  Hint: Since the boxplot on the right shows that the number of symptom-free days increases with air cleaner use, the graph does NOT show that use makes the children sicker.
+  AnswerChoices:  Los niños en el grupo de control tuvieron 3 días asíntomaticos como máximo; 
+  75% de los niños usuarios del sistema del filtración de aire tuvieron 3 días asíntomaticos como máximo; 
+  La mitad de los niños en el grupo de control no se mejoraron; 
+  El uso de la filtración de aire hace que los niños asmáticos sean más enfermos
+  CorrectAnswer: El uso de la filtración de aire hace que los niños asmáticos sean más enfermos
+  AnswerTests: omnitest(correctVal="El uso de la filtración de aire hace que los niños asmáticos sean más enfermos")
+  Hint: Puesto que la diagrama de caja en el lado derecho muestra que el número
+  de días asíntomaticos crece con el use de la filtración de aire, la gráfica 
+  NO muestra que el uso empeora a los niños.
 
 - Class: figure
-  Output: So the first principle was to show a comparison. The second principle is to show causality or a mechanism of how your theory of the data works. This  explanation or systematic structure shows your causal framework for thinking about the question youre trying to answer.
+  Output: Bien. El primer principio es mostrar una comparación. El segundo 
+  principio es sugerir o revelar causa. En otras palabtras, ¿qué factor o 
+  variable causa la variación en la variable de respuesta? Por aplicar este
+  principio, su gráfica comunicará su marco teórico de la pregunta de interés.
   Figure: placeHolder.R
   FigureType: new
                                                                                                                                                                  
 - Class: figure
-  Output: Consider this plot which shows the dual boxplot we just showed, but next to it we have a corresponding plot of changes in measures of particulate matter. 
+  Output: Fijése en este nueva gráfica que muestra la última presentación, 
+  pero a su lado ya tenemos una más de los cambios relacionados en las medidas
+  de partículos en suspensión en el aire. 
   Figure: placeHolder.R
   FigureType: new
   
