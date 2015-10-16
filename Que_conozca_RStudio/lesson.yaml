@@ -150,7 +150,7 @@
   nombre. Luego vas a crear un objeto 'miNombre' y asignarlo tu nombre. Ahora, 
   por favor."
   CorrectAnswer: miNombre <- "David Duncan"
-  AnswerTest: omnitest(correctExpr='miNombre <- "David Duncan"')
+  AnswerTests: omnitest(correctExpr='miNombre <- "David Duncan"')
   Hint: "Escriba miNombre <- 'Ponga su nombre entre comillas'"
 
 - Class: cmd_question
