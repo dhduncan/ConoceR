@@ -93,10 +93,10 @@
   Hint: "Escriba axis(side = 2) y pluse Intro. Es inútil resistir."
   
 - Class: mult_question
-  Output: "¿Ya hemos llegado? Pues, no, pero casi. ¿Qué falta nuestra gráfica para cumplir con los requisitos minimos?"
-  CorrectAnswer: Etiquetas para los ejes más un título o subtítulo
-  AnswerChoices: "Etiquetas para los ejes más un título o subtítulo; Etiquetas para cada eje; Un subtítulo (o 'caption' en inglés); Un título"
-  AnswerTests: omnitest(correctExpr='Etiquetas para los ejes más un título o subtítulo')
+  Output: ¿Ya hemos llegado? Pues no, pero casi. ¿Qué falta nuestra gráfica para cumplir con los requisitos mínimos?
+  CorrectAnswer: Etiquetas para los ejes, más un título o subtítulo
+  AnswerChoices: Etiquetas para los ejes, más un título o subtítulo; Etiquetas para cada eje; Un subtítulo (o 'caption' en inglés); Un título
+  AnswerTests: omnitest(correctExpr='Etiquetas para los ejes, más un título o subtítulo')
   Hint: "Piense en el primero ejemplo que hubieras visto en esta lección actual, llevó título Y etiquetas, verdad? La respuesta correcta es 'Etiquetas para los ejes más un título o subtítulo'."
 
 - Class: cmd_question
