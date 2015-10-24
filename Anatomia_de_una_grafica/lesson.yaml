@@ -67,7 +67,7 @@
   Hint: "Nuestro objecto o variable v es un vector simple de 9 números y por lo tanto lleva 1 tipo de información. Lo puedes averiguar por teclear v y pulse Intro." 
 
 - Class: text
-  Output: "¿Ves que nuestro eje X representa nada más que la posición relativa de cada caso en la lista de valores 'v'? La identidad del caso no nos importa, ¿lo cierto? Sin embargo, los valores en el X pueden distraernos. De hecho, no hay que añadir valores al eje X en este caso."
+  Output: "¿Ves que nuestro eje X representa nada más que la posición relativa de cada caso en la lista de valores 'v'? La identidad del caso no nos importa, ¿cierto? Sin embargo, los valores en el X pueden distraernos. De hecho, no hay que añadir valores al eje X en este caso."
   
 - Class: figure
   Output: "Perdóneme, pero mejor que empecemos de nuevo. Haya aparecido de nuevo el cuadro para la gráfica."
@@ -78,7 +78,7 @@
   Output: "Añadir los puntos nuevamente como hiciste hace unos pocos pasos. ¿Te acuerdas del comando? Si no, hay un atajo útil que uso mucho y que conociste en la primera lección. Pulse la flecha arriba hasta aparezca el comando que necesitas para trazar los puntos."
   CorrectAnswer: points(v)
   AnswerTests: omnitest(correctExpr='points(v)')
-  Hint: "Lo que buscas es la palabra en inglés para puntos, mas el nombre del objeto que lleva los puntos entre paréntesis. 'points(v)' ¿lo cierto?"
+  Hint: "Lo que buscas es la palabra en inglés para puntos, mas el nombre del objeto que lleva los puntos entre paréntesis. 'points(v)' ¿cierto?"
   
 - Class: cmd_question
   Output: "Muy bien, ahora ponemos un eje más adecuado para esta situación en el X. Requiere unas instrucciones más para anular la opcion que pone R por defecto. Teclee axis(side = 1, at = 1:9, labels = FALSE)."
@@ -101,12 +101,12 @@
 
 - Class: cmd_question
   Output: "¡Vamonos pues! Puesto que estamos construyendo la gráfica paso por paso, el comando que necesitamos existe para añadir texto al margen. Se denomina mtext, sigla para 'margin text'. Seguro que reconoces un argumento de esta función mtext. Para etiquetar el eje X, teclee mtext(side = 1, text='Casos') y pulse Intro."
-  CorrectAnswer: mtext(side = 1, text='Casos')
-  AnswerTests: omnitest(correctExpr="mtext(side = 1, text='Casos')")
-  Hint: "Teclee mtext(side = 1, text='Casos') y pulse Into, justo como apareció en el texto arriba."
+  CorrectAnswer: mtext(text='Casos', side = 1, line = 2)
+  AnswerTests: omnitest(correctExpr="mtext(text='Casos', side = 1, line = 2)")
+  Hint: "Teclee mtext(text='Casos', side = 1, line = 2) y pulse Into, justo como apareció en el texto arriba."
   
 - Class: cmd_question
-  Output: "Y para el eye Y, repite el paso previo, cambiando la etiqueta a Valores, y el lado para el número adecuado para el eje Y."
+  Output: "Y para el eye Y, repite el paso previo, cambiando la etiqueta 'text' a Valores, y el lado para el número adecuado para el eje Y."
   CorrectAnswer: "mtext(side = 2, text = 'Valores')"
   AnswerTests: omnitest(correctExpr="mtext(side = 2, text = 'Valores')")
   Hint: "Para evitar tecleando, luego de pulsar la flecha arriba para convocar nuevamente al comando anterior, se puede cambiar los valores para 'side' y 'text' a los sugeridos en las instrucciones. El comando que buscas es mtext(side = 2, text = 'Valores')."
@@ -121,13 +121,13 @@
   Hint: "Escriba la sugerencia no más (ni menos) y presione Intro." 
 
 - Class: cmd_question
-  Output: "¿Qué piensas, un maratón? Pues, la buena noticia es que no hay que construir gráficas así. Normalmente, aquí en el sistema base de gráficas en R, usamos la función 'plot()'. Para ver como sale con el comando más mínimo teclee plot nuestro objeto v."
+  Output: "¿Qué piensas, un maratón? Pues, la buena noticia es que no hay que construir gráficas así. Normalmente, aquí en el sistema base de gráficas en R, usamos la función 'plot()'. Para ver como sale con el comando más mínimo teclee plot() ingresando nuestro objeto v."
   CorrectAnswer: plot(v)
   AnswerTests: omnitest(correctExpr='plot(v)')
   Hint: "Teclee plot(v) y pulse Intro para graficar los valores, aceptando todas las opciones por defecto."
   
 - Class: text
-  Output: "Fíjete que R haya etiquetado el eje Y con el nombre del objeto v, y la palabra 'Index' (índice) como etiqueta para el X. Tampoco proporcionó ningún títulom, aunque depende la gráfica suele hacerlo."
+  Output: "Fíjete que R haya etiquetado el eje Y con el nombre del objeto v, y la palabra 'Index' (índice) como etiqueta para el X. Tampoco proporcionó ningún títul, aunque depende la gráfica R suele hacerlo."
 
 - Class: cmd_question
   Output: "No aceptamos estas opciones, así que vamos a ajustar la llamada a la función plot para anular algunas opciones. Teclee el siguiente plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', xlab='Casos', xaxt='n')"
@@ -136,11 +136,14 @@
   Hint: "teclee plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', xlab='Casos', xaxt='n') y pulse Intro."
   
 - Class: text
-  Output: "¡Buenazo! ¿no? Yo que tu, yo guardaría este último pedazo de codigo en mi álbum de recortes. Te explico los elementos o argumentos que hayas especificado para lograr la gráfica. Ya sabes que v contiene los valores, es nuestra variable o objeto. Reconoces 'main=' del paso cuando pusiste el título; main = principal. los argumentos 'ylab' y 'xlab' detallan el texto para etiquetar los ejes Y y X respectivamente. Por último, incluyé xaxt='n' para que R no dibujara los números arbitrarios en el eje X. Hay muchísmas más opciones con las cual se puede crear gráficas a medida, pero las opciones por defecto suelen hacer gráficas adecuadas."
+  Output: "¡Buenazo! ¿no? Si yo fuera tu, guardaría este último pedazo de codigo en mi álbum de recortes."
+  
+- Class: text
+  Output: "Te explico los elementos o argumentos que hayas especificado para lograr la gráfica. Ya sabes que v contiene los valores, es nuestra variable o objeto. Reconocieras el argumento 'main=' del paso cuando hubieras puesto el título; main = principal. los argumentos 'ylab' y 'xlab' detallan el texto para etiquetar los ejes Y y X respectivamente. Por último, incluyé xaxt='n' para que R no dibujara los números arbitrarios en el eje X. Hay muchísmas más opciones con las cual se puede crear gráficas a medida, pero las opciones por defecto suelen hacer gráficas adecuadas."
   
 - Class: mult_question
   Output: "Antes de terminar con este ejercicio, revisamos un poco. ¿Es necesario que siempre etiquamos los ejes, y proporcionemos un título para cualquier gráfica?"
   AnswerChoices: "Si; No"
   CorrectAnswer: Si
-  AnswerTests: omnitest(correctExpr='Si')
+  AnswerTests: omnitest(correctVal='Si')
   Hint: "La respuesta correcta es que sí, cualquiera gráfica debe llevar estos elementos, a menos de que lleve un subtítulo (o caption) en lugar del título. Normalmente, una gráfica debe llevar uno o otro, pero no ambos."
