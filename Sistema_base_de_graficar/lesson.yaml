@@ -7,28 +7,39 @@
   Version: 0.1.1
 
 - Class: text
-  Output: Una de las mayores fortalezas de R, en relación con otros lenguajes de programación, es la facilidad con la que podemos crear gráficos con calidad de publicación. En esta lección, usted aprenderá acerca de los gráficos básicos de R. 
+  Output: "Una de las mayores fortalezas de R, en relación con otros lenguajes 
+  de programación, es la facilidad con la que podemos crear gráficos con 
+  calidad de publicación. En esta lección, usted aprenderá acerca de los 
+  gráficos básicos de R." 
 
 - Class: text
-  Output: Nosotros no cubriremos los temas más avanzados de gráficos en R en esta lección. Estos incluyen lattice, ggplot2 y ggvis.
+  Output: "Nosotros no cubriremos los temas más avanzados de gráficos en R en 
+  esta lección. Estos incluyen lattice, ggplot2 y ggvis."
 
 - Class: text
-  Output: Hay una escuela de pensamiento que opina que el enfoque para abordar este tema debería ser al revés, es decir, que deberíamos enseñar ggplot2 primero. Vea http://varianceexplained.org/r/teach_ggplot2_to_beginners/ para tener una mejor idea de este punto de vista.
+  Output: "Hay una escuela de pensamiento que opina que el enfoque para abordar 
+  este tema debería ser al revés, es decir, que deberíamos enseñar ggplot2 
+  primero. Vea http://varianceexplained.org/r/teach_ggplot2_to_beginners/ para 
+  tener una mejor idea de este punto de vista."
 
 - Class: cmd_question
-  Output: Cargue la trama de datos incluida en R llamada cars, usando data(cars).
+  Output: "Cargue la trama de datos incluida en R llamada cars, usando data(cars)."
   CorrectAnswer: data(cars)
-  AnswerTests: omnitest(correctExpr='data(cars)')
+  AnswerTests: omnitest(correctVal='data(cars)')
   Hint: Escriba data(cars) para cargar los datos.
 
 - Class: text
-  Output: Para puntualizar, vamos a trabajar con conjuntos de datos simples. Nuestro principal objetivo es dar a conocer las diversas funciones de trazado gráfico y sus argumentos. Toda esta producción se vería más interesante con los conjuntos de datos más grandes y complejos.
+  Output: "Para puntualizar, vamos a trabajar con conjuntos de datos simples. 
+  Nuestro principal objetivo es dar a conocer las diversas funciones de trazado 
+  gráfico y sus argumentos. Toda esta producción se vería más interesante con 
+  los conjuntos de datos más grandes y complejos."
 
 - Class: cmd_question
   Output: Abra la página de ayuda de cars.
   CorrectAnswer: ?cars
   AnswerTests: any_of_exprs('?cars', 'help(cars)', 'help("plot")')
-  Hint: Escriba ?cars o help(cars) para ver una página de ayuda con los detalles sobre la trama de datos cars.
+  Hint: "Escriba ?cars o help(cars) para ver una página de ayuda con los 
+  detalles sobre la trama de datos cars."
 
 - Class: text
   Output: "Como se puede ver en la página de ayuda, el conjunto de datos cars tiene sólo dos variables:. La velocidad (speed) y la distancia de frenado (dist). Tenga en cuenta que estos datos son de la década de 1920."
