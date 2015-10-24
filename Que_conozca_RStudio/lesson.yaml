@@ -18,7 +18,7 @@
   www.rstudio.com/products/rstudio/features/"
   
 - Class: figure
-  Output: "Espera...Ya estás viendo esta lección desde RStudio, ¿lo cierto? 
+  Output: "Espera...Ya estás viendo esta lección desde RStudio, ¿cierto? 
   Vamos a ver. Debe haber aparecido una imagen a la derecha de la pantalla, 
   la que es como se ve la interfaz de RStudio por defecto. ¿La ves? 
   ¿Corresponde al entorno en que te encuentres ahora mismo?"
@@ -56,12 +56,13 @@
   Hint: "La consola es la ventanilla por abajo, a la izquierda. El nombre en 
   inglés es muy semejante al español."
 
-- Class: cmd_question
+- Class: mult_question
   Output: "A la derecha de la consola varias ventanillas comparten un espacio. 
   ¿Cómo se llama la ventanilla donde la imagen del interfaz de RStudio surgió?"
+  AnswerChoices: "Files; Console; Environment; Plots"
   CorrectAnswer: Plots
-  AnswerTests: omnitest(correctExpr='Plots')
-  Hint: "¿No lo acertaste? No te preocupes, escriba Plots y pulse Intro para 
+  AnswerTests: omnitest(correctVal='Plots')
+  Hint: "¿No lo acertaste? No te preocupes, escoja Plots y pulse Intro para 
   continuar."
   
 - Class: text
@@ -154,7 +155,7 @@
   Hint: "Escriba miNombre <- 'Ponga su nombre entre comillas'"
 
 - Class: cmd_question
-  Output: "Ahora se ve este objeto en la ventanilla ENVIRONMENT, lo cierto? 
+  Output: "Ahora se ve este objeto en la ventanilla ENVIRONMENT, cierto? 
   Cualquier objeto en el entorno se puede imprimir a la consola tecleando el 
   nombre no mas. En la consola pues, escriba miNombre para ver el contenido de 
   tu objeto."
