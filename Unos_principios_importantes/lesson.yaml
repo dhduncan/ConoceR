@@ -7,25 +7,25 @@
   Version: 2.3.1
 
 - Class: text
-  Output: En esta lección sencilla, consideramos unos principios básicos de la 
+  Output: "En esta lección sencilla, consideramos unos principios básicos de la 
   presentación eficaz de datos en gráficas. Los principios nos ayudan mostrar 
-  resultados y datos de manera atractiva y impactante. 
+  resultados y datos de manera atractiva y impactante." 
 
 - Class: text
-  Output: La selección de los principios debe mucho al gran libro 
-  'Beautiful Evidence' de Edward Tufte. Se encuentra este y otras joyas en su 
-  pagina web (www.edwardtufte.com).
+  Output: "La selección de los principios debe mucho al gran libro 
+  \"Beautiful Evidence\" de Edward Tufte. Se encuentra este y otras joyas en su 
+  pagina web (www.edwardtufte.com)."
 
 - Class: mult_question
-  Output: Para empezar, ¿cuál de las siguientes opciones crees no es un 
-  propósito importante de gráficar datos? 
-  AnswerChoices:  Mostrar comparaciones; Explicar o sugerir relaciones 
+  Output: "Para empezar, ¿cuál de las siguientes opciones crees no es un 
+  propósito importante de gráficar datos?" 
+  AnswerChoices:  "Mostrar comparaciones; Explicar o sugerir relaciones 
   importantes y/o causales; Resumir datos de variables múltiples; ¡Todos son 
-  propósitos importantes!
+  propósitos importantes!"
   CorrectAnswer: ¡Todos son propósitos importantes!
   AnswerTests: omnitest(correctVal="¡Todos son propósitos importantes!")
-  Hint: Yo diría que todos son propósitos importantes, así que elegir esa opción
-  si ya no hayas hecho.
+  Hint: "Yo diría que todos son propósitos importantes, así que elegir esa opción
+  si ya no hayas hecho."
 
 - Class: text
   Output: Creo que estes list@ para empezar. Gráficas se da una representación 
