@@ -7,13 +7,47 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "En esta lección, vamos a explorar algunos elementos básicos de la programación en el lenguaje R."
+  Output: "En esta lección, vamos a explorar algunos elementos básicos de la 
+  programación en el lenguaje R. Mientras más comodidad tiene con el programa,
+  más atención pueda dirigir a nuestro propósito verdadero de análisis."
 
 - Class: text
-  Output: "Si en algún momento desea obtener más información (en inglés) sobre un tema concreto relacionado con R, puede escribir help.start() en el indicador >. Se abrirá un menú de recursos (ya sea dentro o RStudio su navegador web por defecto, dependiendo de su configuración). Como alternativa, una simple búsqueda en Internet a menudo da la respuesta que estás buscando."
+  Output: "Antes de empezar, sepa que si en algún momento desea obtener más 
+  información (en inglés) sobre un tema concreto relacionado con R, puede escribir 
+  help.start() en el indicador >. Se abrirá un menú de recursos (ya sea dentro 
+  o RStudio su navegador web por defecto, dependiendo de su configuración). 
+  Como alternativa, una simple búsqueda en Internet a menudo da la respuesta 
+  que estás buscando."
 
 - Class: cmd_question
-  Output: "En su forma más simple, R puede ser utilizado como una calculadora interactiva. Escribe  5 + 7 y pulsa Intro."
+  Output: "En su forma más simple, R puede ser utilizado como una calculadora 
+  interactiva. Escribe 2 + 2 y pulsa intro."
+  CorrectAnswer: 2 + 2
+  AnswerTests: omnitest(correctExpr= "2 + 2")
+  Hint: "Escribe 2 + 2 y pulsa Intro."
+  
+- Class: cmd_question
+  Output: "Como se puede imaginar, todos las operaciones normales de calculador
+  	van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
+  	averiguarlo."
+  CorrectAnswer: 2 * 2
+  AnswerTests: omnitest(correctExpr='2 * 2')
+  Hint: "Escribe 2 * 2 y pulsa Intro".
+  	
+- Class: cmd_question
+  	Output: "División se hace con el símbolo '/', etcétera. Se puede cuadrar (o
+  	levantar números a cualquier poder mediante el uso del símbolo '^'). Depende
+  	su teclado, no se ubicara facilmente. Si no aparece nada, pulsa space antes
+  	de cumplir la combinación de teclas. Vas a buscarlo ahora mismo para
+  	cuadrar 2. Escribe 2^2 y presione Intro."
+  	CorrectAnswer: 2^2
+  	AnswerTests: omnitest(correctExpr='2^2')
+  	Hint: "Escribe 2^2 y pulsa Intro. No sirve si aparece algo que parece la
+  	expresión como se escribiría 2\². Aunque tenga mejor pinta, R no sabe
+  	interpretarlo."
+  	
+  
+  Escribe  5 + 7 y pulsa Intro."
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: "Escribe 5 + 7 y pulsa Intro."
@@ -188,3 +222,5 @@
   AnswerChoices: "Si; No"
   AnswerTests: notify()
   Hint: NULL
+
+
