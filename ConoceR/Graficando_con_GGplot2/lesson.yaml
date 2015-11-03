@@ -1,0 +1,21 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Graficando_con_GGplot2
+  Author: David H. Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.3.1
+
+- Class: mult_question
+  Output: "En esta lección verás como hacer las mismas gráficas que ya hubieras
+  	hecho con el sistema base de graficar con otro paquete denominado GGplot2.
+  	¿Estás List@, si o si?"
+  AnswerChoices: "Si;Si;Si"
+  CorrectAnswer: Si
+  AnswerTests: omnitest(correctVal= NULL)
+  Hint: hint
+
+- Class: figure
+  	Output: explain the figure here
+  	Figure: sourcefile.R
+  	FigureType: new
