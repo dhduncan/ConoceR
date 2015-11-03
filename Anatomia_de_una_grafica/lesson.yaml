@@ -2,7 +2,7 @@
   Course: ConoceR
   Lesson: Anatomia_de_una_grafica
   Author: David H. Duncan
-  Type: UTPL xMOOC
+  Type: Standard
   Organization: Universidad Técnica Particular de Loja
   Version: 2.3.1
 
@@ -89,7 +89,7 @@
   Teclee 'axis(side = 1)' para añadir el eje X. ¡Pruebalo ahora!"
   CorrectAnswer: axis(side = 1)
   AnswerTests: omnitest(correctExpr='axis(side = 1)')
-  Hint: "Escriba 'axis(side = 1)' no mas y pulse Intro. Ya se habia dado cuenta 
+  Hint: "Escriba 'axis(side = 1)' no mas y pulse Intro. Ya se había dado cuenta 
   que eje = axis en ingles. Side = lado."
   
 - Class: cmd_question
@@ -175,7 +175,7 @@
   mtext(text = 'Valores', side = 2, line = 2)."
 
 - Class: text
-  Output: "Acabas de etiquetar el eje Y, el dependiente. Se lo llamamos así 
+  Output: "Acabas de etiquetar el eje Y, el dependiente. Lo llamamos así 
   porque el valor en Y depende o pertenece al caso corresponde en X."
 
 - Class: cmd_question
@@ -203,7 +203,8 @@
 
 - Class: cmd_question
   Output: "No aceptamos estas opciones, así que vamos a ajustar la llamada a la 
-  función plot para anular algunas opciones. Teclee el siguiente 
+  función plot() para reemplazar algunas opciones con elementos de los últimos 
+  pasos. Teclee el siguiente 
   plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', 
   xlab='Casos', xaxt='n')"
   CorrectAnswer: plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', xlab='Casos', xaxt='n')
@@ -236,4 +237,12 @@
   elementos, a menos de que lleve un subtítulo (o caption) en lugar del título. 
   Normalmente, una gráfica debe llevar uno o otro, pero no ambos."
   
-
+- Class: mult_question
+  Output: "Y normalmente, ¿en cuál eje se pone la variable de respuest o la
+  dependiente?"
+  AnswerChoices: "No importa; X; Y"
+  CorrectAnswer: Y
+  AnswerTests: omnitest(correctVal='Y')
+  Hint: "La respuesta correcta es que el eje (o 'axis') Y, aunque si no hay
+  una variable obvia que depende de la otra, se pone la variable en que mas
+  quiere ver la variación."

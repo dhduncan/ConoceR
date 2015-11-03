@@ -22,6 +22,10 @@
   primero. Vea http://varianceexplained.org/r/teach_ggplot2_to_beginners/ para 
   tener una mejor idea de este punto de vista."
 
+- Class: text
+  Output: "Para empezar graficando, vamos a utilizar uno de los muchos conjuntos de datos que R tiene ajuntado. En unas semanas
+  aprenderá como importar y manipular sus propios datos."
+
 - Class: cmd_question
   Output: "Cargue la trama de datos incluida en R llamada cars, 
   usando data(cars)."
@@ -55,8 +59,7 @@
 
 - Class: text
   Output: "Antes de gráficar, siempre es una buena idea saber como son los datos.
-  Los comandos de R para hacer esto son, entre otros, dim(), names(), head(), 
-  tail() y summary()."
+  Los comandos de R para hacer esto son, entre otros, dim(), names(), head(), tail() y summary()."
 
 - Class: cmd_question
   Output: Ejecute el comando plot() en trama de datos (data.frame) cars. 
