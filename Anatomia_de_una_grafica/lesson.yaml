@@ -14,13 +14,13 @@
 - Class: text
   Output: "Para esta lección, vamos a usar el sistema de gráficas base del R. 
   Luego, conocerá también a un sistema alternativo denominado GGplot2 que se 
-  ofrece opciones poderosas y convenientes para gráficas exploratorias. No vas 
-  a creer lo que produczcas."
+  ofrece opciones poderosas y convenientes para gráficas exploratorias. ¡No vayas 
+  a creer lo que producirás!"
 
 - Class: text
   Output: "Sin embargo, empezamos con el sistema base de R. Se puede hacer 
   gráficas igual de poderosa y hermosa con ello, aunque con menos automatización.
-  Vámonos, ya."
+  ¡Vámonos, ya!"
 
 - Class: figure
   Output: "Ojalá haya aparecido una gráfica por allí a la derecha, ¿Si? o ¿Si? 
@@ -53,14 +53,14 @@
 - Class: text
   Output: "Ya vamos a crear una gráfica semejante, paso por paso, para asegurar 
   que compartimos una lenguaje común de la anatomía de una gráfica. Sin embargo, 
-  no te preocupes, despues de este ejercicio, nunca mas vayamos a construir una 
+  no te preocupes, despues de este ejercicio, jamas volveremos a construir una 
   gráfica de tal modo."
 
 - Class: cmd_question
   Output: "Antes de trazar los ejes, necesitamos unos datos. ¿Te acuerdas de la 
   lección inicial de R y swirl verdad? Bien, entonces haga un objeto 'v' 
   compuesta del seguiente conjunto de valores c(2, 4, 0, 5, 3, 8, 6, 5, 4). 
-  Este v se podría considerar una variable."
+  Este \"v\" se podría considerar una variable."
   CorrectAnswer: v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)
   AnswerTests: omnitest(correctVal='v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)')
   Hint: "¿No te lo acuerdas de la primera lección? 

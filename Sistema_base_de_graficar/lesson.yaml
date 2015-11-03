@@ -151,7 +151,7 @@
   para crear el gráfico."
 
 - Class: cmd_question
-  Output: "Recree el gráfico con "Speed" y "Stopping Distance", como etiquetas 
+  Output: "Recree el gráfico con \"Speed\" y \"Stopping Distance\", como etiquetas 
   de los ejes." 
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")')
