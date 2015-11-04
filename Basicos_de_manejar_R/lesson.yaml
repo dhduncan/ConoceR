@@ -30,26 +30,23 @@
   
 - Class: cmd_question
   Output: "Como se puede imaginar, todos las operaciones normales de calculador
-  	van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
-  	averiguarlo."
+  van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
+  averiguarlo."
   CorrectAnswer: 2 * 2
   AnswerTests: omnitest(correctExpr='2 * 2')
-  Hint: "Escribe 2 * 2 y pulsa Intro".
-  	
+  Hint: "Escribe 2 * 2 y pulsa Intro."
+
 - Class: cmd_question
-  	Output: "División se hace con el símbolo '/', etcétera. Se puede cuadrar (o
-  	levantar números a cualquier poder mediante el uso del símbolo '^'). Depende
-  	su teclado, no se ubicara facilmente. Si no aparece nada, pulsa space antes
-  	de cumplir la combinación de teclas. Vas a buscarlo ahora mismo para
-  	cuadrar 2. Escribe 2^2 y presione Intro."
-  	CorrectAnswer: 2^2
-  	AnswerTests: omnitest(correctExpr='2^2')
-  	Hint: "Escribe 2^2 y pulsa Intro. No sirve si aparece algo que parece la
-  	expresión como se escribiría 2\². Aunque tenga mejor pinta, R no sabe
-  	interpretarlo."
-  	
-  
-  Escribe  5 + 7 y pulsa Intro."
+  Output: "También se puede levantar números a cualquier poder mediante el uso del símbolo '^'). Depende
+  su teclado, no se ubicara facilmente. Si no aparece nada, pulsa space antes
+  de cumplir la combinación de teclas. Vas a buscarlo ahora mismo para
+  cuadrar 2. Escribe 2^2 y presione Intro."
+  CorrectAnswer: 2^2
+  AnswerTests: omnitest(correctExpr='2^2')
+  Hint: "Escribe 2^2 y pulsa Intro."
+
+- Class: cmd_question
+  Output: "Escribe  5 + 7 y pulsa Intro."
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: "Escribe 5 + 7 y pulsa Intro."
@@ -73,7 +70,10 @@
   Hint: "Escriba x <- 5 + 7. Es importante incluir un único espacio a cada lado de el operador de asignación, pero no ponga un espacio entre el `<` y el `-` que forman la flecha."
     
 - Class: text
-  Output: "Se dará cuenta de que R no imprime el resultado de 12 en esta ocasión. cuando se utiliza el operador de asignación, R asume que no quieres ver el resultado inmediatamente, sino que tiene la intención de utilizar el resultado para otra cosa más adelante."
+  Output: "Se dará cuenta de que R no imprime el resultado de 12 en esta 
+  ocasión. Cuando se utilice el operador de asignación ( \"<-\" ), R asume que 
+  no quieres ver el resultado inmediatamente, sino que tiene la intención de 
+  utilizar el resultado para otra cosa más adelante."
     
 - Class: cmd_question
   Output: "Para ver el contenido del objeto x, simplemente escriba x y pulse Intro. Intentalo ahora."
@@ -102,11 +102,12 @@
   AnswerTests: omnitest(correctExpr='z <- c(1.1, 9, 3.14)')
   Hint: "Ingresando z <- c (1.1, 9, 3.14) asignará el vector (1.1, 9, 3.14) a un nueva variable llamada z. No es necesario Incluir espacios individuales después de las comas en el vector, pero ayuda a que su código se vea menos desordenado y más legible."
 
-- Class: cmd_question
-  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
-  CorrectAnswer: ?c
-  AnswerTests: omnitest(correctExpr='?c')
-  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
+# No estoy convencido que esta intervención vale la pena.
+#- Class: cmd_question
+#  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
+#  CorrectAnswer: ?c
+#  AnswerTests: omnitest(correctExpr='?c')
+#  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
 
 - Class: cmd_question
   Output: "Escriba z para ver su contenido. Verás que los valores impresos no son separados por comas."
