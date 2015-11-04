@@ -131,7 +131,14 @@
   Output: "En primer lugar, R multiplica cada uno de los tres elementos en z por 2. Entonces se añadieron 100 a cada elemento para obtener el resultado que ves arriba."
 
 - Class: text
-  Output: "Otros operadores aritméticos comunes son `+`, `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para tomar la raíz cuadrada, utilice la función sqrt() y tomar el valor absoluto, utilice la función abs()."
+  Output: "Como ya te decía, otros operadores aritméticos comunes son `+`, `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para tomar la raíz cuadrada, utilice la función sqrt() y tomar el valor absoluto, utilice la función abs()."
+
+- Class: cmd_question
+  Output: "Dese una oportunidad, calcula la raiz quadrado de 100 con la función 
+  sqrt()."
+  CorrectAnswer: sqrt(100)
+  AnswerTests: omnitest(correctExpr='sqrt(100)')
+  Hint: "no hay que asignar ningún nombre, teclée sqrt(100) no más."
 
 - Class: cmd_question
   Output: "Tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto llamada my_sqrt."
@@ -184,7 +191,9 @@
   Output: "Detrás de las escenas, R es reciclar, el 2 para hacerlo un vector de 2s y el 100 para hacer un vector de 100s. En otras palabras, cuando usted pide R para calcular z * 2 + 100, lo que realmente se calcula es z * c(2, 2, 2) + c(100, 100, 100)."
 
 - Class: cmd_question
-  Output: "Para ver otro ejemplo de cómo funciona este vector «reciclado», trate de sumar c(1, 2, 3, 4) y c(0, 10). No te preocupes por guardar el resultado enun nuevo objeto."
+  Output: "Para ver otro ejemplo de cómo funciona este vector «reciclado», 
+  trate de sumar c(1, 2, 3, 4) y c(0, 10). No te preocupes por guardar el 
+  resultado en un nuevo objeto."
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10)')
   Hint: "Escriba c(1, 2, 3, 4) + c(0, 10) en la consola para ver cómo R suma dos vectores de diferente longitud. No asigne el resultado a un objeto."
@@ -219,11 +228,13 @@
   AnswerTests: omnitest(correctExpr='my_div')
   Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes que escribir my_div y pulse Enter para continuar."
 
-- Class: mult_question
-  Output: "¿Te gustaría informar a alguien acerca de su finalización con éxito de esta lección?"
-  CorrectAnswer: NULL
-  AnswerChoices: "Si; No"
-  AnswerTests: notify()
-  Hint: NULL
-
-
+- Class: text
+  Output: "Pues, felicitaciones, has terminado con esta lección en los básicos
+  de manejar R. Espero que ya te sientas más cómod@ trabajando con ella. Puedes
+  seguir con la siguiente class, experimentar con R, o volver otro día.
+  
+  Esta lección se escribió con el paquete swirl, representa el labor de muchos
+  voluntarios. A mi me gustaría recibir retroalimentación en el tema de que tan
+  útiles son estas lecciones. Por favor, espera hasta que hayas completado varias
+  antes de juzgar.  ¡Hasta luego!"
+  
