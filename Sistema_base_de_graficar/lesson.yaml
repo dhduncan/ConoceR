@@ -127,7 +127,7 @@
   datos cars, dist en el eje x y speed en el eje y. Esto es lo contrario de lo 
   que hicimos anteriormente."
   CorrectAnswer: plot(x = cars$dist, y = cars$speed)
-  AnswerTests: omnitest(correctExpr='plot(x = cars$dist, y = cars$speed)')
+  AnswerTests: any_of_exprs('plot(x = cars$dist, y = cars$speed)', ' plot(y=cars$speed, x=cars$dist)')
   Hint: Escriba plot(x = cars$dist, y = cars$speed) para crear el gráfico.
 
 - Class: text
@@ -216,17 +216,17 @@
   Hint: Escriba plot(cars, pch = 2) para crear el gráfico.
 
 - Class: cmd_question
-  Output: Grafique cars uniendo las observaciones por lineas. (Use type = "l" para lograr este efecto). 
+  Output: Grafique cars uniendo las observaciones por lineas. (Use type = \"l\" para lograr este efecto). 
   CorrectAnswer: plot(cars, type = "l")
   AnswerTests: omnitest(correctExpr='plot(cars, type = "l")')
   Hint: Escriba plot(cars, type = "l") para crear el gráfico.
 
 
 - Class: text
-  Output: Argumentos como "col" y "pch" pueden no parecer muy intuitivos. Y es 
+  Output: "Argumentos como \"col\" y \"pch\" pueden no parecer muy intuitivos. Y es 
   que no lo son! Pero, tampoco se cuesta mucho trabajo aprenderlos.  Sin embargo,
   quizá es por esto que cada vez más personas usan los paquetes más modernos, 
-  como ggplot2, para la creación de sus gráficos en R.
+  como ggplot2, para la creación de sus gráficos en R."
 
 - Class: text
   Output: Sin embargo, es útil tener una introducción a los gráficos de base porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de ellos.
@@ -244,8 +244,8 @@
   Output: Cada vez que usted cargue una nueva trama de datos, usted debe explorarla antes de usarla. En medio de una lección de swirl, sólo tienes que escribir play(). Esto suspende temporalmente la lección (sin perder el trabajo que ya ha realizado) y le permite probar comandos como dim(mtcars) y head(mtcars). Una vez que haya terminado de examinar los datos, sólo tienes que escribir nxt() y la lección continuará donde la dejó.
 
 - Class: cmd_question
-  Output: Busque la página de ayuda para la función boxplot(). Un 'boxplot' se 
-  conoce en español como una diagrama de caja y bigotes.
+  Output: "Busque la página de ayuda para la función boxplot(). Un 'boxplot' se 
+  conoce en español como una diagrama de caja y bigotes."
   CorrectAnswer: ?boxplot
   AnswerTests: any_of_exprs('?boxplot', 'help(boxplot)')
   Hint: Escriba ?boxplot or help(boxplot) para ver la página de ayuda y los detalles a cerca de boxplot.
@@ -278,11 +278,11 @@
   Hint: Escriba hist(mtcars$mpg) para crear el gráfco.
 
 - Class: text
-  Output: Otro tipo de gráficos muy importantes son los gráficos de barras. 
+  Output: "Otro tipo de gráficos muy importantes son los gráficos de barras. 
   Estos reciben una matriz o arreglo como argumento. He preparado una matriz 
   llamada marital para experimentar con este tipo de gráfico. Recuerde que puede 
   usar las funciones play() y nxt() para pausar la lección y examinar este 
-  conjunto de datos.
+  conjunto de datos."
 
 - Class: cmd_question
   Output: Busque la página de ayuda para la función barplot(). 
