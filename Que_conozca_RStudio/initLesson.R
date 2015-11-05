@@ -10,4 +10,3 @@
     file.path(find.package("swirl"), "Courses", course_, lesson_, file_)
   }
 }
-
