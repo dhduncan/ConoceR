@@ -46,13 +46,13 @@
   Hint: "Escribe 2^2 y pulsa Intro."
 
 - Class: cmd_question
-  Output: "Escribe  5 + 7 y pulsa Intro."
+  Output: "Ahora, otro ejemplo sencillo. Escribe  5 + 7 y pulsa Intro."
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: "Escribe 5 + 7 y pulsa Intro."
 
 - Class: text
-  Output: "R simplemente imprime el resultado de 12 por defecto. Sin embargo, R es un lenguaje de programación y a menudo la razón por la que utiliza un lenguaje de programación, en oposición a una calculadora, es para automatizar algunos procesos o evitar repeticiones innecesarias."
+  Output: "Ojo que con estos ejemplos R simplemente imprime el resultado de 12 por defecto. Sin embargo, R es un lenguaje de programación y a menudo la razón por la que utiliza un lenguaje de programación, en oposición a una calculadora, es para automatizar algunos procesos o evitar repeticiones innecesarias."
 
 - Class: text
   Output: "En este caso, es posible que desee utilizar nuestro resultado de arriba en un segundo cálculo. En lugar de volver a escribir 5 + 7 cada vez que lo necesitamos, podemos simplemente crear un nuevo objeto que almacena el resultado."
@@ -141,7 +141,7 @@
   Hint: "no hay que asignar ningún nombre, teclée sqrt(100) no más."
 
 - Class: cmd_question
-  Output: "Tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto llamada my_sqrt."
+  Output: "Ahora, tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto llamada my_sqrt."
   CorrectAnswer: my_sqrt <- sqrt(z - 1)
   AnswerTests: omnitest(correctExpr='my_sqrt <- sqrt(z - 1)')
   Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado my_sqrt."
