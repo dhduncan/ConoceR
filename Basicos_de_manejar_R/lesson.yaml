@@ -237,11 +237,17 @@
   nombró como mí_div o míDiv. Podrías probar ambos y ver lo que funciona, o ..."
 
 - Class: cmd_question
-  Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego presionar la tecla Tab (posiblemente más de una vez). La mayoría de los entornos de programación proporcionará una lista de los objetos que ha creado que comiencen con 'mi'. Esto se llama auto-completado y puede ser muy útil cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad. (Si el autocompletado no funciona para ti, sólo tienes que escribir my_div y pulse Intro.)"
+  Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego
+  presionar la tecla Tab (posiblemente más de una vez). La mayoría de los 
+  entornos de programación proporcionará una lista de los objetos que ha creado
+  que comiencen con 'mí'. Esto se llama auto-completado y puede ser muy útil 
+  cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad.
+  (Si el autocompletado no funciona para ti, sólo tienes que escribir mí_div y 
+  pulse Intro.)"
   CorrectAnswer: mí_div
   AnswerTests: omnitest(correctExpr='mí_div')
   Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes 
-  que escribir mí_div y pulse Enter para continuar."
+  que escribir mí_div y pulse Intro para continuar."
 
 - Class: text
   Output: "Pues, felicitaciones, has terminado con esta lección en los básicos
