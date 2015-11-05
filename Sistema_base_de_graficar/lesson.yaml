@@ -142,7 +142,7 @@
   con diferentes argumentos utilizados en lugar de los puntos suspensivos."
 
 - Class: cmd_question
-  Output: Recree el gráfico con la etiqueta del eje x (xlab) asignado con "Velocidad (mph)". 
+  Output: Recree el gráfico con la etiqueta del eje X (xlab) asignado con "Velocidad (mph)". 
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")')
   Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") para crear en gráfico.
@@ -174,18 +174,18 @@
   la vez. Por supuesto, usted puede pasar en más de un argumento al hacer un 
   proyecto real."
 
-- Class: cmd_question
-  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
-  que el argumento para el título principal es 'main' no 'title'."
-  CorrectAnswer: plot(cars, main = "Mí plot")
-  AnswerTests: omnitest(correctExpr='plot(cars, main = "Mí plot")')
-  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
+#- Class: cmd_question
+#  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
+#  que el argumento para el título principal es 'main' no 'title'."
+#  CorrectAnswer: plot(cars, main = "Mí plot")
+#  AnswerTests: omnitest(correctExpr='plot(cars, main = "M plot")')
+#  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
 
-- Class: cmd_question
-  Output: Grafique cars con un título secundario de "Un subtítulo".
-  CorrectAnswer: plot(cars, sub = "Un subtítulo")
-  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
-  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
+#- Class: cmd_question
+#  Output: Grafique cars con un título secundario de "Un subtítulo".
+#  CorrectAnswer: plot(cars, sub = "Un subtítulo")
+#  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
+#  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
 
 - Class: text
   Output: "La página de ayuda de plot (?plot) sólo cubre una pequeña parte de 
@@ -223,7 +223,7 @@
 
 
 - Class: text
-  Output: "Argumentos como \"col\" y \"pch\" pueden no parecer muy intuitivos. Y es 
+  Output: "Argumentos como 'col' y 'pch' pueden no parecer muy intuitivos. Y es 
   que no lo son! Pero, tampoco se cuesta mucho trabajo aprenderlos.  Sin embargo,
   quizá es por esto que cada vez más personas usan los paquetes más modernos, 
   como ggplot2, para la creación de sus gráficos en R."
@@ -277,46 +277,45 @@
   AnswerTests: any_of_exprs('hist(mtcars$mpg)', 'hist(x = mtcars$mpg)')
   Hint: Escriba hist(mtcars$mpg) para crear el gráfco.
 
-- Class: text
-  Output: "Otro tipo de gráficos muy importantes son los gráficos de barras. 
-  Estos reciben una matriz o arreglo como argumento. He preparado una matriz 
-  llamada marital para experimentar con este tipo de gráfico. Recuerde que puede 
-  usar las funciones play() y nxt() para pausar la lección y examinar este 
-  conjunto de datos."
+#- Class: text
+#  Output: "Otro tipo de gráficos muy importantes son los gráficos de barras. 
+#  Estos reciben una matriz o arreglo como argumento. He preparado una matriz 
+#  llamada marital para experimentar con este tipo de gráfico. Recuerde que puede 
+#  usar las funciones play() y nxt() para pausar la lección y examinar este 
+#  conjunto de datos."
 
-- Class: cmd_question
-  Output: Busque la página de ayuda para la función barplot(). 
-  CorrectAnswer: ?barplot
-  AnswerTests: any_of_exprs('?barplot', 'help(barplot)')
-  Hint: Escriba ?barplot or help(barplot) para ver la página de ayuda y los detalles a cerca de barplot.
+#- Class: cmd_question
+#  Output: Busque la página de ayuda para la función barplot(). 
+#  CorrectAnswer: ?barplot
+#  AnswerTests: any_of_exprs('?barplot', 'help(barplot)')
+#  Hint: Escriba ?barplot or help(barplot) para ver la página de ayuda y los detalles a cerca de barplot.
 
-- Class: cmd_question
-  Output: Hagamos nuestro primer gráfico de barras con barplot() pasando como argumento solo el conjunto de datos marital, para ver el comportamiento de la función con sus valores por defecto. 
-  CorrectAnswer: barplot(marital)
-  AnswerTests: omnitest(correctExpr='barplot(marital)')
-  Hint: Escriba barplot(marital) para ver un gráfico de barras sobre la matriz de datos marital.
+#- Class: cmd_question
+#  Output: Hagamos nuestro primer gráfico de barras con barplot() pasando como argumento solo el conjunto de datos marital, para ver el comportamiento de la función con sus valores por defecto. 
+#  CorrectAnswer: barplot(marital)
+#  AnswerTests: omnitest(correctExpr='barplot(marital)')
+#  Hint: Escriba barplot(marital) para ver un gráfico de barras sobre la matriz de datos marital.
 
-- Class: cmd_question
-  Output: En casi cualquier tipo de gráfico en R podemos anexar una leyenda. En nuestro grafico de barras hace falta explicar el significado del color de las barras. Para esto incluya en el comando anterior el argumento legend = row.names(marital) 
-  CorrectAnswer: barplot(marital, legend = row.names(marital))
-  AnswerTests: omnitest(correctExpr='barplot(marital, legend = row.names(marital))')
-  Hint: Escriba barplot(marital, legend = row.names(marital)) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
+#- Class: cmd_question
+#  Output: En casi cualquier tipo de gráfico en R podemos anexar una leyenda. En nuestro grafico de barras hace falta explicar el significado del color de las barras. Para esto incluya en el comando anterior el argumento legend = row.names(marital) 
+#  CorrectAnswer: barplot(marital, legend = row.names(marital))
+#  AnswerTests: omnitest(correctExpr='barplot(marital, legend = row.names(marital))')
+#  Hint: Escriba barplot(marital, legend = row.names(marital)) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
-- Class: text
-  Output: Por omisión barplot() muestra todos los valores de cada columna en una misma barra. Si quisieramos mostrar cada valor en una barra distinta podemos usar el argumento "beside"
+#- Class: text
+#  Output: Por omisión barplot() muestra todos los valores de cada columna en una misma barra. Si quisieramos mostrar cada valor en una barra distinta podemos usar el argumento "beside"
 
-- Class: cmd_question
-  Output: Vamos a hacer esto pasando a la función barplot() el conjunto de datos marital y el argumento beside = TRUE 
-  CorrectAnswer: barplot(marital, beside = TRUE)
-  AnswerTests: omnitest(correctExpr='barplot(marital, beside = TRUE)')
-  Hint: Escriba barplot(marital, beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
+#- Class: cmd_question
+#  Output: Vamos a hacer esto pasando a la función barplot() el conjunto de datos marital y el argumento beside = TRUE 
+#  CorrectAnswer: barplot(marital, beside = TRUE)
+#  AnswerTests: omnitest(correctExpr='barplot(marital, beside = TRUE)')
+#  Hint: Escriba barplot(marital, beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
-- Class: cmd_question
-  Output: Pero si lo que queremos es el gráfico de barras en función del estado civil, bastaría con pasar como argumento la matriz de datos traspuesta con la funcion t(). Escriba el mismo comando anterior pero trasponiendo el conjunto de datos con la funcion t(marital). 
-  CorrectAnswer: barplot(marital, beside = TRUE)
-  AnswerTests: omnitest(correctExpr='barplot(t(marital), beside = TRUE)')
-  Hint: Escriba barplot(t(marital), beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
-
+#- Class: cmd_question
+#  Output: Pero si lo que queremos es el gráfico de barras en función del estado civil, bastaría con pasar como argumento la matriz de datos traspuesta con la funcion t(). Escriba el mismo comando anterior pero trasponiendo el conjunto de datos con la funcion t(marital). 
+#  CorrectAnswer: barplot(marital, beside = TRUE)
+#  AnswerTests: omnitest(correctExpr='barplot(t(marital), beside = TRUE)')
+#  Hint: Escriba barplot(t(marital), beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
 # Not sure what a good lesson length is for this. 
 # Might add some information on saving plots.
