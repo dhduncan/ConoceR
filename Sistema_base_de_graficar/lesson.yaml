@@ -150,18 +150,11 @@
   Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") para crear en gráfico.
 
 - Class: cmd_question
-  Output: Recree el gráfico con la etiqueta del eje y en 'Distancia de frenado (ft)'. 
+  Output: Recree el último gráfico con la etiqueta del eje y en 'Distancia de frenado (ft)'. 
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")')
   Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = \"Velocidad (mph)\", ylab = \"Distancia de frenado (ft)\") 
   para crear el gráfico."
-
-#- Class: cmd_question
-#  Output: "Recree el gráfico con \"Speed\" y \"Stopping Distance\", como etiquetas 
-#  de los ejes." 
-#  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
-#  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")')
-#  Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance") para crear el gráfico.
 
 - Class: text
   Output: "La razón por la que plot(cars) funcionó en el comienzo de la lección 
