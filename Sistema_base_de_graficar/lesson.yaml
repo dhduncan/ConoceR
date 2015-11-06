@@ -131,10 +131,12 @@
   Hint: Escriba plot(x = cars$dist, y = cars$speed) para crear el gráfico.
 
 - Class: text
-  Output: "Probablemente tiene más sentido que la velocidad vaya en el eje x 
-  dado que la distancia de frenado está en función de la velocidad, y no al 
-  revés. Así, para el resto de las preguntas de esta parte de la lección, 
-  siempre asignaremos los argumentos en de acuerdo a esto."
+  Output: "¿Ve que ahora que puesto los ejes al revés, el patrón tiene otra 
+  forma? Sin embargo, probablemente tiene más sentido que la velocidad vaya en 
+  el eje X dado que la distancia de frenado está en función de la velocidad, 
+  y no al revés. Así, para el resto de las preguntas de esta parte de la lección, 
+  siempre asignaremos los argumentos en de acuerdo a esto (como Ud. hizo hace dos
+  pasos)."
 
 - Class: text
   Output: "De hecho, usted puede asumir que las respuestas a las siguientes 
@@ -203,8 +205,19 @@
 - Class: cmd_question
   Output: Grafique cars limitando al mismo tiempo el eje x entre 10 y 15 (use xlim = c(10, 15) para lograr este efecto).
   CorrectAnswer: plot(cars, xlim = c(10, 15))
-  AnswerTests: omnitest(correctExpr='plot(cars, xlim = c(10, 15))')
+  AnswerTests: any_of_exprs('plot(cars, xlim = c(10, 15))', 'plot(cars, col = 2, xlim = c(10, 15))')
   Hint: Escriba plot(cars, xlim = c(10, 15)) para crear el gráfico.
+
+- Class: text
+  Output: "Pause un momento. Una de las gran ventajas de RStudio es que mantiene
+  las gráficas de la sessión en la memoría. Véase la ventanilla de PLOTS. A la
+  izquiera de ella hay unas flechas. A la izquierda extrema hay una de azul 
+  que indica hacia izquierda y otra azula bien clarita hacia derecha. 
+  
+  Su propósito es navegar entre las gráficas de la sesión.  Toque la flecha 
+  hacia izquierda una vez para ver la gráfica pasada, y luego la de la derecha 
+  para volver a la gráfica actual.  Esto es muy útil para comparar borradores 
+  de una gráfica."
 
 - Class: text
   Output: También puede cambiar la representacion de los símbolos en la gráfico o la forma de graficarlos. La página de ayuda para points (?points) proporciona algunos detalles.
@@ -216,7 +229,7 @@
   Hint: Escriba plot(cars, pch = 2) para crear el gráfico.
 
 - Class: cmd_question
-  Output: Grafique cars uniendo las observaciones por lineas. (Use type = \"l\" para lograr este efecto). 
+  Output: Grafique cars uniendo las observaciones por lineas. (Use type = 'l' para lograr este efecto). 
   CorrectAnswer: plot(cars, type = "l")
   AnswerTests: omnitest(correctExpr='plot(cars, type = "l")')
   Hint: Escriba plot(cars, type = "l") para crear el gráfico.
@@ -224,9 +237,9 @@
 
 - Class: text
   Output: "Argumentos como 'col' y 'pch' pueden no parecer muy intuitivos. Y es 
-  que no lo son! Pero, tampoco se cuesta mucho trabajo aprenderlos.  Sin embargo,
+  que no lo son! Pero, tampoco cuesta mucho trabajo aprenderlos.  Sin embargo,
   quizá es por esto que cada vez más personas usan los paquetes más modernos, 
-  como ggplot2, para la creación de sus gráficos en R."
+  como ggplot2, para la creación de sus gráficos en R. Conocerá a ggplot luego."
 
 - Class: text
   Output: Sin embargo, es útil tener una introducción a los gráficos de base porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de ellos.
