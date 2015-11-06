@@ -169,18 +169,18 @@
   la vez. Por supuesto, usted puede pasar en más de un argumento al hacer un 
   proyecto real."
 
-#- Class: cmd_question
-#  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
-#  que el argumento para el título principal es 'main' no 'title'."
-#  CorrectAnswer: plot(cars, main = "Mí plot")
-#  AnswerTests: omnitest(correctExpr='plot(cars, main = "M plot")')
-#  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
+- Class: cmd_question
+  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
+  que el argumento para el título principal es 'main' no 'title'."
+  CorrectAnswer: plot(cars, main = "Mí plot")
+  AnswerTests: omnitest(correctExpr='plot(cars, main = "Mi plot")')
+  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
 
-#- Class: cmd_question
-#  Output: Grafique cars con un título secundario de "Un subtítulo".
-#  CorrectAnswer: plot(cars, sub = "Un subtítulo")
-#  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
-#  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
+- Class: cmd_question
+  Output: Grafique cars con un título secundario de "Un subtítulo".
+  CorrectAnswer: plot(cars, sub = "Un subtítulo")
+  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
+  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
 
 - Class: text
   Output: "La página de ayuda de plot (?plot) sólo cubre una pequeña parte de 
