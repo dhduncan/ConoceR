@@ -13,6 +13,20 @@
 - Class: text
   Output: "Antes de empezar, confirma que Ud esté en su proyecto de RStudio.
   Arriba, a la derecha, verá una caja de azul claro y a su lado debe aparecer
-  el nombre de su proyecto. Si viera (none), significa que no esté en el proyecto
-  y Ud debería abrirlo del menu <<File>>."
+  el nombre de su proyecto. Si ve (none), significa que no esta en el proyecto
+  y Ud debería abrirlo del menu <<File>> antes de continuar."
+  
+- Class: cmd_question
+  Output: "Luego, teclea 'getwd()' (de <<get wORKING dIRECTORY>>) en la consola 
+  para confirmar de otra manera en donde esté trabajando. La dirección que sale 
+  en la consola debe corresponder con la dirección que se ve por encima de la 
+  ventanilla FILES. ¿Todo bien? Adelante, pues."
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: "Por favor escriba <<getwd()>> y pulse Intro." 
 
+- Class: cmd_question
+  	Output: explain what the user must do here
+  	CorrectAnswer: EXPR or VAL
+  	AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  	Hint: hint
