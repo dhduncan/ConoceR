@@ -26,7 +26,7 @@
   Hint: "Por favor escriba <<getwd()>> y pulse Intro." 
 
 - Class: cmd_question
-  	Output: explain what the user must do here
-  	CorrectAnswer: EXPR or VAL
-  	AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
-  	Hint: hint
+  Output: explain what the user must do here
+  CorrectAnswer: EXPR or VAL
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: hint
