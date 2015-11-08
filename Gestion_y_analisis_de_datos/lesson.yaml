@@ -1,0 +1,11 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Gestion_y_analisis_de_datos
+  Author: David H. Duncan (based on Will Morris & John Baumgartner)
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.3.1
+
+- Class: text
+  Output: "¡Hola buenas! En esta lección, aprenderá crear objetos de datos 
+  de varias fuentes, y como sacar estadísticos de resumen rapidamente. ¿List@?"
