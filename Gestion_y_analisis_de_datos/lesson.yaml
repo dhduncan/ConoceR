@@ -9,3 +9,10 @@
 - Class: text
   Output: "¡Hola buenas! En esta lección, aprenderá crear objetos de datos 
   de varias fuentes, y como sacar estadísticos de resumen rapidamente. ¿List@?"
+
+- Class: text
+  Output: "Antes de empezar, confirma que Ud esté en su proyecto de RStudio.
+  Arriba, a la derecha, verá una caja de azul claro y a su lado debe aparecer
+  el nombre de su proyecto. Si viera (none), significa que no esté en el proyecto
+  y Ud debería abrirlo del menu <<File>>."
+
