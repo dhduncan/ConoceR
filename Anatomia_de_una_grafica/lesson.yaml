@@ -199,7 +199,7 @@
 - Class: text
   Output: "Fíjete que R haya etiquetado el eje Y con el nombre del objeto v, y 
   la palabra 'Index' (índice) como etiqueta para el X. Tampoco proporcionó 
-  ningún títul, aunque depende la gráfica R suele hacerlo."
+  ningún título, aunque depende la gráfica R suele hacerlo."
 
 - Class: cmd_question
   Output: "No aceptamos estas opciones, así que vamos a ajustar la llamada a la 

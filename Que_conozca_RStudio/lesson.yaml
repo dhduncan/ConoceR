@@ -2,7 +2,7 @@
   Course: ConoceR
   Lesson: Que_conozca_RStudio
   Author: David H. Duncan
-  Type: UTPL xMOOC
+  Type: Standard
   Organization: Universidad Tecnica Particular de Loja
   Version: 2.3.1
 
@@ -77,16 +77,17 @@
   argumentos y paquetes. Meta el cursor en la cajita blanco de la barra de la 
   ventanilla HELP y empece a teclear algo. Verás una lista de funciones para que 
   se pueda buscar información y guianza en el uso."
-  
+
 - Class: cmd_question
-  Output: "Ya conocieras al sistema de HELP en la lección anterior, ¿verdad? 
-  A ver, si quieres lanzar el sistema de ayuda en el uso de la función c, 
-  ¿qué escribes en la consola?"
+  Output: "Ya conocieras al sistema de HELP en la lección anterior, ¿verdad?
+  A ver, si quieres lanzar el sistema de ayuda en el uso de la función c por
+  ejemplo, ¿qué escribas en la consola?"
   CorrectAnswer: ?c
   AnswerTests: omnitest(correctExpr='?c')
-  Hint: "Para cualquier paquete o función, se teclea el símbolo de interrogación 
-  mas el nombre del función.  En este caso '?c' y pulse Intro, ¿ya te acuerdas?"
-  
+  Hint: "Para cualquier paquete o función, se teclea el símbolo de interrogación
+  más el nombre de la función, sin paréntesis. En este caso escriba '?c' y pulse
+  Intro. ¿Ya te acuerdas?"
+
 - Class: figure
   Output: "Volvemos a nuestro próposito pues. A la izquierda de HELP se 
   encuentra PACKAGES (paquetes). Al hacer click en ella, se ve la lista de 
@@ -96,7 +97,7 @@
   por ejemplo."
   Figure: fig2.R
   FigureType: new
-  
+
 - Class: text
   Output: "Saltandonos la ventanilla PLOTS, que ya conoces, más a la izquierda 
   aún está FILES. Esta es un explorador y lanzador útil de archivos. Lo útil 
@@ -148,21 +149,21 @@
   respetivamente. El entorno te muestra los objetos que el programa tiene activo
   en la memoria, o, en terminos técnicos, el entorno. Asegurate que la 
   ventanilla ENVIRONMENT esta por delante de HISTORIA por hacer click en el 
-  nombre. Luego vas a crear un objeto 'miNombre' y asignarlo tu nombre. Ahora, 
+  nombre. Luego vas a crear un objeto 'elProfe' y asignarlo *mí* nombre. Ahora, 
   por favor."
   CorrectAnswer: miNombre <- "David Duncan"
-  AnswerTests: omnitest(correctExpr='miNombre <- "David Duncan"')
-  Hint: "Escriba miNombre <- 'Ponga su nombre entre comillas'"
+  AnswerTests: omnitest(correctExpr='elProfe <- "David Duncan"')
+  Hint: "Escriba elProfe <- \"David Duncan\""
 
 - Class: cmd_question
   Output: "Ahora se ve este objeto en la ventanilla ENVIRONMENT, cierto? 
   Cualquier objeto en el entorno se puede imprimir a la consola tecleando el 
-  nombre no mas. En la consola pues, escriba miNombre para ver el contenido de 
+  nombre no mas. En la consola pues, escriba elProfe para ver el contenido de 
   tu objeto."
-  CorrectAnswer: miNombre
-  AnswerTests: omnitest(correctExpr="miNombre")
-  Hint: "Aunque no importa lo que hubieras asignado al objeto miNombre, hay que 
-  teclear 'miNombre' y pulsar Intro para adelantar."
+  CorrectAnswer: elProfe
+  AnswerTests: omnitest(correctExpr="elProfe")
+  Hint: "Aunque no importa lo que hubieras asignado al objeto elProfe, hay que 
+  teclear 'elProfe' y pulsar Intro para adelantar."
   
 - Class: cmd_question
   Output: "Tambien, ya hubieras visto que se puede imprimir una lista de los 

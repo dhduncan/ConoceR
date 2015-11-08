@@ -30,32 +30,33 @@
   
 - Class: cmd_question
   Output: "Como se puede imaginar, todos las operaciones normales de calculador
-  	van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
-  	averiguarlo."
+  van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
+  averiguarlo."
   CorrectAnswer: 2 * 2
   AnswerTests: omnitest(correctExpr='2 * 2')
-  Hint: "Escribe 2 * 2 y pulsa Intro".
-  	
+  Hint: "Escribe 2 * 2 y pulsa Intro."
+
 - Class: cmd_question
-  	Output: "División se hace con el símbolo '/', etcétera. Se puede cuadrar (o
-  	levantar números a cualquier poder mediante el uso del símbolo '^'). Depende
-  	su teclado, no se ubicara facilmente. Si no aparece nada, pulsa space antes
-  	de cumplir la combinación de teclas. Vas a buscarlo ahora mismo para
-  	cuadrar 2. Escribe 2^2 y presione Intro."
-  	CorrectAnswer: 2^2
-  	AnswerTests: omnitest(correctExpr='2^2')
-  	Hint: "Escribe 2^2 y pulsa Intro. No sirve si aparece algo que parece la
-  	expresión como se escribiría 2\². Aunque tenga mejor pinta, R no sabe
-  	interpretarlo."
-  	
-  
-  Escribe  5 + 7 y pulsa Intro."
+  Output: "También se puede levantar números a cualquier poder mediante el uso del símbolo '^'). Depende
+  su teclado, no se ubicara facilmente. Si no aparece nada, pulsa space antes
+  de cumplir la combinación de teclas. Vas a buscarlo ahora mismo para
+  cuadrar 2. Escribe 2^2 y presione Intro."
+  CorrectAnswer: 2^2
+  AnswerTests: omnitest(correctExpr='2^2')
+  Hint: "Escribe 2^2 y pulsa Intro."
+
+- Class: cmd_question
+  Output: "Ahora, otro ejemplo sencillo. Escribe  5 + 7 y pulsa Intro."
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: "Escribe 5 + 7 y pulsa Intro."
 
 - Class: text
-  Output: "R simplemente imprime el resultado de 12 por defecto. Sin embargo, R es un lenguaje de programación y a menudo la razón por la que utiliza un lenguaje de programación, en oposición a una calculadora, es para automatizar algunos procesos o evitar repeticiones innecesarias."
+  Output: "Ojo que con estos ejemplos R simplemente imprime el resultado de 12 
+  a la consola por defecto. Sin embargo, R es un lenguaje de programación y a 
+  menudo la razón por la que utiliza un lenguaje de programación, en oposición 
+  a una calculadora, es para automatizar algunos procesos o evitar repeticiones 
+  innecesarias."
 
 - Class: text
   Output: "En este caso, es posible que desee utilizar nuestro resultado de arriba en un segundo cálculo. En lugar de volver a escribir 5 + 7 cada vez que lo necesitamos, podemos simplemente crear un nuevo objeto que almacena el resultado."
@@ -73,7 +74,10 @@
   Hint: "Escriba x <- 5 + 7. Es importante incluir un único espacio a cada lado de el operador de asignación, pero no ponga un espacio entre el `<` y el `-` que forman la flecha."
     
 - Class: text
-  Output: "Se dará cuenta de que R no imprime el resultado de 12 en esta ocasión. cuando se utiliza el operador de asignación, R asume que no quieres ver el resultado inmediatamente, sino que tiene la intención de utilizar el resultado para otra cosa más adelante."
+  Output: "Se dará cuenta de que R no imprime el resultado de 12 en esta 
+  ocasión. Cuando se utilice el operador de asignación ( \"<-\" ), R asume que 
+  no quieres ver el resultado inmediatamente, sino que tiene la intención de 
+  utilizar el resultado para otra cosa más adelante."
     
 - Class: cmd_question
   Output: "Para ver el contenido del objeto x, simplemente escriba x y pulse Intro. Intentalo ahora."
@@ -102,11 +106,12 @@
   AnswerTests: omnitest(correctExpr='z <- c(1.1, 9, 3.14)')
   Hint: "Ingresando z <- c (1.1, 9, 3.14) asignará el vector (1.1, 9, 3.14) a un nueva variable llamada z. No es necesario Incluir espacios individuales después de las comas en el vector, pero ayuda a que su código se vea menos desordenado y más legible."
 
-- Class: cmd_question
-  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
-  CorrectAnswer: ?c
-  AnswerTests: omnitest(correctExpr='?c')
-  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
+# No estoy convencido que esta intervención vale la pena.
+#- Class: cmd_question
+#  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
+#  CorrectAnswer: ?c
+#  AnswerTests: omnitest(correctExpr='?c')
+#  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
 
 - Class: cmd_question
   Output: "Escriba z para ver su contenido. Verás que los valores impresos no son separados por comas."
@@ -130,48 +135,63 @@
   Output: "En primer lugar, R multiplica cada uno de los tres elementos en z por 2. Entonces se añadieron 100 a cada elemento para obtener el resultado que ves arriba."
 
 - Class: text
-  Output: "Otros operadores aritméticos comunes son `+`, `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para tomar la raíz cuadrada, utilice la función sqrt() y tomar el valor absoluto, utilice la función abs()."
+  Output: "Como ya te decía, otros operadores aritméticos comunes son `+`, `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para tomar la raíz cuadrada, utilice la función sqrt() y tomar el valor absoluto, utilice la función abs()."
 
 - Class: cmd_question
-  Output: "Tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto llamada my_sqrt."
-  CorrectAnswer: my_sqrt <- sqrt(z - 1)
-  AnswerTests: omnitest(correctExpr='my_sqrt <- sqrt(z - 1)')
-  Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado my_sqrt."
+  Output: "Dese una oportunidad, calcula la raiz quadrado de 100 con la función 
+  sqrt()."
+  CorrectAnswer: sqrt(100)
+  AnswerTests: omnitest(correctExpr='sqrt(100)')
+  Hint: "no hay que asignar ningún nombre, teclée sqrt(100) no más."
+
+- Class: cmd_question
+  Output: "Ahora, tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto 
+  llamada mí_sqrt."
+  CorrectAnswer: mí_sqrt <- sqrt(z - 1)
+  AnswerTests: omnitest(correctExpr='mí_sqrt <- sqrt(z - 1)')
+  Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado mí_sqrt."
 
 - Class: mult_question
-  Output: "Antes de ver el contenido del objeto my_sqrt, ¿qué crees que contiene?"
+  Output: "Antes de ver el contenido del objeto mí_sqrt, ¿qué crees que contiene?"
   CorrectAnswer: un vector de longitud 3
   AnswerChoices: "un vector de longitud 3; un solo número (es decir, un vector de longitud 1); un vector de longitud 0 (es decir, un vector vacío)"
   AnswerTests: omnitest(correctVal='un vector de longitud 3')
-  Hint: 'Piensa en cómo R manejó la otra operación ''vectorizada'': elemento por elemento.'
+  Hint: "Piensa en cómo R manejó la otra operación ''vectorizada'': elemento 
+  por elemento."
 
 - Class: cmd_question
-  Output: "Imprime el contenido de my_sqrt."
-  CorrectAnswer: my_sqrt
-  AnswerTests: omnitest(correctExpr='my_sqrt')
-  Hint: "Sólo tienes que escribir my_sqrt y pulse Intro para ver su valor."
+  Output: "Imprime el contenido de mí_sqrt."
+  CorrectAnswer: mí_sqrt
+  AnswerTests: omnitest(correctExpr='mí_sqrt')
+  Hint: "Sólo tienes que escribir mí_sqrt y pulse Intro para ver su valor."
 
 - Class: text
-  Output: "Como habrás adivinado, R primero resta 1 de cada elemento de la z, luego tomó la raíz cuadrada de cada elemento. Esto le deja con un vector de la misma longitud que el vector z inicial."
+  Output: "Como habrás adivinado, R primero resta 1 de cada elemento de la z, 
+  luego tomó la raíz cuadrada de cada elemento. Esto le deja con un vector de la
+  misma longitud que el vector z inicial."
 
 - Class: cmd_question
-  Output: "Ahora, cree un objeto llamado nueva my_div que obtiene el valor de z dividido por my_sqrt."
-  CorrectAnswer: my_div <- z / my_sqrt
-  AnswerTests: omnitest(correctExpr='my_div <- z / my_sqrt')
-  Hint: "Introduzca my_div <- z / my_sqrt. No se requieren los espacios a ambos lados del signo `/`, pero a menudo puede mejorar la legibilidad haciendo código aparece más despejado. Al final, es una preferencia personal."
+  Output: "Ahora, cree un objeto llamado nueva mí_div que obtiene el valor de z 
+  dividido por mí_sqrt."
+  CorrectAnswer: mí_div <- z / mí_sqrt
+  AnswerTests: omnitest(correctExpr='mí_div <- z / mí_sqrt')
+  Hint: "Introduzca mí_div <- z / mí_sqrt. No se requieren los espacios a ambos 
+  lados del signo `/`, pero a menudo puede mejorar la legibilidad haciendo 
+  código aparece más despejado. Al final, es una preferencia personal."
   
 - Class: mult_question
   Output: "¿Cuál crees que es la declaración verdadera?"
-  CorrectAnswer: El primer elemento de my_div es igual al primer elemento de z dividido por el primer elemento de my_sqrt, y así sucesivamente ...
-  AnswerChoices: "El primer elemento de my_div es igual al primer elemento de z dividido por el primer elemento de my_sqrt, y así sucesivamente ...; my_div es un solo número (es decir, un vector de longitud 1); my_div es indefinido"
-  AnswerTests: omnitest(correctVal='El primer elemento de my_div es igual al primer elemento de z dividido por el primer elemento de my_sqrt, y así sucesivamente ...')
-  Hint: "Piense acerca de cómo R maneja las otras operaciones 'vectorizadas' como `+` y `*`."
+  CorrectAnswer: El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...
+  AnswerChoices: "El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...; mí_div es un solo número (es decir, un vector de longitud 1); mí_div es indefinido"
+  AnswerTests: omnitest(correctVal='El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...')
+  Hint: "Piense acerca de cómo R maneja las otras operaciones 'vectorizadas' 
+  como `+` y `*`."
 
 - Class: cmd_question
-  Output: "Adelante e imprimir el contenido de my_div."
-  CorrectAnswer: my_div
-  AnswerTests: omnitest(correctExpr='my_div')
-  Hint: "Escriba my_div y pulse Intro para ver su contenido."
+  Output: "Adelante e imprimir el contenido de mí_div."
+  CorrectAnswer: mí_div
+  AnswerTests: omnitest(correctExpr='mí_div')
+  Hint: "Escriba mí_div y pulse Intro para ver su contenido."
   
 - Class: text
   Output: "Cuando se le presenten dos vectores de la misma longitud, R simplemente realiza la operación aritmética especificada (`+`, `-`, `*`, etc.) elemento elemento por. Si los vectores son de diferentes longitudes, R 'recicla' el vector más corto hasta que es la misma longitud que el vector más largo."
@@ -183,7 +203,9 @@
   Output: "Detrás de las escenas, R es reciclar, el 2 para hacerlo un vector de 2s y el 100 para hacer un vector de 100s. En otras palabras, cuando usted pide R para calcular z * 2 + 100, lo que realmente se calcula es z * c(2, 2, 2) + c(100, 100, 100)."
 
 - Class: cmd_question
-  Output: "Para ver otro ejemplo de cómo funciona este vector «reciclado», trate de sumar c(1, 2, 3, 4) y c(0, 10). No te preocupes por guardar el resultado enun nuevo objeto."
+  Output: "Para ver otro ejemplo de cómo funciona este vector «reciclado», 
+  trate de sumar c(1, 2, 3, 4) y c(0, 10). No te preocupes por guardar el 
+  resultado en un nuevo objeto."
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10)')
   Hint: "Escriba c(1, 2, 3, 4) + c(0, 10) en la consola para ver cómo R suma dos vectores de diferente longitud. No asigne el resultado a un objeto."
@@ -210,19 +232,30 @@
   Hint: "Si su entorno no admite la función de flecha hacia arriba, y luego sólo tienes que escribir el comando corregido para seguir adelante."
 
 - Class: text
-  Output: "Por último, vamos a suponer que desea ver el contenido de un objeto que ha creado anteriormente, pero parece que no puede recordar si usted la nombró como my_div o myDiv. Podrías probar ambos y ver lo que funciona, o ..."
+  Output: "Por último, vamos a suponer que desea ver el contenido de un objeto 
+  que ha creado anteriormente, pero parece que no puede recordar si usted la 
+  nombró como mí_div o míDiv. Podrías probar ambos y ver lo que funciona, o ..."
 
 - Class: cmd_question
-  Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego presionar la tecla Tab (posiblemente más de una vez). La mayoría de los entornos de programación proporcionará una lista de los objetos que ha creado que comiencen con 'mi'. Esto se llama auto-completado y puede ser muy útil cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad. (Si el autocompletado no funciona para ti, sólo tienes que escribir my_div y pulse Intro.)"
-  CorrectAnswer: my_div
-  AnswerTests: omnitest(correctExpr='my_div')
-  Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes que escribir my_div y pulse Enter para continuar."
+  Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego
+  presionar la tecla Tab (posiblemente más de una vez). La mayoría de los 
+  entornos de programación proporcionará una lista de los objetos que ha creado
+  que comiencen con 'mí'. Esto se llama auto-completado y puede ser muy útil 
+  cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad.
+  (Si el autocompletado no funciona para ti, sólo tienes que escribir mí_div y 
+  pulse Intro.)"
+  CorrectAnswer: mí_div
+  AnswerTests: omnitest(correctExpr='mí_div')
+  Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes 
+  que escribir mí_div y pulse Intro para continuar."
 
-- Class: mult_question
-  Output: "¿Te gustaría informar a alguien acerca de su finalización con éxito de esta lección?"
-  CorrectAnswer: NULL
-  AnswerChoices: "Si; No"
-  AnswerTests: notify()
-  Hint: NULL
-
-
+- Class: text
+  Output: "Pues, felicitaciones, has terminado con esta lección en los básicos
+  de manejar R. Espero que ya te sientas más cómod@ trabajando con ella. Puedes
+  seguir con la siguiente class, experimentar con R, o volver otro día.
+  
+  Esta lección se escribió con el paquete swirl, representa el labor de muchos
+  voluntarios. A mi me gustaría recibir retroalimentación en el tema de que tan
+  útiles son estas lecciones. Por favor, espera hasta que hayas completado varias
+  antes de juzgar.  ¡Hasta luego!"
+  

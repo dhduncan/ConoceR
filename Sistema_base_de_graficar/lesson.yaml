@@ -2,7 +2,7 @@
   Course: ConoceR
   Lesson: Sistema_base_de_graficar
   Author: David Kane (traducido por Jose Sosa)
-  Type: Coursera
+  Type: Standard
   Organization: Williams College
   Version: 0.1.1
 
@@ -30,7 +30,7 @@
   Output: "Cargue la trama de datos incluida en R llamada cars, 
   usando data(cars)."
   CorrectAnswer: data(cars)
-  AnswerTests: omnitest(correctVal='data(cars)')
+  AnswerTests: omnitest(correctExpr='data(cars)')
   Hint: Escriba data(cars) para cargar los datos.
 
 - Class: text
@@ -48,8 +48,8 @@
 
 - Class: text
   Output: "Como se puede ver en la página de ayuda, el conjunto de datos cars 
-  tiene sólo dos variables:. La velocidad (speed) y la distancia de frenado 
-  (dist). Tenga en cuenta que estos datos son de la década de 1920."
+  tiene sólo dos variables:. La velocidad (speed en mph) y la distancia de frenado 
+  (dist en ft). Tenga en cuenta que estos datos son de la década de 1920."
 
 - Class: cmd_question
   Output: Ejecute head() en los datos de cars.
@@ -59,7 +59,8 @@
 
 - Class: text
   Output: "Antes de gráficar, siempre es una buena idea saber como son los datos.
-  Los comandos de R para hacer esto son, entre otros, dim(), names(), head(), tail() y summary()."
+  Los comandos de R para hacer esto son, entre otros, dim(), names(), head(), 
+  tail() y summary()."
 
 - Class: cmd_question
   Output: Ejecute el comando plot() en trama de datos (data.frame) cars. 
@@ -126,14 +127,16 @@
   datos cars, dist en el eje x y speed en el eje y. Esto es lo contrario de lo 
   que hicimos anteriormente."
   CorrectAnswer: plot(x = cars$dist, y = cars$speed)
-  AnswerTests: omnitest(correctExpr='plot(x = cars$dist, y = cars$speed)')
+  AnswerTests: any_of_exprs('plot(x = cars$dist, y = cars$speed)', ' plot(y=cars$speed, x=cars$dist)')
   Hint: Escriba plot(x = cars$dist, y = cars$speed) para crear el gráfico.
 
 - Class: text
-  Output: "Probablemente tiene más sentido que la velocidad vaya en el eje x 
-  dado que la distancia de frenado está en función de la velocidad, y no al 
-  revés. Así, para el resto de las preguntas de esta parte de la lección, 
-  siempre asignaremos los argumentos en de acuerdo a esto."
+  Output: "¿Ve que ahora que puesto los ejes al revés, el patrón tiene otra 
+  forma? Sin embargo, probablemente tiene más sentido que la velocidad vaya en 
+  el eje X dado que la distancia de frenado está en función de la velocidad, 
+  y no al revés. Así, para el resto de las preguntas de esta parte de la lección, 
+  siempre asignaremos los argumentos en de acuerdo a esto (como Ud. hizo hace dos
+  pasos)."
 
 - Class: text
   Output: "De hecho, usted puede asumir que las respuestas a las siguientes 
@@ -141,24 +144,17 @@
   con diferentes argumentos utilizados en lugar de los puntos suspensivos."
 
 - Class: cmd_question
-  Output: Recree el gráfico con la etiqueta del eje x (xlab) asignado con "Speed". 
-  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Speed")
-  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Speed")')
-  Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Speed") para crear en gráfico.
+  Output: Recree el gráfico con la etiqueta del eje X (xlab) asignado con "Velocidad (mph)". 
+  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")
+  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")')
+  Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") para crear en gráfico.
 
 - Class: cmd_question
-  Output: Recree el gráfico con la etiqueta del eje y en 'Stopping Distance'. 
-  CorrectAnswer: plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
-  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")')
-  Hint: "Escriba plot(x = cars$speed, y = cars$dist, ylab = 'Stopping Distance') 
+  Output: Recree el último gráfico con la etiqueta del eje y en 'Distancia de frenado (ft)'. 
+  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")
+  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")')
+  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = \"Velocidad (mph)\", ylab = \"Distancia de frenado (ft)\") 
   para crear el gráfico."
-
-- Class: cmd_question
-  Output: "Recree el gráfico con \"Speed\" y \"Stopping Distance\", como etiquetas 
-  de los ejes." 
-  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")
-  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance")')
-  Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Speed", ylab = "Stopping Distance") para crear el gráfico.
 
 - Class: text
   Output: "La razón por la que plot(cars) funcionó en el comienzo de la lección 
@@ -174,17 +170,17 @@
   proyecto real."
 
 - Class: cmd_question
-  Output: "Grafique cars con un título principal de 'My Plot'. Tenga en cuenta 
+  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
   que el argumento para el título principal es 'main' no 'title'."
-  CorrectAnswer: plot(cars, main = 'My Plot')
-  AnswerTests: omnitest(correctExpr='plot(cars, main = 'My Plot')')
-  Hint: Escriba plot(cars, main = 'My Plot') para crear la gráfica.
+  CorrectAnswer: plot(cars, main = "Mí plot")
+  AnswerTests: omnitest(correctExpr='plot(cars, main = "Mi plot")')
+  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
 
 - Class: cmd_question
-  Output: Grafique cars con un título secundario de "My Plot Subtitle".
-  CorrectAnswer: plot(cars, sub = "My Plot Subtitle")
-  AnswerTests: omnitest(correctExpr='plot(cars, sub = "My Plot Subtitle")')
-  Hint: Escriba plot(cars, sub = "My Plot Subtitle") para crear el gráfico.
+  Output: Grafique cars con un título secundario de "Un subtítulo".
+  CorrectAnswer: plot(cars, sub = "Un subtítulo")
+  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
+  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
 
 - Class: text
   Output: "La página de ayuda de plot (?plot) sólo cubre una pequeña parte de 
@@ -194,7 +190,7 @@
   plot(cars, ...) como la respuesta de base a estas preguntas."
 
 - Class: cmd_question
-  Output: Grafique parcela con un color rojo. (Use col = 2 para lograr este efecto).
+  Output: Grafique cars con un color rojo. (Use col = 2 para lograr este efecto).
   CorrectAnswer: plot(cars, col = 2)
   AnswerTests: omnitest(correctExpr='plot(cars, col = 2)')
   Hint: Escriba plot(cars, col = 2) para crear el gráfico.
@@ -202,8 +198,19 @@
 - Class: cmd_question
   Output: Grafique cars limitando al mismo tiempo el eje x entre 10 y 15 (use xlim = c(10, 15) para lograr este efecto).
   CorrectAnswer: plot(cars, xlim = c(10, 15))
-  AnswerTests: omnitest(correctExpr='plot(cars, xlim = c(10, 15))')
+  AnswerTests: any_of_exprs('plot(cars, xlim = c(10, 15))', 'plot(cars, col = 2, xlim = c(10, 15))')
   Hint: Escriba plot(cars, xlim = c(10, 15)) para crear el gráfico.
+
+- Class: text
+  Output: "Pause un momento. Una de las gran ventajas de RStudio es que mantiene
+  las gráficas de la sessión en la memoría. Véase la ventanilla de PLOTS. A la
+  izquiera de ella hay unas flechas. A la izquierda extrema hay una de azul 
+  que indica hacia izquierda y otra azula bien clarita hacia derecha. 
+  
+  Su propósito es navegar entre las gráficas de la sesión.  Toque la flecha 
+  hacia izquierda una vez para ver la gráfica pasada, y luego la de la derecha 
+  para volver a la gráfica actual.  Esto es muy útil para comparar borradores 
+  de una gráfica."
 
 - Class: text
   Output: También puede cambiar la representacion de los símbolos en la gráfico o la forma de graficarlos. La página de ayuda para points (?points) proporciona algunos detalles.
@@ -215,14 +222,17 @@
   Hint: Escriba plot(cars, pch = 2) para crear el gráfico.
 
 - Class: cmd_question
-  Output: Grafique cars uniendo los puntos por lineas. (Use type = "l" para lograr este efecto). 
+  Output: Grafique cars uniendo las observaciones por lineas. (Use type = 'l' para lograr este efecto). 
   CorrectAnswer: plot(cars, type = "l")
   AnswerTests: omnitest(correctExpr='plot(cars, type = "l")')
   Hint: Escriba plot(cars, type = "l") para crear el gráfico.
 
 
 - Class: text
-  Output: Argumentos como "col" y "pch" pueden no parecer muy intuitivos. Y es que no lo son! Es por esto que cada vez más personas usan los paquetes más modernos, como ggplot2, para la creación de sus gráficos en R.
+  Output: "Argumentos como 'col' y 'pch' pueden no parecer muy intuitivos. Y es 
+  que no lo son! Pero, tampoco cuesta mucho trabajo aprenderlos.  Sin embargo,
+  quizá es por esto que cada vez más personas usan los paquetes más modernos, 
+  como ggplot2, para la creación de sus gráficos en R. Conocerá a ggplot luego."
 
 - Class: text
   Output: Sin embargo, es útil tener una introducción a los gráficos de base porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de ellos.
@@ -240,7 +250,8 @@
   Output: Cada vez que usted cargue una nueva trama de datos, usted debe explorarla antes de usarla. En medio de una lección de swirl, sólo tienes que escribir play(). Esto suspende temporalmente la lección (sin perder el trabajo que ya ha realizado) y le permite probar comandos como dim(mtcars) y head(mtcars). Una vez que haya terminado de examinar los datos, sólo tienes que escribir nxt() y la lección continuará donde la dejó.
 
 - Class: cmd_question
-  Output: Busque la página de ayuda para la función boxplot(). 
+  Output: "Busque la página de ayuda para la función boxplot(). Un 'boxplot' se 
+  conoce en español como una diagrama de caja y bigotes."
   CorrectAnswer: ?boxplot
   AnswerTests: any_of_exprs('?boxplot', 'help(boxplot)')
   Hint: Escriba ?boxplot or help(boxplot) para ver la página de ayuda y los detalles a cerca de boxplot.
@@ -254,7 +265,7 @@
 - Class: cmd_question
   Output: Use boxplot()  con formula = mpg ~ cyl y data = mtcars para crear un gráfico de caja.
   CorrectAnswer: boxplot(formula = mpg ~ cyl, data = mtcars)
-  AnswerTests: omnitest(correctExpr='boxplot(formula = mpg ~ cyl, data = mtcars)')
+  AnswerTests: any_of_exprs('boxplot(formula = mpg ~ cyl, data = mtcars)', 'boxplot(mpg ~ cyl, data = mtcars)')
   Hint: Escriba boxplot(formula = mpg ~ cyl, data = mtcars) para crear la gráfica.
 
 - Class: text
@@ -272,42 +283,45 @@
   AnswerTests: any_of_exprs('hist(mtcars$mpg)', 'hist(x = mtcars$mpg)')
   Hint: Escriba hist(mtcars$mpg) para crear el gráfco.
 
-- Class: text
-  Output: Otro tipo de gráficos muy importantes son los gráficos de barras. Estos reciben una matriz o arreglo como argumento. He preparado una matriz llamada marital para experimentar con este tipo de gráfico. Recuerde que puede usar las funciones play() y nxt() para pausar la lección y examinar este conjunto de datos.
+#- Class: text
+#  Output: "Otro tipo de gráficos muy importantes son los gráficos de barras. 
+#  Estos reciben una matriz o arreglo como argumento. He preparado una matriz 
+#  llamada marital para experimentar con este tipo de gráfico. Recuerde que puede 
+#  usar las funciones play() y nxt() para pausar la lección y examinar este 
+#  conjunto de datos."
 
-- Class: cmd_question
-  Output: Busque la página de ayuda para la función barplot(). 
-  CorrectAnswer: ?barplot
-  AnswerTests: any_of_exprs('?barplot', 'help(barplot)')
-  Hint: Escriba ?barplot or help(barplot) para ver la página de ayuda y los detalles a cerca de barplot.
+#- Class: cmd_question
+#  Output: Busque la página de ayuda para la función barplot(). 
+#  CorrectAnswer: ?barplot
+#  AnswerTests: any_of_exprs('?barplot', 'help(barplot)')
+#  Hint: Escriba ?barplot or help(barplot) para ver la página de ayuda y los detalles a cerca de barplot.
 
-- Class: cmd_question
-  Output: Hagamos nuestro primer gráfico de barras con barplot() pasando como argumento solo el conjunto de datos marital, para ver el comportamiento de la función con sus valores por defecto. 
-  CorrectAnswer: barplot(marital)
-  AnswerTests: omnitest(correctExpr='barplot(marital)')
-  Hint: Escriba barplot(marital) para ver un gráfico de barras sobre la matriz de datos marital.
+#- Class: cmd_question
+#  Output: Hagamos nuestro primer gráfico de barras con barplot() pasando como argumento solo el conjunto de datos marital, para ver el comportamiento de la función con sus valores por defecto. 
+#  CorrectAnswer: barplot(marital)
+#  AnswerTests: omnitest(correctExpr='barplot(marital)')
+#  Hint: Escriba barplot(marital) para ver un gráfico de barras sobre la matriz de datos marital.
 
-- Class: cmd_question
-  Output: En casi cualquier tipo de gráfico en R podemos anexar una leyenda. En nuestro grafico de barras hace falta explicar el significado del color de las barras. Para esto incluya en el comando anterior el argumento legend = row.names(marital) 
-  CorrectAnswer: barplot(marital, legend = row.names(marital))
-  AnswerTests: omnitest(correctExpr='barplot(marital, legend = row.names(marital))')
-  Hint: Escriba barplot(marital, legend = row.names(marital)) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
+#- Class: cmd_question
+#  Output: En casi cualquier tipo de gráfico en R podemos anexar una leyenda. En nuestro grafico de barras hace falta explicar el significado del color de las barras. Para esto incluya en el comando anterior el argumento legend = row.names(marital) 
+#  CorrectAnswer: barplot(marital, legend = row.names(marital))
+#  AnswerTests: omnitest(correctExpr='barplot(marital, legend = row.names(marital))')
+#  Hint: Escriba barplot(marital, legend = row.names(marital)) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
-- Class: text
-  Output: Por omisión barplot() muestra todos los valores de cada columna en una misma barra. Si quisieramos mostrar cada valor en una barra distinta podemos usar el argumento "beside"
+#- Class: text
+#  Output: Por omisión barplot() muestra todos los valores de cada columna en una misma barra. Si quisieramos mostrar cada valor en una barra distinta podemos usar el argumento "beside"
 
-- Class: cmd_question
-  Output: Vamos a hacer esto pasando a la función barplot() el conjunto de datos marital y el argumento beside = TRUE 
-  CorrectAnswer: barplot(marital, beside = TRUE)
-  AnswerTests: omnitest(correctExpr='barplot(marital, beside = TRUE)')
-  Hint: Escriba barplot(marital, beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
+#- Class: cmd_question
+#  Output: Vamos a hacer esto pasando a la función barplot() el conjunto de datos marital y el argumento beside = TRUE 
+#  CorrectAnswer: barplot(marital, beside = TRUE)
+#  AnswerTests: omnitest(correctExpr='barplot(marital, beside = TRUE)')
+#  Hint: Escriba barplot(marital, beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
-- Class: cmd_question
-  Output: Pero si lo que queremos es el gráfico de barras en función del estado civil, bastaría con pasar como argumento la matriz de datos traspuesta con la funcion t(). Escriba el mismo comando anterior pero trasponiendo el conjunto de datos con la funcion t(marital). 
-  CorrectAnswer: barplot(marital, beside = TRUE)
-  AnswerTests: omnitest(correctExpr='barplot(t(marital), beside = TRUE)')
-  Hint: Escriba barplot(t(marital), beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
-
+#- Class: cmd_question
+#  Output: Pero si lo que queremos es el gráfico de barras en función del estado civil, bastaría con pasar como argumento la matriz de datos traspuesta con la funcion t(). Escriba el mismo comando anterior pero trasponiendo el conjunto de datos con la funcion t(marital). 
+#  CorrectAnswer: barplot(marital, beside = TRUE)
+#  AnswerTests: omnitest(correctExpr='barplot(t(marital), beside = TRUE)')
+#  Hint: Escriba barplot(t(marital), beside = TRUE) para ver un gráfico de barras sobre la matriz de datos marital con una leyenda.
 
 # Not sure what a good lesson length is for this. 
 # Might add some information on saving plots.
@@ -319,13 +333,14 @@
 - Class: text
   Output: También existen las funciones llamadas de "bajo nivel", que nos permiten agregar elementos a nuestros gráficos, como por ejemplo legend(), text(), points(), lines(), segments(), arrows(), abline(), entre otras.
 
+- Class: text
+  Output: "En esta lección, usted aprendió cómo trabajar con gráficos de base en 
+  R. Si desea explorar otros elementos de gráficos de base, le sugiero que
+  consulte esta página web (http://www.ling.upenn.edu/~joseff/rstudy/week4.html)
+  le ofrecerá un panorama útil."
 
 - Class: text
-  Output: En esta lección, usted aprendió cómo trabajar con gráficos de base en R. El mejor lugar para ir desde aquí es estudiar el paquete ggplot2. Si desea explorar otros elementos de gráficos de base, entonces consulte esta página web (http://www.ling.upenn.edu/~joseff/rstudy/week4.html) le ofrecerá un panorama útil.
-
-- Class: mult_question
-  Output: ¿Te gustaría informar a alguien acerca de su finalización con éxito de esta lección?
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+  Output: "Felicitaciones de nuevo, usted ha terminado otra lección con R. No
+  olvide de guardar los fragmentos de código que le parece útil en el álbum
+  de recortes. Todos los comandos de esta sesión estarán disponible en la tabula
+  'History'."
