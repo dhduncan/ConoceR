@@ -6,3 +6,15 @@
   Organization: Universidad Técnica Particular de Loja
   Version: 2.3.1
 
+- Class: text
+  Output: "¡Muy buenas! En esta leccion Ud importara un conjunto de datos desde
+  una hoja de calculo de MS Excel, y realizar varias graficas con ellos. 
+  ¿List@s?"
+
+- Class: text_question
+  Output: explain the question here
+  CorrectAnswer: answer
+  AnswerTests: omnitest(correctVal='answer')
+  Hint: hint
+
+
