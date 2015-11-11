@@ -23,8 +23,9 @@
   tener una mejor idea de este punto de vista."
 
 - Class: text
-  Output: "Para empezar graficando, vamos a utilizar uno de los muchos conjuntos de datos que R tiene ajuntado. En unas semanas
-  aprenderá como importar y manipular sus propios datos."
+  Output: "Para empezar graficando, vamos a utilizar uno de los muchos 
+  conjuntos de datos que R tiene ajuntado. En unas semanas aprenderá como 
+  importar y manipular sus propios datos."
 
 - Class: cmd_question
   Output: "Cargue la trama de datos incluida en R llamada cars, 
@@ -48,8 +49,9 @@
 
 - Class: text
   Output: "Como se puede ver en la página de ayuda, el conjunto de datos cars 
-  tiene sólo dos variables:. La velocidad (speed en mph) y la distancia de frenado 
-  (dist en ft). Tenga en cuenta que estos datos son de la década de 1920."
+  tiene sólo dos variables:. La velocidad (speed en mph) y la distancia de 
+  frenado (dist en ft). Tenga en cuenta que estos datos son de la década 
+  de 1920."
 
 - Class: cmd_question
   Output: Ejecute head() en los datos de cars.
@@ -144,17 +146,20 @@
   con diferentes argumentos utilizados en lugar de los puntos suspensivos."
 
 - Class: cmd_question
-  Output: Recree el gráfico con la etiqueta del eje X (xlab) asignado con "Velocidad (mph)". 
+  Output: "Recree el gráfico con la etiqueta del eje X (xlab) asignado 
+  con "Velocidad (mph)"."
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")')
-  Hint: Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") para crear en gráfico.
+  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") 
+  para crear en gráfico."
 
 - Class: cmd_question
-  Output: Recree el último gráfico con la etiqueta del eje y en 'Distancia de frenado (ft)'. 
+  Output: "Recree el último gráfico con la etiqueta del eje y en 
+  'Distancia de frenado (ft)'." 
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")')
-  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = \"Velocidad (mph)\", ylab = \"Distancia de frenado (ft)\") 
-  para crear el gráfico."
+  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = \"Velocidad (mph)\", 
+  ylab = \"Distancia de frenado (ft)\") para crear el gráfico."
 
 - Class: text
   Output: "La razón por la que plot(cars) funcionó en el comienzo de la lección 
@@ -196,7 +201,8 @@
   Hint: Escriba plot(cars, col = 2) para crear el gráfico.
 
 - Class: cmd_question
-  Output: Grafique cars limitando al mismo tiempo el eje x entre 10 y 15 (use xlim = c(10, 15) para lograr este efecto).
+  Output: "Grafique cars limitando al mismo tiempo el eje x entre 10 y 15 
+  (use xlim = c(10, 15) para lograr este efecto)."
   CorrectAnswer: plot(cars, xlim = c(10, 15))
   AnswerTests: any_of_exprs('plot(cars, xlim = c(10, 15))', 'plot(cars, col = 2, xlim = c(10, 15))')
   Hint: Escriba plot(cars, xlim = c(10, 15)) para crear el gráfico.
@@ -213,16 +219,20 @@
   de una gráfica."
 
 - Class: text
-  Output: También puede cambiar la representacion de los símbolos en la gráfico o la forma de graficarlos. La página de ayuda para points (?points) proporciona algunos detalles.
+  Output: "También puede cambiar la representacion de los símbolos en la 
+  gráfico o la forma de graficarlos. La página de ayuda para points (?points) 
+  proporciona algunos detalles."
 
 - Class: cmd_question
-  Output: Grafique cars utilizando triángulos. (Use pch = 2 para lograr este efecto). 
+  Output: "Grafique cars utilizando triángulos. (Use pch = 2 para lograr este 
+  efecto)." 
   CorrectAnswer: plot(cars, pch = 2)
   AnswerTests: omnitest(correctExpr='plot(cars, pch = 2)')
   Hint: Escriba plot(cars, pch = 2) para crear el gráfico.
 
 - Class: cmd_question
-  Output: Grafique cars uniendo las observaciones por lineas. (Use type = 'l' para lograr este efecto). 
+  Output: "Grafique cars uniendo las observaciones por lineas. (Use type = 'l' 
+  para lograr este efecto)." 
   CorrectAnswer: plot(cars, type = "l")
   AnswerTests: omnitest(correctExpr='plot(cars, type = "l")')
   Hint: Escriba plot(cars, type = "l") para crear el gráfico.
@@ -235,10 +245,13 @@
   como ggplot2, para la creación de sus gráficos en R. Conocerá a ggplot luego."
 
 - Class: text
-  Output: Sin embargo, es útil tener una introducción a los gráficos de base porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de ellos.
+  Output: "Sin embargo, es útil tener una introducción a los gráficos de base 
+  porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de 
+  ellos."
 
 - Class: text
-  Output: Vamos ahora a ver algunas otras funciones en los gráficos de base que pueden ser útiles, comencemos con los diagramas de caja (boxplots).
+  Output: "Vamos ahora a ver algunas otras funciones en los gráficos de base 
+  que pueden ser útiles, comencemos con los diagramas de caja (boxplots)."
 
 - Class: cmd_question
   Output: Cargue de la trama de datos llamada mtcars.
@@ -247,35 +260,61 @@
   Hint: Escriba data(mtcars) para cargar los datos.
 
 - Class: text
-  Output: Cada vez que usted cargue una nueva trama de datos, usted debe explorarla antes de usarla. En medio de una lección de swirl, sólo tienes que escribir play(). Esto suspende temporalmente la lección (sin perder el trabajo que ya ha realizado) y le permite probar comandos como dim(mtcars) y head(mtcars). Una vez que haya terminado de examinar los datos, sólo tienes que escribir nxt() y la lección continuará donde la dejó.
+  Output: "Cada vez que usted cargue una nueva trama de datos, usted debe 
+  explorarla antes de usarla. En medio de una lección de swirl, sólo tienes 
+  que escribir play(). Esto suspende temporalmente la lección (sin perder el 
+  trabajo que ya ha realizado) y le permite probar comandos como dim(mtcars) 
+  y head(mtcars). Una vez que haya terminado de examinar los datos, sólo 
+  tienes que escribir nxt() y la lección continuará donde la dejó."
 
 - Class: cmd_question
   Output: "Busque la página de ayuda para la función boxplot(). Un 'boxplot' se 
   conoce en español como una diagrama de caja y bigotes."
   CorrectAnswer: ?boxplot
   AnswerTests: any_of_exprs('?boxplot', 'help(boxplot)')
-  Hint: Escriba ?boxplot or help(boxplot) para ver la página de ayuda y los detalles a cerca de boxplot.
+  Hint: "Escriba ?boxplot or help(boxplot) para ver la página de ayuda y los 
+  detalles a cerca de boxplot."
 
 - Class: text
-  Output: En lugar de agregar columnas de datos directamente como argumentos de entrada, como lo hicimos con plot(), a menudo es útil pasar toda la trama de datos. Esto es lo que el argumento "data" en boxplot() permite.
+  Output: "En lugar de agregar columnas de datos directamente como argumentos 
+  de entrada, como lo hicimos con plot(), a menudo es útil pasar toda la trama 
+  de datos. Esto es lo que el argumento "data" en boxplot() permite."
 
 - Class: text
-  Output: boxplot(), al igual que muchas de las funciones de R, también tiene un argumento "formula", que es en general, una expresión con una tilde ("~") que indica la relación entre las variables de entrada. Esto le permite introducir algo como mpg ~ cyl para graficar la relación entre cyl (número de cilindros) en el eje x y mpg (millas por galón) en el eje y, es decir "millas por galón en función del número de cilindros". 
+  Output: "boxplot(), al igual que muchas de las funciones de R, también tiene 
+  un argumento "formula", que es en general, una expresión con una tilde ("~") 
+  que indica la relación entre las variables de entrada. Esto le permite 
+  introducir algo como mpg ~ cyl para graficar la relación entre cyl (número 
+  de cilindros) en el eje x y mpg (millas por galón) en el eje y, es decir 
+  "millas por galón en función del número de cilindros"." 
 
 - Class: cmd_question
-  Output: Use boxplot()  con formula = mpg ~ cyl y data = mtcars para crear un gráfico de caja.
+  Output: "Use boxplot()  con formula = mpg ~ cyl y data = mtcars para crear 
+  un gráfico de caja."
   CorrectAnswer: boxplot(formula = mpg ~ cyl, data = mtcars)
   AnswerTests: any_of_exprs('boxplot(formula = mpg ~ cyl, data = mtcars)', 'boxplot(mpg ~ cyl, data = mtcars)')
-  Hint: Escriba boxplot(formula = mpg ~ cyl, data = mtcars) para crear la gráfica.
+  Hint: "Escriba boxplot(formula = mpg ~ cyl, data = mtcars) para crear la 
+  gráfica."
 
 - Class: text
-  Output: El gráfico muestra que mpg es mucho menor para los carros con más cilindros. Tenga en cuenta que podemos utilizar el mismo conjunto de argumentos que hemos explorado con plot() para añadir etiquetas de los ejes, títulos y demás.
+  Output: "El gráfico muestra que mpg es mucho menor para los carros con más 
+  cilindros. Tenga en cuenta que podemos utilizar el mismo conjunto de 
+  argumentos que hemos explorado con plot() para añadir etiquetas de los ejes, 
+  títulos y demás."
 
 - Class: text
-  Output: Los boxplots muestran una suerte de distribución de cada variable, las lineas superior e inferior representan los máximos y mínimos (estadísticos). La caja interna denota el rango entre el primer cuartil y el tercer cuartil. La linea central representa la mediana (el punto que divide la muestra en dos partes iguales). Por último, es posible que se dibujen puntos aislados fuera de algunos bloxplots, estos puntos representas los datos atípicos. 
+  Output: "Los boxplots muestran una suerte de distribución de cada variable, 
+  las lineas superior e inferior representan los máximos y mínimos 
+  (estadísticos). La caja interna denota el rango entre el primer cuartil y el 
+  tercer cuartil. La linea central representa la mediana (el punto que divide 
+  la muestra en dos partes iguales). Por último, es posible que se dibujen 
+  puntos aislados fuera de algunos bloxplots, estos puntos representas los 
+  datos atípicos." 
 
 - Class: text
-  Output: Al mirar una sola variable, los histogramas son una herramienta útil. hist() es la función R asociada. Al igual que plot(), hist() se utiliza mejor con sólo pasar en un solo vector. 
+  Output: "Al mirar una sola variable, los histogramas son una herramienta 
+  útil. hist() es la función R asociada. Al igual que plot(), hist() se utiliza 
+  mejor con sólo pasar en un solo vector." 
 
 - Class: cmd_question
   Output: Use hist() con el vector mtcars$mpg  para crear un histograma.
@@ -328,10 +367,15 @@
 # Other functions that I use include identify().
 
 - Class: text
-  Output: Todas las funciones estudiadas hasta ahora son conocidas como de "alto nivel", debido a que generan como resultado un gráfico completo. Le invitamos a estudiar otras funciones de alto nivel como pie(), contour(), image(), persp() y pairs().
+  Output: "Todas las funciones estudiadas hasta ahora son conocidas como de 
+  "alto nivel", debido a que generan como resultado un gráfico completo. Le 
+  invitamos a estudiar otras funciones de alto nivel como pie(), contour(), 
+  image(), persp() y pairs()."
 
 - Class: text
-  Output: También existen las funciones llamadas de "bajo nivel", que nos permiten agregar elementos a nuestros gráficos, como por ejemplo legend(), text(), points(), lines(), segments(), arrows(), abline(), entre otras.
+  Output: "También existen las funciones llamadas de 'bajo nivel', que nos 
+  permiten agregar elementos a nuestros gráficos, como por ejemplo legend(), 
+  text(), points(), lines(), segments(), arrows(), abline(), entre otras."
 
 - Class: text
   Output: "En esta lección, usted aprendió cómo trabajar con gráficos de base en 
