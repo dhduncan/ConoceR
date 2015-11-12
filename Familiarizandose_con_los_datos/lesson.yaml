@@ -63,20 +63,13 @@
   filas. Inténtalo."
   CorrectAnswer: nrow(plants)
   AnswerTests: omnitest(correctExpr='nrow(plants)')
-  Hint: "Utilice nrow(plants) para ver sólo el número de filas.
+  Hint: "Utilice nrow(plants) para ver sólo el número de filas."
 
 - Class: cmd_question
   Output: ... Y ncol(plants) para ver sólo el número de columnas.
   CorrectAnswer: ncol(plants)
   AnswerTests: omnitest(correctExpr='ncol(plants)')
   Hint: Utilice ncol(plants) para ver sólo el número de columnas.
-
-#- Class: cmd_question
-#  Output: "Si usted es curioso en cuanto a la cantidad de espacio del conjunto 
-#  de datos está ocupando en la memoria, puede utilizar object.size(plants)."
-#  AnswerTests: omnitest(correctExpr='object.size(plants)')
-#  Hint: "object.size(plants) le dirá la cantidad de memoria ocupada por la 
-#  trama de datos plants."
 
 - Class: cmd_question
   Output: "Ahora que sabemos forma y tamaño del conjunto de datos, vamos a 
@@ -88,7 +81,7 @@
   (es decir, variables)."
   
 - Class: text
-  Output: "Ahora, ya que esté trabajando en RStudio ahora mismo, le comento que
+  Output: "Ahora, ya que esté usted trabajando en RStudio ahora mismo, le comento que
   también se puede ver muchos de estos detalles en la ventanilla de ENVIRONMENT
   (entorno). Allí, justo a la izquierda del objeto de datos plants verá usted
   una flechita en un cículo azul. Púlselo para que revele su detalle."
@@ -159,7 +152,7 @@
 
 - Class: text
   Output: "Para las variables categóricas (llamadas variables 'factor' en R), 
-  summary() muestra el número de veces que cada valor (o "nivel") se produce 
+  summary() muestra el número de veces que cada valor (o 'nivel') se produce 
   en los datos. Por ejemplo, cada valor de Nombre_cientifico sólo aparece una 
   vez, ya que es única para una planta específica. Por el contrario, el resumen 
   de Duration (también una variable de factor) nos dice que nuestro conjunto 
@@ -167,7 +160,7 @@
 
 - Class: cmd_question
   Output: "Se puede ver que R trunca el resumen para Periodo_crecimiento 
-  incluyendo una nueva categoría denominada "Other". Dado que es una variable 
+  incluyendo una nueva categoría denominada 'Other'. Dado que es una variable 
   categórica / Factor, podemos ver cuántas veces cada valor realmente ocurre 
   en los datos con table(plants$Periodo_crecimiento)."
   CorrectAnswer: table(plants$Periodo_crecimiento)
@@ -221,7 +214,7 @@
 
 - Class: mult_question
   Output: "Con variables cuantitativas la función summary() calcula, como 
-  condición, base los límites (inferior y superior), los cuartiles 1 y 3, la 
+  condición base, los límites (inferior y superior), los cuartiles 1 y 3, la 
   mediana y la media. ¿Qué calcula para factores (variables cualitativas)? Pista:
   Usted vió ejemplos hace unos pasos y se los puede revisar por deslizar hacia
   arriba en la consola."
@@ -236,7 +229,8 @@
 - Class: figure
   Output: "Por último, le dejo con una gráfica sencilla para visualizar este
   conjunto de datos. Debiera haber aparecido en la ventanilla de PLOTs ya. No es
-  nada sensacional, sino un ejemplo de una presentación para echarse un vistazo."
+  nada sensacional, sino un ejemplo de una presentación para echarse un vistazo
+  a la distribución de valores."
   Figure: periodo.R
   FigureType: new
 
