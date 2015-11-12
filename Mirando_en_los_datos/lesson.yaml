@@ -1,6 +1,6 @@
 - Class: meta
   Course: ConoceR
-  Lesson: Mirando en los Datos
+  Lesson: Familiarizandose con los datos
   Author: Nick Carchedi (translations Jose Sosa y David Duncan)
   Type: Standard
   Organization: JHU Biostat & Universidad Técnica Particular de Loja
@@ -136,7 +136,7 @@
   últimas 15 filas."
   CorrectAnswer: tail(plants, 15)
   AnswerTests: omnitest(correctExpr='tail(plants, 15)')
-  Hint: "tail(plants, 15) le mostrará las últimoas 15 filas del conjunto de 
+  Hint: "tail(plants, 15) le mostrará las últimas 15 filas del conjunto de 
   datos."
 
 - Class: cmd_question
@@ -232,6 +232,20 @@
   no se puede calcular esos estadísticos, y sin un contexto analítico, el
   concepto de significancia no tiene sentido. Lo que hace es calcular 
   frecuencias de observaciones en cada nivel del factor."
+
+- Class: figure
+  Output: "Por último, le dejo con una gráfica sencilla para visualizar este
+  conjunto de datos. Debiera haber aparecido en la ventanilla de PLOTs ya. No es
+  nada sensacional, sino un ejemplo de una presentación para echarse un vistazo."
+  Figure: periodo.R
+  FigureType: new
+
+- Class: text
+  Output: "En esta grafica se ve la distribucion de temperaturas minimas para las
+  5166 especie de plantas, categorizadas por su periodo de crecimiento anual.
+  ¿Que detalle se llama a su atencion de esta grafica? Puede ser de la realizacion
+  de la grafica, o del contenido. Lo que sea, comentelo en nuestras 
+  paginas del curso, o tuitearlo con #MOOCUTPLAnalisisDatos!"
 
 - Class: text
   Output: "Felicitaciones, ha terminado usted otra lección. ¡No se olvide de
