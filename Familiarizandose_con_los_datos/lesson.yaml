@@ -34,7 +34,7 @@
   CorrectAnswer: class(plants)
   AnswerTests: omnitest(correctExpr='class(plants)')
   Hint: "Utilice la class(plants) para comprobar la clase de la variable 
-  plants."
+  plants. Usted puede ver que class en inglés = clase en español."
 
 - Class: text
   Output: "Es muy común que los datos se almacenen en una trama de datos 
@@ -60,7 +60,7 @@
 
 - Class: cmd_question
   Output: "También puede utilizar nrow(plants) para ver sólo el número de 
-  filas. Inténtalo."
+  filas. El comando Nrow quiere decir n de número y row = fila. Inténtalo."
   CorrectAnswer: nrow(plants)
   AnswerTests: omnitest(correctExpr='nrow(plants)')
   Hint: "Utilice nrow(plants) para ver sólo el número de filas."
@@ -89,7 +89,8 @@
 - Class:
   Output: "¿Ve usted las mismas dimensiones de esta trama de datos plants, y 
   los nombres y las clases de variables que contiene? Este ejemplo es un poco 
-  feo porque tiene muchos valores perdidos representados por 'NA'. "
+  feo porque tiene muchos valores perdidos representados por 'NA'. Parece a las
+  letras de una canción de pop, ¿no?"
 
 - Class: text
   Output: "Hemos aplicado unos nombres de variables bastante descriptivos 
@@ -103,7 +104,8 @@
   superior del conjunto de datos. Dese la oportunidad con un solo argumento."
   CorrectAnswer: head(plants)
   AnswerTests: omnitest(correctExpr='head(plants)')
-  Hint: head(plants) le mostrará la parte superior del conjunto de datos.
+  Hint: "Head(plants) le mostrará la parte superior (head = cabeza) del conjunto 
+  de datos."
 
 - Class: text
   Output: "Tome un minuto para mirar el resultado y entender la salida 
@@ -239,7 +241,7 @@
   5166 especie de plantas, categorizadas por su periodo de crecimiento anual.
   ¿Que detalle se llama a su atencion de esta grafica? Puede ser de la realizacion
   de la grafica, o del contenido. Lo que sea, comentelo en nuestras 
-  paginas del curso, o tuitearlo con #MOOCUTPLAnalisisDatos!"
+  paginas del curso, o tuítearlo con #MOOCUTPLAnalisisDatos!"
 
 - Class: text
   Output: "Felicitaciones, ha terminado usted otra lección. ¡No se olvide de
