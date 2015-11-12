@@ -91,8 +91,12 @@
   Output: "Ahora, ya que esté trabajando en RStudio ahora mismo, le comento que
   también se puede ver muchos de estos detalles en la ventanilla de ENVIRONMENT
   (entorno). Allí, justo a la izquierda del objeto de datos plants verá usted
-  una flechita en un cículo azul. Púlselo para que revele su detalle. ¿Ve usted
-  los nombres, las dimensiones, las clases de variables?"
+  una flechita en un cículo azul. Púlselo para que revele su detalle."
+  
+- Class:
+  Output: "¿Ve usted las mismas dimensiones de esta trama de datos plants, y 
+  los nombres y las clases de variables que contiene? Este ejemplo es un poco 
+  feo porque tiene muchos valores perdidos representados por 'NA'. "
 
 - Class: text
   Output: "Hemos aplicado unos nombres de variables bastante descriptivos 
@@ -148,7 +152,7 @@
 
 - Class: text
   Output: "summary() proporciona una salida diferente para cada variable, 
-  dependiendo de su clase. Para los datos numéricos como Precip_Min, summary() 
+  dependiendo de su clase. Para los datos numéricos como Precip_Mín, summary() 
   muestra el mínimo, primer cuartil, la mediana, la media, el tercer cuartil, 
   y el máximo. Estos valores nos ayudan a entender cómo se distribuyen los 
   datos."
@@ -156,7 +160,7 @@
 - Class: text
   Output: "Para las variables categóricas (llamadas variables 'factor' en R), 
   summary() muestra el número de veces que cada valor (o "nivel") se produce 
-  en los datos. Por ejemplo, cada valor de Scientific_Name sólo aparece una 
+  en los datos. Por ejemplo, cada valor de Nombre_cientifico sólo aparece una 
   vez, ya que es única para una planta específica. Por el contrario, el resumen 
   de Duration (también una variable de factor) nos dice que nuestro conjunto 
   de datos contiene 3031 plantas perennes, 682 plantas anuales, etc."
@@ -178,7 +182,8 @@
 
 - Class: cmd_question
   Output: "Quizás la función más útil y concisa para la comprensión de la 
-  estructura de sus datos es str (E*str*uctura). Dese una oportunidad ahora."
+  estructura de sus datos es str() de la palabra E*str*uctura. Dese una 
+  oportunidad ahora."
   CorrectAnswer: str(plants)
   AnswerTests: omnitest(correctExpr='str(plants)')
   Hint: Utilice str(plants) para observar la estructura de sus datos.
@@ -204,9 +209,31 @@
   ahorrarle tiempo y frustración más tarde durante su análisis."
 
 - Class: mult_question
-  Output: "¿Te gustaría informar a alguien acerca de su finalización con éxito 
-  de esta lección?"
-  CorrectAnswer: NULL
-  AnswerChoices: Yes; No
-  AnswerTests: notify()
-  Hint: NULL
+  Output: "La lección le hubiera enseñado a usted algunas funciones de gran
+  utilidad. Entres todas ellas, dos sobresalten porque muestran muchos detalles
+  importantes de un tramo de datos en una sola función. ¿Cuales son?"
+  AnswerChoices: "str() y summary(); nrow() y tail(); names() y head(); tail() y summary()"
+  CorrectAnswer: str() y summary()
+  AnswerTests: omnitest(correctVal= 'str() y summary()')
+  Hint: "Aunque todas las funciones de esta lección tienen su papel, para hechar
+  un vistazo a los detalles claves de todo el conjunto str() y summary() son
+  imprescindibles."
+
+- Class: mult_question
+  Output: "Con variables cuantitativas la función summary() calcula, como 
+  condición, base los límites (inferior y superior), los cuartiles 1 y 3, la 
+  mediana y la media. ¿Qué calcula para factores (variables cualitativas)? Pista:
+  Usted vió ejemplos hace unos pasos y se los puede revisar por deslizar hacia
+  arriba en la consola."
+  AnswerChoices: "Frecuencia de casos en cada nivel del factor; Lo mismo que calcula para variables cuantitativas; La significancia de cada factor"
+  CorrectAnswer: Frecuencia de casos en cada nivel del factor
+  AnswerTests: omnitest(correctVal= 'Frecuencia de casos en cada nivel del factor')
+  Hint: "Hmmm Ud. acertó mal esta vez. Para un factor o variable cualitativa, 
+  no se puede calcular esos estadísticos, y sin un contexto analítico, el
+  concepto de significancia no tiene sentido. Lo que hace es calcular 
+  frecuencias de observaciones en cada nivel del factor."
+
+- Class: text
+  Output: "Felicitaciones, ha terminado usted otra lección. ¡No se olvide de
+  guardar pedazos de código que le parece útil en su álbum de recortes!  Hasta
+  la próxima oportunidad, le espero mucho éxito en sus labores."
