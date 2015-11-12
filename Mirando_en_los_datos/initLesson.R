@@ -1,6 +1,6 @@
 # Path to data
 .datapath <- file.path(path.package('swirl'), 'Courses',
-                      'Programando_en_R', 'Looking_at_Data',
+                      'ConoceR', 'Mirando_en_los_datos',
                       'plant-data.txt')
 # Read in data
 plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
@@ -10,7 +10,7 @@ plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
 plants <- plants[, !(names(plants) %in% .cols2rm)]
 
 # Make names pretty
-names(plants) <- c('Scientific_Name', 'Duration', 'Active_Growth_Period',
-                   'Foliage_Color', 'pH_Min', 'pH_Max',
-                   'Precip_Min', 'Precip_Max',
-                   'Shade_Tolerance', 'Temp_Min_F')
+names(plants) <- c('Nombre_científico', 'Duración', 'Periodo_crecimiento',
+                   'Color_follaje', 'pH_Mín', 'pH_Max',
+                   'Precip_Mín', 'Precip_Max',
+                   'Tolerancia_de_sombra', 'Temp_Mín_F')

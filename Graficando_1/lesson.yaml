@@ -10,6 +10,11 @@
   Output: "¡Muy buenas! En esta leccion Ud importara un conjunto de datos desde
   una hoja de calculo de MS Excel, y realizar varias graficas con ellos. 
   ¿List@s?"
+  
+- Class: text
+  Output: "Ud va a cargar datos que ya hubiera visto en la visita a la galería, 
+  los que resumen el número de hijos y hijas que tiene las mujeres de las varias
+  provincias de El Ecuador."
 
 - Class: text_question
   Output: explain the question here
