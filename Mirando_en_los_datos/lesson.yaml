@@ -71,12 +71,12 @@
   AnswerTests: omnitest(correctExpr='ncol(plants)')
   Hint: Utilice ncol(plants) para ver sólo el número de columnas.
 
-- Class: cmd_question
-  Output: "Si usted es curioso en cuanto a la cantidad de espacio del conjunto 
-  de datos está ocupando en la memoria, puede utilizar object.size(plants)."
-  AnswerTests: omnitest(correctExpr='object.size(plants)')
-  Hint: "object.size(plants) le dirá la cantidad de memoria ocupada por la 
-  trama de datos plants."
+#- Class: cmd_question
+#  Output: "Si usted es curioso en cuanto a la cantidad de espacio del conjunto 
+#  de datos está ocupando en la memoria, puede utilizar object.size(plants)."
+#  AnswerTests: omnitest(correctExpr='object.size(plants)')
+#  Hint: "object.size(plants) le dirá la cantidad de memoria ocupada por la 
+#  trama de datos plants."
 
 - Class: cmd_question
   Output: "Ahora que sabemos forma y tamaño del conjunto de datos, vamos a 
@@ -86,6 +86,13 @@
   AnswerTests: omnitest(correctExpr='names(plants)')
   Hint: "names(plants) volverán un vector carácter de nombres de columna 
   (es decir, variables)."
+  
+- Class: text
+  Output: "Ahora, ya que esté trabajando en RStudio ahora mismo, le comento que
+  también se puede ver muchos de estos detalles en la ventanilla de ENVIRONMENT
+  (entorno). Allí, justo a la izquierda del objeto de datos plants verá usted
+  una flechita en un cículo azul. Púlselo para que revele su detalle. ¿Ve usted
+  los nombres, las dimensiones, las clases de variables?"
 
 - Class: text
   Output: "Hemos aplicado unos nombres de variables bastante descriptivos 
@@ -155,13 +162,13 @@
   de datos contiene 3031 plantas perennes, 682 plantas anuales, etc."
 
 - Class: cmd_question
-  Output: "Se puede ver que R trunca el resumen para Active_Growth_Period 
+  Output: "Se puede ver que R trunca el resumen para Periodo_crecimiento 
   incluyendo una nueva categoría denominada "Other". Dado que es una variable 
   categórica / Factor, podemos ver cuántas veces cada valor realmente ocurre 
-  en los datos con table(plants$Active_Growth_Period)."
-  CorrectAnswer: table(plants$Active_Growth_Period)
-  AnswerTests: omnitest(correctExpr='table(plants$Active_Growth_Period)')
-  Hint: "table(plants$Active_Growth_Period) mostrará los recuentos para cada 
+  en los datos con table(plants$Periodo_crecimiento)."
+  CorrectAnswer: table(plants$Periodo_crecimiento)
+  AnswerTests: omnitest(correctExpr='table(plants$Periodo_crecimiento)')
+  Hint: "table(plants$Periodo_crecimiento) mostrará los recuentos para cada 
   nivel de la variable de factor."
 
 - Class: text
