@@ -1,0 +1,198 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Distribucion binomial
+  Author: David H. Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.3.1
+
+- Class: text
+  Output: "¡Buenas! Esta lección le va a ayudar resolver ejercicios de
+  probabilidad con R. ¿List@?"
+
+- Class: text_question
+  Output: "Empezamos con la distribución que se usa para tratar resumenes de 
+  ensayos independientes, cada uno de dos posibilidades denominadas 'éxito' o 
+  'fracaso'. ¿Sabe usted cómo se llama este tipo de variable aleatoria?"
+  CorrectAnswer: binomial
+  AnswerTests: omnitest(correctVal='binomial')
+  Hint: "Este tipo de variable o distribución se llama binomial. Siento si ya
+  lo supiera pero la había ingresado con mayúscula, este programa es un poco 
+  rígido así."
+
+- Class: mult_question
+  Output: "¿Qué quiere decir éxito o fracaso en este contexto?"
+  AnswerChoices: "Es arbitrario pero hay que definir un éxito que vale 1, un fracaso que vale 0; Se asigna éxito al resultado bueno y fracaso al otro"
+  CorrectAnswer: Es arbitrario pero hay que definir un éxito que vale 1, un fracaso que vale 0
+  AnswerTests: omnitest(correctVal= 'Es arbitrario pero hay que definir un éxito que vale 1, un fracaso que vale 0')
+  Hint: "Siempre y cuando tratamos a una variable de este tipo, tiros de 
+  monedas, presencia o ausencia, vivo o muerto, verdadero o falso, hay que
+  definir la respuesta que se considera el éxito, pero no tiene que ser positivo."
+
+- Class: text
+  Output: "R tiene una familia de funciones de gran utilidad para trabajar con
+  esta distribución; dbinom(), pbinom(), qbinom() y rbinom(). En esta lección
+  jugará usted con tres de las cuatro. Sinceramente, nunca he utilizado qbinom
+  así que ¡no sé yo exactamente lo que hace!"
+
+- Class: cmd_question
+  Output: "Primero, para que tengas una idea de la naturaleza de los datos,
+  empiece por generar unos datos al azar. Fingimos que vamos a lanzar una moneda
+  4 veces. Digamos que un éxito sea que la moneda nos da la cara. Realice este 
+  experimento con este comando rbinom(n = 4, size = 1, prob = 0.5). Acá n = en 
+  numero de tiros, size = para cuantos casos buscamos éxitos o fracasos en cada 
+  experimento (1 moneda), y prob igual la probabilidad de éxito en cada tiro."
+  CorrectAnswer: rbinom(n = 4, size = 1, prob = 0.5)
+  AnswerTests: omnitest(correctExpr='rbinom(n = 4, size = 1, prob = 0.5)')
+  Hint: "Escriba rbinom(n = 4, size = 1, prob = 0.5)."
+
+- Class: cmd_question
+  Output: "Usted hubiera visto que R imprimió 4 valores a la pantalla, alguna 
+  combinación de caras (1) y cruces (0). Repítalo pero esta vez para 10 tiros 
+  de un dado."
+  CorrectAnswer: rbinom(n = 10, size = 1, prob = 0.5)
+  AnswerTests: omnitest(correctExpr = 'rbinom(n = 10, size = 1, prob = 0.5)')
+  Hint: "Se escribe el mismo comando que el último, cambiando solo 10 por 4."
+
+- Class: text
+  Output: "Puesto que nuestro ejemplo tiene probabilidad de 0.5, igual chance de
+  que resulte éxito (cara) o fracaso (cruz), se esperaría que en la secuencia de
+  números, hay aproximadamente una cantidad igual de los 1 y 0. ¿Salió así? Sin
+  embargo, ya que se los sacó al azar no es nada cierto."
+
+- Class: cmd_question
+  Output: "Si fuera al revés, es decir rbinom(n = 1, size = 10, prob = 0.5), 
+  ahora con 1 ensayo de tamaño 10, ¿qué se esperaría que nos devolviera R? 
+  En este caso un ejemplo sería anotar el genero de un grupo de estudiantes 
+  como mujer (éxito, valor 1) o hombre (fracaso, valor 0), suponiendo que la
+  probabilidad de éxito sea 0.5. Dese la oportunidad."
+  CorrectAnswer: rbinom(n = 1, size = 10, prob = 0.5)
+  AnswerTests: omnitest(correctExpr= 'rbinom(n = 1, size = 10, prob = 0.5)')
+  Hint: "Hemos cambiado los valores de n y p. Escriba rbinom(n = 1, size = 10, 
+  prob = 0.5) para continuar."
+
+- Class: text
+  Output: "Saliera un numero entre 0 y 10, ¿verdad?, probablemente alrededor de
+  5? En este caso pedimos un saque del número de éxitos (mujeres) entre 10 
+  casos o sujetos."
+  
+- Class: text
+  Output: "Ahora usted va a graficar la función de masa de probabilidad mediante
+  la función dbinom() y la función plot(). Esta grafica se demuestre la
+  distribución de las probabilidades de cada valor posible de cualquier de los
+  dos últimos saques de valores. En este contexto, ya que en los dos casos hemos
+  definido la misma probabilidad (0.5), no importa si fuera 1 ensayo con 10 
+  estudiantes, o 10 ensayos con una moneda, la probabilidad que hubieramos
+  observado 5 caras o 5 mujeres es igual. Ya verá"
+
+- Class: cmd_question
+  Output: "Lo hacemos en dos pasos, aunque se podría hacerlo todo a la vez.
+  Haga un objecto X que será un vector que contiene todos los valores que 
+  nuestra variable aleatoria - el número de caras / mujeres - pueda tomar. Usted
+  puede utilizar la function c() o los dos puntos para indicar la secuencia desde
+  0 hasta 10."
+  CorrectAnswer: X <- 0:10
+  AnswerTests: any_of_exprs('X <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)', 'X <- 0:10')
+  Hint: "Cualquier de estas dos opciones funcionará X <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 o X <- 0:10"
+
+- Class: cmd_question
+  Output: "Muy bien, ahora la gráfica. Teclee plot(X, dbinom(X, size = 10, 
+  prob=0.5), type = 'h', ylab = 'probabilidad (X=x)'). Este comando usa la
+  función plot(), con la función dbinom() por dentro. Añadé dos elementos no
+  estándares, el tipo (h) y la etiqueta para el eje Y con el argumento ylab."
+  CorrectAnswer: plot(X, dbinom(X, size = 10, prob=0.5), type = 'h', ylab = 'probabilidad (X=x)')
+  AnswerTests: omnitest(correctExpr="plot(X, dbinom(X, size = 10, prob=0.5), type = 'h', ylab = 'probabilidad (X=x)')")
+
+- Class: cmd_question
+  Output: "Un detallito que yo suelo cambiar es la orientación de los números en
+  el eje Y. Recupere el último comando con la tecla flecha arriba y añadir,
+  justo antes del último cierre de paréntesis ', las = 1'. Dese la oportunidad."
+  CorrectAnswer: plot(X, dbinom(X, size = 10, prob=0.5), type = 'h', ylab = 'probabilidad (X=x)', las = 1)
+  AnswerTests: omnitest(correctExpr="plot(X, dbinom(X, size = 10, prob=0.5), type = 'h', ylab = 'probabilidad (X=x)', las = 1)")
+  Hint: Asegúrese que su código es como sigue plot(X, dbinom(X, size = 10, prob=0.5), type = 'h', ylab = 'probabilidad (X=x)', las = 1).
+
+- Class: mult_question
+  Output: "Según la gráfica, ¿qué es el valor esperado (la media o el valor
+  más probable) de cualquier de estos dos ensayos, lo de las 10 monedas o el 
+  genero de los 10 estudiantes?"
+  AnswerChoices: 5; 4-6; 10
+  CorrectAnswer: 5
+  AnswerTests: omnitest(correctVal= '5')
+  Hint: "El valor 5 es lo más probable con una probabilidad alrededor de 0.25."
+
+- Class: exact_question
+  Output: "Según la gráfica, ¿qué es la probabilidad de que salgan 4 caras (o cuatro mujeres) de
+  este experimento? Redondear a dos decimales."
+  CorrectAnswer: 0.20
+  AnswerTests: omnitest(correctVal=0.20)
+  Hint: "Tal vez usted no lo hubiera tecleado así la primera vez, pero ingrese 
+  '0.20' para continuar."
+
+- Class: cmd_question
+  Output: "En lugar de leer la probabilidad de la gráfica, se puede pedir de R
+  una respuesta más precisa con la misma función dbinom(). Ahora, no va a ingresar
+  X sino el valor 4 (x = 4). Empiece con dbinom(), luego, con el cursor dentro de los
+  paréntesis, presione TAB, y entregar los elementos que se ve sugeridos (aparte
+  del argumento log, este se deja fuera)."
+  CorrectAnswer: dbinom(x = 4, size = 10, prob = 0.5)
+  AnswerTests: omnitest(correctExpr='dbinom(x = 4, size = 10, prob = 0.5)')
+  Hint: "La respuesta que buscaba es dbinom(x = 4, size = 10, prob = 0.5)."
+  
+- Class: text
+  Output: "Ya usted ha visto cómo gráficar la función de masa de probabilidades 
+  cuando tengamos datos que resumen ensayos binomiales, mediante la función 
+  dbinom().  También, hubiera visto cómo se usa la misma función para calcular
+  probabilidades especificas para ciertos valores de X. Por último, aprenderá
+  usar la función pbinom, para tratar preguntas de probabilidades cumulativas."
+
+- Class: cmd_question
+  Output: "Empezamos con otra gráfica con los mismos datos, esta vez demostrará 
+  como acumula la probabilidad mientras que pasamos por los valores posibles de 
+  X. Teclee plot(X, pbinom(q = X, size = 10, prob = 0.5), ylab = 
+  'Probabilidad cumulativa', type='o', las = 1)."
+  CorrectAnswer: plot(X, pbinom(q = X, size = 10, prob = 0.5), ylab = 'Probabilidad cumulativa', type='o', las = 1)
+  AnswerTests: omnitest(correctExpr="plot(X, pbinom(q = X, size = 10, prob = 0.5), ylab = 'Probabilidad cumulativa', type='o', las = 1)")
+  Hint: "Escriba justamente lo que aparece plot(X, pbinom(q = X, size = 10, prob = 0.5), ylab = 'Probabilidad cumulativa', type='o', las = 1)."
+
+- Class: cmd_question
+  Output: "Digamos que un ejercicio le pide la probabilidad de que vemos 4 o 
+  menos caras de este experimento de 10 tiros de moneda, o que hay 4 o menos 
+  mujeres en este grupo de 10 estudiantes. Justo como hemos cambiado la función
+  dbinom() antes para sacar una probabilidad de que hubiera exactament 4, ahora vamos a 
+  cambiar la función pbinom(). En vez de q = nuestro vector X, ingrese en la 
+  función que q = 4. Los argumentos de más se queda igual que antes."
+  CorrectAnswer: pbinom(q = 4, size = 10, prob = 0.5)
+  AnswerTests: omnitest(correctExpr='pbinom(q = 4, size = 10, prob = 0.5)')
+  Hint: "Escriba justamente lo que aparece pbinom(q = 4, size = 10, prob = 0.5)"
+
+- Class: text
+  Output: "Este valor que hubiera aparecido en la pantalla, es la probabilidad
+  de ver 4 o menos éxitos de cualquier de los dos experimentos, lo de la moneda
+  o lo de los estudiantes. Imagínese una linea vertical desde el valor 4 hasta
+  la curva. El área a la izquierda de esa linea ocupa, o tiene probabilidad de
+  0.38."
+
+- Class: cmd_question
+  Output: "De hecho, vamos a dibjuar esta linea de referencia en la gráfica que,
+  si no me equivoco, todavía sea en la ventanilla de PLOTS. Teclee 
+  abline(v = 4, col='grey'). Este comando pide a R que ponga una linea vertical
+  (v) encima del valor 4 del eje X, y que su color sea gris (grey)."
+  CorrectAnswer: abline(v = 4, col="grey")
+  AnswerTests: omnitest(correctExpr="abline(v = 4, col='grey')")
+  Hint: "Escriba abline(v = 4, col='grey') y presione Intro."
+
+- Class: cmd_question
+  Output: "Si ponemos la pregunta al revés - cual es la probabilidad de obtener
+  un número de éxitos de 4 o más - para calcular el área incluyendo 4 y valores 
+  mayores, solo hay que restar el último comando con pbinom() de 1. Dese la
+  oportunidad ahora. Recomiendo el uso de la tecla flecha arriba para recuperarlo."
+  CorrectAnswer: 1 - pbinom(q = 4, size = 10, prob = 0.5)
+  AnswerTests: omnitest(correctExpr='1 - pbinom(q = 4, size = 10, prob = 0.5)')
+  Hint: "Restar pbinom(q = 4, size = 10, prob = 0.5) de 1 no más."
+  
+- Class: text
+  Output: "Muy bien, espero que esta lección le haya ayudado entender como usar
+  R para resolver problemas de probabilidad, tanto para crear funciones de masa
+  de probabilidad como sacar estimadores de la probabilidad de valores 
+  específicos. En la siguiente lección, se puede ver como tratar problemas de la
+  distribución Poisson."
