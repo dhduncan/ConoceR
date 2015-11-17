@@ -137,7 +137,17 @@
   CorrectAnswer: dbinom(x = 4, size = 10, prob = 0.5)
   AnswerTests: omnitest(correctExpr='dbinom(x = 4, size = 10, prob = 0.5)')
   Hint: "La respuesta que buscaba es dbinom(x = 4, size = 10, prob = 0.5)."
-  
+
+- Class: cmd_figure
+  Output: "En clase aprendimos utilizar la formula que acaba de aparecer en la
+  ventanilla PLOTS para calcular probabilidades de la binomial. Podemos 
+  ejecutar esta formula con R para averiguar el resultado anterior, como sigue  
+  P(X=4) = (factorial(10) / (factorial(4) * factorial(6))) * 0.5^4 * 0.5^6. 
+  Dese la oportunidad ahora, pero deja la parte P(X=4) = fuera de lo que usted
+  tecleara."
+  Figure: ecuacion.R
+  FigureType: new
+
 - Class: text
   Output: "Ya usted ha visto cómo gráficar la función de masa de probabilidades 
   cuando tengamos datos que resumen ensayos binomiales, mediante la función 
