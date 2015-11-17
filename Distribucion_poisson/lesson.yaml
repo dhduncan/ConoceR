@@ -1,0 +1,40 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Distribucion_poisson
+  Author: David H. Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.2.21
+
+- Class: text
+  Output: "¡Hola!, en esta lecciòn, usted verá como usar R para investigar o 
+  resolver asuntos de probabilidad para datos que vengan de la distribución 
+  Poisson."
+
+- Class: text
+  Output: "La Poisson, nombrado por un matemático frances Siméon Denis Poisson,
+  se desarrolló de la distribución binomial. Se usa mucho en modelos que tratan a
+  datos de conteo, por ejemplo el número de aves en el muestreo de unas parcelas,
+  o el número de muertos cada año por el dengue en la región amazonica. Tiene un
+  solo parámetro, lambda, que igual a la media y la varianza a la vez."
+
+- Class: cmd_question
+  Output: "Usando el ejemplo de muestreo de aves, fingimos que acabamos de
+  visitar 5 parcelas para contar las especies de los aves. Podemos generar datos
+  plausibles usando la funciòn rpois(), nombrado por la 'r' de random (azar) y 
+  'pois' de Poisson. Digamos que la media verdadera del número de especie de aves
+  en una parcela sea 4. Realice un saque de esta distribución con rpois(n = 5, 
+  lambda = 4)."
+  CorrectAnswer: rpois(n = 5, lambda = 4)
+  AnswerTests: omnitest(correctExpr='rpois(n = 5, lambda = 4)')
+  Hint: "Ingrese los números del texto, que n = 5, y que lambda = 4, in una
+  llamada a la función rpois()."
+
+- Class: cmd_question
+  Output: "Podríamos echar un vistazo a la función de la masa de probabilidades
+  para un rango de valores plausibles de esta distribuciòn con las funciones 
+  plot() y dpois(). Sea X nuestra variable aleatoria tipo Poisson. Define X como
+  un vector que contiene todos los números enteros entre 0 y 30."
+  CorrectAnswer: X <- 0:30
+  AnswerTests: any_of_exprs('X <- 0:30', 'X <- seq(0, 30, 1)', 'X <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)')
+  Hint: "Use uno de las formas cortas, X <- 0:30 o  X <- seq(0, 30, 1)."
