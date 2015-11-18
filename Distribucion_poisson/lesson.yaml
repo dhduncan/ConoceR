@@ -13,10 +13,10 @@
 
 - Class: text
   Output: "La Poisson, nombrado por un matemático frances Siméon Denis Poisson,
-  se desarrolló de la distribución binomial. Se usa mucho en modelos que tratan a
-  datos de conteo, por ejemplo el número de aves en el muestreo de unas parcelas,
-  o el número de muertos cada año por el dengue en la región amazonica. Tiene un
-  solo parámetro, lambda, que igual a la media y la varianza a la vez."
+  se desarrolló en base de la distribución binomial. Se usa mucho en modelos que 
+  tratan a datos de conteo, por ejemplo el número de aves en el muestreo de unas 
+  parcelas, o el número de muertos cada año por el dengue en la región amazonica.
+  Tiene un solo parámetro, lambda, que igual a la media y la varianza a la vez."
 
 - Class: cmd_question
   Output: "Usando el ejemplo de muestreo de aves, fingimos que acabamos de
@@ -30,6 +30,10 @@
   Hint: "Ingrese los números del texto, que n = 5, y que lambda = 4, in una
   llamada a la función rpois()."
 
+- Class: text
+  Output: "Puesto que la media (lambda) es 4, no se soprendiera que los valores
+  hubieran salido alrededor de ese mismo valor."
+
 - Class: cmd_question
   Output: "Podríamos echar un vistazo a la función de la masa de probabilidades
   para un rango de valores plausibles de esta distribuciòn con las funciones 
@@ -40,10 +44,10 @@
   Hint: "Use uno de las formas cortas, X <- 0:30 o  X <- seq(0, 30, 1)."
 
 - Class: cmd_question
-  Output: "Ahora grafique esta distribución plot(X, dpois(x=X, lambda = 5),
-  ylab = 'Probabilidad (X = k)', type = "h", las = 1)."
-  CorrectAnswer: plot(X, dpois(x=X, lambda = 5), ylab = 'Probabilidad (X = k)', type = "h", las = 1)
-  AnswerTests: omnitest(correctExpr = "plot(X, dpois(x=X, lambda = 5), ylab = 'Probabilidad (X = k)', type = "h", las = 1)")
+  Output: "Ahora grafique esta distribución plot(X, dpois(x=X, lambda = 4),
+  ylab = 'Probabilidad (X = k)', type = 'h', las = 1)."
+  CorrectAnswer: plot(X, dpois(x=X, lambda = 4), ylab = 'Probabilidad (X = k)', type = "h", las = 1)
+  AnswerTests: omnitest(correctExpr = "plot(X, dpois(x=X, lambda = 4), ylab = 'Probabilidad (X = k)', type = 'h', las = 1)")
   Hint: "Escriba o pegue el comando para la gráfica, pero si usted lo pega, le 
   tocara averiguar que esté en una linea sola de código."
 
@@ -57,63 +61,63 @@
   Output: "Igual que usted hizo con el ejemplo de la binomial, para sacar la 
   probabilidad de un valor específico, se usa la misma función dpois(), 
   ingresando el valor de interés (25) en lugar del vector X. Pruébalo ahora."
-  CorrectAnswer: dpois(x = 25, lambda = 5)
-  AnswerTests: omnitest(correctExpr = 'dpois(x = 25, lambda = 5)')
+  CorrectAnswer: dpois(x = 25, lambda = 4)
+  AnswerTests: omnitest(correctExpr = 'dpois(x = 25, lambda = 4)')
   Hint: "Empiece con dpois(), y presione TAB con el curso dentro de los 
   paréntesis vacios, luego ingrese los valores de x y lambda según convenga."
 
 - Class: text
   Output: "Ve que si hay probabilidad de que encontremos 25 especie dentro de 
-  una parcela, ¡pero es pequeñisima! -1.294589e-10. Si usted no reconoce esta
+  una parcela, ¡pero es pequeñisima! 1.329463e-12. Si usted no reconoce esta
   notificación, la manera de enterarse de que tan pequena es ese número es
-  mover el punto decimal 10 plazas hacia la izquierda así 0.0000000001294589. 
-  Que uno se encontraría 5 especie en una parcela es alrededor de 1.3 
+  mover el punto decimal 12 plazas hacia la izquierda así 0.000000000001329463. 
+  Que uno se encontraría 4 especie en una parcela es alrededor de 146 
   billion de veces más probable."
 
 - Class: cmd_question
-  Output: "¿Qué es la probabilidad de muestrear una parcela y encontrar 4 o 5
+  Output: "¿Qué es la probabilidad de muestrear una parcela y encontrar 3 o 4
   especies en una parcela entonces? De la gráfica, parece que es más o menos
-  igual, con un valor alrededor de 0.17. Teclee dpois(x=c(4,5), lambda = 5)
+  igual, con un valor alrededor de 0.19. Teclee dpois(x=c(3, 4), lambda = 4)
   para sacar estas probabilidades y averiguarlo."
-  CorrectAnswer: dpois(c(4,5), 5)
-  AnswerTests: omnitest(correctExpr='dpois(c(4,5), 5)')
-  Hint: "Escriba dpois(c(4,5), 5) no más."
+  CorrectAnswer: dpois(c(3, 4), 4)
+  AnswerTests: omnitest(correctExpr='dpois(c(3, 4), 4)')
+  Hint: "Escriba dpois(c(3, 4), 4) no más."
 
 - Class: text
   Output: "Fíjese que R se devuelve los dos respuestas aparte. La probabilidad
-  de que se encontraría o 4 especie o 5 se calcula por sumar las dos entonces. 
-  En un paso se pudiera haber ingresado dpois(4, 5) + dpois(5, 5). Pero, bueno,
+  de que se encontraría o 3 especie o 4 se calcula por sumar las dos entonces. 
+  En un paso se pudiera haber ingresado dpois(3, 4) + dpois(4, 4). Pero, bueno,
   siempre hay muchas opciones con R."
 
 - Class: cmd_question
   Output: "Ahora abordamos al tema de probabilidades cumulativas, con las preguntas
   emblemáticas como ¿qué tan probable es que encontramos una parcela con más de
   10 especie de aves? Para estos asuntos necesitamos la función ppois() en vez
-  de dpois(). Ingrese los argumentos q = 10, lambda = 5 en la función ppois(), y
+  de dpois(). Ingrese los argumentos q = 10, lambda = 4 en la función ppois(), y
   restar todo de 1 para calcular la probabilidad por encima de 10."
-  CorrectAnswer: 1 - ppois(q = 10, lambda = 5)
-  AnswerTests: omnitest(correctExpr= '1 - ppois(q = 10, lambda = 5)')
-  Hint: "No se olivida de restar de uno. Escriba 1 - ppois(q = 10, lambda = 5)."
+  CorrectAnswer: 1 - ppois(q = 10, lambda = 4)
+  AnswerTests: omnitest(correctExpr= '1 - ppois(q = 10, lambda = 4)')
+  Hint: "No se olivida de restar de uno. Escriba 1 - ppois(q = 10, lambda = 4)."
 
 - Class: cmd_question
-  Output: "Entonces se encuentra menos de 2 % (0.02) de la masa de probabilidad 
+  Output: "Entonces se encuentra mucho menos de 1 % (0.01) de la masa de probabilidad 
   en los valores de 10 y arriba. Muy improbable pero imposible no. Se puede
   visualizar este hecho con la distribución cumulativa de probabilidad, así 
-  plot(X, ppois(X, 5), ylab = 'Probabilidad cumulativa', type = 'o', las = 1).
+  plot(X, ppois(X, 4), ylab = 'Probabilidad cumulativa', type = 'o', las = 1).
   Dese la oportunidad."
-  CorrectAnswer: plot(X, ppois(X, 5), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)
-  AnswerTests: omnitest(correctExpr= "plot(X, ppois(X, 5), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)")
-  Hint: "Escriba plot(X, ppois(X, 5), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)
+  CorrectAnswer: plot(X, ppois(X, 4), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)
+  AnswerTests: omnitest(correctExpr= "plot(X, ppois(X, 4), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)")
+  Hint: "Escriba plot(X, ppois(X, 4), ylab = 'Probabilidad cumulativa', type = 'o', las = 1)
   para continuar."
 
 - Class: mult_question
-  Output: "Pues, esto concluye la lección con las funciones de R para la Poisson
+  Output: "Pues, esto concluye la lección con las funciones de R para la Poisson.
   Antes de irnos, ¿cuál función se usa para calcular probabilidades específicas?"
   AnswerChoices: "dpois(); rpois(); ppois(); qpois()"
   CorrectAnswer: dpois()
-  AnswerTests: omnitest(correctExpr= 'dpois()')
+  AnswerTests: omnitest(correctVal= "dpois()")
   Hint: "Para sacar una probabilidad específica, como la de que encontremos a
-  una parcela con 8 especie de aves, se usa dpois()."
+  una parcela con 8 especie de aves, se usaría dpois()."
 
 - Class: text
   Output: "Aunque no las hayan visto, existen las mismas funciones para la 
