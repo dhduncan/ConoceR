@@ -11,7 +11,7 @@
   }
 }
 
-# Make path to csv available to user
+# Make path to xlsx available to user
 path2xlsx <- file.path(path.package('swirl'), 'Courses',
                       'ConoceR',
                       'Graficando_1',
