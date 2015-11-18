@@ -27,15 +27,15 @@
   importar directamente de un montón de fuentes, hasta páginas web y el 
   portapapeles, aunque no vamos a aprender estas técnicas durante este curso."
 
-- Class: figure
-  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
-  datos. Para que tengas una idea de la estructura antemano, su practica normal
-  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
-  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
-  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
-  estructura. A continuación le presentará una pregunta sobre ella."
-  Figure: hojaVista.R
-  FigureType: new
+#- Class: figure
+#  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
+#  datos. Para que tengas una idea de la estructura antemano, su practica normal
+#  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
+#  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
+#  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
+#  estructura. A continuación le presentará una pregunta sobre ella."
+#  Figure: hojaVista.R
+#  FigureType: new
   
 - Class: exact_question
   Output: "Esta hoja de calculo tiene 'metadatos' (datos sobre los datos), y los 
@@ -56,15 +56,15 @@
 - Class: cmd_question
   Output: "Sin retraso más, vamos a asignar a un objeto nuevo 'hijos' los datos 
   del censo mediante la función read_excel(), y teclee 
-  hijos <- read_excel(path = 'hijosYhijas.xlsx', skip = 14). 
+  hijos <- read_excel(path = path2xlsx, skip = 14). 
   Con esto especificamos dos argumentos, (1) 'path', la dirección al archivo de 
   interés y (2)'skip', cuantos renglones de contenido deben ser saltados antes 
   empezar a leer los datos."
-  CorrectAnswer: hijos <- read_excel('hijosYhijas.xlsx', skip = 14)
-  AnswerTests: omnitest(correctExpr='hijos <- read_excel("hijosYhijas.xlsx", skip = 14)')
+  CorrectAnswer: hijos <- read_excel(path = path2xlsx, skip = 14)
+  AnswerTests: omnitest(correctExpr='hijos <- read_excel(path = path2xlsx, skip = 14)')
   Hint: "Acuérdese que R es ultra sensible a minúscula y mayúscula, muchos errores
   surgen debido a cambios no intencionales de ortografía. Escriba, o pega, 
-  hijos <- read_excel('hijosYhijas.xlsx', skip = 14)."
+  hijos <- read_excel(path = path2xlsx, skip = 14)."
   
 - Class: text
   Output: "Entienda que la función read_excel pertenece al paquete. Fuera de esta 
@@ -88,16 +88,16 @@
 
 - Class: cmd_question
   Output: "Repita el último paso, cambiando las referencias a region para area, 
-  , la variable que marca si el valor pertenece a zonas urbanas o rurales."
+  la variable que marca si el valor pertenece a zonas urbanas o rurales."
   CorrectAnswer: hijos$area <- as.factor(hijos$area)
-  AnswerTests: omnitest(correctExpr='hijos$area <- as.factor(hijos$area))
+  AnswerTests: omnitest(correctExpr='hijos$area <- as.factor(hijos$area)')
   Hint: "Ingrese hijos$area <- as.factor(hijos$area) no más."
 
 - Class: cmd_question
   Output: "Ahora con leer.escr también (si las encuestadas supieron leer y
   escribir), haga el mismo cambio."
   CorrectAnswer: hijos$leer.escr <- as.factor(hijos$leer.escr)
-  AnswerTests: omnitest(correctExpr='hijos$leer.escr <- as.factor(hijos$leer.escr))
+  AnswerTests: omnitest(correctExpr='hijos$leer.escr <- as.factor(hijos$leer.escr)')
   Hint: "Ingrese hijos$leer.escr <- as.factor(hijos$leer.escr) no más."
 
 - Class: cmd_question
@@ -106,7 +106,7 @@
   usted tiene que cambiar hasta una variable numérica, como sigue
   hijos$hijos <- as.numeric(hijos$hijos)."
   CorrectAnswer: hijos$hijos <- as.numeric(hijos$hijos)
-  AnswerTests: omnitest(correctExpr='hijos$hijos <- as.numeric(hijos$hijos))
+  AnswerTests: omnitest(correctExpr='hijos$hijos <- as.numeric(hijos$hijos)')
   Hint: "Ingrese hijos$hijos <- as.numeric(hijos$hijos) no más."
 
 - Class: cmd_question

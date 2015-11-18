@@ -10,3 +10,9 @@
     file.path(find.package("swirl"), "Courses", course_, lesson_, file_)
   }
 }
+
+# Make path to csv available to user
+path2xlsx <- file.path(path.package('swirl'), 'Courses',
+                      'ConoceR',
+                      'Graficando_1',
+                      'hijosYhijas.xlsx')
