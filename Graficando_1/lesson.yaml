@@ -14,8 +14,29 @@
 - Class: text
   Output: "Ud va a cargar datos que ya hubiera visto en la visita a la galería, 
   los que resumen el número de hijos y hijas que tiene las mujeres de las varias
-  provincias de El Ecuador."
+  provincias de El Ecuador. Si quiere explorar el base de datos, desde esta página
+  http://www.ecuadorencifras.gob.ec/sistema-integrado-de-consultas-redatam/ se 
+  escoge el enlace para el VII Censo de Poblacion y VI de Vivienda 2010."
+  
+- Class: text
+  Output: "Tal vez no se lo enteró pero al comenzar esta lección R hubiera 
+  instalado un paquete nuevo 'readxl' en el fondo. El propósito de este paquete
+  es aceder a datos almacenados en archivos de MS Excel. Creo que la gran mayoria
+  de usuarios de R siguen usando Excel o su equivalente como parte del proceso 
+  de ingresar datos, así que paquetes así son super útiles. De hecho, se puede
+  importar directamente de un montón de fuentes, hasta páginas web y el 
+  portapapeles, aunque no vamos a aprender estas técnicas durante este curso."
 
+- Class: figure
+  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
+  datos. Para que tengas una idea de la estructura antemano, su practica normal
+  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
+  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
+  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
+  estructura. A continuación le presentará una pregunta sobre ella."
+  Figure: hojaVista.R
+  FigureType: new
+  
 - Class: text_question
   Output: explain the question here
   CorrectAnswer: answer
