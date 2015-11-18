@@ -37,10 +37,33 @@
   Figure: hojaVista.R
   FigureType: new
   
-- Class: text_question
-  Output: explain the question here
-  CorrectAnswer: answer
-  AnswerTests: omnitest(correctVal='answer')
-  Hint: hint
+- Class: exact_question
+  Output: "Esta hoja de calculo tiene 'metadatos' (datos sobre los datos), y los 
+  datos crudos que nosotros necesitamos. ¿Después de cuantos renglones de 
+  meta datos empiecen los datos crudos y sus etiquetas? Escriba el número del 
+  renglón no más sin incluir renglones vacios."
+  CorrectAnswer: 14
+  AnswerTests: omnitest(correctVal='14')
+  Hint: "Las etiquetas (region, área, sabLyE, y Hijos) encabezar los datos, y 
+  empiezan despues de 14 renglones de observaciones y notas. Escriba 14 entonces."
 
+- Class: text
+  Output: "Este hecho es importante porque vamos a utilizar este dato en el 
+  siguiente paso para decir a R que debe saltar los primeros 14 renglones de 
+  contenido."
 
+- Class: cmd_question
+  Output: "Sin retraso más, vamos a asignar a un objeto nuevo 'hijos' los datos 
+  del censo mediante la función read_excel(), y teclee 
+  hijos <- read_excel(path = 'hijosYhijas.xlsx', skip = 14). 
+  Con esto especificamos dos argumentos, (1) 'path', la dirección al archivo de 
+  interés y (2)'skip', cuantos renglones de contenido deben ser saltados antes 
+  empezar a leer los datos.
+  CorrectAnswer: hijos <- read_excel('hijosYhijas.xlsx', skip = 14)
+  AnswerTests: omnitest(correctExpr='hijos <- read_excel("hijosYhijas.xlsx", skip = 14)')
+  Hint: "Acuérdese que R es ultra sensible a minúscula y mayúscula, muchos errores
+  surgen debido a cambios no intencionales de ortografía. Escriba, o pega, 
+  hijos <- read_excel('hijosYhijas.xlsx', skip = 14)."
+  
+  Entienda que fuera de esta lección, usted tendría que cargar el
+  paquete readxl antes de este paso por teclear library(readxl)"
