@@ -1,26 +1,232 @@
-"","region","hijos"
-"1","Azuay",1.63
-"2","Bolivar",2.04
-"3","Cañar",1.75
-"4","Carchi",1.85
-"5","Cotopaxi",1.93
-"6","Chimborazo",1.84
-"7","El Oro",1.77
-"8","Esmeraldas",2.36
-"9","Guayas",1.75
-"10","Imbabura",1.87
-"11","Loja",1.85
-"12","Los Rios",2.04
-"13","Manabi",1.94
-"14","Morona Santiago",2.58
-"15","Napo",2.29
-"16","Pastaza",2.17
-"17","Pichincha",1.56
-"18","Tungurahua",1.61
-"19","Zamora Chinchipe",2.42
-"20","Galápagos",1.69
-"21","Sucumbios",2.33
-"22","Orellana",2.48
-"23","Santa Domingo",1.94
-"24","Santa Elena",2.02
-"25","Zonas No Delimitadas",2.46
+"region","area","leer.escr","hijos"
+"Azuay","rural","No",3.79
+"Bolivar","rural","No",4.37
+"Cañar","rural","No",3.61
+"Carchi","rural","No",3.49
+"Cotopaxi","rural","No",4.59
+"Chimborazo","rural","No",4.2
+"El Oro","rural","No",3.05
+"Esmeraldas","rural","No",4.52
+"Guayas","rural","No",3.46
+"Imbabura","rural","No",4.59
+"Loja","rural","No",3.01
+"Los Rios","rural","No",3.79
+"Manabi","rural","No",3.8
+"Morona Santiago","rural","No",4.39
+"Napo","rural","No",3.94
+"Pastaza","rural","No",5.01
+"Pichincha","rural","No",3.77
+"Tungurahua","rural","No",3.71
+"Zamora Chinchipe","rural","No",5
+"Galápagos","rural","No",3.56
+"Sucumbios","rural","No",4.6
+"Orellana","rural","No",4.63
+"Santa Domingo","rural","No",3.88
+"Santa Elena","rural","No",3.16
+"Zonas No Delimitadas","rural","No",3.94
+"Resumen","rural","No",3.98
+"Azuay","juntos","No",3.52
+"Bolivar","juntos","No",4.27
+"Cañar","juntos","No",3.51
+"Carchi","juntos","No",3.34
+"Cotopaxi","juntos","No",4.48
+"Chimborazo","juntos","No",4.1
+"El Oro","juntos","No",2.74
+"Esmeraldas","juntos","No",4.27
+"Guayas","juntos","No",3.05
+"Imbabura","juntos","No",4.37
+"Loja","juntos","No",2.78
+"Los Rios","juntos","No",3.63
+"Manabi","juntos","No",3.59
+"Morona Santiago","juntos","No",4.23
+"Napo","juntos","No",3.65
+"Pastaza","juntos","No",4.77
+"Pichincha","juntos","No",3.48
+"Tungurahua","juntos","No",3.56
+"Zamora Chinchipe","juntos","No",4.49
+"Galápagos","juntos","No",2.96
+"Sucumbios","juntos","No",4.28
+"Orellana","juntos","No",4.37
+"Santa Domingo","juntos","No",3.75
+"Santa Elena","juntos","No",3.21
+"Zonas No Delimitadas","juntos","No",3.94
+"Resumen","juntos","No",3.65
+"Azuay","urbana","No",2.61
+"Bolivar","urbana","No",3.33
+"Cañar","urbana","No",3.08
+"Carchi","urbana","No",2.97
+"Cotopaxi","urbana","No",3.56
+"Chimborazo","urbana","No",3.17
+"El Oro","urbana","No",2.58
+"Esmeraldas","urbana","No",3.68
+"Guayas","urbana","No",2.84
+"Imbabura","urbana","No",3.46
+"Loja","urbana","No",2.18
+"Los Rios","urbana","No",3.37
+"Manabi","urbana","No",3.22
+"Morona Santiago","urbana","No",3.39
+"Napo","urbana","No",2.61
+"Pastaza","urbana","No",3.77
+"Pichincha","urbana","No",3.21
+"Tungurahua","urbana","No",2.67
+"Zamora Chinchipe","urbana","No",2.74
+"Galápagos","urbana","No",2.83
+"Sucumbios","urbana","No",3.46
+"Orellana","urbana","No",3.66
+"Santa Domingo","urbana","No",3.65
+"Santa Elena","urbana","No",3.27
+"Resumen","urbana","No",3.09
+"Azuay","rural","Si",1.8
+"Bolivar","rural","Si",2.03
+"Cañar","rural","Si",1.67
+"Carchi","rural","Si",1.99
+"Cotopaxi","rural","Si",1.84
+"Chimborazo","rural","Si",1.94
+"El Oro","rural","Si",1.97
+"Esmeraldas","rural","Si",2.58
+"Guayas","rural","Si",2.13
+"Imbabura","rural","Si",1.92
+"Loja","rural","Si",2.27
+"Los Rios","rural","Si",2.15
+"Manabi","rural","Si",2.09
+"Morona Santiago","rural","Si",2.95
+"Napo","rural","Si",2.62
+"Pastaza","rural","Si",2.44
+"Pichincha","rural","Si",1.66
+"Tungurahua","rural","Si",1.64
+"Zamora Chinchipe","rural","Si",2.71
+"Galápagos","rural","Si",1.92
+"Sucumbios","rural","Si",2.54
+"Orellana","rural","Si",2.8
+"Santa Domingo","rural","Si",2.09
+"Santa Elena","rural","Si",2.07
+"Zonas No Delimitadas","rural","Si",2.36
+"Resumen","rural","Si",2.01
+"Azuay","juntos","Si",1.58
+"Bolivar","juntos","Si",1.87
+"Cañar","juntos","Si",1.65
+"Carchi","juntos","Si",1.81
+"Cotopaxi","juntos","Si",1.73
+"Chimborazo","juntos","Si",1.7
+"El Oro","juntos","Si",1.75
+"Esmeraldas","juntos","Si",2.25
+"Guayas","juntos","Si",1.72
+"Imbabura","juntos","Si",1.73
+"Loja","juntos","Si",1.83
+"Los Rios","juntos","Si",1.97
+"Manabi","juntos","Si",1.86
+"Morona Santiago","juntos","Si",2.51
+"Napo","juntos","Si",2.26
+"Pastaza","juntos","Si",2.05
+"Pichincha","juntos","Si",1.52
+"Tungurahua","juntos","Si",1.54
+"Zamora Chinchipe","juntos","Si",2.37
+"Galápagos","juntos","Si",1.68
+"Sucumbios","juntos","Si",2.25
+"Orellana","juntos","Si",2.41
+"Santa Domingo","juntos","Si",1.88
+"Santa Elena","juntos","Si",1.98
+"Zonas No Delimitadas","juntos","Si",2.36
+"Resumen","juntos","Si",1.76
+"Azuay","urbana","Si",1.42
+"Bolivar","urbana","Si",1.55
+"Cañar","urbana","Si",1.62
+"Carchi","urbana","Si",1.65
+"Cotopaxi","urbana","Si",1.52
+"Chimborazo","urbana","Si",1.44
+"El Oro","urbana","Si",1.7
+"Esmeraldas","urbana","Si",1.98
+"Guayas","urbana","Si",1.66
+"Imbabura","urbana","Si",1.59
+"Loja","urbana","Si",1.57
+"Los Rios","urbana","Si",1.84
+"Manabi","urbana","Si",1.72
+"Morona Santiago","urbana","Si",1.86
+"Napo","urbana","Si",1.73
+"Pastaza","urbana","Si",1.69
+"Pichincha","urbana","Si",1.46
+"Tungurahua","urbana","Si",1.41
+"Zamora Chinchipe","urbana","Si",1.94
+"Galápagos","urbana","Si",1.64
+"Sucumbios","urbana","Si",1.94
+"Orellana","urbana","Si",1.99
+"Santa Domingo","urbana","Si",1.82
+"Santa Elena","urbana","Si",1.92
+"Resumen","urbana","Si",1.63
+"Azuay","rural","juntos",1.9
+"Bolivar","rural","juntos",2.26
+"Cañar","rural","juntos",1.83
+"Carchi","rural","juntos",2.05
+"Cotopaxi","rural","juntos",2.1
+"Chimborazo","rural","juntos",2.15
+"El Oro","rural","juntos",2
+"Esmeraldas","rural","juntos",2.75
+"Guayas","rural","juntos",2.2
+"Imbabura","rural","juntos",2.2
+"Loja","rural","juntos",2.29
+"Los Rios","rural","juntos",2.25
+"Manabi","rural","juntos",2.23
+"Morona Santiago","rural","juntos",3.02
+"Napo","rural","juntos",2.66
+"Pastaza","rural","juntos",2.62
+"Pichincha","rural","juntos",1.72
+"Tungurahua","rural","juntos",1.73
+"Zamora Chinchipe","rural","juntos",2.79
+"Galápagos","rural","juntos",1.93
+"Sucumbios","rural","juntos",2.64
+"Orellana","rural","juntos",2.89
+"Santa Domingo","rural","juntos",2.2
+"Santa Elena","rural","juntos",2.1
+"Zonas No Delimitadas","rural","juntos",2.46
+"Resumen","rural","juntos",2.12
+"Azuay","juntos","juntos",1.63
+"Bolivar","juntos","juntos",2.04
+"Cañar","juntos","juntos",1.75
+"Carchi","juntos","juntos",1.85
+"Cotopaxi","juntos","juntos",1.93
+"Chimborazo","juntos","juntos",1.84
+"El Oro","juntos","juntos",1.77
+"Esmeraldas","juntos","juntos",2.36
+"Guayas","juntos","juntos",1.75
+"Imbabura","juntos","juntos",1.87
+"Loja","juntos","juntos",1.85
+"Los Rios","juntos","juntos",2.04
+"Manabi","juntos","juntos",1.94
+"Morona Santiago","juntos","juntos",2.58
+"Napo","juntos","juntos",2.29
+"Pastaza","juntos","juntos",2.17
+"Pichincha","juntos","juntos",1.56
+"Tungurahua","juntos","juntos",1.61
+"Zamora Chinchipe","juntos","juntos",2.42
+"Galápagos","juntos","juntos",1.69
+"Sucumbios","juntos","juntos",2.33
+"Orellana","juntos","juntos",2.48
+"Santa Domingo","juntos","juntos",1.94
+"Santa Elena","juntos","juntos",2.02
+"Zonas No Delimitadas","juntos","juntos",2.46
+"Resumen","juntos","juntos",1.82
+"Azuay","urbana","juntos",1.43
+"Bolivar","urbana","juntos",1.59
+"Cañar","urbana","juntos",1.65
+"Carchi","urbana","juntos",1.67
+"Cotopaxi","urbana","juntos",1.57
+"Chimborazo","urbana","juntos",1.46
+"El Oro","urbana","juntos",1.71
+"Esmeraldas","urbana","juntos",2.04
+"Guayas","urbana","juntos",1.68
+"Imbabura","urbana","juntos",1.63
+"Loja","urbana","juntos",1.58
+"Los Rios","urbana","juntos",1.88
+"Manabi","urbana","juntos",1.76
+"Morona Santiago","urbana","juntos",1.88
+"Napo","urbana","juntos",1.74
+"Pastaza","urbana","juntos",1.73
+"Pichincha","urbana","juntos",1.48
+"Tungurahua","urbana","juntos",1.43
+"Zamora Chinchipe","urbana","juntos",1.95
+"Galápagos","urbana","juntos",1.65
+"Sucumbios","urbana","juntos",1.98
+"Orellana","urbana","juntos",2.02
+"Santa Domingo","urbana","juntos",1.86
+"Santa Elena","urbana","juntos",1.95
+"Resumen","urbana","juntos",1.66

@@ -13,42 +13,28 @@
   
 - Class: text
   Output: "Ud va a cargar datos que ya hubiera visto en la visita a la galería, 
-  los que resumen el número de hijos y hijas que tiene las mujeres entre 14--50
+  los que resumen el número de hijos y hijas que tiene las mujeres entre 14 y 50
   años de las varias provincias de El Ecuador. Si quiere explorar el base de 
   datos, desde esta página
   http://www.ecuadorencifras.gob.ec/sistema-integrado-de-consultas-redatam/ se 
   escoge el enlace para el VII Censo de Poblacion y VI de Vivienda 2010."
 
 - Class: cmd_question
-  Output: "He creado un objeto denominada 'path2csv' que contiene la dirección 
+  Output: "He creado un objeto denominada 'path2csv1' que contiene la dirección 
   completa para el tramo de datos para que funcione para cada persona sin saber
   donde haya almacenado su directorio del curso. Llame a la función read.csv() 
-  con el argumento path = path2csv (para dirección al archivo csv), y asígnelo 
+  con el argumento path = path2csv1 (para dirección al archivo csv), y asígnelo 
   al resultado el nombre 'resumen'."
-  CorrectAnswer: resumen <- read.csv(path2csv)
-  AnswerTests: omnitest(correctExpr='resumen <- read.csv(path2csv)')
-  Hint: Almacene a read.csv(path2csv) en un objeto nuevo con nombe resumen.
+  CorrectAnswer: resumen <- read.csv(path2csv1)
+  AnswerTests: omnitest(correctExpr='resumen <- read.csv(path2csv1)')
+  Hint: Almacene a read.csv(path2csv1) en un objeto nuevo con nombe resumen.
   
-- Class: cmd_question
+- Class: text
   Output: "Antes de nada, hechar un vistazo a la estructura del conjunto en la
   ventanilla ENVIRONMENT, por tocar la flechita azul al lado del nombre del
-  objeto 'resumen'. Allí se ve que la variable región tienen tipo 'chr' que 
-  refiere a la palabra inglés character (carácter, ¿no?). 
-  Usted va a dar R instrucciones nuevos sobre el tipo de esta variable. Necesita 
-  cambiar la variable 'region' de tipo 'chr' a un factor. Se lo hace así  
-  resumen$region <- as.factor(resumen$region). En efecto, la instrucción dice, 
-  resumen$region es si mismo, pero se convierta hasta un factor. Al cambiarlo, 
-  verá el cambio en la ventanilla ENVIRONMENT."
-  CorrectAnswer: resumen$region <- as.factor(resumen$region)
-  AnswerTests: omnitest(correctExpr="resumen$region <- as.factor(resumen$region)")
-  Hint: "Escriba justamente resumen$region <- as.factor(resumen$region) y véase el
-  cambio en la ventanilla ENVIRONMENT. Ahora dice region es un Factor de 26
-  niveles."
-
-- Class: text
-  Output: "R ya hubiera reconocido que la variable de respuesta 'hijos' es
-  una variable numérica, así que no hace falta cambiarla. Pero, para que lo sepa
-  el comando adecuado sería resumen$hijos <- as.numeric(resumen$hijos)."
+  objeto 'resumen'. Allí se ve que la variable región tiene tipo 'Factor', 
+  mientras que la variable hijos es 'num' (para numérica). En este caso, los
+  dos son correctos. R suele reconocer el tipo correctamente por defecto."
 
 - Class: cmd_question
   Output: "En la última lección usted aprendió algunas funciones más para explorar
@@ -63,6 +49,11 @@
   Hint: "Escriba summary(resumen)."
 
 - Class: cmd_question
+  Output: "De esta vista de summary() parece que tenemos un conjunto con un
+  valor por Provincia del país con el valor del promedio del número de hijos y
+  hijas por mujer en cada una."
+
+- Class: cmd_question
   Output: "Muy bien, graficamos pues. Tiramos todas
   juntas para esta primera vista. Escriba 
   plot(resumen$hijos, ylab='Número de hijos)', xaxt='n')"
@@ -75,67 +66,49 @@
   Output: "Ya con esta gráfica vemos la dispersión de los promedios del número
   de hijos y hijas por mujer. Según la gráfica ¿aproximadamente qué es el rango
   de los valores?"
-  AnswerChoices: "1.6--2.6; 1.6--2.5; 1--3; no se lo puede estimar"
-  CorrectAnswer: 1.6--2.6
-  AnswerTests: omnitest(correctVal= "1.6--2.6")
+  AnswerChoices: "1.6-2.6; 1.6-2.5; 1-3; no se lo puede estimar"
+  CorrectAnswer: 1.6-2.6
+  AnswerTests: omnitest(correctVal= "1.6-2.6")
   Hint: "El valor más bajo es a eso de los 1.6 y el mayor alrededor de 2.6, así
-  que por promedio, hay un rango de un hijo atravesar de las provincias del país."
+  que por promedio, hay un rango de un hijo atravesar de las provincias del 
+  país. De hecho, también usted hubiera visto este dato por el resumen ofrecido
+  de summary(resumen) antes."
+
+- Class: text
+  Output: "Una gráfica sencilla de puntos mediante plot() es un primer paso
+  excelente para familiarizarse con los datos. En ella se puede ver si hay
+  valores raros o no creibles." 
+  
+- Class: cmd_question
+  Output: "Sin embargo, una gráfica mejor para resumir una sola variable 
+  cuantitativa como el número de hijos sea una diagrama de caja, también conocido
+  como diagrama de caja y bigote, o boxplot en inglés. La función tomo el nombre
+  del inglés, teclee boxplot(resumen$hijos)."
+  CorrectAnswer: teclee boxplot(resumen$hijos)
+  AnswerTests: omnitest(correctExpr="teclee boxplot(resumen$hijos)")
+  Hint: "Acá no hay trucos, escriba teclee boxplot(resumen$hijos) no más. Si 
+  usted ve un mensaje de error 'Error in plot.new() figure margins too large',
+  significa que necesita arrastrar la ventana de PLOTS para que sea más alta."
+
+- Class: text
+  Output: "Un encanto del sistema base de gráficas en R es que es algo parecido
+  al modo de trabajar con papel y lapiz. Una vez que estemos satisfech@s con la
+  base de la gráfica, podemos añadir elementos como títulos, leyendas, y muchos
+  elementos más. Pero esta gráfica no está lista todavía, me parece. Primero, 
+  vamos a girar las etiquetas del eje Y para que se lea mejor los valores."
 
 - Class: cmd_question
-  Output: ""
-
-## basura
-- Class: text
-  Output: "Tal vez no se lo enteró pero al comenzar esta lección R hubiera 
-  instalado un paquete nuevo 'readxl' en el fondo. El propósito de este paquete
-  es aceder a datos almacenados en archivos de MS Excel. Creo que la gran mayoria
-  de usuarios de R siguen usando Excel o su equivalente como parte del proceso 
-  de ingresar datos, así que paquetes así son super útiles. De hecho, se puede
-  importar directamente de un montón de fuentes, hasta páginas web y el 
-  portapapeles, aunque no vamos a aprender estas técnicas durante este curso."
-
-- Class: figure
-  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
-  datos. Para que tengas una idea de la estructura antemano, su practica normal
-  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
-  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
-  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
-  estructura. A continuación le presentará una pregunta sobre ella."
-  Figure: hojaVista.R
-  FigureType: new
-  
-- Class: exact_question
-  Output: "Esta hoja de calculo tiene 'metadatos' (datos sobre los datos), y los 
-  datos crudos que nosotros necesitamos. ¿Después de cuantos renglones de 
-  meta datos empiecen los datos crudos y sus etiquetas? Escriba el número del 
-  renglón cuando empiecen los datos no más."
-  CorrectAnswer: 18
-  AnswerTests: omnitest(correctVal='18')
-  Hint: "Las etiquetas (region, área, sabLyE, y hijos) que encabezan los datos
-  empiezan en el renglón 18, después de las observaciones y notas. Escriba 18 
-  entonces."
-
-- Class: text
-  Output: "Este hecho es importante porque vamos a utilizar este dato en el 
-  siguiente paso para decir a R que debe saltar los primeros 14 renglones de 
-  contenido."
+  Output: "Cuando queremos reemplazar un elemento, le toca volver a repetir 
+  el comando que establece el cuadro. Pero, es por eso que guardamos código en
+  un archivo - así se puede volver a repetir al instante. Ahora, para girar los
+  valores del eye Y, la manera más eficaz pueda ser recuperar el último llamada
+  a boxplot(resumen$hijos) con la flecha arriba, y insertar ', las=1 antes del
+  último cierre de paréntesis. Dese una oportunidad."
+  CorrectAnswer: boxplot(resumen$hijos, las=1)
+  AnswerTests: omnitest(correctExpr= "boxplot(resumen$hijos, las=1)")
+  Hint: "Use la flecha arriba para recuperar el comando que hizo la gráfica y 
+  editarlo para que diga boxplot(resumen$hijos, las=1)."
 
 - Class: cmd_question
-  Output: "Sin retraso más, vamos a asignar a un objeto nuevo 'resumen' los datos 
-  del censo mediante la función read_excel(), y teclee 
-  hijos <- read_excel(path = path2xlsx, sheet="resumen", skip = 14). 
-  Con esto especificamos tres argumentos, (1) 'path', la dirección al archivo de 
-  interés, (2) 'sheet' para el nombre de la hoja que queremos, y (3) 'skip', 
-  cuantos renglones de contenido deben ser saltados antes empezar a leer los 
-  datos."
-  CorrectAnswer: hijos <- read_excel(path = path2xlsx, skip = 14)
-  AnswerTests: omnitest(correctExpr='hijos <- read_excel(path = path2xlsx, skip = 14)')
-  Hint: "Acuérdese que R es ultra sensible a minúscula y mayúscula, muchos errores
-  surgen debido a cambios no intencionales de ortografía. Escriba, o pega, 
-  hijos <- read_excel(path = path2xlsx, skip = 14)."
+  Output: "Añada una etiqueta para el eje Y "
   
-- Class: text
-  Output: "Entienda que la función read_excel pertenece al paquete. Fuera de esta 
-  lección, usted tendría que cargar el paquete readxl antes de invocar 
-  read_excel() paso por teclear library(readxl)."
-

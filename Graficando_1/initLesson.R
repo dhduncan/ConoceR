@@ -12,7 +12,13 @@
 }
 
 # Make path to xlsx available to user
-path2csv <- file.path(path.package('swirl'), 'Courses',
+path2csv1 <- file.path(path.package('swirl'), 'Courses',
+                       'ConoceR',
+                       'Graficando_1',
+                       'hijosResumen.csv')
+
+
+path2csv2 <- file.path(path.package('swirl'), 'Courses',
                       'ConoceR',
                       'Graficando_1',
                       'hijosDetalle.csv')
@@ -21,6 +27,7 @@ path2csv <- file.path(path.package('swirl'), 'Courses',
 # doing this, but it will be necessary for students who
 # quit and later resume. We are not saving the variable
 # to the progress file to save on performance.
-resumen <- read.csv(path2csv)
+resumen <- read.csv(path2csv1)
+detalle <- read.csv(path2csv2)
 #cran2 <- select(cran, size:ip_id)
 #cran3 <- select(cran, ip_id, package, size)
