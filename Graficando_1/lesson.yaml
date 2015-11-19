@@ -27,15 +27,15 @@
   importar directamente de un montón de fuentes, hasta páginas web y el 
   portapapeles, aunque no vamos a aprender estas técnicas durante este curso."
 
-#- Class: figure
-#  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
-#  datos. Para que tengas una idea de la estructura antemano, su practica normal
-#  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
-#  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
-#  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
-#  estructura. A continuación le presentará una pregunta sobre ella."
-#  Figure: hojaVista.R
-#  FigureType: new
+- Class: figure
+  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
+  datos. Para que tengas una idea de la estructura antemano, su practica normal
+  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
+  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
+  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
+  estructura. A continuación le presentará una pregunta sobre ella."
+  Figure: hojaVista.R
+  FigureType: new
   
 - Class: exact_question
   Output: "Esta hoja de calculo tiene 'metadatos' (datos sobre los datos), y los 
