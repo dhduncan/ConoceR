@@ -48,7 +48,7 @@
   AnswerTests: omnitest(correctExpr="summary(resumen)")
   Hint: "Escriba summary(resumen)."
 
-- Class: cmd_question
+- Class: text
   Output: "De esta vista de summary() parece que tenemos un conjunto con un
   valor por Provincia del país con el valor del promedio del número de hijos y
   hijas por mujer en cada una."
@@ -56,11 +56,11 @@
 - Class: cmd_question
   Output: "Muy bien, graficamos pues. Tiramos todas
   juntas para esta primera vista. Escriba 
-  plot(resumen$hijos, ylab='Número de hijos)', xaxt='n')"
-  CorrectAnswer: plot(resumen$hijos, ylab='Número de hijos)', xaxt='n')
-  AnswerTests: omnitest(correctExpr="plot(resumen$hijos, ylab='Número de hijos)', xaxt='n')")
+  plot(resumen$hijos, ylab='Número de hijos', xaxt='n')"
+  CorrectAnswer: plot(resumen$hijos, ylab='Número de hijos', xaxt='n')
+  AnswerTests: omnitest(correctExpr="plot(resumen$hijos, ylab='Número de hijos', xaxt='n')")
   Hint: "Esta primera gráfica es un regalo, solo hay que teclear
-  plot(resumen$hijos, ylab='Número de hijos)', xaxt='n')."
+  plot(resumen$hijos, ylab='Número de hijos', xaxt='n')."
 
 - Class: mult_question
   Output: "Ya con esta gráfica vemos la dispersión de los promedios del número
@@ -84,31 +84,47 @@
   cuantitativa como el número de hijos sea una diagrama de caja, también conocido
   como diagrama de caja y bigote, o boxplot en inglés. La función tomo el nombre
   del inglés, teclee boxplot(resumen$hijos)."
-  CorrectAnswer: teclee boxplot(resumen$hijos)
-  AnswerTests: omnitest(correctExpr="teclee boxplot(resumen$hijos)")
-  Hint: "Acá no hay trucos, escriba teclee boxplot(resumen$hijos) no más. Si 
+  CorrectAnswer: boxplot(resumen$hijos)
+  AnswerTests: omnitest(correctExpr="boxplot(resumen$hijos)")
+  Hint: "Acá no hay trucos, escriba boxplot(resumen$hijos) no más. Si 
   usted ve un mensaje de error 'Error in plot.new() figure margins too large',
   significa que necesita arrastrar la ventana de PLOTS para que sea más alta."
 
 - Class: text
   Output: "Un encanto del sistema base de gráficas en R es que es algo parecido
-  al modo de trabajar con papel y lapiz. Una vez que estemos satisfech@s con la
+  al modo de trabajar con papel y bolígrafo. Una vez que estemos satisfech@s con la
   base de la gráfica, podemos añadir elementos como títulos, leyendas, y muchos
-  elementos más. Pero esta gráfica no está lista todavía, me parece. Primero, 
+  elementos más. Pero, justo igual a dibujar con un bolí en papel, no podemos 
+  borrar un elemento una vez trazado. Hay que volver a dibujarla, y en esto se
+  ve la gran ventajo de un sistema repetible como lo que ofrece R. Ahora, 
   vamos a girar las etiquetas del eje Y para que se lea mejor los valores."
 
 - Class: cmd_question
-  Output: "Cuando queremos reemplazar un elemento, le toca volver a repetir 
-  el comando que establece el cuadro. Pero, es por eso que guardamos código en
-  un archivo - así se puede volver a repetir al instante. Ahora, para girar los
-  valores del eye Y, la manera más eficaz pueda ser recuperar el último llamada
-  a boxplot(resumen$hijos) con la flecha arriba, y insertar ', las=1 antes del
-  último cierre de paréntesis. Dese una oportunidad."
+  Output: "Uno debe esperar pasar por varios borradores de una gráfica, y como
+  le explicaba en el último dialogo, es por eso que guardamos código en un 
+  archivo. Así se puede volver a repetir al instante. 
+  Ahora, para girar los valores del eye Y, la manera más eficaz pueda ser 
+  recuperar el último llamada a boxplot(resumen$hijos) con la flecha arriba, y 
+  insertar ', las=1' antes del último cierre de paréntesis. 
+  Siempre y cuando introducimos un argumento nuevo en una función, hay que 
+  separarlo de los de más con una coma. Introduzca el argumento con 'las' 
+  ahora..."
   CorrectAnswer: boxplot(resumen$hijos, las=1)
   AnswerTests: omnitest(correctExpr= "boxplot(resumen$hijos, las=1)")
   Hint: "Use la flecha arriba para recuperar el comando que hizo la gráfica y 
   editarlo para que diga boxplot(resumen$hijos, las=1)."
 
+- Class: text
+  Output: "¿No se siente inmediatamente más comod@ en leer el contenido así? 
+  Por ejemplo, la pregunta sobre el rango de valores hubiera sido mucho más 
+  fácil con la gráfica en esta orientación, ¿verdad?"
+
 - Class: cmd_question
-  Output: "Añada una etiqueta para el eje Y "
-  
+  Output: "Ahora añada una etiqueta para el eje Y. Tiene usted dos opciones. 
+  (1) con mtext('Número de hijos y hijas', side=2, line=3), o (2) por recuperar
+  el último comando con boxplot y insertar, antes del último cierre de 
+  paréntesis ylab='Número de hijos y hijas'."
+  CorrectAnswer: boxplot(resumen$hijos, las=1, ylab="Número de hijos y hijas") 
+  AnswerTests: any_of_exprs('mtext("Número de hijos y hijas", side = 2, line = 3)', 'boxplot(resumen$hijos, las=1, ylab="Número de hijos y hijas")')
+  Hint: "Escriba o mtext('Número de hijos y hijas', side = 2, line = 3) o 
+  boxplot(resumen$hijos, las=1, ylab='Número de hijos y hijas')."

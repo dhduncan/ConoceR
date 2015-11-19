@@ -1,0 +1,63 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: scraps
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.3.1
+
+## basura
+- Class: text
+  Output: "Tal vez no se lo enteró pero al comenzar esta lección R hubiera 
+  instalado un paquete nuevo 'readxl' en el fondo. El propósito de este paquete
+  es aceder a datos almacenados en archivos de MS Excel. Creo que la gran mayoria
+  de usuarios de R siguen usando Excel o su equivalente como parte del proceso 
+  de ingresar datos, así que paquetes así son super útiles. De hecho, se puede
+  importar directamente de un montón de fuentes, hasta páginas web y el 
+  portapapeles, aunque no vamos a aprender estas técnicas durante este curso."
+
+- Class: figure
+  Output: "Bueno, es la hora de crear un tramo de datos que corresponde a los
+  datos. Para que tengas una idea de la estructura antemano, su practica normal
+  sería echar un vistazo al archivo mediante un programa tipo Excel o LibreOffice. 
+  Esto se haría fuera de R. En este caso grabé una imagen de la hoja, y la acabara
+  de aparecer en la ventanilla de PLOTS. Deténgase un ratito para observar la
+  estructura. A continuación le presentará una pregunta sobre ella."
+  Figure: hojaVista.R
+  FigureType: new
+  
+- Class: exact_question
+  Output: "Esta hoja de calculo tiene 'metadatos' (datos sobre los datos), y los 
+  datos crudos que nosotros necesitamos. ¿Después de cuantos renglones de 
+  meta datos empiecen los datos crudos y sus etiquetas? Escriba el número del 
+  renglón cuando empiecen los datos no más."
+  CorrectAnswer: 18
+  AnswerTests: omnitest(correctVal='18')
+  Hint: "Las etiquetas (region, área, sabLyE, y hijos) que encabezan los datos
+  empiezan en el renglón 18, después de las observaciones y notas. Escriba 18 
+  entonces."
+
+- Class: text
+  Output: "Este hecho es importante porque vamos a utilizar este dato en el 
+  siguiente paso para decir a R que debe saltar los primeros 14 renglones de 
+  contenido."
+
+- Class: cmd_question
+  Output: "Sin retraso más, vamos a asignar a un objeto nuevo 'resumen' los datos 
+  del censo mediante la función read_excel(), y teclee 
+  hijos <- read_excel(path = path2xlsx, sheet="resumen", skip = 14). 
+  Con esto especificamos tres argumentos, (1) 'path', la dirección al archivo de 
+  interés, (2) 'sheet' para el nombre de la hoja que queremos, y (3) 'skip', 
+  cuantos renglones de contenido deben ser saltados antes empezar a leer los 
+  datos."
+  CorrectAnswer: hijos <- read_excel(path = path2xlsx, skip = 14)
+  AnswerTests: omnitest(correctExpr='hijos <- read_excel(path = path2xlsx, skip = 14)')
+  Hint: "Acuérdese que R es ultra sensible a minúscula y mayúscula, muchos errores
+  surgen debido a cambios no intencionales de ortografía. Escriba, o pega, 
+  hijos <- read_excel(path = path2xlsx, skip = 14)."
+  
+- Class: text
+  Output: "Entienda que la función read_excel pertenece al paquete. Fuera de esta 
+  lección, usted tendría que cargar el paquete readxl antes de invocar 
+  read_excel() paso por teclear library(readxl)."
+
