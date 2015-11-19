@@ -3,7 +3,7 @@
 # the user's working directory and thus be accessible to them
 # throughout the lesson.
 
-.pathtofile <- function(course_, lesson_, file_){
+.pathtofile <<- function(course_, lesson_, file_){
   if(as.character(packageVersion("swirl")) > "2.2.21"){
     file.path(get_swirl_option("courses_dir"), course_, lesson_, file_)
   } else {
