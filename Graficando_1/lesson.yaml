@@ -152,8 +152,8 @@
   stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, 
   vertical = TRUE, pch=19). Le comento los elementos en seguida."
   CorrectAnswer: stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, vertical = TRUE, pch=19)
-  AnswerTests: omnitest(correctExpr="stripchart(resumen$hijos, method = 'jitter', jitter = 0.15, add = TRUE, vertical = TRUE, pch=19)")
-  Hint: "escriba stripchart(resumen$hijos, method = 'jitter', jitter = 0.15, 
+  AnswerTests: omnitest(correctExpr="stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, vertical = TRUE, pch=19)")
+  Hint: "escriba stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, 
   add = TRUE, vertical = TRUE, pch=19)."
   
 - Class: text
@@ -178,13 +178,13 @@
 
 - Class: cmd_question
   Output: "Necesita un título, ¿verdad?. Ponga 
-  title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
-  por ejemplo. Aunque puede parecerse un error '\n' causa que el título rompe
-  en las dos lineas."
-  CorrectAnswer: title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
-  AnswerTests: omnitest(correctExpr= "title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')")
-  Hint: "Teclee title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
-  no más para titular la presentación.
+  title(main= 'Promedio del número de hijos y hijas de mujeres ecuatorianas 2010')
+  por ejemplo. Fuera del contexto de una lección de swirl, hay opciones para 
+  romper el título rompe en dos o más lineas."
+  CorrectAnswer: title(main= 'Promedio del número de hijos y hijas de mujeres ecuatorianas 2010')
+  AnswerTests: omnitest(correctExpr= "title(main= 'Promedio del número de hijos y hijas de mujeres ecuatorianas 2010')")
+  Hint: "Teclee title(main= 'Promedio del número de hijos y hijas de mujeres ecuatorianas 2010')
+  no más para titular la presentación."
   
 - Class: cmd_question
   Output: "Podríamos declarar nuestra fuente como subtítulo, otra vez con la 
@@ -202,11 +202,12 @@
   siguiente lección através del conjunto de datos deglosados."
 
 - Class: mult_question
-  Output: En la lección actual, solo le queda a usted un momento de reflexión en
+  Output: "En la lección actual, solo le queda a usted un momento de reflexión en
   lo que haya aprendido. Según su experiencia, ¿cree usted que se podría haber
-  añadido el título, subtítulo, y etiqueta del eje todos a la vez?
+  añadido el título, subtítulo, y etiqueta del eje todos a la vez?"
   AnswerChoices: "Si, la función title() tiene argumentos para cada tipo de título o etiqueta; No, solo acepta un argumento a la vez"
   CorrectAnswer: Si, la función title() tiene argumentos para cada tipo de título o etiqueta
+  AnswerTests: omnitest(correctVal="Si, la función title() tiene argumentos para cada tipo de título o etiqueta")
   Hint: "Pues, si se puede. Trate de nuevo."
   
 - Class: text
@@ -239,5 +240,3 @@
   
 - Class: text
   Output: "Hasta la proxima lección, tenga usted un buen día."
-  
-  
