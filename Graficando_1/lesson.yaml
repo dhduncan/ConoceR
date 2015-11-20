@@ -187,8 +187,10 @@
   no más para titular la presentación."
   
 - Class: cmd_question
-  Output: "Podríamos declarar nuestra fuente como subtítulo, otra vez con la 
-  función title. Trate esto title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
+  Output: "Si no cabe en la ventanilla, haga click en ZOOM, justa arriba de la
+  gráfica para verla más bonita. Podríamos declarar nuestra fuente de datos como
+  subtítulo, otra vez con la función title. Trate esto 
+  title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
   CorrectAnswer: title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')
   AnswerTests: omnitest(correctExpr= "title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')")
   Hint: "Para añadir este texto como subtítulo escriba 
@@ -201,12 +203,25 @@
   que comunica mucho de este conjunto de datos. También provoca muchas preguntas
   más, como ¿cuáles Provincias sobresaltan del conjunto con máximo o mínimo
   promedio de número de niños por mujer?  Preguntas así podemos explorar en la
-  siguiente lección através del conjunto de datos deglosados."
+  siguiente lección através del conjunto de datos desglosados."
+
+- Class: mult_question
+  Output: "Otra pregunta de interpretación de esta gráfica antes de cambiar el
+  tipo. La mediana es un estadístico que indica el valor en la mitad de todos en
+  el conjunto impar, o en el caso de un número par de valores, divide los dos 
+  valores centrales. Entonces, según la gráfica ¿qué cree usted es la mediana 
+  del número promedio de hijos y hijas que tuvieron las mujeres ecuatorianas 
+  entre 14 - 50 años de edad en 2010?"
+  AnswerChoices: "1.95; 2.10; 2.30"
+  CorrectAnswer: 1.95
+  AnswerTests: omnitest(correctVal= "1.95")
+  Hint: "Por defecto, las diagramas de caja llevan la media en la linea gruesa
+  así el estimador más cercano es 1.95."
 
 - Class: cmd_question
   Output: "Antes de salir, debemos realizar una histrograma ¿verdad?, tal vez la
   gráfica más famosa para resumenes de una variable cuantitativa. Bueno, así se
-  lo hace hist(resumen$hijos, ylab='Número de hijos y hijas'). 
+  lo hace hist(resumen$hijos, ylab='Número de hijos y hijas')." 
   CorrectAnswer: hist(resumen$hijos, ylab='Número de hijos y hijas')
   AnswerTests: omnitest(correctExpr="hist(resumen$hijos, ylab='Número de hijos y hijas')")
   Hint: "No hay ningún truco, simplemente escriba hist(resumen$hijos, 
@@ -216,7 +231,7 @@
 - Class: mult_question
   Output: "En la lección actual, solo le queda a usted un momento de reflexión en
   lo que haya aprendido. Según su experiencia, ¿cree usted que se podría haber
-  añadido el título, subtítulo, y etiqueta del eje todos a la vez?"
+  añadido el título, subtítulo, y etiqueta del eje, todos a la vez?"
   AnswerChoices: "Si, la función title() tiene argumentos para cada tipo de título o etiqueta; No, solo acepta un argumento a la vez"
   CorrectAnswer: Si, la función title() tiene argumentos para cada tipo de título o etiqueta
   AnswerTests: omnitest(correctVal="Si, la función title() tiene argumentos para cada tipo de título o etiqueta")
@@ -229,17 +244,6 @@
   Es buena practica romper lineas con INTRO para mantener código fácil de leer
   y editar.  La función stripchart() para superimponer los puntos por encima 
   tendrá que ser una llamada aparte, despues de lo de boxplot()."
-
-- Class: mult_question
-  Output: "La mediana marca el valor en la mitad de todos en el conjunto impar, 
-  o en el caso de un número par de valores, divide los dos valores centrales. 
-  Entonces ¿la mediana del número promedio de hijos y hijas que tuvieron las mujeres 
-  ecuatorianas entre 14 - 50 años de edad en 2010 era qué?"
-  AnswerChoices: "1.95; 2.10; 2.30"
-  CorrectAnswer: 1.95
-  AnswerTests: omnitest(correctVal= "1.95")
-  Hint: "Por defecto, las diagramas de caja llevan la media en la linea gruesa
-  así el estimador más cercano es 1.95."
 
 - Class: text
   Output: "Con eso, usted ha terminado la lección. No se olvide de trasladar
