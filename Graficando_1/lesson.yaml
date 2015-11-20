@@ -115,16 +115,129 @@
   editarlo para que diga boxplot(resumen$hijos, las=1)."
 
 - Class: text
-  Output: "¿No se siente inmediatamente más comod@ en leer el contenido así? 
+  Output: "¿No se siente inmediatamente más comod@ leyendo el contenido así? 
   Por ejemplo, la pregunta sobre el rango de valores hubiera sido mucho más 
   fácil con la gráfica en esta orientación, ¿verdad?"
 
 - Class: cmd_question
   Output: "Ahora añada una etiqueta para el eje Y. Tiene usted dos opciones. 
-  (1) con mtext('Número de hijos y hijas', side=2, line=3), o (2) por recuperar
+  (1) con title(ylab= 'Número de hijos y hijas'), o (2) por recuperar
   el último comando con boxplot y insertar, antes del último cierre de 
   paréntesis ylab='Número de hijos y hijas'."
   CorrectAnswer: boxplot(resumen$hijos, las=1, ylab="Número de hijos y hijas") 
-  AnswerTests: any_of_exprs('mtext("Número de hijos y hijas", side = 2, line = 3)', 'boxplot(resumen$hijos, las=1, ylab="Número de hijos y hijas")')
-  Hint: "Escriba o mtext('Número de hijos y hijas', side = 2, line = 3) o 
+  AnswerTests: any_of_exprs('title(ylab= "Número de hijos y hijas")', 'boxplot(resumen$hijos, las=1, ylab="Número de hijos y hijas")')
+  Hint: "Escriba o title(ylab= 'Número de hijos y hijas') o 
   boxplot(resumen$hijos, las=1, ylab='Número de hijos y hijas')."
+
+- Class: mult_question
+  Output: "¿Se acuerde en la visita a la galería cuando le expliqué las partes
+  de una digrama de cajas? Basicamente, la diagrama divide los datos en cuartos.
+  Esto nos permite hacer observaciones sencillas como 'en 75% de todas las 
+  provincias de El Ecuador las mujeres por promedio tienen más de N niños.' En
+  este caso N sería el primer cuartil o el punto que indica un cuarto de todas
+  las observaciones. ¿Cuál de los siguientes valores sería más cercano a N según
+  esta gráfica?"
+  AnswerChoices: "1.75; 1.95; 2.30; 1.55"
+  CorrectAnswer: 1.75
+  AnswerTests: omnitest(correctVal= "1.75")
+  Hint: "El primer cuarto de valores acaba donde empieza la caja, así que el
+  valor más cercano según la gráfica sería 1.75."
+
+- Class: cmd_question
+  Output: "Hacemos una modificación que a mi me encanta. Se puede superimponer
+  dos gráficas una por encima de otra para comunicar aspectos distintos de los
+  datos. A esta diagrama de cajas vamos a añadir un tipo denominado 
+  'stripchart', y su función es stripchart(). Usted va a llamar a esta función
+  con 6 argumentos. Acá está el código entero, deténgase un ratito observarlos
+  stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, 
+  vertical = TRUE, pch=19). Le comento los elementos en seguida."
+  CorrectAnswer: stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, vertical = TRUE, pch=19)
+  AnswerTests: omnitest(correctExpr="stripchart(resumen$hijos, method = 'jitter', jitter = 0.15, add = TRUE, vertical = TRUE, pch=19)")
+  Hint: "escriba stripchart(resumen$hijos, method = 'jitter', jitter = 0.15, 
+  add = TRUE, vertical = TRUE, pch=19)."
+  
+- Class: text
+  Output: "En este último llamada empezamos con el objeto x, lo que era la
+  variable resumen$hijos. El segundo argumento 'method' define el método de acomodar 
+  los puntos 'jitter'. Jitter no tiene ninguna tradución fácil, pero se puede 
+  pensar en agitación causada por inestablidad nerviosa o algo así. El siguiente
+  argumento jitter adjuste el grado máximo de desplacimiento horizontal de los
+  puntos. Luego, el argumento 'add' (añadir) es imprescindible. Es ello que 
+  especifica que los puntos sean por encima de la gráfica actual en lugar de en
+  una diagrama nueva. El argumento 'vertical' por defecto es 'FALSE', es decir
+  horizontal, así que tuvimos que cambiarlo a 'TRUE'. Por último, el argumento
+  'pch' es lo que controla el tipo de punto."
+
+- Class: text
+  Output: "No me soprendería si usted esta pensando que todo esto es demasiado
+  detallado. Pero, fíjese, con estos dos elementos gráficos elementos juntos se 
+  aprovecha del mensaje de resumen que ofrece la caja y bigote, pero a la vez 
+  se ve el número de valores y su distribución cruda. En efecto combine lo bueno
+  de las dos primeras vistas que hemos visto. Podemos dejar esta gráfica en su
+  estado actual, una vez que acabemos de añadir las etiquetas necesarias."
+
+- Class: cmd_question
+  Output: "Necesita un título, ¿verdad?. Ponga 
+  title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
+  por ejemplo. Aunque puede parecerse un error '\n' causa que el título rompe
+  en las dos lineas."
+  CorrectAnswer: title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
+  AnswerTests: omnitest(correctExpr= "title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')")
+  Hint: "Teclee title(main= 'El promedio provincial de hijos y hijas de mujeres\necuatorianas entre 14 y 50 años de edad')
+  no más para titular la presentación.
+  
+- Class: cmd_question
+  Output: "Podríamos declarar nuestra fuente como subtítulo, otra vez con la 
+  función title. Trate esto title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
+  CorrectAnswer: title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')
+  AnswerTests: omnitest(correctExpr= "title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')")
+  Hint: "Para añadir este texto como subtítulo escriba 
+  title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
+
+- Class: text
+  Output: "Ahora yo diría que usted tiene una gráfica linda en su simplicidad
+  que comunica mucho de este conjunto de datos. También provoca muchas preguntas
+  más, como ¿cuáles Provincias sobresaltan del conjunto con máximo o mínimo
+  promedio de número de niños por mujer?  Preguntas así podemos explorar en la
+  siguiente lección através del conjunto de datos deglosados."
+
+- Class: mult_question
+  Output: En la lección actual, solo le queda a usted un momento de reflexión en
+  lo que haya aprendido. Según su experiencia, ¿cree usted que se podría haber
+  añadido el título, subtítulo, y etiqueta del eje todos a la vez?
+  AnswerChoices: "Si, la función title() tiene argumentos para cada tipo de título o etiqueta; No, solo acepta un argumento a la vez"
+  CorrectAnswer: Si, la función title() tiene argumentos para cada tipo de título o etiqueta
+  Hint: "Pues, si se puede. Trate de nuevo."
+  
+- Class: text
+  Output: "De hecho, se pudiera haber añadido todos los elementos de título y 
+  etiqueta en la llamad original a boxplot(), sin llamar a la función title(). 
+  Le animo colocar todos argumentos en una sola llamada en su álbum de recortes.
+  Es buena practica romper lineas con INTRO para mantener código fácil de leer
+  y editar.  La función stripchart() para superimponer los puntos por encima 
+  tendrá que ser una llamada aparte, despues de lo de boxplot()."
+
+- Class: mult_question
+  Output: "La mediana marca el valor en la mitad de todos en el conjunto impar, 
+  o en el caso de un número par de valores, divide los dos valores centrales. 
+  Entonces ¿la mediana del número promedio de hijos y hijas que tuvieron las mujeres 
+  ecuatorianas entre 14 - 50 años de edad en 2010 era qué?"
+  AnswerChoices: "1.95; 2.10; 2.30"
+  CorrectAnswer: 1.95
+  AnswerTests: omnitest(correctVal= "1.95")
+  Hint: "Por defecto, las diagramas de caja llevan la media en la linea gruesa
+  así el estimador más cercano es 1.95."
+
+- Class: text
+  Output: "Con eso, usted ha terminado esta lección. No se olvide de trasladar
+  código que le parece útil a su álbum de recortes.  En esta lección hemos visto
+  una manera muy buena de resumir una variable cuantitativa de forma atractiva
+  y informativa. En la siguiente usted jugará con opciones para revelar la 
+  identidad de las Provincias, y hacer contrastes con factores de agrupación que
+  puedan ayudar en explicar los patrones en el número de hijos y hijas entre las
+  mujeres ecuatorianas."
+  
+- Class: text
+  Output: "Hasta la proxima lección, tenga usted un buen día."
+  
+  
