@@ -192,7 +192,9 @@
   CorrectAnswer: title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')
   AnswerTests: omnitest(correctExpr= "title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')")
   Hint: "Para añadir este texto como subtítulo escriba 
-  title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
+  title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010'). El
+  símbolo '>' es un poco raro pero los dos puntos interfieren con la 
+  programación de lecciones en swirl así no los puedo utilizar acá."
 
 - Class: text
   Output: "Ahora yo diría que usted tiene una gráfica linda en su simplicidad
@@ -230,7 +232,7 @@
   así el estimador más cercano es 1.95."
 
 - Class: text
-  Output: "Con eso, usted ha terminado esta lección. No se olvide de trasladar
+  Output: "Con eso, usted ha terminado la lección. No se olvide de trasladar
   código que le parece útil a su álbum de recortes.  En esta lección hemos visto
   una manera muy buena de resumir una variable cuantitativa de forma atractiva
   y informativa. En la siguiente usted jugará con opciones para revelar la 
