@@ -203,6 +203,16 @@
   promedio de número de niños por mujer?  Preguntas así podemos explorar en la
   siguiente lección através del conjunto de datos deglosados."
 
+- Class: cmd_question
+  Output: "Antes de salir, debemos realizar una histrograma ¿verdad?, tal vez la
+  gráfica más famosa para resumenes de una variable cuantitativa. Bueno, así se
+  lo hace hist(resumen$hijos, ylab='Número de hijos y hijas'). 
+  CorrectAnswer: hist(resumen$hijos, ylab='Número de hijos y hijas')
+  AnswerTests: omnitest(correctExpr="hist(resumen$hijos, ylab='Número de hijos y hijas')")
+  Hint: "No hay ningún truco, simplemente escriba hist(resumen$hijos, 
+  ylab='Número de hijos y hijas'). Se podría definir un título y muchaos detalles
+  de más para este tipo, pero con esto se puede experimentar aparte."
+
 - Class: mult_question
   Output: "En la lección actual, solo le queda a usted un momento de reflexión en
   lo que haya aprendido. Según su experiencia, ¿cree usted que se podría haber
