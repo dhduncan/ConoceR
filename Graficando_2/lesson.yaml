@@ -137,8 +137,7 @@
   Output: "No sé como se siente usted, pero a mi me tranquilizó los ojos este 
   cambio, aunque todavía el producto podría ser mejorado. Ya se puede leer mejor
   las etiquetas y también el rango de valores.  Creo yo que podemos dejar esta
-  gráfica acá, aunque le toca a usted añadir etiquetas y títulos para completar
-  esta gráfica."
+  gráfica acá, aunque le toca a usted añadir etiquetas y títulos para completarla."
   
 - Class: cmd_question
   Output: "Vamos a comparar una opción más antes de partir. Pero antes de eso, 
@@ -167,12 +166,62 @@
 - Class: cmd_question
   Output: "He guardado lo mejor para el fin. En el vídeo de principios en que
   le destaqué algunos heroes del campo de visualización de datos, mencioné 
-  William Cleveland. Según los principios de la percepcion humana, el desarollo
+  William Cleveland. Según los principios de la percepcion humana, él desarolló
   una alternativa a la digrama de barras la que lleva su nombre 'Cleveland Plot'.
-  En R, con nuestro conjunto reordenado podemos realizarlo asi
-  dotchart(x = resumenOrd$hijos, labels = resumenOrd$region). Pruebelo, puede
+  En R, con nuestro conjunto reordenado podemos realizarlo así
+  dotchart(x = resumenOrd$hijos, labels = resumenOrd$region). Pruébelo, puede
   que le quitara las ganas de hacer diagramas de barras para toda la vida."
   CorrectAnswer: dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)
   AnswerTests: omnitest(correctExpr= "dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)")
   Hint: "Teclee dotchart(x = resumenOrd$hijos, labels = resumenOrd$region) y
   presione INTRO, usted tendra que añadir las etiquetas luego, y solo."
+
+- Class: mult_question
+  Output: "Para mi, esta gráfica es lo mejor de las opciones para comunicar este
+  resumen de información. Los valores sobresaltean mejor de ella que de una 
+  tabla de valores, y también comunica su contenido mejor que la diagrama de 
+  barras. ¿Por qué? Pues, el diseño de esta gráfica cumple un par de principios 
+  de presentación algo sútiles, pero influyen el impacto de la gráfica. Escoja 
+  la opción entre las siguientes que no sería un principio importante que cumple
+  esta gráfica comparado con la diagrama de barras."
+  AnswerChoices: "Se favorece presentaciones horizontales ; Mantenga una buena razón de la información proporcionada a la tinta utilizada; No refiera a cero si el valor no es especialmente referente"
+  CorrectAnswer: "Se favorece presentaciones horizontales"
+  AnswerTests: omnitest(correctVal="Se favorece presentaciones horizontales")
+  Hint: "Aunque muchas presentaciones se aprovechen de una orientación horizontal
+  no es un principio general reconocido. Así que la respuesta correcta - el 
+  principio falso - es que se favorece presentaciones horizontales."
+
+- Class: text
+  Output: "Esta presentación es mucho mas ligera, ¿no cree? El cambio hasta 
+  puntos resulta en un impacto estético más agradable, pero los lineas débiles 
+  del fondo habilitan que un lector pueda sacar el valor para una cierta 
+  provincia. Opino yo que se gana mucho y se pierde nada."
+  
+- Class: mult_question
+  Output: "Si usted quisiera cambiar los puntos de esta gráfica hasta circulos 
+  llenados o solidos, o triangulos o lo que sea, ¿cuál argumento adjustaría?"
+  AnswerChoices: "pch; las; mar; ninguno de ellos"
+  CorrectAnswer: pch
+  AnswerTest: omnitest(correctVal= "pch")
+  Hint: "La respuesta correcta es pch, lo que quiere decir pLOTTING chARACTER, o
+  , tal vez, carácter de trazar o marcar podría ser una tradución al español."
+
+- Class: text
+  Output: "Pues, usted acaba de completar dos lecciones en resumir una variable
+  sola, primero el numero de hijos y hijas, la variable cuantitativa sola, y
+  luego variación en ella por provincia de El Ecuador es decir, un resumen por
+  una variable categorica. Para ella usamos una diagrama de barras y on dotchart(),
+  lo que es más parecida a una diagrama de barras que una diagram de dispersión."
+
+- Class: text
+  Output: "Tal vez le hubiera dado cuenta que cada vez le dejo más comandos 
+  para cumplir, títulos, etiquetas, etcétera.  Espero que usted esté
+  experimentando con los comandos, con los diseños, y que muy pronto empezara de 
+  jugar con sus propios tramos de datos sea por su propio interés o tal vaz en
+  trabajos para otras materias."
+
+- Class: text
+  Output: "Esto es todo para esta lecciòn. No se olvide guardar y anotar pedazos
+  de código en su álbum de recortes digital. La idea es que estos pedazos sean 
+  útiles para usted en un futuro, y por eso, sea sabio que no solo pegar el 
+  código sino anotarlo también según convenga.  Le espero un buen día."
