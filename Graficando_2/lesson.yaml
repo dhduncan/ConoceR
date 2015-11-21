@@ -111,7 +111,68 @@
   pero no lo hagas tanto que apretara a la consola."
 
 - Class: mult_question
-  Output: "La grafica ya esta mucho mejor, pero nos queda un problema muy comun
-  que afecta el poder de la grafica contar su historia. Acuerdese a las graficas
-  de la ultima leccion. "
+  Output: "La grafica ya esta mucho mejor, pero nos queda un problema muy común
+  que afecta el poder de la gráfica contar su historia. Acuérdese a las gráficas
+  de la última lección, ¿estuvo muy facil leer el rango de valores de ellas, 
+  verdad? ¿Le parece más difícil ahora? ¿Cómo son ordenadas las provincias?"
+  AnswerChoices: "alfabeticamente; aleatoriamente; geograficamente"
+  CorrectAnswer: alfabeticamente
+  AnswerTests: omnitest(correctVal="alfabeticamente")
+  Hint: "No importa si usted empieza arriba o abajo, no se puede escapar la 
+  conclusión que el órden sigue el alfabeto."
 
+- Class: cmd_question
+  Output: "Supongo que este orden podria ser util para ubicar rapidamente una 
+  cierta provincia, pero compárelo con el efecto de ordenar las provincias por 
+  el valor de la variable de respuesta, el número de hijos y hijas. Vamos
+  a cambiar la llamada a la función barplot para controlar el órden, como sigue
+  'with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, 
+  horiz = TRUE, las=1))'. Hágalo, en seguida se lo explico a usted."
+  CorrectAnswer: with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, horiz = TRUE, las=1))
+  AnswerTests: omnitest(correctExpr="with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, horiz = TRUE, las=1))")
+  Hint: "Escriba el código según las instrucciones para seguir, todas las comas y 
+  corchetes son muy importantes."
+
+- Class: text
+  Output: "No sé como se siente usted, pero a mi me tranquilizó los ojos este 
+  cambio, aunque todavía el producto podría ser mejorado. Ya se puede leer mejor
+  las etiquetas y también el rango de valores.  Creo yo que podemos dejar esta
+  gráfica acá, aunque le toca a usted añadir etiquetas y títulos para completar
+  esta gráfica."
+  
+- Class: cmd_question
+  Output: "Vamos a comparar una opción más antes de partir. Pero antes de eso, 
+  quiero que vea el efecto del último comando que usted ha hecho en la gráfica 
+  esta. Teclee este parte del comando solo resumen[order(resumen[,2]), ] y
+  presione INTRO."
+  CorrectAnswer: resumen[order(resumen[,2]), ]
+  AnswerTests: omnitest(correctExpr="resumen[order(resumen[,2]), ]")
+  Hint: "Teclee o pegar resumen[order(resumen[,2]), ] no más y presione INTRO."
+
+- Class: cmd_question
+  Output: "Este comando no es nada transparente ¿verdad?. Dice a R algo como... 
+  con todo el objeto 'resumen', ordénelo por la segunda columna en sí. 
+  Un comando equivalente, tal vez más de facil leer sería 
+  'resumen[with(resumen, order(hijos)), ]'. En sí, ninguno de ellos afectará un
+  cambio permanente a nuestro tramo de datos, sino una reconfiguración temporal
+  de conveniencia. Para hacer la pŕoxima y final gráfica más sencilla realizar, 
+  vamos a guardar una versión del tramo con este órden por número de hijos y 
+  hijas. Solo hay que asignar el último comando su propio nombre, así
+  resumenOrd <- resumen[with(resumen, order(hijos)), ]. Pruébelo, el resultado
+  aparecerá en la ventanilla ENVIRONMENT."
+  CorrectAnswer: resumenOrd <- resumen[with(resumen, order(hijos)), ]
+  AnswerTests: omnitest(correctExpr= "resumenOrd <- resumen[with(resumen, order(hijos)), ]")
+  Hint: "Escriba resumenOrd <- resumen[with(resumen, order(hijos)), ] y presione INTRO."
+
+- Class: cmd_question
+  Output: "Hemos guardado lo mejor para el fin. En el vídeo de principios en que
+  le destaqué algunos heroes del campo de visualización de datos, mencioné 
+  William Cleveland. Según los principios de la percepcion humana, el desarollo
+  una alternativa a la digrama de barras la que lleva su nombre 'Cleveland Plot'.
+  En R, con nuestro conjunto reordenado podemos realizarlo asi
+  dotchart(x = resumenOrd$hijos, labels = resumenOrd$region). Pruebelo, puede
+  que le quitara las ganas de hacer diagramas de barras para toda la vida."
+  CorrectAnswer: dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)
+  AnswerTests: omnitest(correctExpr= "dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)")
+  Hint: "Teclee dotchart(x = resumenOrd$hijos, labels = resumenOrd$region) y
+  presione INTRO, usted tendra que añadir las etiquetas luego, y solo."
