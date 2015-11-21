@@ -165,7 +165,7 @@
   Hint: "Escriba resumenOrd <- resumen[with(resumen, order(hijos)), ] y presione INTRO."
 
 - Class: cmd_question
-  Output: "Hemos guardado lo mejor para el fin. En el vídeo de principios en que
+  Output: "He guardado lo mejor para el fin. En el vídeo de principios en que
   le destaqué algunos heroes del campo de visualización de datos, mencioné 
   William Cleveland. Según los principios de la percepcion humana, el desarollo
   una alternativa a la digrama de barras la que lleva su nombre 'Cleveland Plot'.
