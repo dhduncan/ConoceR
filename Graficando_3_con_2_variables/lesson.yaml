@@ -1,0 +1,17 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Graficando_3_con_2_variables
+  Author: David H. Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.3.1
+
+- Class: text
+  Output: "¡Hola! Bienvenid@ a esta tercer lección de graficar. Usted va a 
+  hacer más gráficas con pares de variables en esta lección."
+  
+- Class: text
+  Output: "Espero que se siente cada vez más cómod@ con el uso de R, y que ya 
+  tiene su álbum de recortes creciendo con ejemplos de código útil para 
+  realizar sus propias presentaciones. Muy pronto, usted tiene que presentar 
+  una obra propia a sus compañeros como tarea de calificación."
