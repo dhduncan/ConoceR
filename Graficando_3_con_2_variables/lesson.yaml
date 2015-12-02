@@ -15,3 +15,48 @@
   tiene su álbum de recortes creciendo con ejemplos de código útil para 
   realizar sus propias presentaciones. Muy pronto, usted tiene que presentar 
   una obra propia a sus compañeros como tarea de calificación."
+  
+- Class: figure
+  Output: "Antes de empezar, quería enseñarle una característica de R que no
+  he mencionado todavía. En la última lección usted utilizara unos argumentos
+  a la función par() para cambiar las dimensiones de las margenes externas para
+  acomodar los nombres de las provincias de El Ecuador.  Acabara de aparecer una
+  imagen de cuatro gráficas en la ventanilla PLOTS que demuestra el uso de un
+  argumento que divide el espacio en filas y columnas para acomodar gráficas
+  múltiples."
+  Figure: mfrow.R
+  FigureType: new
+
+- Class:  cmd_question
+  Output: "El argumento que utilicé fue mfrow() lo cual es otro argumento muy
+  útil de par(). No tengo ni idea porque el argumento se denominó mfrow, pero,
+  por si a caso que le ayude recordarlo, digamos que es una sigla para Matriz 
+  de  Figuras por ROWs (filas). En el indicador (>) teclée par(mfrow = c(2,2)).
+  Se lo explico en seguida."
+  CorrectAnswer: par(mfrow = c(2,2))
+  AnswerTests: omnitest(correctExpr="par(mfrow = c(2,2))")
+  Hint: "Teclée par(mfrow = c(2,2)), y en el próximo diálogo se lo explicaré."
+
+- Class: text
+  Output: "La instrucción que usted acaba de darle a R es que divida
+  el espacio de una salida grafica en partes iguales; la parte 'c(2, 2)' 
+  especifica el numero de filas (2), luego el numero de columnas (2) (pudieran
+  haber sido otros valores, y se podría volver el adjuste a 'c(1,1)' para
+  que R imprima una gráfica en la ventanilla entera.
+  La parte del argumento ROW (fila) refleja que R va a llenar este espacio por 
+  filas, empezando con el espacio superior a la izquierda. Existe un argumento
+  muy parecido mfcol() que llenara los espacios por columnas. Sin embargo, 
+  puesto que usted controla el orden de realizar las graficas, no importa tanto
+  cual escoge usted. Yo siempre uso mfrow()."
+  
+- Class: cmd_question
+  Output: "Muy bien, ahora, usted va a reproducir la imagen de las cuatro
+  gráficas. Ya usted estableció el espacio con mfrow(), necesita generar unos
+  datos. Escriba k <- rnorm(20) para crear un objeto k que tomara 20 números
+  aleatorios de una distribución normal (simétrica, con media 0)."
+  CorrectAnswer: k <- rnorm(20)
+  AnswerTests: omnitest(correctExpr="k <- rnorm(20)")
+  Hint: "Usted necesita este objeto para dar las siguientes instrucciones a R.
+  Teclée k <- rnorm(20) para continuar."
+
+  
