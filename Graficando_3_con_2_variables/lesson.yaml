@@ -59,4 +59,60 @@
   Hint: "Usted necesita este objeto para dar las siguientes instrucciones a R.
   Teclée k <- rnorm(20) para continuar."
 
-  
+- Class: cmd_question
+  Output: "Eche un vistazo a los datos antes de graficarlos por teclear 'k', el
+  nombre del objeto."
+  CorrectAnswer: k
+  AnswerTests: omnitest(correctExpr="k")
+  Hint: "Siempre es una buena práctica visualizar los datos antes de graficar,
+  así que ingrese k y presione INTRO."
+
+- Class: cmd_question
+  Output: "Volvemos a su gráfica pues. Haga la primera gráfica, la cual va a 
+  aparecer en la parte superior a la izquierda, por ingresar este comando 
+  plot(k, type = 'p').  De hecho, type = 'p' es la condición base del argumento
+  type (tipo) pero usted va a declararlo para ver la comparación con lo que 
+  sigue. Dese la oportunidad ahora."
+  CorrectAnswer: plot(k, type = 'p')
+  AnswerTests: omnitest(correctExpr= "plot(k, type = 'p')")
+  Hint: "Escriba plot(k, type = 'p') y pulse INTRO para continuar."
+
+- Class: mult_question
+  Output: "Acuérdese que el comando para dividir el espacio era mfrow, y esto
+  impliclara una secuencia particular de llenar el espacio. ¿Dónde se espera
+  que aparecerá la siguiente gráfica entonces?"
+  AnswerChoices: "A la derecha de la que ya esta; Por debajo de la que ya esta; En la posición diagonal, por abajo a la derecha"
+  CorrectAnswer: A la derecha de la que ya esta
+  AnswerTests: omnitest(correctVal="A la derecha de la que ya esta")
+  Hint: "mfrow() va a llenar los espacios por filas (rows en inglés), así se
+  espera que la próxima aparezca a la derecha de la gráfica previa."
+
+- Class: cmd_question
+  Output: "Ya verá usted. Escriba plot(k, type = 'l') para realizar la siguiente
+  gráfica. Fíjese que el comando es lo mismo que usted realizó para la última
+  gráfica, a parte del cambio de la 'p' de puntos para la 'l' de linea."
+  CorrectAnswer: plot(k, type = 'l')
+  AnswerTests: omnitests(correctExpr="plot(k, type = 'l')")
+  Hint: "Este comando hará la gráfica de los mismos datos, pero ahora con  una
+  linea."
+
+- Class: cmd_question
+  Output: "Ahora la tercera. Tome nota que con esta sería de gráficas usa usted
+  el mismo conjunto de 20 valores, solo está cambiando la instrucción a R sobre
+  el tipo de gráfica. La siguiente es con 'b' para both, o amBos tipos, puntos
+  y lineas juntos. Teclée plot(k, type = 'b')."
+  CorrectAnswer: plot(k, type = 'b')
+  AnswerTests: omnitest(correctExpr="plot(k, type = 'b')")
+  Hint: "¿Se equivocó en teclear plot(k, type = 'b')? Inténtelo otra vez."
+
+- Class: cmd_question
+  Output: "Por la última gráfica de este juego, teclée plot(k, type = 'h'). Esta
+  produce una gráfica tipo histograma (aunque hay valores negativos que no se 
+  esperaría de una histograma clásica) que toma el valor 0 como referencia de 
+  donde las lineas salen hacia los destinos de cada valor del objeto k. Tal vez
+  mi explicación tendrá mas sentido cuando la hayas visto. Dese la oportunidad
+  como el susodicho comando plot(k, type = 'h')."
+  CorrectAnswer: plot(k, type = 'h')
+  AnswerTests: omnitest(correctExpr="plot(k, type = 'h')")
+  Hint: "Esta es la última gráfica de esta imagen, teclée plot(k, type = 'h') y 
+  presione INTRO para continuar."
