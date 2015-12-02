@@ -92,7 +92,7 @@
   gráfica. Fíjese que el comando es lo mismo que usted realizó para la última
   gráfica, a parte del cambio de la 'p' de puntos para la 'l' de linea."
   CorrectAnswer: plot(k, type = 'l')
-  AnswerTests: omnitests(correctExpr="plot(k, type = 'l')")
+  AnswerTests: omnitest(correctExpr="plot(k, type = 'l')")
   Hint: "Este comando hará la gráfica de los mismos datos, pero ahora con  una
   linea."
 
@@ -116,3 +116,30 @@
   AnswerTests: omnitest(correctExpr="plot(k, type = 'h')")
   Hint: "Esta es la última gráfica de esta imagen, teclée plot(k, type = 'h') y 
   presione INTRO para continuar."
+
+- Class: text
+  Output: "A mi la función plot() me parece muy flexible. Creo que la impressión
+  distinta de cada gráfica destaca la importancia de pensar en cuales
+  objetos se escoge para gráficar un conjunto de valores. El cambio de puntos
+  para la linea inmediatamente da un sentido de dirección y significado a la
+  nube de valores, pero precisamente por eso no es necesariamente una buena
+  opción, si dirección no hay en los datos en sí. De igual manera, la última
+  gráfica en el estilo de histograma afecta un cambio algo radical a la gráfica
+  en que sugiere que el valor 0 es una referencia muy importante."
+
+- Class: cmd_question
+  Output: "Es importante darse cuenta que cambios a la función par() permanecen
+  en la sesión. Por ejemplo, nuevos gráficas aparecieran según esta misma
+  secuencia de arriba y izquierda, luego arriba derecho, luego abajo y izquierda,
+  etcétera. Para reinicar todos los ajustes de la función par a sus condiciones
+  de base, se puede teclear dev.off(). Este comando quiere decir algo como 
+  'apague el dispositivo gráfico'. El dispositivo, tanto como los ajustes, se 
+  refresca al recibir una nueva instrucción para graficar. Dese la oportunidad
+  ahora, teclée dev.off()."
+  CorrectAnswer: dev.off()
+  AnswerTests: omnitest(correctExpr="dev.off()")
+  Hint: "dev.off() - lo que significa 'device off' - es lo que usted tiene que 
+  teclear para seguir con la lecciòn."
+
+  
+  
