@@ -42,7 +42,7 @@
   el espacio de una salida grafica en partes iguales; la parte 'c(2, 2)' 
   especifica el numero de filas (2), luego el numero de columnas (2) (pudieran
   haber sido otros valores, y se podría volver el adjuste a 'c(1,1)' para
-  que R imprima una gráfica en la ventanilla entera.
+  que R imprima una gráfica en la ventanilla entera).
   La parte del argumento ROW (fila) refleja que R va a llenar este espacio por 
   filas, empezando con el espacio superior a la izquierda. Existe un argumento
   muy parecido mfcol() que llenara los espacios por columnas. Sin embargo, 
@@ -68,7 +68,7 @@
   así que ingrese k y presione INTRO."
 
 - Class: cmd_question
-  Output: "Volvemos a su gráfica pues. Haga la primera gráfica, la cual va a 
+  Output: "Haga la primera gráfica, la cual va a 
   aparecer en la parte superior a la izquierda, por ingresar este comando 
   plot(k, type = 'p').  De hecho, type = 'p' es la condición base del argumento
   type (tipo) pero usted va a declararlo para ver la comparación con lo que 
@@ -144,10 +144,77 @@
 - Class: text
   Output: "Si usted quiere revisar el estado de los ajustes de par() en algún
   momento, se puede teclear par() no más, con los paréntesis vacios. Esto imprime 
-  una lista de los ajustes de cada argumento que acepta la función par. Hay 
-  muchas, y algunos jamas he usado en más de una década del uso de este 
-  programa. También, para leer lo que hace cada argumento, se puede teclear ?par
-  en el indicador, sin paréntesis. Pero ahora, debemos seguir con unas gráficas
+  una lista de los ajustes de cada argumento que acepta la función par. Cabe 
+  señalar que hay argumentos que controlan detalles dentro del par pero su uso 
+  no es muy común. Para leer lo que hace cada argumento, se puede teclear ?par
+  en el indicador sin paréntesis. Pero ahora, debemos seguir con gráficas
   de dos variables."
 
+- Class: text
+  Output: "Como usted sabe, existen miles de opciones para hacer 
+  una gráfica. En esta lección, igual que en las lecciones anteriores, le voy
+  a enseñar una acá, y más en el vídeo. 
+  Podemos conversar en opciones para ejemplos propios que tengan
+  ustedes en el curso. Todo depende de su propósito o la idea que usted quiera 
+  probar con una gráfica o  presentación. Sin un propósito o destino, se puede 
+  jugar y tal vez le saltara algo lindo, pero siempre es más fácil adelantarse 
+  cuando tenga un propósito."
 
+- Class: cmd_question
+  Output: "De hecho, usted ya hiciera una gráfica de dos variables cuando hizo
+  el diagrama de cajas con los datos del número de hijos y hijas que tiene la
+  mujer de promedio de cada provincia de El Ecuador, separados por 
+  alfabetización.  Seguimos con ese conjunto de datos, que hubiera cargado
+  en el fondo cuando usted lanzó la lección actual. Para ubicarse, reproduzca 
+  la gráfica del número de hijos y hijas condicionado en alfabetización con 
+  este comando boxplot(detalle$hijos ~ detalle$leer.escr)."
+  CorrectAnswer: boxplot(detalle$hijos ~ detalle$leer.escr)
+  AnswerTests: omnitest(correctExpr="boxplot(detalle$hijos ~ detalle$leer.escr)")
+  Hint: "Aunque faltan los elementos obligatorios de títulos y etiquetas 
+  informativas, basta teclear boxplot(detalle$hijos ~ detalle$leer.escr) de
+  momento."
+  
+- Class: mult_question
+  Output: "Espere, ¿esta gráfica es la misma que usted hizo unas lecciones atrás,
+  o no?"
+  AnswerChoices: "No; Si"
+  CorrectAnswer: No
+  Hint: "Esta gráfica tiene las mismas dos cajas que usted vio hace una 
+  lecciones, pero también tiene una caja a la izquierda 'juntos' que resume el 
+  promedio global para cada provincia del país."
+
+- Class: text
+  Output: "La diferencia no es en el código o comandos para la gráfica, sino en
+  el conjunto de datos. Tenemos categorias adicionales en este caso, etiquetadas
+  'juntos', que nos proporcionan resumenes. En esta gráfica vemos un resumen, y 
+  una subdivisión por alfabetización. Pero hay más aún en estos datos."
+  
+- Class: cmd_question
+  Output: "Para revelar un poco más del detalle, teclee el siguiente 
+  'with(detalle, boxplot(hijos~area*leer.escr))'. No se asuste de la
+  introducción de 'with( , )', es un formato alternativo para evitar el uso del
+  nombre del conjunto y el $ (detalle$). Escríbalo de arriba para visulaizar este
+  paso ahora."
+  CorrectAnswer: with(detalle, boxplot(hijos~area*leer.escr))
+  AnswerTests: omnitest(correctExpr="with(detalle, boxplot(hijos~area*leer.escr))")
+  Hint: "Envolví el comando arriba con comillas para señalar que el argumento
+  with() era incluido, pero no debe usted ingresarlas acá en el indicador. Teclée
+  with(detalle, boxplot(hijos~area*leer.escr)) no más."
+  
+- Class: cmd_question
+  Output: "Pffff, ¿qué tenemos acá? Pues, hacemos una cosa, le sugiero un cambio
+  que le va a ayudar entender el contenido. Luego me vaya a proponer, con los 
+  compañeros por el espacio de foro, unos mejores para esta gráfica para que su 
+  cuento salte. Gire las etiquetas del eje X por ingresar las=2, después de una
+  coma, al final del comando que utilizó para realizar la gráfica actual.
+  Recuperar ese comando y ingrese el cambio pues."
+  CorrectAnswer: with(detalle, boxplot(hijos~area*leer.escr, las = 2))
+  AnswerTests: omnitest(correctExpr="with(detalle, boxplot(hijos~area*leer.escr, las=2))")
+  Hint: 
+  
+  
+  No se limite por los cambios que usted sabe realizar ya, también
+  se podría sugerir ideas que t"
+  a los niveles de todas provincias
+  juntas, los promedios de las provincias por zona (rural o urbana), y luego
+  por alfabetización"

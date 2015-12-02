@@ -9,3 +9,15 @@
     file.path(find.package("swirl"), "Courses", course_, lesson_, file_)
   }
 }
+
+# Make path to csv available to user
+path2csv2 <- file.path(path.package('swirl'), 'Courses',
+                       'ConoceR',
+                       'Graficando_3_con_2_variables',
+                       'hijosDetalle.csv')
+
+# Create datasets for user. We don't advertise that we're
+# doing this, but it will be necessary for students who
+# quit and later resume. We are not saving the variable
+# to the progress file to save on performance.
+detalle <- read.csv(path2csv2)
