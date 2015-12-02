@@ -141,5 +141,13 @@
   Hint: "dev.off() - lo que significa 'device off' - es lo que usted tiene que 
   teclear para seguir con la lecciòn."
 
-  
-  
+- Class: text
+  Output: "Si usted quiere revisar el estado de los ajustes de par() en algún
+  momento, se puede teclear par() no más, con los paréntesis vacios. Esto imprime 
+  una lista de los ajustes de cada argumento que acepta la función par. Hay 
+  muchas, y algunos jamas he usado en más de una década del uso de este 
+  programa. También, para leer lo que hace cada argumento, se puede teclear ?par
+  en el indicador, sin paréntesis. Pero ahora, debemos seguir con unas gráficas
+  de dos variables."
+
+
