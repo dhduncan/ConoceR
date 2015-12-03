@@ -179,6 +179,7 @@
   o no?"
   AnswerChoices: "No; Si"
   CorrectAnswer: No
+  AnswerTests: omnitest(correctVal="No")
   Hint: "Esta gráfica tiene las mismas dos cajas que usted vio hace una 
   lecciones, pero también tiene una caja a la izquierda 'juntos' que resume el 
   promedio global para cada provincia del país."
@@ -214,7 +215,7 @@
   Hint: "El comando debe terminar así with(detalle, boxplot(hijos~area*leer.escr, las = 2))."
 
 - Class: text
-  CorrectAnswer: "Cabe indicarle el sintaxis del comando. Con ello pedimos 
+  Output: "Cabe indicarle el sintaxis del comando. Con ello pedimos 
   los datos de 'hijos', la variable dependiente, divido por las combinaciones de 'area'
   (urbana, rural, y juntos (combinados)) y 'leer.escr' (SI sabe, NO lo sabe, y 
   juntos (combinados)). El asterisco o símbolo de multiplicación * es lo que

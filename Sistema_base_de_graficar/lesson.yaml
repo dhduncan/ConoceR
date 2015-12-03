@@ -147,19 +147,19 @@
 
 - Class: cmd_question
   Output: "Recree el gráfico con la etiqueta del eje X (xlab) asignado 
-  con "Velocidad (mph)"."
+  con 'Velocidad (mph)'."
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")')
-  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)") 
+  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = 'Velocidad (mph)') 
   para crear en gráfico."
 
 - Class: cmd_question
   Output: "Recree el último gráfico con la etiqueta del eje y en 
   'Distancia de frenado (ft)'." 
-  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")
-  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)", ylab = "Distancia de frenado (ft)")')
-  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = \"Velocidad (mph)\", 
-  ylab = \"Distancia de frenado (ft)\") para crear el gráfico."
+  CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = 'Velocidad (mph)', ylab = 'Distancia de frenado (ft)')
+  AnswerTests: omnitest(correctExpr="plot(x = cars$speed, y = cars$dist, xlab = 'Velocidad (mph)', ylab = 'Distancia de frenado (ft)')")
+  Hint: "Escriba plot(x = cars$speed, y = cars$dist, xlab = 'Velocidad (mph)', 
+  ylab = 'Distancia de frenado (ft)') para crear el gráfico."
 
 - Class: text
   Output: "La razón por la que plot(cars) funcionó en el comienzo de la lección 
@@ -278,15 +278,15 @@
 - Class: text
   Output: "En lugar de agregar columnas de datos directamente como argumentos 
   de entrada, como lo hicimos con plot(), a menudo es útil pasar toda la trama 
-  de datos. Esto es lo que el argumento "data" en boxplot() permite."
+  de datos. Esto es lo que el argumento 'data' en boxplot() permite."
 
 - Class: text
   Output: "boxplot(), al igual que muchas de las funciones de R, también tiene 
-  un argumento "formula", que es en general, una expresión con una tilde ("~") 
+  un argumento 'formula', que es en general, una expresión con una tilde ('~') 
   que indica la relación entre las variables de entrada. Esto le permite 
   introducir algo como mpg ~ cyl para graficar la relación entre cyl (número 
   de cilindros) en el eje x y mpg (millas por galón) en el eje y, es decir 
-  "millas por galón en función del número de cilindros"." 
+  'millas por galón en función del número de cilindros'." 
 
 - Class: cmd_question
   Output: "Use boxplot()  con formula = mpg ~ cyl y data = mtcars para crear 
@@ -368,7 +368,7 @@
 
 - Class: text
   Output: "Todas las funciones estudiadas hasta ahora son conocidas como de 
-  "alto nivel", debido a que generan como resultado un gráfico completo. Le 
+  'alto nivel', debido a que generan como resultado un gráfico completo. Le 
   invitamos a estudiar otras funciones de alto nivel como pie(), contour(), 
   image(), persp() y pairs()."
 

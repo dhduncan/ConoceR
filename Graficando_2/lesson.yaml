@@ -37,9 +37,9 @@
   girar las etiquetas o valores de los ejes? Es algo irónico que con este tipo
   de gráfica los números del eje Y salieron bueno por defecto mientras que los
   nombres en el eje X no. Bueno, ¿cómo se llama el argumento que necesitamos
-  entonces? Escriba las letras no más, sin o  el símbolo = o un valor. !Intente
+  entonces? Escriba las letras no más, sin o  el símbolo = o un valor. ¡Intente
   contestar!"
-  CorrectAnswer: las
+  CorrectAnswer: "las"
   AnswerTests: omnitest(correctVal='las')
   Hint: "El nombre del argumento es 'las', escíbalo sin comillas para seguir."
 
@@ -199,10 +199,10 @@
   
 - Class: mult_question
   Output: "Si usted quisiera cambiar los puntos de esta gráfica hasta circulos 
-  llenados o solidos, o triangulos o lo que sea, ¿cuál argumento adjustaría?"
+  llenados o solidos, o triangulos o lo que sea, ¿cuál argumento ajustaría?"
   AnswerChoices: "pch; las; mar; ninguno de ellos"
   CorrectAnswer: pch
-  AnswerTest: omnitest(correctVal= "pch")
+  AnswerTests: omnitest(correctVal= "pch")
   Hint: "La respuesta correcta es pch, lo que quiere decir pLOTTING chARACTER, o
   , tal vez, carácter de trazar o marcar podría ser una tradución al español."
 

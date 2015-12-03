@@ -86,7 +86,7 @@
   (entorno). Allí, justo a la izquierda del objeto de datos plants verá usted
   una flechita en un cículo azul. Púlselo para que revele su detalle."
   
-- Class:
+- Class: text
   Output: "¿Ve usted las mismas dimensiones de esta trama de datos plants, y 
   los nombres y las clases de variables que contiene? Este ejemplo es un poco 
   feo porque tiene muchos valores perdidos representados por 'NA'. Parece a las
