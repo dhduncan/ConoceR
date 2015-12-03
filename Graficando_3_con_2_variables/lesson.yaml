@@ -203,18 +203,52 @@
   
 - Class: cmd_question
   Output: "Pffff, ¿qué tenemos acá? Pues, hacemos una cosa, le sugiero un cambio
-  que le va a ayudar entender el contenido. Luego me vaya a proponer, con los 
-  compañeros por el espacio de foro, unos mejores para esta gráfica para que su 
+  que le va a ayudar entender el contenido y luego me vaya a proponer, con los 
+  compañeros en el espacio de foro, unos mejores para esta gráfica para que su 
   cuento salte. Gire las etiquetas del eje X por ingresar las=2, después de una
-  coma, al final del comando que utilizó para realizar la gráfica actual.
-  Recuperar ese comando y ingrese el cambio pues."
+  coma, antes de los dos paréntesis de cierre al final del comando que utilizó 
+  para realizar la gráfica actual. Recuperar ese comando y ingrese el cambio 
+  mencionado."
   CorrectAnswer: with(detalle, boxplot(hijos~area*leer.escr, las = 2))
   AnswerTests: omnitest(correctExpr="with(detalle, boxplot(hijos~area*leer.escr, las=2))")
-  Hint: 
-  
-  
-  No se limite por los cambios que usted sabe realizar ya, también
-  se podría sugerir ideas que t"
-  a los niveles de todas provincias
-  juntas, los promedios de las provincias por zona (rural o urbana), y luego
-  por alfabetización"
+  Hint: "El comando debe terminar así with(detalle, boxplot(hijos~area*leer.escr, las = 2))."
+
+- Class: text
+  CorrectAnswer: "Cabe indicarle el sintaxis del comando. Con ello pedimos 
+  los datos de 'hijos', la variable dependiente, divido por las combinaciones de 'area'
+  (urbana, rural, y juntos (combinados)) y 'leer.escr' (SI sabe, NO lo sabe, y 
+  juntos (combinados)). El asterisco o símbolo de multiplicación * es lo que
+  manda que R grafica las combinaciones de area por leer.escr."
+
+- Class: mult_question
+  Output: "¿Ya tiene claro que quiere decir las etiquetas provisionales que 
+  ha puesto el programa según el código? Tenemos datos de los promedios por 
+  las provincias de todo el páis etiqueteados como 'juntos.juntos'. Luego dos
+  cajas cuya contenido respectivamente los promedios de cada provincia según 
+  pertenecen a àreas urbanas o rurales. Luego, tres gráficas para las partes de 
+  la muestra en cuanto si supo leer y escribir, o que si no lo supo. Para
+  probar si me explico, déjeme preguntarle algo específico. ¿Escoja una las
+  siguientes interpretaciones NO sea correcta?"
+  AnswerChoices: "Algunas cajas tienen varios valores por provincia según el contexto; Cada caja se constituyó de un valor para cada provincia; Cada valor de promedio que compone cada caja representa más o menos mujeres según el contexto"
+  CorrectAnswer: Algunas cajas tienen varios datos por provincia según el contexto
+  AnswerTests: omnitest(correctVal="Algunas cajas tienen varios datos por provincia según el contexto")
+  Hint: "Solo hay un valor por provincia en cada caja, aunque el número de
+  mujeres a que se representa ese punto cambia según el contexto."
+
+- Class: text
+  Output: "Al pensar en como se podría mejorar la gráfica, no se debe limitar a 
+  los cambios que usted sabe realizar ya, sino se puede sugerir cualquier idea 
+  que le ocurra. Se podría jugar con las posibilidades directamente en R mismo,
+  o se podría empezar con un croquis con un lapiz y una hoja de papel, como 
+  suelo hacer yo. ¿Tal vez sería mejor en gráficas aparte?"
+
+- Class: text
+  Output: "Pues, dejamos esta lección acá, depués de un paso más en un análisis
+  exploratorio de este conjunto de datos interesantes de El Ecuador. Tengo ganas
+  de ver sus propios experimentos con gráficas y presentaciones, ¡y en el próximo
+  módulo usted tendrá una gran oportunidad de mostrar un poco de sus propios
+  talentos y gustos!"
+
+- Class: text
+  Output: "Hasta la próxima vez que nos vemos en linea, le deseo mucho éxito en
+  todos los labores académicos."
