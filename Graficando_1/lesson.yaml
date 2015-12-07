@@ -8,7 +8,7 @@
 
 - Class: text
   Output: "¡Muy buenas! En esta leccion Ud importara un conjunto de datos desde
-  una hoja de calculo de MS Excel, y realizar varias graficas con ellos. 
+  un archivo de datos guardado como .CSV, y realizar varias graficas con ellos. 
   ¿List@?"
   
 - Class: text
