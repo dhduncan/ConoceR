@@ -234,7 +234,7 @@
 - Class: text
   Output: "Cuando se le presenten dos vectores de la misma longitud, R 
   simplemente realiza la operación aritmética especificada (`+`, `-`, `*`, 
-  etc.) elemento elemento por. Si los vectores son de diferentes longitudes, 
+  etc.) elemento por elemento. Si los vectores son de diferentes longitudes, 
   R 'recicla' el vector más corto hasta que es la misma longitud que el vector 
   más largo."
 
@@ -279,7 +279,7 @@
 
 - Class: text
   Output: "A principios de la lección, z multiplica * 2 + 100. Supongamos que 
-  has cometido un error y que te referías a sumar 1.000 en lugar de 100. Usted 
+  has cometido un error y querías sumar 1.000 en lugar de 100. Usted 
   podría volver a escribir la expresión, o ..."
 
 - Class: cmd_question
