@@ -183,10 +183,10 @@
 
 - Class: cmd_question
   Output: "Ahora, tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto 
-  llamada mí_sqrt."
-  CorrectAnswer: mí_sqrt <- sqrt(z - 1)
-  AnswerTests: omnitest(correctExpr='mí_sqrt <- sqrt(z - 1)')
-  Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado mí_sqrt."
+  llamada mi_sqrt."
+  CorrectAnswer: mi_sqrt <- sqrt(z - 1)
+  AnswerTests: omnitest(correctExpr='mi_sqrt <- sqrt(z - 1)')
+  Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado mi_sqrt."
 
 - Class: mult_question
   Output: "Antes de ver el contenido del objeto mí_sqrt, ¿qué crees que 
@@ -198,10 +198,10 @@
   por elemento."
 
 - Class: cmd_question
-  Output: "Imprime el contenido de mí_sqrt."
-  CorrectAnswer: mí_sqrt
-  AnswerTests: omnitest(correctExpr='mí_sqrt')
-  Hint: "Sólo tienes que escribir mí_sqrt y pulse Intro para ver su valor."
+  Output: "Imprime el contenido de mi_sqrt."
+  CorrectAnswer: mi_sqrt
+  AnswerTests: omnitest(correctExpr='mi_sqrt')
+  Hint: "Sólo tienes que escribir mi_sqrt y pulse Intro para ver su valor."
 
 - Class: text
   Output: "Como habrás adivinado, R primero resta 1 de cada elemento de la z, 
@@ -210,26 +210,26 @@
 
 - Class: cmd_question
   Output: "Ahora, cree un objeto llamado nueva mí_div que obtiene el valor de z 
-  dividido por mí_sqrt."
-  CorrectAnswer: mí_div <- z / mí_sqrt
-  AnswerTests: omnitest(correctExpr='mí_div <- z / mí_sqrt')
-  Hint: "Introduzca mí_div <- z / mí_sqrt. No se requieren los espacios a ambos 
+  dividido por mi_sqrt."
+  CorrectAnswer: mi_div <- z / mi_sqrt
+  AnswerTests: omnitest(correctExpr='mi_div <- z / mi_sqrt')
+  Hint: "Introduzca mi_div <- z / mi_sqrt. No se requieren los espacios a ambos 
   lados del signo `/`, pero a menudo puede mejorar la legibilidad haciendo 
   código aparece más despejado. Al final, es una preferencia personal."
   
 - Class: mult_question
   Output: "¿Cuál crees que es la declaración verdadera?"
-  CorrectAnswer: El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...
-  AnswerChoices: "El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...; mí_div es un solo número (es decir, un vector de longitud 1); mí_div es indefinido"
-  AnswerTests: omnitest(correctVal='El primer elemento de mí_div es igual al primer elemento de z dividido por el primer elemento de mí_sqrt, y así sucesivamente ...')
+  CorrectAnswer: El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...
+  AnswerChoices: "El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...; mi_div es un solo número (es decir, un vector de longitud 1); mi_div es indefinido"
+  AnswerTests: omnitest(correctVal='El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...')
   Hint: "Piense acerca de cómo R maneja las otras operaciones 'vectorizadas' 
   como `+` y `*`."
 
 - Class: cmd_question
-  Output: "Adelante e imprimir el contenido de mí_div."
-  CorrectAnswer: mí_div
-  AnswerTests: omnitest(correctExpr='mí_div')
-  Hint: "Escriba mí_div y pulse Intro para ver su contenido."
+  Output: "Adelante e imprimir el contenido de mi_div."
+  CorrectAnswer: mi_div
+  AnswerTests: omnitest(correctExpr='mi_div')
+  Hint: "Escriba mi_div y pulse Intro para ver su contenido."
   
 - Class: text
   Output: "Cuando se le presenten dos vectores de la misma longitud, R 
@@ -296,20 +296,20 @@
 - Class: text
   Output: "Por último, vamos a suponer que desea ver el contenido de un objeto 
   que ha creado anteriormente, pero parece que no puede recordar si usted la 
-  nombró como mí_div o míDiv. Podrías probar ambos y ver lo que funciona, o ..."
+  nombró como mi_div o miDiv. Podrías probar ambos y ver lo que funciona, o ..."
 
 - Class: cmd_question
   Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego
   presionar la tecla Tab (posiblemente más de una vez). La mayoría de los 
   entornos de programación proporcionará una lista de los objetos que ha creado
-  que comiencen con 'mí'. Esto se llama auto-completado y puede ser muy útil 
+  que comiencen con 'mi'. Esto se llama auto-completado y puede ser muy útil 
   cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad.
-  (Si el autocompletado no funciona para ti, sólo tienes que escribir mí_div y 
+  (Si el autocompletado no funciona para ti, sólo tienes que escribir mi_div y 
   pulse Intro.)"
-  CorrectAnswer: mí_div
-  AnswerTests: omnitest(correctExpr='mí_div')
+  CorrectAnswer: mi_div
+  AnswerTests: omnitest(correctExpr='mi_div')
   Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes 
-  que escribir mí_div y pulse Intro para continuar."
+  que escribir mi_div y pulse Intro para continuar."
 
 - Class: text
   Output: "Pues, felicitaciones, has terminado con esta lección en los básicos
