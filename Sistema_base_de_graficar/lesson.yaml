@@ -175,11 +175,11 @@
   proyecto real."
 
 - Class: cmd_question
-  Output: "Grafique cars con un título principal de 'Mí plot'. Tenga en cuenta 
+  Output: "Grafique cars con un título principal de 'Mi plot'. Tenga en cuenta 
   que el argumento para el título principal es 'main' no 'title'."
-  CorrectAnswer: plot(cars, main = "Mí plot")
+  CorrectAnswer: plot(cars, main = "Mi plot")
   AnswerTests: omnitest(correctExpr='plot(cars, main = "Mi plot")')
-  Hint: Escriba plot(cars, main = "Mí plot") para crear la gráfica.
+  Hint: Escriba plot(cars, main = "Mi plot") para crear la gráfica.
 
 - Class: cmd_question
   Output: Grafique cars con un título secundario de "Un subtítulo".
