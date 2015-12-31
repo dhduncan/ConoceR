@@ -231,8 +231,8 @@
   probar si me explico, déjeme preguntarle algo específico. ¿Escoja una las
   siguientes interpretaciones NO sea correcta?"
   AnswerChoices: "Algunas cajas tienen varios valores por provincia según el contexto; Cada caja se constituyó de un valor para cada provincia; Cada valor de promedio que compone cada caja representa más o menos mujeres según el contexto"
-  CorrectAnswer: Algunas cajas tienen varios datos por provincia según el contexto
-  AnswerTests: omnitest(correctVal="Algunas cajas tienen varios datos por provincia según el contexto")
+  CorrectAnswer: Algunas cajas tienen varios valores por provincia según el contexto
+  AnswerTests: omnitest(correctVal="Algunas cajas tienen varios valores por provincia según el contexto")
   Hint: "Solo hay un valor por provincia en cada caja, aunque el número de
   mujeres a que se representa ese punto cambia según el contexto."
 
