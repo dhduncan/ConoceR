@@ -18,7 +18,7 @@
   
 - Class: figure
   Output: "Antes de empezar, quería enseñarle una característica de R que no
-  he mencionado todavía. En la última lección usted utilizara unos argumentos
+  se he comentado todavía. En la última lección usted utilizara unos argumentos
   a la función par() para cambiar las dimensiones de las margenes externas para
   acomodar los nombres de las provincias de El Ecuador.  Acabara de aparecer una
   imagen de cuatro gráficas en la ventanilla PLOTS que demuestra el uso de un
