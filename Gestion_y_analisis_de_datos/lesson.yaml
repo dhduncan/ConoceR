@@ -18,15 +18,340 @@
   
 - Class: cmd_question
   Output: "Luego, teclea 'getwd()' (de <<get wORKING dIRECTORY>>) en la consola 
-  para confirmar de otra manera en donde esté trabajando. La dirección que sale 
-  en la consola debe corresponder con la dirección que se ve por encima de la 
-  ventanilla FILES. ¿Todo bien? Adelante, pues."
+  para confirmar de otra manera en donde esté trabajando."
   CorrectAnswer: getwd()
   AnswerTests: omnitest(correctExpr='getwd()')
-  Hint: "Por favor escriba <<getwd()>> y pulse Intro." 
+  Hint: "Por favor escriba <<getwd()>> y pulse Intro."
+  
+- Class: text
+  Output: "La dirección que sale 
+  en la consola debe corresponder con la dirección que se ve por encima de la 
+  ventanilla FILES. ¿Todo bien? Adelante, pues."
+
+- Class: text
+  Output: "Muchas veces, la primera cosa que querramos hacer es introducir un
+  conjunto de datos que están almacenados en un archivo digital. Por lo tanto, 
+  empezamos en esta lección ampliando las opciones que hay."
+
+- Class: mult_question
+  Output: "En lecciones y vídeos pasados usted hubiera visto comandos para la
+  importación de datos al entorno de R.  "
+  AnswerChoices: "*.csv (valores seperados por comas); *.kmz (keyhole markup language); Microsoft Access base de datos"
+  CorrectAnswer: *.csv (valores seperados por comas)
+  AnswerTests: omnitest(correctVal="*.csv (valores seperados por comas)")
+  Hint: "De este listado, usted solo hubiera visto comandos para leer datos
+  almacenados en el formato csv - valores seperados por comas." 
+
+- Class: text
+  Output: "También, usted puede utilizar la función `read.table()` para leer 
+  datos que ya están en formato de filas y columnas, incluso archivos tipo csv. 
+  La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la
+  función read.csv().
+  R puede ubicar el archivo con su ruta de archivo, o bien, si el archivo 
+  está ubicado en su carpeta de trabajo, podemos llamarlo directamente así."
 
 - Class: cmd_question
-  Output: explain what the user must do here
-  CorrectAnswer: EXPR or VAL
-  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
-  Hint: hint
+  Output: "Vamos a leer unos datos alamacenados en formato csv mediante el
+  siguiente comando  
+  read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA'). Dese la
+  oportunidad ahora mismo."
+  CorrectAnswer: read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA')
+  AnswerTests: omnitest(correctExpr= "read.table('jc_fireComm.csv', header=TRUE, sep=',', na.strings='NA')")
+  Hint: "Escriba el comando precisamente como aparece arriba. Aunque puede ser
+  tedioso, cada argumento a la función tiene su propósito para lograr que los 
+  datos aterricen salvos y sanos para el análisis en R."
+  
+                            
+```
+¿Qué paso? Si ejecutamos la orden así, R ls hace, y por defecto imprime los resultados, pero no retiene nada en memoría de lo que salió. 
+
+Si queremos conservar estos datos, necesitamos atribuirlo un nombre con `<-` para que R lo asigne una ubicación en el entorno de trabajo y se acordará que el objeto está. 
+```{r read_fireComm3}
+jc_fireComm <- read.table('jc_fireComm.csv', header=TRUE, sep=',',
+  na.strings='NA')                         
+```
+
+¿Funcionó ese mando? Podemos revisar el encabezado de la tabla, las primeras seis filas utilizando la función  `head`.
+```{r head_fireComm, eval=FALSE}
+head(jc_fireComm)
+```
+Con esto, hemos creado un **objeto**. Los objetos en R pueden ser los conjuntos de datos, las funciones, listas, matrices, resultados guardados, etc.
+
+La función `read.csv()` es más sencilla que `read.table()` pero exige que los datos sean formateados de una manera especifica. Una vez entendido este formato, mucha gente eligirá `read.csv()`.  
+```{r read_fireComm4, eval=FALSE}                                                                      
+jc_fireComm <- read.csv('jc_fireComm.csv')
+
+head(jc_fireComm)
+```
+Normalmente, yo uso esta `read.csv()`, o sino, acedo directamente a una hoja de cálculo de MS Excel. Pero ¿como se importa datos de MS Excel? ¡Todo el mundo usa Excel!  
+
+Pues sí, se puede ingresar datos dsdee una hoja de cálculo de MS Excel, pero necesitamos cargar un paquete. Primero, vamos a ver que pasa cuando llamamos a una función que todavía no está.
+
+#### Advertencia - este paquete no funcione de momento para usuarios. Parece que algunas combinaciones del sistema operativo PC y R no permiten funcionar un paquete auxiliario `rJava`.  Así que borro los ejemplos que leen archivos directamente de una hoja de cálculo.
+
+
+3. Buscando la ayuda en R
+--------------------------------------------------------------------------------
+Vamos a pedir que R nos ayude. Por ejemplo, quizas no entendemos como trabaja la función `read.table`?
+```{r help_read}
+?read.table                                                           
+```
+Bueno, *muy* interesante, pero no es la información que buscábamos.
+
+Podemos ampliar la busqueda con `help.search`, la cual también busca dentro de la documentación de R para frases específicas.
+```{r search_read, eval=FALSE}
+help.search('read data')
+```
+Pues, no nos ha ayudado mucho esto. ¿Qué más hay?
+
+### Aumentar R con los paquetes de R
+Aquí, se presenta un paquete que amplia y extende nuestra busqueda para la ayuda en R. El primer paso es instalar el paquete <<sos>> con el comando: `install.packages('sos')`. El paquete `sos` (nombrado por la anticuada llamada maritima de socorro - <<save our souls>>) extende el sistema de ayuda de R, y lo hace muchísimo más útil. 
+```{r install_sos, eval=FALSE}
+install.packages('sos')                                             
+```                                                                   
+¡Que bueno, ha acabado de instalarse ya!
+
+Por cierto, y obviamente, no necesitamos instalar un paquete que ya está instalado. Si hay duda, podemos llamar a `library()` sin grabar nada para saber cuales paquetes ya estén en nuesta colección.
+```{r lib_show, eval=FALSE}
+library()                                                             
+```
+
+Una vez instalado, tenemos que cargar el paquete con la función `library` para que esté disponible en nuestro entorno de trabajo.
+```{r lib_sos, eval=FALSE}
+library(sos)                                                          
+```
+
+Ahora, volvemos a nuestra busqueda. Imagínense que no tuvieramos instalado un paquete que lee las hojas de cálculo de MS Excel. Una vez que hemos cargado `sos`, podemos utilizar la función `findFn`, que buscará en internet para ver si existe alguna función relacionada. Nos devuelve el nombre del paquete a lo cual pertenezca esa función.  Abastecemos solamente un poco de imaginación en escoger los terminos adecuados. Según nuestro ejemplo de ignorancia de paquetes que puedan leer a hojas de MS Excel, pongamos el seguiente:
+```{r find_xlsx, eval=FALSE}
+findFn('read excel')                                                   
+```
+
+Lance una busqueda de internet en un navigador, y de pronto parece que hay varias opciones. Imagínense que el día de hoy el paquete `read` nos llama la atención. Si no lo tuvieramos, lo instalaríamos.
+```{r install_xlsx, eval=FALSE}
+install.packages('')                                              
+```
+
+Luego, para activarlo
+```{r lib_xlsx, message=FALSE}
+library(readxl)
+rn_leafWaterPot <- read_excel('rn_leafWaterPot.xlsx')
+```
+
+Etc, etc. Sin embargo, hemos descubrido que para alguna razón, no funciona. Así que, podemos guardar una version del conjunto de datos como un archivo `.csv` en lugar de leerlos directamente. Abandonamos al  Excel!  Pero, ahora se ve como se puede descubrir paquetes can puedan servirnos en tareas especificas.
+
+```{r read_leafWater3}
+rn_leafWaterPot <- read.csv('rn_leafWaterPot.csv')
+```
+
+Hechamos un vistazo a los datos...
+```{r head_leafWater, eval=FALSE}
+head(rn_leafWaterPot)                                                 
+```
+Ahora sabemos como leer un conjunto de datos en R. Hay muchas 
+más opciones pero esta es uno de las más usado.
+#####################################3
+
+4. Interrogar unos datos
+-----------------------------------------------------------------------------
+
+Vamos a jugar con otro conjunto de datos. En este caso son datos estáan incluidos en R, así que no necesitamos utilizar `read.table()` o `read.csv()`. El conjunto se llama `swiss` y resume indicadores de fertilidad y estatus socio-economico de las provincias francoparlantes de Suiza (del año 1888). Todos los numeros son porcentajes de población.
+
+Asignamos otro nombre al conjunto, para proceder por el camino tipico de editar o analizar los datos.
+```{r read_seedln}
+suiza <- swiss                     
+```
+
+La función `head` mostra las primeras filas de un objeto, en este caso un `data.frame`. Mostra seis filas por defecto pero se puede escoger otro número por especificar el argumento `n=`.
+```{r head_seedln, eval=FALSE}
+head(suiza)                                                  
+```
+
+Por el otro lado, `tail` nos muestra las últimas seis filas por defecto.
+```{r tail_seedln, eval=FALSE}
+tail(suiza)                                                   
+```
+
+Este tipo de objeto se llama `data.frame`, verdad?
+```{r class_seedln}
+class(suiza)
+```
+Normalmente vamos a trabajar con `data.frames` así que no necesitamos aprender todos los tipos que hay. Pero, si se encuentra un problema raro, o un mensaje de error que no se ha visto antes, siempre es buena idea revisar qué clase (`class` y `mode`) de objetos son.
+
+Por ejemplo, un `data.frame` es un tipo de listado (`list`), verdad?
+```{r mode_seedln}
+mode(suiza)                                                   
+```
+Que si, un `data.frame` no es otra cosa que un listado de columnas del mismo tamaño.
+
+Cuál es el tamaño de este `data.frame`?
+```{r length_seedln}
+length(suiza)                                                 
+```
+Ahah, cuando preguntamos por longitud, recibimos un valor pequeí±a que parece como el número de columnas. Podemos verificarlo por preguntar directamente cuantas columnas hay...
+```{r ncol_seedln}
+ncol(suiza)                                                  
+```
+Bingo! Guardamos esta información en la mente.
+
+Así que, si queremos verificar que todas las filasestén presentes, podemos preguntar por la longitud, preguntamos directamente por el número de las filas. Cuantas hay?
+```{r nrow_seedln}
+nrow(suiza) 
+```
+No tantas, el programa puede tratar conjuntos hasta centenares de miles de filas, pero se tomará su tiempo.
+
+Podemos preguntar por las columnas y filas a la vez con `dim`, que devuelve las dimensiones de un conjunto o matriz.
+```{r dim_seedln}
+dim(suiza)
+```
+Resulta en las mismas respuestas que salieron de `ncol` y `nrow`, respectivamente(ojalá).
+
+Vamos a ver como el conjunto es ensamblado con `str` (estructura).
+```{r str_seedln}
+str(suiza)                                                    
+```
+Con RStudio se puede ver la misma información haciendo click en la flechita azul, inmediatamente a la izquierda del nombre del conjunto en la ventanilla del entorno.  Tambien se puede ver los nombres de las columnas, y su clase.
+
+
+Estadísticos de resumen
+--------------------------------------------------------------------------------
+Dejamos los datos de Siuza y en su lugar vamos a jugar con unos datos acerca del potencial de hidratación de hojas. Empezamos por la lectura y luego revisarenmos el encambezado de todas las columnas con `head`.
+```{r head_leaf, eval=FALSE}
+rn_leafWaterPot <- read.csv('rn_leafWaterPot.csv')
+head(rn_leafWaterPot)
+```
+
+Vamos a calcular unos estadísticos de resumen. Primero, calculamos el promedio (o la media) con `mean()`.
+```{r mean_leaf}
+mean(rn_leafWaterPot$leaf.w)
+```
+Muy facil, no?
+
+También, podemos calcular la mediana con `median()`...
+```{r median_leaf}
+median(rn_leafWaterPot$leaf.w)
+```
+
+y luego algunos quantiles.
+```{r quantile_leaf}
+quantile(rn_leafWaterPot$leaf.w)
+```
+
+Por defecto, la función `quantile` nos devuelve los cuantiles de 0, 25, 50, 75 y 100% (pero podemos preguntar por otros cuantiles utilizando el argumento `probs`, por ejemplo:)
+```{r quantile2_leaf}
+quantile(rn_leafWaterPot$leaf.w, probs=c(0.025, 0.5, 0.975))
+```
+
+También podemos calcular la moda. Sin embargo, para R `mode` tiene otro significado así que utilizamos otro método.  
+```{r mode_leaf}
+mode(rn_leafWaterPot$leaf.w)
+```
+En cambio, para calcular la moda (el valor específico de más frequencia) de un vector, introducimos nuestra amigable función `table`, la cual nos indique la frequencia de cada valor unica. 
+
+```{r table_leaf}
+table(rn_leafWaterPot$leaf.w)
+```
+Bueno, sale desordenado, así que vamos a ordenarlo con `sort`.
+
+```{r table_leaf2}
+sort(table(rn_leafWaterPot$leaf.w))
+```
+Bien! Ahora podemos ver que el valor más comun (la moda) es 0.38, lo que aparece 6 veces en el conjuntode datos.
+
+Nos gustaria además conocer algo sobre la variabildad de los datos. Por ejemplo, qué podemos decir sobre la desviación estándar?.
+```{r sd_leaf}
+sd(rn_leafWaterPot$leaf.w)
+```
+Si queremos calcular la precisión de nuestro estimador de la media poblacional, podemos calcular el error estándar. Seguramente seria simple si usamos una función abrevaida como 'se', verdad?
+
+```{r se_leaf}
+se(rn_leafWaterPot$leaf.w) 
+```
+Oh, esto es inesperado... 
+
+Resulta que R no tiene niguna función propia para calcular el error estandar  del promedio. : - (
+
+Functions
+-----------------------------------------------------------------------------
+No todo está perdido. Sabemos como calcular el error estándar, paso a paso...Solo necesitamos la desviación estándar y el tamaño de la muestra. Estamos bastante expertos en escribir código ahora, sin tanto problema deberíamos ser capaces de crear nuestras propias funciones que ejecutaran nuestra orden. Manos a la obra entonces.
+
+```{r se_funct}
+se <- function(x) {
+  sigma <- sd(x)
+	n <- length(x)
+  sigma / sqrt(n)
+	}
+```
+Hemos definido una función! 
+Para utilizar la función 'se' se espera disponer de un vector numérico 'x'. Lo primero que hace 'se' es calcular la desviación estándar de 'x', almacenando el resultado en el objeto `sigma`. Luego calcula el tamaño de la muestra (número de elementos de `x`) y almacena esto en el objeto `n`. La línea final de la función utiliza estos objetos anteriores para calcular el error estándar; además por ser la última línea, este es además el valor que la función imprimirá. Es útil notar que los objetos `sigma` y `n` sólo existen temporalmente, y desaparecerán una vez que la función haya finalizado el trabajo.
+
+Aplicamos ahora la función.
+```{r se_ci_leaf}
+se(rn_leafWaterPot$leaf.w)
+```
+Destacable, ahora que hemos definido la función `se`, ya no recibimos ese error.
+
+Utilicemos nuestra función `se` para crear otras funciones incluos más útiles. Por ejemplo un intervalo de confianza para la media poblacional.
+
+```{r ci95}
+ci95 <- function(x) {
+	lo <- mean(x) - (se(x) * 1.96)
+	up <- mean(x) + (se(x) * 1.96)
+	c(lo, up)
+	}
+```
+
+```{r run_ci95}
+ci95(rn_leafWaterPot$leaf.w)
+```
+
+
+Los gráficos
+-----------------------------------------------------------------------------
+
+Hacer un gráfico de una variable es facil. Solo necesitamos saber elegir cual tipo de gráfico queremos, e introducir el nombre del vector (la variable)
+
+Por ejemplo, un `boxplot`.
+```{r boxplot_leafWater}
+boxplot(rn_leafWaterPot$leaf.w)
+```
+
+O un `hist`ograma, un gráfico muy sencillo que representa la frecuencia de los valores observados en nuestra variable.
+```{r hist_leafWater}
+hist(rn_leafWaterPot$lnPot)
+```
+
+Otro gráfico común para la exploración de las variables de un conjunto multi-dimensional es un matriz de <<scatterplots>>. Realizamos este con la función `pairs` (parejas). 
+```{r splom_leafWater}
+pairs(sc_FrogsCrk1_2[9:14], panel=panel.smooth)
+```
+En este ejemplo hemos especificado otro argumento `panel=panel.smooth`, el cual agrega la linea suave. Esta linea representa la relación alisada (y local) entre las dos variables.  Lleva mucha información, pero puede ser muy útil como resumen de las correlaciones crudas que tenemos en el conjunto. 
+
+La función más general para realizar los gráficos se llama `plot` que en inglés es el verbo más común para lo que hacemos. Basta dar dos vectores y nos devuelve un scatterplot sencillo. ¿lo probamos?
+
+Vamos a hacerlo con unos datos acera del tiempo de mi ciudad de Melbourne, Australia.
+```{r read_melb_weath}
+	melb_weath <- read.csv('melb_weath.csv')
+```
+
+Aquí tenemos el codigo para un scatterplot sencillo.
+```{r plot_melb_weath}
+plot(1:48, as.numeric(melb_weath[48:1, 2]))
+```
+Ahora vamos a ver como se cambia un gráfico a la medida, y al gusto. 
+
+Pero, teniendo en cuenta que estos datos representan una serie de tiempo, quizás seria mejor que lo indiquemos con una linea?
+```{r plot_melb_weath_l}
+plot(1:48, as.numeric(melb_weath[48:1, 2]), type='l')
+```
+
+Tal vez unos rótulos para los ejes, porque los genericos que salen no nos sirven.
+```{r plot_melb_weath_l2}
+plot(1:48, as.numeric(melb_weath[48:1, 2]), type='l', xlab='la Hora', 
+	ylab='Temperatura (Celsius)')
+```
+
+Aumentamos los limites del eje Y con el argumento `ylim=c()`, y cambiamos la orientación de los rótulos con `las=1`.  
+```{r plot_melb_weath_l3}
+plot(1:48, as.numeric(melb_weath[48:1, 2]), type='l', xlab='la Hora', 
+	ylab='Temperatura (Celsius)', ylim=c(0, 50), las=1)
+```
