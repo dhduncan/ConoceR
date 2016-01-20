@@ -182,10 +182,10 @@
   Hint: Escriba plot(cars, main = "Mi plot") para crear la gráfica.
 
 - Class: cmd_question
-  Output: Grafique cars con un título secundario de "Un subtítulo".
-  CorrectAnswer: plot(cars, sub = "Un subtítulo")
-  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtítulo")')
-  Hint: Escriba plot(cars, sub = "Un subtítulo") para crear el gráfico.
+  Output: Grafique cars con un título secundario de "Un subtitulo".
+  CorrectAnswer: plot(cars, sub = "Un subtitulo")
+  AnswerTests: omnitest(correctExpr='plot(cars, sub = "Un subtitulo")')
+  Hint: Escriba plot(cars, sub = "Un subtitulo") para crear el gráfico.
 
 - Class: text
   Output: "La página de ayuda de plot (?plot) sólo cubre una pequeña parte de 
