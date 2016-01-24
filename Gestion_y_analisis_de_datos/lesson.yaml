@@ -40,7 +40,7 @@
   CorrectAnswer: *.csv (valores seperados por comas)
   AnswerTests: omnitest(correctVal="*.csv (valores seperados por comas)")
   Hint: "De este listado, usted solo hubiera visto comandos para leer datos
-  almacenados en el formato csv - valores seperados por comas." 
+  almacenados en el formato csv - valores seperados por comas - en este curso." 
 
 - Class: text
   Output: "También, usted puede utilizar la función `read.table()` para leer 
@@ -51,8 +51,7 @@
   está ubicado en su carpeta de trabajo, podemos llamarlo directamente así."
 
 - Class: cmd_question
-  Output: "Vamos a leer unos datos alamacenados en formato csv mediante el
-  siguiente comando  
+  Output: "Vamos a leer unos datos alamacenados en formato csv mediante el comando  
   read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA'). Dese la
   oportunidad ahora mismo."
   CorrectAnswer: read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA')
@@ -61,7 +60,7 @@
   tedioso, cada argumento a la función tiene su propósito para lograr que los 
   datos aterricen salvos y sanos para el análisis en R."
   
-                            
+
 ```
 ¿Qué paso? Si ejecutamos la orden así, R ls hace, y por defecto imprime los resultados, pero no retiene nada en memoría de lo que salió. 
 
