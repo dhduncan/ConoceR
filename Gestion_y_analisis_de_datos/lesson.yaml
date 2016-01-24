@@ -8,7 +8,7 @@
 
 - Class: text
   Output: "¡Hola buenas! En esta lección, aprenderá crear objetos de datos 
-  de varias fuentes, y como sacar estadísticos de resumen rapidamente. ¿List@?"
+  de varias fuentes, y como sacar estadísticos de resumen rápidamente. ¿List@?"
 
 - Class: text
   Output: "Antes de empezar, confirma que Ud esté en su proyecto de RStudio.
@@ -21,8 +21,8 @@
   para confirmar de otra manera en donde esté trabajando."
   CorrectAnswer: getwd()
   AnswerTests: omnitest(correctExpr='getwd()')
-  Hint: "Por favor escriba <<getwd()>> y pulse Intro."
-  
+  Hint: "Por favor escriba 'getwd()' y pulse Intro." 
+
 - Class: text
   Output: "La dirección que sale 
   en la consola debe corresponder con la dirección que se ve por encima de la 

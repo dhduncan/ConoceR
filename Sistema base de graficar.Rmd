@@ -1,0 +1,194 @@
+---
+title: "Sistema base de graficar"
+author: "David H. Duncan"
+date: "January 20, 2016"
+output: pdf_document
+---
+
+```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
+library(knitr)
+library(swirl)
+source("~/git/ConoceR/Graficando_1/initLesson.R")
+```
+
+Una de las mayores fortalezas de R, en relación con otros lenguajes de programación, es la facilidad con la que podemos crear gráficos con calidad de publicación. En esta lección, usted aprenderá acerca de los gráficos básicos de R.
+  
+Nosotros no cubriremos los temas más avanzados de gráficos en R en esta lección. Estos incluyen lattice, ggplot2 y ggvis.
+  
+Hay una escuela de pensamiento que opina que el enfoque para abordar este tema debería ser al revés, es decir, que deberíamos enseñar ggplot2 primero. Vea http://varianceexplained.org/r/teach_ggplot2_to_beginners/ para tener una mejor idea de este punto de vista.
+  
+Para empezar graficando, vamos a utilizar uno de los muchos conjuntos de datos que R tiene ajuntado. En unas semanas aprenderá como importar y manipular sus propios datos.
+  
+Cargue la trama de datos incluida en R llamada cars, usando data(cars).
+
+```{r}
+data(cars)
+```
+
+Para puntualizar, vamos a trabajar con conjuntos de datos simples. Nuestro principal objetivo es dar a conocer las diversas funciones de trazado gráfico y sus argumentos. Toda esta producción se vería más interesante con los conjuntos de datos más grandes y complejos.
+  
+Abra la página de ayuda de cars.
+
+```{r}
+?cars
+```
+
+Como se puede ver en la página de ayuda, el conjunto de datos cars tiene sólo dos variables:. La velocidad (speed en mph) y la distancia de frenado (dist en ft). Tenga en cuenta que estos datos son de la década de 1920.
+  
+Ejecute head() en los datos de cars.
+
+```{r}
+head(cars)
+```
+
+Antes de gráficar, siempre es una buena idea saber como son los datos. Los comandos de R para hacer esto son, entre otros, dim(), names(), head(), tail() y summary().
+  
+Ejecute el comando plot() en trama de datos (data.frame) cars.
+
+```{r}
+plot(cars)
+```
+
+Como siempre, R intenta darle algo sensato dada la información que ha proporcionado para hacerlo. En primer lugar, R indica que la trama de datos sólo cuenta con dos columnas, por lo que asume que desea gráficar una columna contra a la otra.
+  
+En segundo lugar, ya que no proporcionamos etiquetas para cualquiera de los ejes, R utiliza los nombres de las columnas. En tercer lugar, se crea marcas de graduación del eje en números redondos legibles y las etiqueta en consecuencia. En cuarto lugar, utiliza los otros valores predeterminados suministrados en plot().
+  
+Ahora vamos a pasar algún tiempo explorando plot, aunque muchos de los temas tratados aquí los aplicaremos a la mayoría de las otras funciones gráficas de R. Tenga en cuenta que 'plot' es la abreviatura de 'scatterplot' o gráfico de dispersión.
+  
+Busque la página de ayuda para plot().
+
+```{r}
+?plot
+```
+
+La página de ayuda plot() destaca los diferentes argumentos que la función puede tomar. Los dos más importantes son x e y, que son las variables que se grafican. En adelante, para el siguiente conjunto de preguntas, incluya los nombres de los argumentos en sus respuestas. Es decir, no escriba plot(cars$speed, cars$dist), a pesar de que esto funcione. En su lugar escriba plot(x = cars$speed, y = cars$dist).
+  
+Use el comando plot() para mostrar la velocidad (speed) en el eje x, y la distancia (dist) en el eje y. Utilice el formato del comando en el que los vectores se pasan de forma explícita como argumentos para x e y.
+  
+```{r}
+ plot(x = cars$speed, y = cars$dist)
+```
+
+Tenga en cuenta que esto produce una respuesta ligeramente diferente a la de plot(cars). En este caso, R no está seguro de lo que usted desea utilizar para las etiquetas de los ejes, por lo que sólo utiliza los argumentos que se le pasan, incluyendo el nombre del marco de datos y el simbolo de dólar.
+  
+Observe que hay otras maneras de llamar el comando plot(cars), es decir, utilizando el interfaz 'formula'. Por ejemplo, obtendremos una gráfica similar a la anterior con plot(dist ~ speed, cars). Sin embargo, vamos a esperar hasta más adelante en la lección antes de utilizar la interfaz de fórmula.
+  
+Use del comando plot() para mostrar las variables de la trama de datos cars, dist en el eje x y speed en el eje y. Esto es lo contrario de lo que hicimos anteriormente.
+  
+```{r}
+plot(x = cars$dist, y = cars$speed)
+```
+
+¿Ve que ahora que puesto los ejes al revés, el patrón tiene otra forma? Sin embargo, probablemente tiene más sentido que la velocidad vaya en el eje X dado que la distancia de frenado está en función de la velocidad, y no al revés. Así, para el resto de las preguntas de esta parte de la lección, siempre asignaremos los argumentos en de acuerdo a esto (como Ud. hizo hace dos pasos).
+  
+De hecho, usted puede asumir que las respuestas a las siguientes preguntas son todas de la forma plot(x = cars$speed, y = cars$dist, ...) pero con diferentes argumentos utilizados en lugar de los puntos suspensivos.
+  
+Recree el gráfico con la etiqueta del eje X (xlab) asignado con 'Velocidad (mph)'.
+  
+```{r}
+plot(x = cars$speed, y = cars$dist, xlab = "Velocidad (mph)")
+```
+
+Recree el último gráfico con la etiqueta del eje y en 'Distancia de frenado (ft)'.
+  
+```{r}
+plot(x = cars$speed, y = cars$dist, xlab = 'Velocidad (mph)', ylab = 'Distancia de frenado (ft)')
+```
+
+La razón por la que plot(cars) funcionó en el comienzo de la lección es porque R fue lo suficientemente inteligente como para saber que el primer elemento (es decir, la primera columna) de cars se debía asignar al argumento x  y el segundo elemento al argumento y. Para ahorrar en la tipificación, la siguiente serie de respuestas serán todos de la forma, la trama (cars, ...) con varios argumentos añadidos.
+  
+Para cada pregunta, nosotros sólo queremos un argumento adicional a la vez. Por supuesto, usted puede pasar en más de un argumento al hacer un proyecto real.
+  
+Grafique cars con un título principal de 'Mi plot'. Tenga en cuenta que el argumento para el título principal es 'main' no 'title'.
+  
+```{r}
+plot(cars, main = "Mi plot")
+```
+
+Grafique cars con un título secundario de "Un subtítulo".
+
+```{r}
+plot(cars, sub = "Un subtítulo")
+```
+
+La página de ayuda de plot (?plot) sólo cubre una pequeña parte de los muchos argumentos que se pueden pasar a plot() y a otras funciones gráficas. Para comenzar a explorar las muchas otras opciones, miré ?par. Echemos un vistazo a algunos de los más comúnmente utilizados. Siga usando plot(cars, ...) como la respuesta de base a estas preguntas.
+  
+Grafique cars con un color rojo. (Use col = 2 para lograr este efecto).
+
+```{r}
+plot(cars, col = 2)
+```
+
+Grafique cars limitando al mismo tiempo el eje x entre 10 y 15 (use xlim = c(10, 15) para lograr este efecto).
+  
+```{r}
+plot(cars, xlim = c(10, 15))
+```
+
+Pause un momento. Una de las gran ventajas de RStudio es que mantiene las gráficas de la sessión en la memoría. Véase la ventanilla de PLOTS. A la izquiera de ella hay unas flechas. A la izquierda extrema hay una de azul que indica hacia izquierda y otra azula bien clarita hacia derecha. 
+  
+Su propósito es navegar entre las gráficas de la sesión.  Toque la flecha hacia izquierda una vez para ver la gráfica pasada, y luego la de la derecha para volver a la gráfica actual.  Esto es muy útil para comparar borradores de una gráfica.
+  
+También puede cambiar la representacion de los símbolos en la gráfico o la forma de graficarlos. La página de ayuda para points (?points) proporciona algunos detalles.
+  
+Grafique cars utilizando triángulos. (Use pch = 2 para lograr este efecto).
+  
+```{r}
+plot(cars, pch = 2)
+```
+
+Grafique cars uniendo las observaciones por lineas. (Use type = 'l' para lograr este efecto).
+  
+```{r}
+plot(cars, type = "l")
+```
+
+Argumentos como 'col' y 'pch' pueden no parecer muy intuitivos. Y es que no lo son! Pero, tampoco cuesta mucho trabajo aprenderlos.  Sin embargo, quizá es por esto que cada vez más personas usan los paquetes más modernos, como ggplot2, para la creación de sus gráficos en R. Conocerá a ggplot luego.
+  
+Sin embargo, es útil tener una introducción a los gráficos de base porque muchos de los formatos en lattice y ggplot2 se modelaron a partir de ellos.
+  
+Vamos ahora a ver algunas otras funciones en los gráficos de base que pueden ser útiles, comencemos con los diagramas de caja (boxplots).
+  
+Cargue de la trama de datos llamada mtcars.
+
+```{r}
+data(mtcars)
+```
+
+Cada vez que usted cargue una nueva trama de datos, usted debe explorarla antes de usarla. En medio de una lección de swirl, sólo tienes que escribir play(). Esto suspende temporalmente la lección (sin perder el trabajo que ya ha realizado) y le permite probar comandos como dim(mtcars) y head(mtcars). Una vez que haya terminado de examinar los datos, sólo tienes que escribir nxt() y la lección continuará donde la dejó.
+  
+Busque la página de ayuda para la función boxplot(). Un 'boxplot' se conoce en español como una diagrama de caja y bigotes.
+  
+```{r}
+?boxplot
+```
+
+En lugar de agregar columnas de datos directamente como argumentos de entrada, como lo hicimos con plot(), a menudo es útil pasar toda la trama de datos. Esto es lo que el argumento 'data' en boxplot() permite.
+  
+boxplot(), al igual que muchas de las funciones de R, también tiene un argumento 'formula', que es en general, una expresión con una tilde ('~') que indica la relación entre las variables de entrada. Esto le permite introducir algo como mpg ~ cyl para graficar la relación entre cyl (número de cilindros) en el eje x y mpg (millas por galón) en el eje y, es decir 'millas por galón en función del número de cilindros'.
+  
+Use boxplot()  con formula = mpg ~ cyl y data = mtcars para crear un gráfico de caja.
+  
+```{r}
+boxplot(formula = mpg ~ cyl, data = mtcars)
+```
+
+El gráfico muestra que mpg es mucho menor para los carros con más cilindros. Tenga en cuenta que podemos utilizar el mismo conjunto de argumentos que hemos explorado con plot() para añadir etiquetas de los ejes, títulos y demás.
+  
+Los boxplots muestran una suerte de distribución de cada variable, las lineas superior e inferior representan los máximos y mínimos (estadísticos). La caja interna denota el rango entre el primer cuartil y el tercer cuartil. La linea central representa la mediana (el punto que divide la muestra en dos partes iguales). Por último, es posible que se dibujen puntos aislados fuera de algunos bloxplots, estos puntos representas los datos atípicos.
+  
+Al mirar una sola variable, los histogramas son una herramienta útil. hist() es la función R asociada. Al igual que plot(), hist() se utiliza mejor con sólo pasar en un solo vector.
+  
+Use hist() con el vector mtcars$mpg  para crear un histograma.
+
+```{r}
+hist(mtcars$mpg)
+```
+
+Todas las funciones estudiadas hasta ahora son conocidas como de 'alto nivel', debido a que generan como resultado un gráfico completo. Le invitamos a estudiar otras funciones de alto nivel como pie(), contour(), image(), persp() y pairs().
+  
+También existen las funciones llamadas de 'bajo nivel', que nos permiten agregar elementos a nuestros gráficos, como por ejemplo legend(), text(), points(), lines(), segments(), arrows(), abline(), entre otras.
+  
+En esta lección, usted aprendió cómo trabajar con gráficos de base en R. Si desea explorar otros elementos de gráficos de base, le sugiero que consulte esta página web (http://www.ling.upenn.edu/~joseff/rstudy/week4.html) le ofrecerá un panorama útil.
+  
+Felicitaciones de nuevo, usted ha terminado otra lección con R. No olvide de guardar los fragmentos de código que le parece útil en el álbum de recortes. Todos los comandos de esta sesión estarán disponible en la tabula 'History'.
