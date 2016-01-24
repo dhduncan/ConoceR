@@ -24,9 +24,14 @@
   Hint: "Por favor escriba 'getwd()' y pulse Intro." 
 
 - Class: text
+  Output: "En realidad, la decisión de establecer un espacio de proyecto en
+  RStudio es uno de las mas importantes para facilitar el manejo de sus datos
+  y archivos muchos."
+
+- Class: text
   Output: "La dirección que sale 
-  en la consola debe corresponder con la dirección que se ve por encima de la 
-  ventanilla FILES. ¿Todo bien? Adelante, pues."
+  en la consola al teclear getwd() debe corresponder con la dirección que se ve 
+  por encima de la ventanilla FILES. ¿Todo bien? Adelante, pues."
 
 - Class: text
   Output: "Muchas veces, la primera cosa que querramos hacer es introducir un
@@ -46,7 +51,7 @@
   Output: "También, usted puede utilizar la función `read.table()` para leer 
   datos que ya están en formato de filas y columnas, incluso archivos tipo csv. 
   La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la
-  función read.csv().
+  función read.csv(). De hecho, read.csv usa read.table en el fondo.
   R puede ubicar el archivo con su ruta de archivo, o bien, si el archivo 
   está ubicado en su carpeta de trabajo, podemos llamarlo directamente así."
 
@@ -62,86 +67,88 @@
   
 - Class: text
   Output: "¿Qué paso? Si ejecutamos la orden así, R lo hace, y por defecto 
-  imprime los resultados. Acaba de pasarle un monton de datos rapidísimo, lo
+  imprime los resultados. Ya lo supo, ¿no? Ha acabado de pasarle un monton de datos rapidísimo, lo
   cual significa que R entendiera el comando, pero no retiene nada vigente
   en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?
   
 - Class: cmd_question
   Output: "Cuando querremos conservar datos para trabajarlos, necesitamos 
-  atribuirlo un nombre con `<-` para que R lo asigne una ubicación en el entorno
+  atribuirlo un nombre con '<-' para que R lo asigne una ubicación en el entorno
   de trabajo y se acordará que el objeto está. Vamos a llamarle a este conjunto
   'cicLoja' porque son datos acerca del proyecto de la ciclovia de Loja.  Ahora, 
   Recupere el comando con read.csv pero esta vez ponga el nombre y el símbolo 
   de asignación delante de él."
-  CorrectAnswer: cicLoja <- read.table('jc_fireComm.csv', header=TRUE, sep=',',
-  na.strings='NA')                         
-```
+  CorrectAnswer: cicLoja <- read.table('ciclovia.csv', header=TRUE, sep=',',
+  na.strings='NA')
 
-¿Funcionó ese mando? Podemos revisar el encabezado de la tabla, las primeras seis filas utilizando la función  `head`.
-```{r head_fireComm, eval=FALSE}
-head(jc_fireComm)
-```
-Con esto, hemos creado un **objeto**. Los objetos en R pueden ser los conjuntos de datos, las funciones, listas, matrices, resultados guardados, etc.
+- Class: text
+  Output: "De mi opinión, la idea con esta lección es enseñarle lo mínimo
+  posible de un par de opciones, así que no pienso en explicar en detalle cada
+  argumento que usted hubiera teclead en el último paso. En breve, después del
+  nombre y dirección del archivo, llevó un argumento 'header =' que pregunta si 
+  los datos vienen encabezados (TRUE) o no (FALSE)..." 
 
-La función `read.csv()` es más sencilla que `read.table()` pero exige que los datos sean formateados de una manera especifica. Una vez entendido este formato, mucha gente eligirá `read.csv()`.  
-```{r read_fireComm4, eval=FALSE}                                                                      
-jc_fireComm <- read.csv('jc_fireComm.csv')
+- Class: text
+  Output: "Luego, 'sep=' pregunta por 
+  la caracter que sepera los valores del archivo. Ya que nuestro datos son
+  separados por comas (.csv) informamos a R de este hecho de forma muy directa 
+  ','. El último argumento na.strings = quiere saber como sabrá cuando encuentre
+  a valores perdidos.  Va a suponer que celdas vacías si estén en esa clase, 
+  pero algunos autores suelen ingresar un valor especial para señalar valores
+  perdidos, como un número fuera del rango de lo posible para la variable."
+  
+- Class: text
+  Output: "Acabo de comentar que mucha gente suele ingresar un valor especial 
+  para señalar valores perdidos. ¿Qué sería la ventaja de esa práctica versus,
+  la opción de dejar la celda vacía? Esto sería un buen temito para el foro me 
+  parece. ¡Es una cuestión sencilla pero algo existencial!"
 
-head(jc_fireComm)
-```
-Normalmente, yo uso esta `read.csv()`, o sino, acedo directamente a una hoja de cálculo de MS Excel. Pero ¿como se importa datos de MS Excel? ¡Todo el mundo usa Excel!  
+- Class: mult_question
+  Output: "Volviéndonos al tema de los archivos de datos separados por comas, 
+  tal vez usted acabara de darse cuenta de un inconveniente sencillo pero 
+  importante con el 
+  formato debido a diferencias en las costumbres de notación númerica entre el 
+  inglés y el castellano.  ¿Cuál de los siguientes podría ser el inconveniente?"
+  AnswerChoices: "El estánder para indicar decimales en castellano es con la coma; CSV en castellano sería VCS; En castellano los números son más grandes"
+  CorrectAnswer: El estánder para indicar decimales en castellano es con la coma
+  AnswerTests: omnitest(correcVal="El estánder para indicar decimales en castellano es con la coma")
+  Hint: "Demasiado fácil, ¿no? Un inconveniente podría ser que mientras que en 
+  muchos paises y idiomas se indica decimales con el punto, en castellano se los
+  señala con la coma. En realidad, todo depende de los adjustes de su computadora
+  y programas demás que intervenieran en el proceso. He visto problemas en 
+  algunas ocasiones y que todo funciona sin problema en otras. Lo importante es 
+  que usted esté consciente de la posibilidad." 
 
-Pues sí, se puede ingresar datos dsdee una hoja de cálculo de MS Excel, pero necesitamos cargar un paquete. Primero, vamos a ver que pasa cuando llamamos a una función que todavía no está.
+- Class: cmd_question
+  Output: "Pues, ¿Funcionó ese mando? Podemos revisar el encabezado de la tabla,
+  las primeras seis filas utilizando la función head(). Siempre vale la pena
+  echar un vistazo a una muestra del conjunto."
+  CorrectAnswer: head(cicLoja)
+  AnswerTests: omnitest(correctExpr= 'head(cicLoja)')
+  Hint: "En los parentesis de la función, escriba el nombre de su objeto no más, 
+  así head(cicLoja)."
+  
+- Class: text
+  Output: "Insisto, la función 'read.csv()' es más sencilla que 'read.table()',
+  pero exige que los datos sean formateados de una manera especifica. Una vez 
+  entendido este formato, mucha gente eligirá 'read.csv()'. En este caso, la
+  llamada hubiera sido cicLoja <- read.csv("ciclovia.csv")."
 
-#### Advertencia - este paquete no funcione de momento para usuarios. Parece que algunas combinaciones del sistema operativo PC y R no permiten funcionar un paquete auxiliario `rJava`.  Así que borro los ejemplos que leen archivos directamente de una hoja de cálculo.
+- Class: text
+  Output: "Mientras que tecleara el comando con read.table hubiera ojeado los
+  muchos argumentos que acepta la función read.table( ) aparte de los que usted
+  ejecutó. Basta mencionar acá que brinda un nivel de control en todos los 
+  ajustes que quizas le sirva algún día."
 
+- Class: cmd_question
+  Output: "Un momento de práctica antes de continuar, tenemos un objeto de datos,
+  debemos arrojar una gráfica o resumen de algún tipo. Eche un vistazo a las
+  variables con str(cicLoja) ya mismo."
+  CorrectAnswer: str(cicLoja)
+  AnswerTests: omnitest(correctExpr= "str(cicLoja)")
+  Hint: "Teclee el comando precisamente como aparece al fin del diálogo para 
+  continuar."
 
-3. Buscando la ayuda en R
---------------------------------------------------------------------------------
-Vamos a pedir que R nos ayude. Por ejemplo, quizas no entendemos como trabaja la función `read.table`?
-```{r help_read}
-?read.table                                                           
-```
-Bueno, *muy* interesante, pero no es la información que buscábamos.
-
-Podemos ampliar la busqueda con `help.search`, la cual también busca dentro de la documentación de R para frases específicas.
-```{r search_read, eval=FALSE}
-help.search('read data')
-```
-Pues, no nos ha ayudado mucho esto. ¿Qué más hay?
-
-### Aumentar R con los paquetes de R
-Aquí, se presenta un paquete que amplia y extende nuestra busqueda para la ayuda en R. El primer paso es instalar el paquete <<sos>> con el comando: `install.packages('sos')`. El paquete `sos` (nombrado por la anticuada llamada maritima de socorro - <<save our souls>>) extende el sistema de ayuda de R, y lo hace muchísimo más útil. 
-```{r install_sos, eval=FALSE}
-install.packages('sos')                                             
-```                                                                   
-¡Que bueno, ha acabado de instalarse ya!
-
-Por cierto, y obviamente, no necesitamos instalar un paquete que ya está instalado. Si hay duda, podemos llamar a `library()` sin grabar nada para saber cuales paquetes ya estén en nuesta colección.
-```{r lib_show, eval=FALSE}
-library()                                                             
-```
-
-Una vez instalado, tenemos que cargar el paquete con la función `library` para que esté disponible en nuestro entorno de trabajo.
-```{r lib_sos, eval=FALSE}
-library(sos)                                                          
-```
-
-Ahora, volvemos a nuestra busqueda. Imagínense que no tuvieramos instalado un paquete que lee las hojas de cálculo de MS Excel. Una vez que hemos cargado `sos`, podemos utilizar la función `findFn`, que buscará en internet para ver si existe alguna función relacionada. Nos devuelve el nombre del paquete a lo cual pertenezca esa función.  Abastecemos solamente un poco de imaginación en escoger los terminos adecuados. Según nuestro ejemplo de ignorancia de paquetes que puedan leer a hojas de MS Excel, pongamos el seguiente:
-```{r find_xlsx, eval=FALSE}
-findFn('read excel')                                                   
-```
-
-Lance una busqueda de internet en un navigador, y de pronto parece que hay varias opciones. Imagínense que el día de hoy el paquete `read` nos llama la atención. Si no lo tuvieramos, lo instalaríamos.
-```{r install_xlsx, eval=FALSE}
-install.packages('')                                              
-```
-
-Luego, para activarlo
-```{r lib_xlsx, message=FALSE}
-library(readxl)
-rn_leafWaterPot <- read_excel('rn_leafWaterPot.xlsx')
-```
 
 Etc, etc. Sin embargo, hemos descubrido que para alguna razón, no funciona. Así que, podemos guardar una version del conjunto de datos como un archivo `.csv` en lugar de leerlos directamente. Abandonamos al  Excel!  Pero, ahora se ve como se puede descubrir paquetes can puedan servirnos en tareas especificas.
 
