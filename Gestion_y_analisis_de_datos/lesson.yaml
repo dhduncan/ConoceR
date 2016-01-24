@@ -52,21 +52,28 @@
 
 - Class: cmd_question
   Output: "Vamos a leer unos datos alamacenados en formato csv mediante el comando  
-  read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA'). Dese la
+  read.table("ciclovia.csv", header=TRUE, sep=',', na.strings='NA'). Dese la
   oportunidad ahora mismo."
-  CorrectAnswer: read.table("jc_fireComm.csv", header=TRUE, sep=',', na.strings='NA')
-  AnswerTests: omnitest(correctExpr= "read.table('jc_fireComm.csv', header=TRUE, sep=',', na.strings='NA')")
+  CorrectAnswer: read.table("", header=TRUE, sep=',', na.strings='NA')
+  AnswerTests: omnitest(correctExpr= "read.table('ciclovia.csv', header=TRUE, sep=',', na.strings='NA')")
   Hint: "Escriba el comando precisamente como aparece arriba. Aunque puede ser
   tedioso, cada argumento a la función tiene su propósito para lograr que los 
   datos aterricen salvos y sanos para el análisis en R."
   
-
-```
-¿Qué paso? Si ejecutamos la orden así, R ls hace, y por defecto imprime los resultados, pero no retiene nada en memoría de lo que salió. 
-
-Si queremos conservar estos datos, necesitamos atribuirlo un nombre con `<-` para que R lo asigne una ubicación en el entorno de trabajo y se acordará que el objeto está. 
-```{r read_fireComm3}
-jc_fireComm <- read.table('jc_fireComm.csv', header=TRUE, sep=',',
+- Class: text
+  Output: "¿Qué paso? Si ejecutamos la orden así, R lo hace, y por defecto 
+  imprime los resultados. Acaba de pasarle un monton de datos rapidísimo, lo
+  cual significa que R entendiera el comando, pero no retiene nada vigente
+  en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?
+  
+- Class: cmd_question
+  Output: "Cuando querremos conservar datos para trabajarlos, necesitamos 
+  atribuirlo un nombre con `<-` para que R lo asigne una ubicación en el entorno
+  de trabajo y se acordará que el objeto está. Vamos a llamarle a este conjunto
+  'cicLoja' porque son datos acerca del proyecto de la ciclovia de Loja.  Ahora, 
+  Recupere el comando con read.csv pero esta vez ponga el nombre y el símbolo 
+  de asignación delante de él."
+  CorrectAnswer: cicLoja <- read.table('jc_fireComm.csv', header=TRUE, sep=',',
   na.strings='NA')                         
 ```
 
