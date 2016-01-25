@@ -7,8 +7,9 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "¡Hola buenas! En esta lección, aprenderá crear y manipular objetos 
-  de datos de varias fuentes, ¿Listo?"
+  Output: "¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos 
+  de datos, codificar a variables categóricas, y guardar su trabajo en un
+  archivo. ¿Listo?"
 
 - Class: text
   Output: "Antes de empezar, confirma que Ud esté en su proyecto de RStudio.
