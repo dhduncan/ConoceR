@@ -42,13 +42,13 @@
   Output: "En lecciones y vídeos pasados usted hubiera visto comandos para la
   importación de datos al entorno de R.  "
   AnswerChoices: "*.csv (valores seperados por comas); *.kmz (keyhole markup language); Microsoft Access base de datos"
-  CorrectAnswer: *.csv (valores seperados por comas)
+  CorrectAnswer: "*.csv (valores seperados por comas)"
   AnswerTests: omnitest(correctVal="*.csv (valores seperados por comas)")
   Hint: "De este listado, usted solo hubiera visto comandos para leer datos
   almacenados en el formato csv - valores seperados por comas - en este curso." 
 
 - Class: text
-  Output: "También, usted puede utilizar la función `read.table()` para leer 
+  Output: "También, usted puede utilizar la función 'read.table()' para leer 
   datos que ya están en formato de filas y columnas, incluso archivos tipo csv. 
   La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la
   función read.csv(). De hecho, read.csv usa read.table en el fondo.
@@ -57,10 +57,10 @@
 
 - Class: cmd_question
   Output: "Vamos a leer unos datos alamacenados en formato csv mediante el comando  
-  read.table("ciclovia.csv", header=TRUE, sep=',', na.strings='NA'). Dese la
-  oportunidad ahora mismo."
-  CorrectAnswer: read.table("", header=TRUE, sep=',', na.strings='NA')
-  AnswerTests: omnitest(correctExpr= "read.table('ciclovia.csv', header=TRUE, sep=',', na.strings='NA')")
+  read.table(path2csv1, header=TRUE, sep=','). Dese la oportunidad ahora 
+  mismo."
+  CorrectAnswer: read.table(path2csv1, header=TRUE, sep=',')
+  AnswerTests: omnitest(correctExpr= "read.table(path2csv1, header=TRUE, sep=',')")
   Hint: "Escriba el comando precisamente como aparece arriba. Aunque puede ser
   tedioso, cada argumento a la función tiene su propósito para lograr que los 
   datos aterricen salvos y sanos para el análisis en R."
@@ -69,7 +69,7 @@
   Output: "¿Qué paso? Si ejecutamos la orden así, R lo hace, y por defecto 
   imprime los resultados. Ya lo supo, ¿no? Ha acabado de pasarle un monton de datos rapidísimo, lo
   cual significa que R entendiera el comando, pero no retiene nada vigente
-  en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?
+  en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?"
   
 - Class: cmd_question
   Output: "Cuando querremos conservar datos para trabajarlos, necesitamos 
@@ -78,8 +78,9 @@
   'cicLoja' porque son datos acerca del proyecto de la ciclovia de Loja.  Ahora, 
   Recupere el comando con read.csv pero esta vez ponga el nombre y el símbolo 
   de asignación delante de él."
-  CorrectAnswer: cicLoja <- read.table('ciclovia.csv', header=TRUE, sep=',',
-  na.strings='NA')
+  CorrectAnswer: cicLoja <- read.table(path2csv1, header=TRUE, sep=',')
+  AnswerTests: omnitest(correctExpr= "cicLoja <- read.table(path2csv1, header=TRUE, sep=',')")
+  Hint: "No hacen falta pistas creo, vuelve al diálogo para hallar la respuesta."
 
 - Class: cmd_question
   Output: "Pues, ¿Funcionó ese mando? Podemos revisar el encabezado de la tabla,
@@ -132,7 +133,7 @@
   Output: "Insisto, la función 'read.csv()' es más sencilla que 'read.table()',
   pero exige que los datos sean formateados de una manera especifica. Una vez 
   entendido este formato, mucha gente eligirá 'read.csv()'. En este caso, la
-  llamada hubiera sido cicLoja <- read.csv("ciclovia.csv")."
+  llamada hubiera sido cicLoja <- read.csv('ciclovia.csv')."
 
 - Class: text
   Output: "Mientras que tecleara el comando con read.table hubiera ojeado los
@@ -195,11 +196,11 @@
   Output: "Puede resolver esto sin problema. Usted va a utilizar la función 
   factor() para definir la variable Década nuevamente.  Siga este ejemplo
   directamente nuevoDecada <- factor(cicLoja$Decada, 
-  levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))". Con ello, usted
+  levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Con ello, usted
   dara R la información acerca del orden de los niveles del factor."
   CorrectAnswer: nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))
   AnswerTests: omnitest(correctExpr= "nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')")
-  Hint: Teclee esto nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')
+  Hint: "Teclee esto nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')."
 
 - Class: cmd_question
   Output: "Ahora el modo más sencillo comprobar el resultado sería repetir la 
@@ -282,6 +283,6 @@
   para terminar la lección actual. Copie y pegue del diálogo arriba si no le
   sale."
 
-- Class: txt
+- Class: text
   Output: "Es un poco tarde, ya lo sé. Bueno, hasta la próxima lección..."
   

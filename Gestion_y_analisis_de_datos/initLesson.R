@@ -16,14 +16,9 @@ path2csv1 <- file.path(path.package('swirl'), 'Courses',
                        'Gestion_y_analisis_de_datos',
                        'ciclovia.csv')
 
-path2csv2 <- file.path(path.package('swirl'), 'Courses',
-                       'ConoceR',
-                       'Gestion_y_analisis_de_datos',
-                       'hijosDetalle.csv')
-
 # Create datasets for user. We don't advertise that we're
 # doing this, but it will be necessary for students who
 # quit and later resume. We are not saving the variable
 # to the progress file to save on performance.
-cicl <- read.csv(path2csv1)
+cicLoja <- read.csv(path2csv1)
 #detalle <- read.csv(path2csv2)
