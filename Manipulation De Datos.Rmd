@@ -1,0 +1,138 @@
+---
+title: "Manipulacion de datos"
+author: "David H. Duncan"
+date: "January 25, 2016"
+output: pdf_document
+---
+
+```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
+library(knitr)
+library(swirl)
+source("~/git/ConoceR/Basicos_de_manejar_R/initLesson.R")
+```
+
+¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos de datos, codificar a variables categóricas, y guardar su trabajo en un archivo. ¿Listo?
+
+Antes de empezar, confirma que Ud esté en su proyecto de RStudio. Arriba, a la derecha, verá una caja de azul claro y a su lado debe aparecer el nombre de su proyecto. Si ve (none), significa que no esta en el proyecto y Ud debería abrirlo del menu <<File>> antes de continuar.
+
+Luego, teclea 'getwd()' (de <<get wORKING dIRECTORY>>) en la consola para confirmar de otra manera en donde esté trabajando.  
+  
+```{r}
+getwd()
+```
+
+En realidad, la decisión de establecer un espacio de proyecto en RStudio es uno de las mas importantes para facilitar el manejo de sus datos y archivos muchos.
+  
+La dirección que sale en la consola al teclear getwd() debe corresponder con la dirección que se ve por encima de la ventanilla FILES. ¿Todo bien? Adelante, pues.
+  
+Muchas veces, la primera cosa que querramos hacer es introducir un conjunto de datos que están almacenados en un archivo digital. Por lo tanto, empezamos en esta lección ampliando las opciones que hay.
+  
+Antes de seguir, entonces, En lecciones y vídeos pasados usted hubiera visto comandos para la importación de datos al entorno de R.
+
+* .csv (valores seperados por comas)  
+* .kmz (keyhole markup language)  
+* Microsoft Access base de datos  
+
+También, usted puede utilizar la función 'read.table()' para leer datos que ya están en formato de filas y columnas, incluso archivos tipo csv. La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la función read.csv(). De hecho, read.csv usa read.table en el fondo. R puede ubicar el archivo con su ruta de archivo, o bien, si el archivo está ubicado en su carpeta de trabajo, podemos llamarlo directamente así.
+  
+Vamos a leer unos datos alamacenados en formato csv mediante el comando read.table(path2csv1, header=TRUE, sep=','). Dese la oportunidad ahora mismo.
+  
+```{r}
+read.table(path2csv1, header=TRUE, sep=',')
+```
+
+¿Qué paso? Si ejecutamos la orden así, R lo hace, y por defecto imprime los resultados. Ya lo supo, ¿no? Ha acabado de pasarle un monton de datos rapidísimo, lo cual significa que R entendiera el comando, pero no retiene nada vigente en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?
+  
+Cuando querremos conservar datos para trabajarlos, necesitamos atribuirlo un nombre con '<-' para que R lo asigne una ubicación en el entorno de trabajo y se acordará que el objeto está. Vamos a llamarle a este conjunto 'cicLoja' porque son datos acerca del proyecto de la ciclovia de Loja. Ahora, Recupere el comando con read.csv pero esta vez ponga el nombre y el símbolo de asignación delante de él.
+  
+```{r}
+cicLoja <- read.table(path2csv1, header=TRUE, sep=',')
+```
+
+Pues, ¿Funcionó ese mando? Podemos revisar el encabezado de la tabla, las primeras seis filas utilizando la función head(). Siempre vale la pena echar un vistazo a una muestra del conjunto.
+  
+```{r}
+head(cicLoja)
+```
+
+De mi opinión, la idea con esta lección es enseñarle lo mínimo posible de un par de opciones, así que no pienso en explicar en detalle cada argumento que usted hubiera teclead en el último paso. En breve, después del nombre y dirección del archivo, llevó un argumento 'header =' que pregunta si los datos vienen encabezados (TRUE) o no (FALSE)...
+  
+Luego, 'sep=' pregunta por la caracter que sepera los valores del archivo. Ya que nuestro datos son separados por comas (.csv) informamos a R de este hecho de forma muy directa ','. El último argumento na.strings = quiere saber como sabrá cuando encuentre a valores perdidos.  Va a suponer que celdas vacías si estén en esa clase, pero algunos autores suelen ingresar un valor especial para señalar valores perdidos, como un número fuera del rango de lo posible para la variable.
+  
+Acabo de comentar que mucha gente suele ingresar un valor especial para señalar valores perdidos. ¿Qué sería la ventaja de esa práctica versus, la opción de dejar la celda vacía? Esto sería un buen temito para el foro me parece. ¡Es una cuestión sencilla pero algo existencial!
+  
+Volviéndonos al tema de los archivos de datos separados por comas, tal vez usted acabara de darse cuenta de un inconveniente sencillo pero importante con el formato debido a diferencias en las costumbres de notación númerica entre el inglés y el castellano. Antes de seguir, entonces, ¿cuál de los siguientes podría ser el inconveniente?
+
+* El estánder para indicar decimales en castellano es con la coma  
+* CSV en castellano sería VCS  
+* En castellano los números son más grandes  
+
+Insisto, la función 'read.csv()' es más sencilla que 'read.table()', pero exige que los datos sean formateados de una manera especifica. Una vez entendido este formato, mucha gente eligirá 'read.csv()'. En este caso, la llamada hubiera sido cicLoja <- read.csv('ciclovia.csv').
+  
+Mientras que tecleara el comando con read.table hubiera ojeado los muchos argumentos que acepta la función read.table( ) aparte de los que usted hubiera ejecutado. Basta mencionar acá que brinda un nivel de control en todos los ajustes que quizas le sirva algún día.
+  
+Un momento de práctica antes de continuar, tenemos un objeto de datos, debemos arrojar una gráfica o resumen de algún tipo. Eche un vistazo a las variables con str(cicLoja) ya mismo.
+  
+```{r}
+str(cicLoja)
+```
+
+Le comento en breve lo que tenemos acá con este conjunto. Los datos son de encuestas de 331 lojanos en el mes de enero 2016. Las encuestas ses debe al  trabajo de estudiantes de la UTPL en la asignatura de bioestadística. R identifó correctamente que la mayoría de las variables son categorías, o  factores en terminos más técnicos. Eche un vistazo a una gráfica del número de personas encuestados según la década de su nacimiento. Usted va a resumir la variable Decada.
+  
+Haga una gráfica sencilla de las frecuencias, el número de personas en cada década. ¿Cómo va usted a sumar las frecuencias? Pues, R se lo hace muy fácil,  pero lo voy a realizar en dos pasos. Primero, hay una función 'table( )' con  la cual puede contar frecuencias para factores. Teclee table(cicLoja$Decada)  al indicador para ver el resultado.
+  
+```{r}
+table(cicLoja$Decada)
+```
+
+¿Qué se ve en ese resultado? Me parece que la gran mayoría de los encuestados eran jovenes quienes nacieron en los 90. Bueno, tal vez mis estudiantes eran  más cómodos encuestando a sus pares, o tal vez estos datos reflejan la estructura de la población lojana?
+  
+Lo bonito es que se puede pasar el último comando entero directamente a la función plot() para graficar los datos. ¡Dese la oportunidad ahora!
+  
+```{r}
+plot(table(cicLoja$Decada))
+```
+
+Para mí, esto es una gráfica elegante y sencilla, y no me hace falta ni color ni 3 dimensiones ni nada. Pero ... hmmm, hay un pequeño inconveniente. Aunque R reconoció que las variables del conjunto eran factores, no sabe si tiene orden o no. En este caso tenemos la década '00s' (2000s) primero en el eje X, cuando debe aparecer después de los 90.
+  
+Puede resolver esto sin problema. Usted va a utilizar la función factor() para definir la variable Década nuevamente.  Siga este ejemplo directamente nuevoDecada <- factor(cicLoja$Decada,  levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Con ello, usted dara R la información acerca del orden de los niveles del factor.
+  
+```{r}
+nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))
+```
+
+Ahora el modo más sencillo comprobar el resultado sería repetir la gráfica. Recupere el comando para la gráfica, pero en lugar de cicLoja$Decada usted ingresará nuevoDecada.
+  
+```{r}
+plot(table(nuevoDecada))
+```
+
+Es esqueleto de esta gráfica ya se ve bien, así digo yo por lo menos. Sin embargo, no lleva los elementos obligatorios como etiquetas y títulos  adecuados. Si esta fuera su gráfica para un informe o una conversación con alguien, espero que no falle en añadir los elementos imprescindibles. Usted puede terminar este ejemplo fuera de la lección en su álbum de recortes.
+  
+¿Fue todo esto un callejón sin salida? ¡De ninguna manera! Usted acaba de aprender como utilizar la función factor() para codificar variables ordinales (las que tengan un orden específico). Con este truco puede asegurar que sus tablas y gráficas salgan correctas sin la necesidad de ordenar elementos manualmente.
+  
+Creo que es buena práctica adjuntar nuevas variables al conjunto principal. Hay muchas opciones para realizarlo. Una de ellas es la función cbind() para atar las columnas. Con ella se puede atar nuevoDecada a cicLoja, así cicLoja <- cbind(cicLoja, nuevoDecada). Dese la oportunidad ahora.
+  
+```{r}
+cicLoja <- cbind(cicLoja, nuevoDecada)
+```
+
+En realidad, lo que hubiera hecho lograra todo esto en un paso. Usted pudiera haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Fíjese que solo he añadido cicLoja$ al principio del mismo comando usted utilizó. En aquel momento la variable nuevoDecada no existiera, pero se la hubiera creado en el mismo acto de ordenar los niveles de las décadas. ¿Me explico?
+  
+Un pequeño paso más en esta tema. Entienda que estos cambios que usted ha hecho son vigentes o toman su efecto dentro de la sesión actual, pero al salir, cesan de existir hasta que vuelva a repetir los comandos.  Sin embargo, puede guardar el objeto como un archivo para que sea disponible a otras programas.
+  
+En el proceso de importación hay read.csv() y read.table(), igual, para exportar o guardar objetos hay write.csv() y write.table(). Usted va a llamar a la función write.csv() para guardar un archivo nuevo con estos datos. Escriba write.csv(x = cicLoja,  file = 'miCicLoja.csv') para almacenar el objeto como otro archivo tipo csv.
+  
+```{r}
+write.csv(x = cicLoja,  file = 'miCicLoja.csv')
+```
+
+Con los pasos de esta lección usted ya hubiera aprendido unas técnicas y trucos útiles. Sin embargo, hemos metido solomente un dedito en el agua hasta ahora.  Quiero abrirle unas ventanas o portales al mundo enorme de posibilidades en este campo, para que tenga una idea de ellas, pero nos bastará con un puñado de técnicas para practicar. Próximadas paradas - copiar y pegar, y uniendo conjuntos por variables en común.
+  
+Por último, algo para divertirse. No hemos pasado mucho tiempo con las funciones básicas de programación en R, pero en este paso usted va a conocer la función rep() para repetir.  Es de gran utilidad cuando queremos crear una variable nueva. En esta occassión, por meter una llamada a la función dentro de otra, se puede simular cosas interesantes y ridículas. Teclee el siguiente rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)
+  
+```{r}
+rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)
+```
+
+Es un poco tarde, ya lo sé. Bueno, hasta la próxima lección...
