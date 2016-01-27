@@ -280,7 +280,7 @@
   Teclee el siguiente
   rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)"
   CorrectAnswer: rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)
-  AnswerTests: ommitest(correctExpr = "rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)")
+  AnswerTests: omnitest(correctExpr = "rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)")
   Hint: "Usted adivine lo que viene, siga luchando, solo le queda este comando
   para terminar la lección actual. Copie y pegue del diálogo arriba si no le
   sale."
