@@ -205,11 +205,19 @@
   esta vez pondrá el nuevo objeto nuevoDecada entre los paréntesis."
 
 - Class: text
-  Output: "Es esqueleto de esta gráfica ya se ve bien, así digo yo por lo menos.
-  Sin embargo, no lleva los elementos obligatorios como etiquetas y títulos 
-  adecuados. Si esta fuera su gráfica para un informe o una conversación con
-  alguien, espero que no falle en añadir los elementos imprescindibles. Usted
-  puede terminar este ejemplo fuera de la lección en su álbum de recortes."
+  Output: "Es esquéleto de esta gráfica ya se ve bien, así digo yo por lo menos.
+  La mayoría de los encuestados nacieron en los 90, unos pocos más jovenes aún,
+  con una proporción disminuyendo mientras mayor fueran los encuestados. A me mi
+  gusta como esquéleto. Sin embargo, no lleva los elementos obligatorios, ¿verdad?"
+  
+- Class: text
+  Output: "Faltan etiquetas más informativas, y un título cómo mínimo, y hay 
+  muchos cambios estéticos que se pudiera haber realizado. Si esta fuera su gráfica para un informe o una conversación con
+  alguien, espero que no fallara en añadir los elementos imprescindibles." 
+  
+- Class: text
+  Output: "Usted debe terminar este ejemplo a su satisfacción fuera de la lección 
+  en su álbum de recortes."
   
 - Class: text
   Output: "¿Fue todo esto un callejón sin salida? ¡De ninguna manera!
