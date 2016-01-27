@@ -275,8 +275,9 @@
   Output: "Por último, algo para divertirse. No hemos pasado mucho tiempo con las
   funciones básicas de programación en R, pero en este paso usted va a conocer
   la función rep() para repetir.  Es de gran utilidad cuando queremos crear una
-  variable nueva. En esta occassión, por meter una llamada a la función dentro
-  de otra, se puede simular cosas interesantes y ridículas. Teclee el siguiente
+  variable nueva. En esta occassión, por meter una llamada a esta función rep dentro
+  de otra a la misma, se puede simular cosas interesantes y ridículas. 
+  Teclee el siguiente
   rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)"
   CorrectAnswer: rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)
   AnswerTests: ommitest(correctExpr = "rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)")
