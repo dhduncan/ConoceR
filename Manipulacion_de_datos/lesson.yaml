@@ -238,7 +238,7 @@
   cicLoja <- cbind(cicLoja, nuevoDecada)"
 
 - Class: text
-  Output: "En realidad, lo que hubiera hecho lograra todo esto en un paso. Usted
+  Output: "En realidad, hay una opción lograra todo esto en un paso. Usted
   pudiera haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, 
   levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Fíjese que solo
   he añadido cicLoja$ al principio del mismo comando usted utilizó. 
