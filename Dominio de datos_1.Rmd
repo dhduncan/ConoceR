@@ -1,5 +1,5 @@
 ---
-title: "Manipulacion de datos"
+title: "Dominio de datos parte 1"
 author: "David H. Duncan"
 date: "January 25, 2016"
 output: pdf_document
@@ -8,7 +8,7 @@ output: pdf_document
 ```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE ,warning=FALSE}
 library(knitr)
 library(swirl)
-source("~/git/ConoceR/Manipulacion_de_datos/initLesson.R")
+source("~/MOOC/ConoceR/Dominio_de_datos_1/initLesson.R")
 ```
 
 ¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos de datos, codificar a variables categóricas, y guardar su trabajo en un archivo. ¿Listo?
@@ -47,7 +47,7 @@ Primero, ya que usted trabaja esta lección fuera de swirl tenemos que copiar y 
 
 path2csv1 <- file.path(path.package('swirl'), 'Courses',
                        'ConoceR',
-                       'Manipulacion_de_datos',
+                       'Dominio_de_datos_1',
                        'ciclovia.csv')
 ```
   
