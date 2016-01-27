@@ -8,7 +8,7 @@ output: pdf_document
 ```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
 library(knitr)
 library(swirl)
-source("~git/ConoceR/Manipulacion_de_datos/initLesson.R")
+source("~/git/ConoceR/Manipulacion_de_datos/initLesson.R")
 ```
 
 ¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos de datos, codificar a variables categóricas, y guardar su trabajo en un archivo. ¿Listo?
