@@ -192,8 +192,8 @@
   levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Con ello, usted
   dara R la información acerca del orden de los niveles del factor."
   CorrectAnswer: nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))
-  AnswerTests: omnitest(correctExpr= "nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')")
-  Hint: "Teclee esto nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')."
+  AnswerTests: omnitest(correctExpr= "nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))")
+  Hint: "Teclee esto nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))."
 
 - Class: cmd_question
   Output: "Ahora el modo más sencillo comprobar el resultado sería repetir la 
