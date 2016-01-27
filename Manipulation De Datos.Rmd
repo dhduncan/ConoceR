@@ -8,7 +8,7 @@ output: pdf_document
 ```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
 library(knitr)
 library(swirl)
-source("~/git/ConoceR/Basicos_de_manejar_R/initLesson.R")
+source("~git/ConoceR/Manipulacion_de_datos/initLesson.R")
 ```
 
 ¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos de datos, codificar a variables categóricas, y guardar su trabajo en un archivo. ¿Listo?
@@ -35,9 +35,27 @@ Antes de seguir, entonces, En lecciones y vídeos pasados usted hubiera visto co
 
 También, usted puede utilizar la función 'read.table()' para leer datos que ya están en formato de filas y columnas, incluso archivos tipo csv. La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la función read.csv(). De hecho, read.csv usa read.table en el fondo. R puede ubicar el archivo con su ruta de archivo, o bien, si el archivo está ubicado en su carpeta de trabajo, podemos llamarlo directamente así.
   
+Primero, ya que usted trabaja esta lección fuera de swirl tenemos que copiar y pegar el siguiente para realizar unas tareas para su conveniencia.  
+```{r}
+.pathtofile <<- function(course_, lesson_, file_){
+  if(as.character(packageVersion("swirl")) > "2.2.21"){
+    file.path(get_swirl_option("courses_dir"), course_, lesson_, file_)
+  } else {
+    file.path(find.package("swirl"), "Courses", course_, lesson_, file_)
+  }
+}
+
+path2csv1 <- file.path(path.package('swirl'), 'Courses',
+                       'ConoceR',
+                       'Manipulacion_de_datos',
+                       'ciclovia.csv')
+```
+  
 Vamos a leer unos datos alamacenados en formato csv mediante el comando read.table(path2csv1, header=TRUE, sep=','). Dese la oportunidad ahora mismo.
+Tiene que pensar que en efecto, con "path2csv1" usted está efectivamente ingresando una dirección hacia el archivo clave. Tecléelo aparte para revelar la dirección.
   
 ```{r}
+# Make path to csv available to user
 read.table(path2csv1, header=TRUE, sep=',')
 ```
 
