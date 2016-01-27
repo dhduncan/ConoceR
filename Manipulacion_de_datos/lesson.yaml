@@ -114,7 +114,7 @@
   inglés y el castellano.  ¿Cuál de los siguientes podría ser el inconveniente?"
   AnswerChoices: "El estándar para indicar decimales en castellano es con la coma; CSV en castellano sería VCS; En castellano los números son más grandes"
   CorrectAnswer: El estándar para indicar decimales en castellano es con la coma
-  AnswerTests: omnitest(correcVal="El estándar para indicar decimales en castellano es con la coma")
+  AnswerTests: omnitest(correctVal="El estándar para indicar decimales en castellano es con la coma")
   Hint: "Demasiado fácil, ¿no? Un inconveniente podría ser que mientras que en 
   muchos paises y idiomas se indica decimales con el punto, en castellano se los
   señala con la coma. En realidad, todo depende de los adjustes de su computadora
