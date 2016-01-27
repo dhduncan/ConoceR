@@ -5,7 +5,7 @@ date: "January 25, 2016"
 output: pdf_document
 ---
 
-```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
+```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE ,warning=FALSE}
 library(knitr)
 library(swirl)
 source("~/git/ConoceR/Manipulacion_de_datos/initLesson.R")
@@ -75,10 +75,8 @@ head(cicLoja)
 
 De mi opinión, la idea con esta lección es enseñarle lo mínimo posible de un par de opciones, así que no pienso en explicar en detalle cada argumento que usted hubiera teclead en el último paso. En breve, después del nombre y dirección del archivo, llevó un argumento 'header =' que pregunta si los datos vienen encabezados (TRUE) o no (FALSE)...
   
-Luego, 'sep=' pregunta por la caracter que sepera los valores del archivo. Ya que nuestro datos son separados por comas (.csv) informamos a R de este hecho de forma muy directa ','. El último argumento na.strings = quiere saber como sabrá cuando encuentre a valores perdidos.  Va a suponer que celdas vacías si estén en esa clase, pero algunos autores suelen ingresar un valor especial para señalar valores perdidos, como un número fuera del rango de lo posible para la variable.
-  
-Acabo de comentar que mucha gente suele ingresar un valor especial para señalar valores perdidos. ¿Qué sería la ventaja de esa práctica versus, la opción de dejar la celda vacía? Esto sería un buen temito para el foro me parece. ¡Es una cuestión sencilla pero algo existencial!
-  
+Luego, 'sep=' pregunta por la caracter que sepera los valores del archivo. Ya que nuestro datos son separados por comas (.csv) informamos a R de este hecho de forma muy directa ','. 
+
 Volviéndonos al tema de los archivos de datos separados por comas, tal vez usted acabara de darse cuenta de un inconveniente sencillo pero importante con el formato debido a diferencias en las costumbres de notación númerica entre el inglés y el castellano. Antes de seguir, entonces, ¿cuál de los siguientes podría ser el inconveniente?
 
 * El estánder para indicar decimales en castellano es con la coma  
@@ -125,7 +123,10 @@ Ahora el modo más sencillo comprobar el resultado sería repetir la gráfica. R
 plot(table(nuevoDecada))
 ```
 
-Es esqueleto de esta gráfica ya se ve bien, así digo yo por lo menos. Sin embargo, no lleva los elementos obligatorios como etiquetas y títulos  adecuados. Si esta fuera su gráfica para un informe o una conversación con alguien, espero que no falle en añadir los elementos imprescindibles. Usted puede terminar este ejemplo fuera de la lección en su álbum de recortes.
+El esquéleto de esta gráfica ya se ve bien, así digo yo por lo menos.
+  La mayoría de los encuestados nacieron en los 90, unos pocos más jovenes aún,
+  con una proporción disminuyendo mientras mayor fueran los encuestados. A me mi
+  gusta como esquéleto. Sin embargo, no lleva los elementos obligatorios, ¿verdad?
   
 ¿Fue todo esto un callejón sin salida? ¡De ninguna manera! Usted acaba de aprender como utilizar la función factor() para codificar variables ordinales (las que tengan un orden específico). Con este truco puede asegurar que sus tablas y gráficas salgan correctas sin la necesidad de ordenar elementos manualmente.
   
@@ -135,7 +136,7 @@ Creo que es buena práctica adjuntar nuevas variables al conjunto principal. Hay
 cicLoja <- cbind(cicLoja, nuevoDecada)
 ```
 
-En realidad, lo que hubiera hecho lograra todo esto en un paso. Usted pudiera haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Fíjese que solo he añadido cicLoja$ al principio del mismo comando usted utilizó. En aquel momento la variable nuevoDecada no existiera, pero se la hubiera creado en el mismo acto de ordenar los niveles de las décadas. ¿Me explico?
+En realidad, hay una opción que lograra todo esto en un paso. Usted pudiera haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Fíjese que solo he añadido cicLoja$ al principio del mismo comando usted utilizó. En aquel momento la variable nuevoDecada no existiera, pero se la hubiera creado en el mismo acto de ordenar los niveles de las décadas. ¿Me explico?
   
 Un pequeño paso más en esta tema. Entienda que estos cambios que usted ha hecho son vigentes o toman su efecto dentro de la sesión actual, pero al salir, cesan de existir hasta que vuelva a repetir los comandos.  Sin embargo, puede guardar el objeto como un archivo para que sea disponible a otras programas.
   
