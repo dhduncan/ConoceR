@@ -27,7 +27,7 @@ La dirección que sale en la consola al teclear getwd() debe corresponder con la
   
 Muchas veces, la primera cosa que querramos hacer es introducir un conjunto de datos que están almacenados en un archivo digital. Por lo tanto, empezamos en esta lección ampliando las opciones que hay.
   
-Antes de seguir, entonces, En lecciones y vídeos pasados usted hubiera visto comandos para la importación de datos al entorno de R.
+Antes de seguir, entonces, En lecciones y vídeos pasados usted hubiera visto comandos para la importación de datos al entorno de R. ¿Instrucciones para cúal vio usted en el curso?
 
 * .csv (valores seperados por comas)  
 * .kmz (keyhole markup language)  
