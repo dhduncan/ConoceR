@@ -13,7 +13,7 @@
 # Make path to csv available to user
 path2csv1 <- file.path(path.package('swirl'), 'Courses',
                        'ConoceR',
-                       'Manipulacion_de_datos',
+                       'Dominio_de_datos_1',
                        'ciclovia.csv')
 
 # Create datasets for user. We don't advertise that we're
