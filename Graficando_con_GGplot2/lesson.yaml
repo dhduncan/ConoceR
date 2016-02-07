@@ -22,46 +22,53 @@
   Hint: "No hay otra salida"
 
 - Class: figure
-  Output: 
+  Output: "En vez de escribirle las razones para presentarle un sistema más de
+  graficar cuando le hubiera costado bastante esfuerzo aprender el otro, le
+  presento la siguiente imagen que muestra lo que ofrece el paquete con pocas
+  palabras de código."
+  FigureType:
 
 - Class: text
   Output:  "En cambio al sistema base de graficar que esta incluido en cada
   instalación, GGplot se accede por un paquete adicional. El paquete se llama
   'ggplot2' y se lo instala por la función install.packages(). Sin embargo, en
-  esta lección, le habíamos instalado ya al inciar la lección.
+  esta lección, se le hemos instalado ya al inciar la lección.
 
 - Class: text
   Output: "El nombre del paquete le aparezca algo torpe en castellano, y tampoco 
   tiene mucho sentido en el inglés. Se lo voy a explicar en breve por si a caso
-  que le ayudara acordarse.  'GG' se refiere a una Gramática de Graficar, 'plot' 
+  que le ayudara acordarse. La sigla 'GG' se refiere a una Gramática de Graficar, 
+  'plot' 
   (el nombre de la función famosa) significa trazar o marcar en castellano, y
-  supongo que 2 es un número de versión."
+  supongo que 2 es un número de versión. Para mayor información váyase a la 
+  página del proyecto http://ggplot2.org."
 
 - Class: text
   Output: "¿Por qué le estoy contando esta historia? El significado del nombre
   es importante, porque cuenta lo que pretendía el autor del paquete Dr Hadley
-  Wickham. Tal vez usted hubiera se hubiera enterado del hecho de que varios
-  tipos de gráfica en R aceptan argumentos distintos, o realicen distintas 
-  operaciones con argumentos que tienen otra función para otra gráfica"
+  Wickham."
   
-  (Don't worry, we've installed it for you already.) It is an implementation of The Grammar of Graphics, an abstract concept (as well as book) authored and invented by Leland Wilkinson and implemented by Hadley Wickham while he was a graduate student at Iowa State. The web site http://ggplot2.org provides complete documentation.
+- Class: "Tal vez usted se hubiera enterado del hecho de que varios
+  tipos de gráfica en R aceptan argumentos distintos, o realicen distintas 
+  operaciones con argumentos cuyos nombres tienen otra función para otra gráfica.  
+  En cambio, ggplot2 presenta una visión alternativa y bastante completa, y
+  siendo un paquete aparte, ha logrado un grado de cohesión que no es posible
+  con los muchos contribuidores al sistema base."
 
 - Class: text
-  Output: A grammar of graphics represents an abstraction of graphics, that is,  a theory of graphics which conceptualizes basic pieces from which you can build new graphics and graphical objects. The  goal of the grammar is to “Shorten the distance from mind to page”. From Hadley Wickham's book  we learn that 
+  Output: "Entonces, los comandos que va a ver son bastante distintos a los
+  que fuera aprendiendo, pero siendo más coherente, tal vez se lo va a enterar 
+  con mayor facilidad. Ojalá le resultara así."
+
+- Class: text
+  Output: "A parte de los objetivos bonitos de los autores del paquete, mi motivo
+principal para introducir este paquete es una compa hace exploración de datos "
 
 - Class: text
   Output:  The ggplot2 package "is composed of a set of independent components that can be composed in many different ways. ... you can create new graphics that are precisely tailored for your problem." These components include aesthetics which are attributes such as colour, shape, and  size, and geometric objects or geoms such as points, lines, and bars.  
 
 - Class: text
   Output: Before we delve into details, let's review the other 2 plotting systems.
-
-- Class: mult_question
-  Output: Recall what you know about R's base plotting system. Which of the following does NOT apply to it? 
-  AnswerChoices: Start with plot (or similar) function; Use annotation functions to add/modify (text, lines, points, axis); It is convenient and mirrors how we think of building plots and analyzing data; Can easily go back once the plot has started (e.g., to adjust margins or correct a typo)
-  CorrectAnswer: Can easily go back once the plot has started (e.g., to adjust margins or correct a typo)
-  AnswerTests: omnitest(correctVal='Can easily go back once the plot has started (e.g., to adjust margins or correct a typo)')
-  Hint: Which choice is the only one which looks backward? 
-
 
 - Class: mult_question
   Output: Recall what you know about R's lattice plotting system. Which of the following does NOT apply to it? 
@@ -237,4 +244,6 @@
   Hint: Recall our examples when we saw labels that we didn't specify.
 
 - Class: text
-  Output: Congrats! You've finished plot 1 of  ggplot2. In the next lesson the plot thickens.
+  Output: "¡Felicitaciones! Usted acaba de terminar la primera parte de la lección
+  con ggplot. "En la siguiente lección, la cual es opcional francamente, 
+  subirá un escalón más, para acceder al poder de este paquete integrado."
