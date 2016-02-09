@@ -126,6 +126,14 @@
   Hint: hint
 
 - Class: text
+  Output: "A propósito, algunos de los expertos en visualización opinan
+  diferente en la cuestión de cuál color es más fiable cuando le toca añadir
+  color para destacar algo. En sus libros Edward Tufte propone rojo, pero ayer
+  vi un autor opinando que para pantallas y fuentes del internet, azul suele
+  ser la mejor opción.  Yo no tengo opiniones fuertes en este asunto, aunque 
+  supongo en mi práctica voy con rojo. Rojo se llama con col=2, y azul con col=4."
+
+- Class: text
   Output: "Ojo - estos numeros no tienen nada que ver con los
   índices de los colores en la tabla completa de colores que usted vio antes.
   Por ejemplo el índice para blanco en la tabla completa era 1, así que lo llamara
@@ -149,8 +157,8 @@
   with(detalle, plot(hijos, col = area)). Dese la oportunidad."
   CorrectAnswer: with(detalle, plot(hijos, col = area))
   AnswerTests: omnitest(correctExpr='with(detalle, plot(hijos, col = area))')
-  Hint: No hay trucos acá, escriba with(detalle, plot(hijos, col = area)) para
-  ver los puntos pintados según la variable area.
+  Hint: "No hay trucos acá, escriba with(detalle, plot(hijos, col = area)) para
+  ver los puntos pintados según la variable area."
 
 - Class: text
   Output: "Para entender esta vista de los datos, hay que acordarse que en este
@@ -171,27 +179,75 @@
   Hint: "¿Exijo cada vez más de usted verdad?  Ensámblelo así 
   text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?'), aunque
   el orden dentro de la función no importa."
+  
+- Class: text
+  Output: "Si usted quiere romper lineas en el texto, hay que ingresar la
+  combinación \n en el lugar donde quiere que divide el texto.  Le sugierso que
+  experimenta con las opciones de más del función text(), los cuales brindan
+  un nivel de contro muy fino."
 
 - Class: text
-  Output: "A propósito, algunos de los expertos en visualización opinan
-  diferente en la cuestión de cuál color es más fiable cuando le toca añadir
-  color para destacar algo. En sus libros Edward Tufte propone rojo, pero ayer
-  vi un autor opinando que para pantallas y fuentes del internet, azul suele
-  ser la mejor opción.  Yo no tengo opiniones fuertes en este asunto, aunque 
-  supongo en mi práctica voy con rojo."
+  Output: "Usted reconocerá que algunos técnicas, como lo de añadir texto, 
+  podrían hacerse con igual o mayor facilidad en un programa de terceros. Sin 
+  embargo, no hace daño aprenderlas en R."
 
 - Class: cmd_question
   Output: "Si usted quisiera añadir una linea para destacar algún umbral en 
-  la gràfica, hay varias opciones. Se puede utilizar la función abline() - 
+  la gràfica, hay varias opciones. Se puede utilizar la función abline() cuya nombre 
   quiere decir trace una linea entre a y b.  Imagínese que queremos isladar el
   primer tercio (más o menos) del espacio, donde hay las mujeres que no sabían
   leer ni escribir. La función abline() tiene hace más cosas, pero ahora solo
-  queremos pedir que nos añade una linea vertical alrededor de donde 75 en el
-  eje X. Teclee abline(v=75) entonces, para una linea v para vertical."
-  CorrectAnswer: abline(v=75)
-  AnswerTests: omnitest(correctExpr='abline(v=75)')
-  Hint: "El comando que quiere es abline(v = 75)."
+  queremos pedir que nos añade una linea vertical alrededor de donde 77 en el
+  eje X. Teclee abline(v=77) entonces, para una linea v para vertical."
+  CorrectAnswer: abline(v=77)
+  AnswerTests: omnitest(correctExpr='abline(v=77)')
+  Hint: "El comando que quiere es abline(v = 77)."
 
 - Class: text
   Output: "Super sencillo verdad? Para lineas horizontales haríamos algo muy
   parecido, aunque con h en lugar de v."
+
+- Class: cmd_question
+  Output: "Para especificar una linea que empieza y termina donde usted quiera,
+  utilzamos segments(). Esta función require más argumentos, porque tenemos que
+  proporcionar las coordinadas en las dimensiones x y y. Sería más facíl entender
+  con un ejemplo. Digamos que quiero trazar una linea que empieza en nuestra
+  recta vertical en 77 y va en el plano horizontal hasta 200 en la altura que
+  cabiera los datos de las alfabetizadas, y los datos para alfabetizadas y no
+  alfabetizadas juntas. Lo voy a hacer mas gruesa también con lwd=. La receta 
+  es así segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)"
+  CorrectAnswer: segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)
+  AnswerTests: omnitest(correctExpr='segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)')
+  Hint: "Averigue que tenga los elementos bien escritos, y los argumentos seperados
+  con comas. El comando es segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)."
+
+- Class: text
+  Output: "Ya se hubiera dado cuenta que con esta función puede dibujar una
+  linea entre cualquier par de puntos en el espacio que establece el cuadro."
+
+- Class: cmd_question
+  Output: "Claro, le he hecho crear un pequeño disastre acá, metiendo estos
+  elementos sin razón. Sin embargo, la idea es que usted aprenderá la técnica
+  y lugeo la puede aplicar en un contexto donde tiene sentido. Siguemos, ¿no?
+  Para flechas, los argumentos son parecidos a los de segments, aunque tenemos
+  que meter unos más para la forma del punto de la flecha. Pruebe esto
+  arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)"
+  CorrectAnswer: arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)
+  AnswerTests: omnitest(correctExpr= "arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)")
+  Hint: "Escriba, o copie y pegue 
+  arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5) para avanzar"
+
+- Class: text
+  Output: "Lo que usted necesita más que nada es practicar. Le animo practicar
+  en un espiritu de diversión y aventura. Si no le sale algo, inténtelo de otra
+  manera, o escriba en el foro sobre su inconveniente.  Con el R, siempre hay 
+  varias maneras de lograr cualquier cosa, y el internet es una fuente muy rica
+  de buen consejos y ejemplos hechos."
+
+- Class: text
+  Output: "Note que muchos de los ejemplos dentro de estas lecciones no llevan
+  los elementos imprescindibles de etiquetas para los ejes con unidades de
+  medida, títulos, etcétera.  Lo hacemos así para enfocarle en lo nuevo de la
+  lección, y para que los comandos sean más ligeros. Sin embargo, sus obras 
+  siempre deben llevar estos elementos.  Pues, seguro que le he quedado con
+  dudas, pero ¡por eso tenemos el foro! Nos vemos allí."
