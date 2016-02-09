@@ -1,0 +1,24 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Anotacion
+  Author: David H. Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.2.21
+
+- Class: text
+  Output: "En esta lección breve usted jugará con técnicas sencillas de destacar
+  y anotar gráficas en R.  Usted reconocerá que algunos técnicas podrían hacerse
+  con igual o tal vez mayor facilidad en un programa de terceros. Sin embargo, 
+  no hace daño aprenderlas en R."
+
+- Class: text
+  Outpu: "También, hay razones que favorecen la opción de añadir estos elementos
+  dentro de R. Por ejemplo, en el caso de actualizar un detalle de la gráfica,
+  no hace falta pasar la imagen nuevamente al programa de terceros para anotarla
+  otra vez.  También, si lo añade en R, no hay el riesgo de distorcionar el
+  elemento que hubiera sobreimpuesto."
+
+- Class: cmd_question
+  Output: "En esta lección verá como añadir polígonos de color, flechas y texto.
+  Empiece con un espacio casi vacío, teclee . Presta atención en este comando "

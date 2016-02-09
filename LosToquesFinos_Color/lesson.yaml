@@ -1,0 +1,112 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: LosToquesFinos_Color
+  Author: David H Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.2.21
+
+- Class: text
+  Output: "Bienvenidos a la sessión. En esta oportunidad usted explorará las
+  opciones con color en el sistema básico de graficar en R. Cuando digo en R, 
+  espero que usted esté trabajando en RStudio siempre para este curso."
+
+- Class: text
+  Output: "Ya que usted conoce a R, no le va a sorprender que hay muchas maneras
+  de trabajar con color, y incluso unos paquetes con paladares alternativos. Nos
+  quedamos con los básicos en esta sessión."
+
+- Class: cmd_question
+  Output: "R tiene nombrado 657 colores, y se puede llamar a ellos por su nombre,
+  o varias codificaciones de color como hexadecimal o RGB valores. Para ver la 
+  lista de los colores, teclee colors(). Dese la oportunidad ahora."
+  CorrectAnswer: colors()
+  AnswerTests: omnitest(correctExpr="colors()")
+  Hint: "Tecléelo, esto no le va a dolor"
+
+- Class: figure
+  Output: "En la ventanilla de PLOTS hubiera aparecido, o empezado de aparecer,
+  una representacíon de los 657 colores ordenados por tonalidad, saturación, y 
+  valor."
+  Figure: StowersColor.R
+  FigureType: new
+
+- Class: text
+  Output: "Esta tabla se cita mucho en las fuentes en linea de R. Usted puede
+  consultarla, y otras configuraciones útiles, en esa página 
+  http://research.stowers-institute.org/efg/R/Color/Chart/index.htm. Si usted
+  encuentra un recurso semejante en castellano, ¡compártalo con nosotros por el
+  foro!"
+
+- Class: cmd_question
+  Output: "Muy bien, ¿pero como le va a ayudar esto? Pues, con el código numérico
+  que se ve en la tabla de colores, se puede llamar al nombre del color en su
+  gráfica. A mi me llama la atención el color número 642, así vamos a conocerlo.
+  Ya hemos visto que el objeto que almacena los colores se llama colors(),
+  ¿verdad? Pues a este comando vamos a especificar el número del color que 
+  queremos destacar en corchetes cuadrados [], así colors()[642]. Inténtelo."
+  CorrectAnswer: colors()[642]
+  AnswerTests: omnitest(correctExpr='colors()[642]')
+  Hint: "Aunque le parezca un poco torpe, este comando pide el color con índice
+  642 de todos los colores."
+
+- Class: cmd_question
+  Output: "¿Como se llama ese color entonces? Escriba el nombre en ingles que
+  hubiera aparecido en la consola, sin las comillas."
+  CorrectAnswer: violetred1
+  AnswerTests: omnitest(correctExpr='violetred1')
+  Hint: "Teclee el nombre del color no más para avanzar al próximo paso."
+
+- Class: text
+  Output: "OK, ahora ustd va a llamar este color para reconstruir la gráfica que vimos
+  en el vídeo de las opiniones de la gente de Bogotá sobre sus vidas. Las
+  primeras cifras de la gráfica superior fueron 51 % en 2011 quienes creyeron 
+  que su nivel de vida ha mejorado en los 5 años anteriores, comparado con 54.2%
+  en 2014."
+
+- Class: cmd_question
+  Output: "Primero con el color que sale por defecto,
+  proporcione usted los siguientes argumentos a la función barplot(). Primero
+  tiene que especificar la altura (height) de las barras así height=c(51, 54.2),
+  y luego un argumento para los nombres (etiquetas) de las barras, así
+  names.arg=c('2011', '2014'). Envuelve los dos argumentos en la función
+  barplot(), seperados por una coma, para empezar."
+  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))
+  AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))")
+  Hint: "Lo que necesitaba era barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))" 
+
+- Class: cmd_question
+  Output: "Usted va a añadir ese color 'violetred1' entonces. Como hicieron ellos de la 
+  oficina del alcalde de Bogotá, queremos que sobresale 2014, así que dejarémos
+  2011 en gris. Recupere el comando anterior y despues de una coma, modifique la
+  llamada a barplot() con el siguiente col = c('grey', 'violetred1')"
+  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))
+  AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))")
+  Hint: "Ya que añadió lo del color, la función debiera haber salido así
+  barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))"
+
+- Class: cmd_question
+  Output: "En este momento podríamos reproducir el efecto del corte del eje que 
+  hicieron ellos de la oficina del alcalde. ¿Se acuerde que tan fuerte parecía 
+  la diferencia entre 2011 y 2014 en su gráfica? Se lo hace por introducir otro
+  argumento ylim = c(49, 55) - ya que estos fueron los limites de su versión
+  de la gráfica, pero también tenemos que ingresar otra argumento xpd=FALSE. 
+  Inténtelo usted, recupere el último comando otra vez y añádale los dos
+  argumentos mencionados."
+  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c("2011", "2014"), col = c("grey", "violetred1"), ylim = c(49,55), xpd = FALSE)
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: "Ahora la función es así barplot(height = c(51, 54.2), 
+  names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylim = c(49,55), xpd = FALSE)"
+
+- Class: cmd_question
+  Output: "¡Vaya cambiazo, verdad! Esta versión es más llamativa, pero no es
+  una buena practica, así vamos a quitar los últimos dos argumentos con los 
+  cual cambiara el eje Y. Lo que si usted debe introducir en el comando son las
+  etiquetas para los ejes. En este paso usted debe quitar los argumentos a ylim
+  y xpd, y añadir ylab='porcentage de encuestados' y xlab = 'Año de la encuesta'."
+  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: "Despues de los cambios de este paso, la función es así
+  barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey',
+  'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')"
+
