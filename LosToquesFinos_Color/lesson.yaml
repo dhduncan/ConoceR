@@ -141,3 +141,57 @@
   AnswerTests: omnitest(correctExpr='head(detalle)')
   Hint: "Este paso siempre es una buena idea para orientarnos en un objeto de 
   datos. Escriba head(detalle) y presione INTRO."
+
+- Class: cmd_question
+  Output: "En este paso usted va a graficar todos los valores en el conjunto,
+  pero especificar que el color siga la variable area. Area es la variable que
+  cuenta si la encuestada pertencía de una zona urbana o rural.  Así se hace
+  with(detalle, plot(hijos, col = area)). Dese la oportunidad."
+  CorrectAnswer: with(detalle, plot(hijos, col = area))
+  AnswerTests: omnitest(correctExpr='with(detalle, plot(hijos, col = area))')
+  Hint: No hay trucos acá, escriba with(detalle, plot(hijos, col = area)) para
+  ver los puntos pintados según la variable area.
+
+- Class: text
+  Output: "Para entender esta vista de los datos, hay que acordarse que en este
+  conjunto tenemos datos promedios por cada provinicia de El Ecuador, y luego 
+  desglosados por alfabetización y la zona, rural o urbana."
+
+- Class: cmd_question
+  Output: "¿Le parece que añadimos unas anotaciones a esta gráfica? Empezamos
+  con unas palabras. Todos las gráficas y por lo tanto lo que podemos añadir 
+  como anotaciones necesita información sobre las coordinadas de forma precisa
+  o, bajo ciertas condiciones, vaga. Añada las palabras ¿cuál color va con cuál
+  nivel de área?.  Este texto va entre comillas con el argumento labels=''. 
+  También, usted tiene que especificar un lugar. Digamos que x sea 150, e y 
+  sea 4. Ensamblar estos detalles dentro la función text() ahora en el indicador
+  de RStudio."
+  CorrectAnswer: text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')
+  AnswerTests: omnitest(correctExpr='text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')', correctVal=VAL)
+  Hint: "¿Exijo cada vez más de usted verdad?  Ensámblelo así 
+  text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?'), aunque
+  el orden dentro de la función no importa."
+
+- Class: text
+  Output: "A propósito, algunos de los expertos en visualización opinan
+  diferente en la cuestión de cuál color es más fiable cuando le toca añadir
+  color para destacar algo. En sus libros Edward Tufte propone rojo, pero ayer
+  vi un autor opinando que para pantallas y fuentes del internet, azul suele
+  ser la mejor opción.  Yo no tengo opiniones fuertes en este asunto, aunque 
+  supongo en mi práctica voy con rojo."
+
+- Class: cmd_question
+  Output: "Si usted quisiera añadir una linea para destacar algún umbral en 
+  la gràfica, hay varias opciones. Se puede utilizar la función abline() - 
+  quiere decir trace una linea entre a y b.  Imagínese que queremos isladar el
+  primer tercio (más o menos) del espacio, donde hay las mujeres que no sabían
+  leer ni escribir. La función abline() tiene hace más cosas, pero ahora solo
+  queremos pedir que nos añade una linea vertical alrededor de donde 75 en el
+  eje X. Teclee abline(v=75) entonces, para una linea v para vertical."
+  CorrectAnswer: abline(v=75)
+  AnswerTests: omnitest(correctExpr='abline(v=75)')
+  Hint: "El comando que quiere es abline(v = 75)."
+
+- Class: text
+  Output: "Super sencillo verdad? Para lineas horizontales haríamos algo muy
+  parecido, aunque con h en lugar de v."

@@ -17,8 +17,17 @@
   dentro de R. Por ejemplo, en el caso de actualizar un detalle de la gráfica,
   no hace falta pasar la imagen nuevamente al programa de terceros para anotarla
   otra vez.  También, si lo añade en R, no hay el riesgo de distorcionar el
-  elemento que hubiera sobreimpuesto."
+  elemento que hubiera superimpuesto."
 
 - Class: cmd_question
   Output: "En esta lección verá como añadir polígonos de color, flechas y texto.
-  Empiece con un espacio casi vacío, teclee . Presta atención en este comando "
+  Empiece con un espacio casi vacío, teclee. plot(1, type='n', axes=FALSE, 
+  xlab='dimensión X', ylab= 'dimensión Y')."
+  CorrectAnswer: plot(1, type='n', axes=FALSE, xlab='dimensión X', ylab= 'dimensión Y')
+  AnswerTests: omnitest(correctExpr="plot(1, type='n', axes=FALSE, xlab='dimensión X', ylab= 'dimensión Y')")
+  Hint: "Tecléelo justamente como aparece arriba, y hay que respetar los símbolos
+  de puntuación."
+
+- Class: cmd_question
+  Output: ""
+  
