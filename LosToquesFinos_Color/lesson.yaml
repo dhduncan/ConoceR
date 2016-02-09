@@ -110,3 +110,34 @@
   barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey',
   'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')"
 
+- Class: text
+  Output: "Bueno, le desvié un poco con esto de la escala del eje Y, regresamos
+  al tema de color. A propósito, si a usted le gustaría destacar diferencias
+  pequeñas como vemos en este ejemplo, toca seleccionar un gráfico de puntos."
+
+- Class: cmd_question
+  Output: "De hecho, hay una manera aún más sencillo para introducir un juego
+  limitado de colores dentro de gráficas.  R tiene un paladar de 8 colores que
+  se puede llamar por el número. Usted los hubiera visto en el vídeo en la 
+  gráfica bien fea mía. Se los puede ver por teclear el siguiente 
+  barplot(1:8, col=1:8)."
+  CorrectAnswer: barplot(1:8, col=1:8)
+  AnswerTests: omnitest(correctExpr='barplot(1:8, col=1:8)')
+  Hint: hint
+
+- Class: text
+  Output: "Ojo - estos numeros no tienen nada que ver con los
+  índices de los colores en la tabla completa de colores que usted vio antes.
+  Por ejemplo el índice para blanco en la tabla completa era 1, así que lo llamara
+  por col=colors()[1], mientras que 1 en esta serie limitada de colores llama al 
+  color negro, y con el sintaxis col=1."
+
+- Class: cmd_question
+  Output: "Una aplicación super útil en R es asignar color por una variable de
+  agrupación o factor. En el fondo le hemos cargado un conjunto 'detalle' que lleva los
+  datos del número promedio de hijos y hijas que tenían las ecuatorianas según
+  el censo de 2010.  Confirme que está vigente en la sessión con head(detalle)."
+  CorrectAnswer: head(detalle)
+  AnswerTests: omnitest(correctExpr='head(detalle)')
+  Hint: "Este paso siempre es una buena idea para orientarnos en un objeto de 
+  datos. Escriba head(detalle) y presione INTRO."
