@@ -50,11 +50,11 @@
   Hint: "Aunque le parezca un poco torpe, este comando pide el color con índice
   642 de todos los colores."
 
-- Class: cmd_question
+- Class: text_question
   Output: "¿Como se llama ese color entonces? Escriba el nombre en ingles que
   hubiera aparecido en la consola, sin las comillas."
   CorrectAnswer: violetred1
-  AnswerTests: omnitest(correctExpr='violetred1')
+  AnswerTests: omnitest(correctVal='violetred1')
   Hint: "Teclee el nombre del color no más para avanzar al próximo paso."
 
 - Class: text
