@@ -34,7 +34,7 @@ rowCount <- 27
     plot(0, type="n", ylab="", xlab="",
     axes=FALSE, ylim=c(rowCount,0), xlim=c(1,colCount))
 
-    title("Los colores de R -- ordenados por tonalidad, saturación, valor")
+    title("Los colores de R -- ordenados por tonalidad,\nsaturación, valor")
 
     for (j in 0:(rowCount-1))
     {
