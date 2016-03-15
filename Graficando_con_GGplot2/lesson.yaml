@@ -19,20 +19,21 @@
   AnswerChoices: "Si;Si;Si"
   CorrectAnswer: Si
   AnswerTests: omnitest(correctVal= NULL)
-  Hint: "No hay otra salida"
+  Hint: "¡No hay otra salida!"
 
 - Class: figure
   Output: "En vez de escribirle las razones para presentarle un sistema más de
   graficar cuando le hubiera costado bastante esfuerzo aprender el otro, le
   presento la siguiente imagen que muestra lo que ofrece el paquete con pocas
   palabras de código."
-  FigureType:
+  Figure: demo.R
+  FigureType: new
 
 - Class: text
   Output:  "En cambio al sistema base de graficar que esta incluido en cada
   instalación, GGplot se accede por un paquete adicional. El paquete se llama
   'ggplot2' y se lo instala por la función install.packages(). Sin embargo, en
-  esta lección, se le hemos instalado ya al inciar la lección.
+  esta lección, se le hemos instalado ya al inciar la lección."
 
 - Class: text
   Output: "El nombre del paquete le aparezca algo torpe en castellano, y tampoco 
@@ -48,7 +49,8 @@
   es importante, porque cuenta lo que pretendía el autor del paquete ggplot2, 
   Dr Hadley Wickham."
   
-- Class: "Tal vez usted se hubiera enterado del hecho de que varios
+- Class: text
+  Output: "Tal vez usted se hubiera enterado del hecho de que varios
   tipos de gráfica en R aceptan argumentos distintos, o realicen distintas 
   operaciones con argumentos cuyos nombres tienen otra función para otra gráfica.  
   En cambio, ggplot2 presenta una visión alternativa y bastante completa, y
@@ -62,119 +64,363 @@
 
 - Class: text
   Output: "Ni siquiera voy a profundizar o parafrasear más los objetivos bonitos
-  de los autores del paquete, sino, se lo he presentado para explotar sus 
-  ventajas en rápidamente realizar vistas de conjuntos de estructura más compleja
-  que hemos visto hasta ahora."
-
-- Class: text
-  Output:  The ggplot2 package "is composed of a set of independent components that can be composed in many different ways. ... you can create new graphics that are precisely tailored for your problem." These components include aesthetics which are attributes such as colour, shape, and  size, and geometric objects or geoms such as points, lines, and bars.  
-
-- Class: text
-  Output: Yes, ggplot2 combines the best of base and lattice. It allows for multipanel (conditioning) plots (as lattice does) but also post facto annotation (as base does), so you can add titles and labels. It uses the low-level grid package (which comes with R) to draw the graphics. As part of its grammar philosophy, ggplot2 plots are composed of aesthetics (attributes such as size, shape, color) and geoms (points, lines, and bars), the geometric objects you see on the plot.
-
-- Class: text
-  Output: The ggplot2 package has 2 workhorse functions. The more basic workhorse function is qplot, (think quick plot), which works like the plot function in the base graphics system. It can produce many types of plots (scatter, histograms, box and whisker) while hiding tedious details from the user. Similar to lattice functions, it looks for data in a data frame or parent environment. 
-
-- Class: text
-  Output: The more advanced workhorse function in the package is ggplot, which is  more flexible and can be customized for doing things qplot cannot do. In this lesson we'll focus on qplot.
-    
-- Class: cmd_question
-  Output: We'll start by showing how easy and versatile qplot is. First, let's look at some data which comes with the ggplot2 package. The mpg data frame contains fuel economy data for 38 models of cars manufactured in 1999 and 2008. Run the R command str with the argument mpg. This will give you an idea of what mpg contains.
-  CorrectAnswer: str(mpg)
-  AnswerTests: omnitest(correctExpr='str(mpg)')
-  Hint: Type str(mpg) at the command prompt.
+  de los autores del paquete, sino, se lo he presentado para que Ud. puede 
+  aprovechar del gran capacidad de rápidamente realizar vistas de conjuntos de 
+  datos con estructura más compleja que hemos visto hasta ahora.  Sin embargo, 
+  cuando le llegue algo de resentimiento sobre el cambio en las funciones y 
+  argumentos, acuérdese que resulta del intento de establecer una grámatica
+  coherente para la construcción de gráficas."
 
 - Class: cmd_question
-  Output: We see that there are 234 points in the dataset concerning 11 different characteristics of the cars. Suppose we want to see if there's a correlation between engine displacement (displ) and highway miles per gallon (hwy). As we did with the plot function of the base system we could simply call  qplot with 3 arguments, the first two are the variables we want to examine and the third argument data is set equal to the name of the dataset which contains them (in this case, mpg). Try this now.
+  Output: "Bueno, hacemos un ejemplo y luego se lo comento. El paquete 
+  ggplot2 tiene dos funciones que son las bestias de carga principales. 
+  Empezamos viendo la flexibilidad de la más sencilla denominada 'qplot' 
+  (piense en 'quick plot') con un conjunto de datos 'mpg' que viene con ggplot 
+  mismo. Teclee el comando para revelar la cabeza del conjunto 'mpg' ahora."
+  CorrectAnswer: head(mpg)
+  AnswerTests: omnitest(correctExpr='head(mpg)')
+  Hint: Escriba head(mpg) al indicador.
+
+- Class: text
+  Output: "Este conjunto de datos 'mpg' contiene ahorro de combustible para 38
+  modelos de coche fabricados en 1999 y 2008. Realice el comando str con el 
+  argumento mpg para que tenga mayor información en el conjunto."
+
+- Class: cmd_question
+  Output: "Del resultado vemos que hay 234 observaciones en este objeto mpg 
+  que corresponden a 11 características distintas de los coches. Digamos que
+  queremos visualizar si existe una correlación entre la variable 'displ'
+  (desplazamiento del motor) y la variable de ahorro de combustible en la
+  carretera ('hwy', para highway del inglés) medida en millas por galon.  Casi 
+  igual como lo hicimos con la función plot del sistema básica de gráficar, 
+  podríamos llamar a la función qplot (del paquete ggplot2) con tan solo 3 argumentos.
+  Los primeros dos son las variables que queremos ver y para el tercer argumento
+  dimos el nombre del objeto de los datos, en este caso mpg. Le ayudo con esta
+  primera gráfica, hágala así qplot(displ, hwy, data = mpg)."
   CorrectAnswer: qplot(displ, hwy, data = mpg)
   AnswerTests: omnitest(correctExpr='qplot(displ, hwy, data = mpg)')
-  Hint: Type qplot(displ, hwy, data = mpg) at the command prompt.
+  Hint: "Teclee qplot(displ, hwy, data = mpg) no más para seguir."
 
-- Class: cmd_question
-  Output: A nice scatterplot done simply, right? All the labels are provided. The first argument is shown along the x-axis and the second along the y-axis. The negative trend (increasing displacement and lower gas mileage) is pretty clear. Now suppose we want to do the same plot but this time use different colors to distinguish between the 3 factors (subsets) of different types of drive (drv) in  the data (front-wheel, rear-wheel, and 4-wheel). Again, qplot makes this very easy. We'll just add what ggplot2 calls an aesthetic, a fourth argument, color, and set it equal to drv. Try this now. (Use the up arrow key to save some typing.)
+- Class: text
+  Output: "Vimos hace unas lecciones lo flexible que es la función plot, y 
+  esta función qplot es su igual. Produce muchos de los tipos de gráficas que 
+  hemos visto, por ejemplo diagramas de dispersión como salió en el último paso
+  , histogramas, diagramas de caja y bigote, etcétera, mientras 'protegiendo' el
+  usuario de los detalles que va procesando en el fondo." 
+
+- Class: mult_question
+  Output: "En el caso actual tenemos una digrama de dispersión sencilla, bien 
+  hecha, ¿verdad? Se nos proporcionó etiquetas en los ejes, de los cual 
+  podemos averiguar que el primer argument a la función se tomó como la variable
+  X y el segungo como el Y. Con esta gráfica queríamos echar un vistazo para 
+  una correlación entre las variables. ¿Qué opine usted?"
+  AnswerChoices: "Hay una correlación negativa bastante clara; No, no hay correlación; Hay una correlación positiva aunque sea débil; Hay una correlación positiva fuerte"
+  CorrectAnswer: Hay una correlación negativa bastante clara
+  AnswerTests: omnitest(correctVal='Hay una correlación negativa bastante clara')
+  Hint: "Mientras crece desplazamiento (en el eje x) mayor cantidad de combustible
+  consuma el coche, y por lo tanto tenemos una correlación negativa que es bastante
+  clara." 
+  
+- Class:  cmd_question
+  Output: "Ahora, digamos que queremos realizar la misma diagrama de nuevo, aunque
+  con colores que respresentan un factor que nos puede ayudar entender la
+  variación de mejor manera. Vamos a pintarla corresponde niveles del factor drv, 
+  que se refiere al tipo de tracción que tienen los coches, f (para 'front' o 
+  delantera, r (para rear o trasera), o 4 para 4 por 4. Con qplot este paso
+  también es fácil. Mientras con la función base plot añadíamos color por 'col'
+  con qplot usamos la palabra color, y lo hacemos igual a esta variable drv. 
+  Dese la oportunidad ahora, después de recuperar el comando adecuado por la 
+  flecha arriba."
   CorrectAnswer: qplot(displ, hwy, data = mpg, color = drv)
   AnswerTests: omnitest(correctExpr='qplot(displ, hwy, data = mpg, color = drv)')
-  Hint: Type qplot(displ, hwy, data = mpg, color = drv) at the command prompt.
+  Hint: "Debiera haber tecleado qplot(displ, hwy, data = mpg, color = drv) al 
+  indicador."
 
 - Class: text
-  Output: Pretty cool, right? See the legend to the right which qplot helpfully supplied? The colors were automatically assigned by qplot so the legend decodes the colors for you. Notice that qplot automatically used dots or points to indicate the data. These points are geoms (geometric objects). We could have used a different aesthetic, for instance shape instead of color, to distinguish between the drive types.
+  Output: "¡Lindo! Acá se ve dos criterios por los cual ggplot2 sea preferido. Uno
+  es los colores en si. Mientras que se puede definir cualquier color que querre
+  en el sistema basica de gráficar los colores que salen por defecto de ggplot2
+  son más al gusto. La otra, más importante, es la leyenda que nos proporcionó, 
+  sencilla y compacta."
+  
+- Class: text
+  Output: "Estos detalles son de gran importancia en un análisis EXPLORATORIO
+  de datos porque nos resultan gráficas listas para considerar o comunicar,
+  aunque falten detalles o elaboración para publicación."
+  
+- Class: text
+  Output: "La función qplot se nos asignó los colores de forma automática y por
+  lo tanto en la leyenda la asociación se hace automaticamente también. 
+  Fíjese que qplot usa puntos para indicar los datos como condición base. Estos
+  puntos son un ejemplo de lo que se llama geoms (objetos geométricos) en ggplot.
+  Ud pudiera haber utilizado otro estético, por ejemplo forma, para distinguir
+  los tipos de tracción de los coches. Sin embargo, estoy totalmente de acuerdo
+  con la opción de puntos."
 
 - Class: cmd_question
-  Output: Now let's add a second geom to the default points. How about some smoothing function to produce trend lines, one for each color? Just add a fifth argument, geom, and using the R function c(), set it equal to the concatenation of the two strings "point" and "smooth". The first refers to the data points and second to the trend lines we want plotted. Try this now.
+  Output: "Ahora Ud va a añadir otro 'geom' a los puntos que salen por defecto.
+  Para algo diferente, va a introducir una linea alisada para enfatizar la 
+  tendencia dentro de cada tipo de tracción. No es más complicado que ingresar un
+  quinto argumento, geom, y con la función c() haga la concatenación de los puntos
+  'point' and la linea alisada 'smooth'. Es decir, geom = c('points', 'smooth').
+  Inténtalo ahora, nuevamente recuperando el comando anterior con la flecha
+  arriba para ahorrar esfuerzo."
   CorrectAnswer: qplot(displ, hwy, data = mpg, color=drv, geom = c("point", "smooth"))
   AnswerTests: omnitest(correctExpr='qplot(displ, hwy, data = mpg, color=drv, geom = c("point", "smooth"))')
-  Hint: Type qplot(displ, hwy, data = mpg, color=drv, geom = c("point", "smooth")) at the command prompt.
+  Hint: Escriba qplot(displ, hwy, data = mpg, color=drv, geom = c("point", "smooth")) al indicador.
 
 - Class: text
-  Output: Note the helpful message R returns in red telling you what function (loess) it used to create the trend lines. No need to worry - we'll see another example of method  in another (Extras) lesson. Notice the gray areas surrounding each trend lines. These indicate the 95% confidence intervals for the lines.
-
+  Output: "Tal vez R le devolviera en la consola una advertencia sobre cual 
+  función estadística (loess) aplicó en trazar la linea alisada de tendencia. No
+  hay que preocuparse por ese mensaje, ggplot suele informar de opciones de 
+  condición base y a veces sugiere cambios o alternativos. Note las bandas grises
+  alrededor de cada linea de tendencia. Esas nos indican el intervalo de
+  confianza a 95% para la linea, o la incertidumbre en la relación según la
+  función que se aplicó." 
+  
+- Class: text
+  Output: "Es muy buena práctica representar incertidumbre siempre
+  y cuando gráficamos estadísticos o modelos que pretenden resumir variación."
+  
 - Class: cmd_question
-  Output: Before we leave qplot's scatterplotting ability, call qplot again, this time with 3 arguments. The first is y set equal to hwy, the second is data set equal to mpg, and the third is color set equal to drv. Try this now.
+  Output: "Antes de partir de diagramas de dispersión con qplot, llame a qplot()
+  de nuevo, pero esta vez con los siguientes 3 argumentos. El primero será que
+  'y' iguala a hwy, la variable de ahorro de combustible. El segundo, data, se 
+  iguala al nombre del conjunto de datos, mpg. Por último, color se iguala a drv, 
+  la variable de tipo de tracción. Inténtalo ahora. "
   CorrectAnswer: qplot(y=hwy, data = mpg, color = drv)
   AnswerTests: omnitest(correctExpr='qplot(y=hwy, data = mpg, color = drv)')
-  Hint: Type qplot(y=hwy, data = mpg, color = drv) at the command prompt.
-
-- Class: cmd_question
-  Output: What's this plot showing? We see the x-axis ranges from 0 to 250 and we remember that we had 234 data points in our set, so we can infer that each point in the plot represents one of the hwy values (indicated by the y-axis). We've created the vector myhigh for you which contains the hwy data from the mpg dataset. Look at myhigh now.
-  CorrectAnswer: myhigh
-  AnswerTests: omnitest(correctExpr='myhigh')
-  Hint: Type myhigh at the command prompt.
+  Hint: "Escriba qplot(y=hwy, data = mpg, color = drv) para seguir. Acuérdese 
+  que dentro de los paréntesis de qplot() se puede teclear TAB para sugerencias 
+  de los argumentos, y presione INTRO para ingresar lo seleccionado en su función 
+  en la consola."
 
 - Class: text
-  Output: Comparing the values of myhigh with the plot, we see the first entries in the vector (29, 29, 31, 30,...) correspond to the leftmost points in the the plot (in order), and the last entries in myhigh (28, 29, 26, 26, 26) correspond to the rightmost plotted points. So, specifying the y parameter only, without an x argument, plots the values of the y argument in the order in which they occur in the data.
+  Output: "¿Qué demuestra esta diagrama? Siempre y cuando no proporcionamos 
+  ningún argumento para 'x', qplot traza los valores de la única variable (la Y)
+  en el orden que aparecen en el conjunto de datos.  Ya hemoms visto lo mismo con la
+  función plot del sistema base, por ejemplo cuando hicimos la primera gráfica 
+  del número de hijos por provincia."
 
 - Class: cmd_question
-  Output: The all-purpose qplot can also create box and whisker plots.  Call qplot now with 4 arguments. First specify the variable by which you'll split the data, in this case drv, then specify the variable which you want to examine, in this case hwy. The third argument is data (set equal to mpg), and the fourth, the geom, set equal to the string "boxplot"
+  Output: "A propósito, ¿sabe Ud. como haría esta gráfica en el sistema básica de 
+  graficar?
+  Ya que plot() en si no acepta un argumento como 'data' que precise el conjunto
+  , tendrá que utilizar el símbolo $ para identificar la variable (mpg$hwy). Además, 
+  para pintar los puntos según valores de drv, tendremos que señalar a R que
+  trate a la variable como si fuera un factor, con as.factor(mpg$drv). Trate Ud.
+  de realizar esta gráfica ahora."
+  CorrectAnswer: plot(mpg$hwy, col = as.factor(mpg$drv))
+  AnswerTests: omnitest(correctExpr = "plot(mpg$hwy, col = as.factor(mpg$drv)")
+  Hint: "Teclee plot(mpg$hwy, col = as.factor(mpg$drv) para especificar hwy
+  como la variable de graficar, y drv para pintar los colores."
+  
+- Class: text
+  Output: "Bueno, después de ver las diferencias estructurales en el uso de las
+  funciones plot() del sistema base y de la función sencilla qplot() que 
+  pertenece al paquete ggplot2. Ahora seguimos con qplot para terminar con la 
+  lección."
+  
+- Class: cmd_question
+  Output: "Con la función qplot también se puede hacer diagramas de caja y 
+  bigote. Ya verá. Llame a la función qplot otra vez y la va a proporcionar 4
+  argumentos. Primero ingrese la variable con la cual quiere dividir los datos,
+  en este caso drv, y luego especificar la variable que quiere como la variable
+  de respuesta que será hwy. El tercer argumento precisa el conjunto de datos que
+  fijamos en mgp. Con el último ingresamos el 'geom' lo cual es el argumento
+  que da el tipo de la gráfica. Ponga geom='boxplot' como este cuarto argumento.
+  Dese la oportunidad ahora."
   CorrectAnswer: qplot(drv,hwy,data=mpg,geom="boxplot")
   AnswerTests: omnitest(correctExpr='qplot(drv,hwy,data=mpg,geom="boxplot")')
-  Hint: Type qplot(drv,hwy,data=mpg,geom="boxplot") at the command prompt.
+  Hint: Escriba qplot(drv,hwy,data=mpg,geom="boxplot") al indicador.
 
 - Class: cmd_question
-  Output: We see 3 boxes, one for each drive. Now to impress you, call qplot with 5 arguments. The first 4 are just as you used previously, (drv, hwy, data set equal to mpg, and geom set equal to the string "boxplot"). Now add a fifth argument, color, equal to manufacturer. 
-  CorrectAnswer: qplot(drv,hwy,data=mpg,geom="boxplot",color=manufacturer)
+  Output: "Salieron 3 cajas, una para cada tipo de tracción. Ahora, para destacar
+  el poder de este paquete, y a la vez realizar una gráfica francamente fea, 
+  usted va a añadir un argumento más, el quinto, lo cual es que color iguala a 
+  manufacturer. Recupere al último comando y añade este argumento pues." 
+  CorrectAnswer: qplot(drv, hwy, data=mpg, geom="boxplot", color=manufacturer)
   AnswerTests: omnitest(correctExpr='qplot(drv,hwy,data=mpg,geom="boxplot",color=manufacturer)')
-  Hint: Type qplot(drv,hwy,data=mpg,geom="boxplot",color=manufacturer) at the command prompt.
+  Hint: "Ingrese qplot(drv,hwy,data=mpg,geom='boxplot',color=manufacturer) al
+  indicador."
 
 - Class: text
-  Output: It's a little squished but we just wanted to illustrate qplot's capabilities. Notice that there are still 3 regions of the plot (determined by the factor drv). Each is subdivided into several boxes depicting different manufacturers.
-
+  Output: "Bueno, no es perfecto. A esta gráfica le falta espacio, y tal vez es 
+  un poco mal pensado.
+  Sin embargo, vea como la función ha cambiado la estructura de la gráfica 
+  según este último argumento, dividiendo lo que era una caja por tipo de 
+  tracción en varias, según la empresa que fabricó el modelo."  
+  
 - Class: cmd_question
-  Output: Now, on to histograms. These display frequency counts for a single variable. Let's start with an easy one. Call qplot with 3 arguments. First specify the variable for which you want the frequency count, in this case hwy, then specify the data (set equal to mpg), and finally, the aesthetic, fill, set equal to drv. Instead of a plain old histogram, this will again use colors to distinguish the 3 different drive factors.
+  Output: "Bueno, pasamos a ver como trata qplot() a las histogramas. Como Ud. se 
+  acordaría, las histogramas demuestran la frecuencia de una variable sola, con
+  o sin agrupación por algún factor. 
+  Empezamos con un ejempo sencillo; de como primer argumento la variable la cual
+  quiere plasmar las frecuencias de valores. Seguimos graficando la variable
+  hwy, así que el primer argumento será hwy. Entonces, como ya sabría, usted va
+  a especificar el objeto que contiene los datos con data = mgp."
+  CorrectAnswer: qplot(hwy, data = mpg)
+  AnswerTests: omnitest(correctExpr='qplot(hwy, data = mpg)')
+  Hint: Lo que necesita teclear es qplot(hwy, data = mpg).
+  
+- Class: text
+  Output: "Esta histograma nos presenta una oportunidad de observar algo 
+  importante de un análisis exploratorio de datos. La forma de una histograma
+  nos cuenta de variación dentro de una variable. De una variable continua como
+  ahorro de combustible, si no escondiera uno o más factores que explicaran 
+  variación, se esperaría la forma más o menos como una curva de campaña con un solo
+  pico. Si hay picos múltiples, consituyeran pistas de que haya factores
+  importantes subyacentes. " 
+  
+- Class: mult_question
+  Output: "¿Esta histograma tiene forma de campaña?"
+  AnswerChoices: "Parece que hay dos picos, cada uno vagamente como campaña; Si, tiene un pico con forma de campaña; No hay forma ninguna de campaña"
+  CorrectAnswer: Parece que hay dos picos, cada uno vagamente como campaña
+  AnswerTests: omnitest(correctVal= "Parece que hay dos picos, cada uno vagamente como campaña")
+  Hint: "Esto requiere algo de creatividad en la interpretación, ¿verdad? Digo yo que
+  hay dos picos principales (en 10 y 26 más o menos). Alrededor de ellas se ve 
+  una masa vagamente en forma de campaña."
+  
+- Class: mult_question
+  Output: "Así que cree usted que hay factores subyacentes que influye en la
+  distribución de frecuencias en esta histograma? ¿Si o no?"
+  AnswerChoices: "Si; No"
+  CorrectAnswer: Si
+  AnswerTests: omnitest(correctVal="Si")
+  Hint: "Si hay más de un pico, entonces implica que o hay muy pocos datos - que 
+  no es cierto en este caso - o hay factores subyacentes que influyen en la variable."
+  
+- Class: cmd_question
+  Output: "Vamos a ver. Recupere el último comando que produzcó la histograma
+  actual. Ingresará un detalle estético con el argumento 'fill'. Haga que este 
+  fill iguala a la variable drv. Este último argumento hace que produce no solo 
+  una histograma sino una para cada nivel del factor drv (del tipo de tracción)."
   CorrectAnswer: qplot(hwy, data = mpg, fill = drv)
   AnswerTests: omnitest(correctExpr='qplot(hwy, data = mpg, fill = drv)')
-  Hint: Type qplot(hwy, data = mpg, fill = drv) at the command prompt.
+  Hint: Lo que necesita teclear es qplot(hwy, data = mpg, fill = drv).
 
 - Class: text
-  Output: See how qplot consistently uses the colors. Red (if 4-wheel drv is in the bin) is at the bottom of the bin, then green on top of it (if present), followed by blue (rear wheel drv). The color lets us see right away that 4-wheel drive vehicles in this dataset don't have gas mileages exceeding 30 miles per gallon.
+  Output: "La revelación de los grupos por color nos muestra inmediatemente que
+  los carros con tracción 4 por 4 (señalado con '4' en la leyenda) tienen
+  valores de ahorro de combustible inferiores comparados con los de tracción
+  delantera o trasera (2 por 4). La masa algo como compaña arriba se debe
+  a los carros con tracción delantera, que suelen tener mejor ahorro de combustible."
+
+- Class: mult_question
+  Output: "Después de meter la variable drv, ¿se ha resuelto o explicado el tema 
+  de picos múltiples, o quedan picos múltiples dentro de alguna sub-conjunto de
+  coches pintados por tracción?"
+  AnswerChoices: "Si, los datos de cada tipo de tracción tienen picos múltiples; Si, pero solo a los de tracción 4 por 4 (rojo) les quedan picos múltiples; No, parece que con este factor los picos múltiples se ha explicado"
+  CorrectAnswer: Si, los datos de cada tipo de tracción tienen picos múltiples
+  AnswerTests: omnitest(correctVal="Si, los datos de cada tipo de tracción tienen picos múltiples")
+  Hint: "Les quedan picos múltiples a los tres grupos, aunque casi no se vea con 
+  los carros de tracción delantera (verde). Sin embargo, si se fija en el pico
+  de la izquierda, verá que hay un poco de verde que extiende justo más allá de
+  la barra roja."
 
 - Class: text
-  Output: It's cool that qplot can do this  so easily, but some people may find this multi-color histogram hard to interpret. Instead of using colors to distinguish between the drive factors let's use facets or panels. (That's what lattice called them.) This just means we'll split the data into 3 subsets (according to drive) and make 3 smaller individual plots of each subset in one plot (and with one call to qplot).
+  Output: "Correcto, quedan picos múltiples, y eso quiere decir que existan otros
+  factores que deben explicar la variación en ahorro de combustible. Sin embargo,
+  dejaremos esa investigación allí; ¡debemos terminar con esta lección en 
+  el uso de qplot()!"
 
 - Class: text
-  Output: Remember that with base plot we had to do each subplot individually. The lattice system made plotting  conditioning plots  easier. Let's see how easy it is with qplot.
+  Output: "A propósito, vemos también en la presente gráfica que uno de las ventajas del 
+  uso de las funciones del paquete ggplot2, tanto la función
+  qplot() de la lección actual como ggplot() que usted conocerá en la siguiente, 
+  es que usa color de manera consistente, sin que usted hubiera especificado que
+  lo haga."
+  
+- Class: text
+  Output: "Es chévere que qplot() hace con tanta facilidad, sin embargo, como
+  usted acabara de ver, no es facil ver lo que pasa cuando tenemos tres 
+  histrogramas solapandose así. Entonces, en vez de una gráfica con varios
+  colores, vamos a utilizar una herramienta denominda facets (facetas o paneles).
+  Esto quiere decir que dividimos los datos en facetas o paneles aparte que a la
+  vez nos ayuda considerar aparte y comparar entre si. Es una herramienta super
+  poderosa, y bastante facil de implementar."
+
+- Class: text
+  Output:  "Vamos a trabajar con estas paneles primero con las histogramas y
+  luego con diagramas de dispersión, volviéndonos a donde empezamos la lección.
+  Cada uno tendrá 3 paneles o facetas. Creo que paneles es la palabra más natural
+  pero en cambio el nombre del argumento es facets, así que tal vez facetas le 
+  hará acordarse mejor."
+  
+- Class: cmd_question
+  Output: "Esta histrograma necesitará 3 argumentos a la función qplot(). Empieza
+  con la variable hwy como primer argumento, y data=mpg como segundo. Ahora,
+  la parte nueva. Entregamos como tercer argumento el siguiente 
+  'facets = drv ~ .' (aunque sin comillas). Este código curioso quiere decir que
+  qplot() debe hacer un panel para cada nivel de la variable drv. Mejor que lo
+  vea, así que inténtalo por favor."
+  CorrectAnswer: qplot(hwy, data = mpg, facets = drv ~ .)
+  AnswerTests: omnitest(correctExpr='qplot(hwy, data = mpg, facets = drv ~ .)')
+  Hint: Teclee qplot(hwy, data = mpg, facets = drv ~ .) para realizar la gráfica.
 
 - Class: cmd_question
-  Output:  We'll do two plots, a scatterplot and then a histogram, each with 3 facets. For the scatterplot, call qplot with 4 arguments. The first two are displ and hwy and the third is the argument data set equal to mpg. The fourth is the argument facets which will be set equal to the expression . ~ drv which is ggplot2's shorthand for number of rows (to the left of the ~) and number of columns (to the right of the ~). Here the . indicates a single row and drv implies 3, since there are 3 distinct drive factors. Try this now.
-  CorrectAnswer: qplot(displ, hwy, data = mpg, facets = . ~ drv)
-  AnswerTests: omnitest(correctExpr='qplot(displ, hwy, data = mpg, facets = . ~ drv)')
-  Hint: Type qplot(displ, hwy, data = mpg, facets = . ~ drv) at the command prompt.
-
-- Class: text
-  Output: The result is a 1 by 3 array of plots. Note how each is labeled at the top with the factor label (4,f, or r). This shows us more detailed information than the histogram. We see the relationship between displacement and highway mileage for each of the 3 drive factors.
-
-- Class: cmd_question
-  Output:  Now we'll do a histogram, again calling qplot with 4 arguments. This time, since we need only one variable for a histogram, the first is hwy and the second is the argument data set equal to mpg. The third is the argument facets which we'll set equal to the expression drv ~ . . This will give us a different arrangement of the facets. The fourth argument is binwidth. Set this equal to 2. Try this now.
+  Output: "Bien, ¿no? Tenemos las histogramas juxtapuestas para comparación, pero
+  también se ve la forma de cada una sin interferiencia. ¿Ve usted el mensaje que
+  acabara de aparecer en la consola? Dice que por defecto tiene cierto número de
+  bins (bins = 30) y que tal vez podríamos escoger un valor más apto mediante
+  el argumento binwidth. 'Bin' en este contexto se refiere al tamaño de las
+  divisiones en que cuenta valores. Lo mejor será que usted lo presencie
+  directamente, así que recupere el último comando y añade al final, después de
+  una coma, binwidth = 2. Deténgese un ratico con el resultado."
   CorrectAnswer: qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)
   AnswerTests: omnitest(correctExpr='qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)')
-  Hint: Type qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2) at the command prompt.
+  Hint: Escriba qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2) y .
 
+- Class: text
+  Output: "Ahora las histogramas pintan mejor, ¿no cierto? Antes las divisiones
+  fueron demasiado estrecho, lo que introducía huecos y una vista fragmentada. 
+  Ahora tenemos una forma más estable que se distraiga menos. Usted debe
+  experimentar con binwidth en algún momento, cambiándose el valor para mayores
+  y menores a ver su efecto en la gráfica. Mientras mayor sea el valor que tiene
+  el argumento binwidth, menos divisiones serán."
+
+- Class: text
+  Output: "Debo explicar la notación con facets. ¿Se acuerde de la función mfrow
+  para establecer un espacio con cuadros múltiples? Básicamente, facets acepta
+  un argumento para la variable que controle filas y otro para la que controle 
+  las columnas. Entre estos argumentos va la tilde '~'. Si solo queremos una
+  columna de cuadros dejamos el lado izquierdo con solo un punto, así
+  '. ~ variable'. En cambio, para una sola fila de cuadros, dejarímos el lado
+  derecho con el punto, así 'variable ~ .'. A usted no le queda más remedio que
+  practicar y experimentar para convencerse de la función."
+
+- Class: cmd_question
+  Output: 'Ahora vamos a ver el uso de facets con la diagrama de dispersión. 
+  Usted podría recuperar el comando penúltimo, antes de que introduzcó el 
+  argumento binwidth. O, empiece de nuevo, como sigue":" Los primeros dos
+  argumentos son displ (la variable de desplazamiento con la cual empezemos 
+  esta lección) y hwy, nuestra variable de ahorro de combustible. Luego va
+  el argumento de siempre para los datos, y por último él de las facetas ". ~ drv".
+  Dese la oportunidad ahora.'
+  CorrectAnswer: qplot(displ, hwy, data = mpg, facets = . ~ drv)
+  AnswerTests: omnitest(correctExpr='qplot(displ, hwy, data = mpg, facets = . ~ drv)')
+  Hint: 'Debe arreglar los argumentos así qplot(displ, hwy, data = mpg, 
+  facets = . ~ drv) para continuar.'
+
+- Class: text
+  Output: Remember that with base plot we had to do each subplot individually. 
+  The lattice system made plotting  conditioning plots  easier. 
+  Let's see how easy it is with qplot.
+
+- Class: text
+  Output: The result is a 1 by 3 array of plots. Note how each is labeled at the 
+  top with the factor label (4,f, or r). This shows us more detailed information 
+  than the histogram. We see the relationship between displacement and highway 
+  mileage for each of the 3 drive factors.
+
+- Class: cmd_question
+  Output:  
 - Class: mult_question
   Output: The facets argument, drv ~ ., resulted in what arrangement of facets?
   AnswerChoices:  1 by 3; 3 by 1; 2 by 2; huh?
   CorrectAnswer:  3 by 1
   AnswerTests: omnitest(correctVal='3 by 1')
   Hint: How many row? How many columns?
-
 
 - Class: text
   Output:  Pretty good, right? Not too difficult either. Let's review what we learned!
@@ -194,34 +440,6 @@
   Hint: That qplot is amazing! It seems to do everything!
 
 - Class: mult_question
-  Output:  What does the gg in ggplot2 stand for?
-  AnswerChoices:  good grief; grammar of graphics; goto graphics; good graphics
-  CorrectAnswer: grammar of graphics
-  AnswerTests: omnitest(correctVal='grammar of graphics')
-  Hint: Think of building blocks and components.
-
-- Class: mult_question
-  Output:  True or False? The geom argument takes a string for a value.
-  AnswerChoices:  True; False
-  CorrectAnswer: True
-  AnswerTests: omnitest(correctVal='True')
-  Hint: Recall our examples, for instance, geom="density".
-
-- Class: mult_question
-  Output:  True or False? The data argument takes a string for a value.
-  AnswerChoices:  True; False
-  CorrectAnswer: True
-  AnswerTests: omnitest(correctVal='False')
-  Hint: Recall our examples. Did we ever put the dataset name in quotation marks?
-
-- Class: mult_question
-  Output:  True or False? The binwidth argument takes a string for a value.
-  AnswerChoices:  True; False
-  CorrectAnswer: False
-  AnswerTests: omnitest(correctVal='False')
-  Hint: Recall our examples, for instance, binwidth=18497/30.
-
-- Class: mult_question
   Output:  True or False? The user must specify x- and y-axis labels when using qplot. 
   AnswerChoices:  True; False
   CorrectAnswer: False
@@ -230,5 +448,5 @@
 
 - Class: text
   Output: "¡Felicitaciones! Usted acaba de terminar la primera parte de la lección
-  con ggplot. "En la siguiente lección, la cual es opcional francamente, 
-  subirá un escalón más, para acceder al poder de este paquete integrado."
+  con ggplot. En la siguiente lección, subirá un escalón más, para ver un poco
+  del poder de la función 'ggplot()' que es aún más flexible, y aún avanzada."
