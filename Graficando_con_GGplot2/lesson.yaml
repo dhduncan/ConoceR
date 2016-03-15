@@ -81,17 +81,25 @@
   AnswerTests: omnitest(correctExpr='head(mpg)')
   Hint: Escriba head(mpg) al indicador.
 
-- Class: text
+- Class: cmd_question
   Output: "Este conjunto de datos 'mpg' contiene ahorro de combustible para 38
   modelos de coche fabricados en 1999 y 2008. Realice el comando str con el 
   argumento mpg para que tenga mayor información en el conjunto."
+  CorrectAnswer: str(mpg)
+  AnswerTests: omnitest(correctExpr= "str(mpg")
+  Hint: "Seguro que Ud. se acuerde de esto - debe teclear str(mpg) para
+  revelar la estructura del conjunto mpg."
 
-- Class: cmd_question
+- Class: text
   Output: "Del resultado vemos que hay 234 observaciones en este objeto mpg 
   que corresponden a 11 características distintas de los coches. Digamos que
   queremos visualizar si existe una correlación entre la variable 'displ'
   (desplazamiento del motor) y la variable de ahorro de combustible en la
-  carretera ('hwy', para highway del inglés) medida en millas por galon.  Casi 
+  carretera ('hwy', para highway del inglés) medida en millas por galon.  ¿Que 
+  hacemos entonces?"
+  
+- Class: cmd_question
+  Output: "Pues, casi 
   igual como lo hicimos con la función plot del sistema básica de gráficar, 
   podríamos llamar a la función qplot (del paquete ggplot2) con tan solo 3 argumentos.
   Los primeros dos son las variables que queremos ver y para el tercer argumento
@@ -109,9 +117,9 @@
   usuario de los detalles que va procesando en el fondo." 
 
 - Class: mult_question
-  Output: "En el caso actual tenemos una digrama de dispersión sencilla, bien 
+  Output: "En el caso actual tenemos una digrama de dispersión sencilla, y bien 
   hecha, ¿verdad? Se nos proporcionó etiquetas en los ejes, de los cual 
-  podemos averiguar que el primer argument a la función se tomó como la variable
+  podemos averiguar que el primer argumento a la función se tomó como la variable
   X y el segungo como el Y. Con esta gráfica queríamos echar un vistazo para 
   una correlación entre las variables. ¿Qué opine usted?"
   AnswerChoices: "Hay una correlación negativa bastante clara; No, no hay correlación; Hay una correlación positiva aunque sea débil; Hay una correlación positiva fuerte"
@@ -121,10 +129,13 @@
   consuma el coche, y por lo tanto tenemos una correlación negativa que es bastante
   clara." 
   
-- Class:  cmd_question
+- Class:  text
   Output: "Ahora, digamos que queremos realizar la misma diagrama de nuevo, aunque
   con colores que respresentan un factor que nos puede ayudar entender la
-  variación de mejor manera. Vamos a pintarla corresponde niveles del factor drv, 
+  variación de mejor manera."
+
+- Class:  cmd_question
+  Output: "Vamos a pintarla corresponde niveles del factor drv, 
   que se refiere al tipo de tracción que tienen los coches, f (para 'front' o 
   delantera, r (para rear o trasera), o 4 para 4 por 4. Con qplot este paso
   también es fácil. Mientras con la función base plot añadíamos color por 'col'
@@ -149,7 +160,7 @@
   aunque falten detalles o elaboración para publicación."
   
 - Class: text
-  Output: "La función qplot se nos asignó los colores de forma automática y por
+  Output: "La función qplot() se nos asignó los colores de forma automática y por
   lo tanto en la leyenda la asociación se hace automaticamente también. 
   Fíjese que qplot usa puntos para indicar los datos como condición base. Estos
   puntos son un ejemplo de lo que se llama geoms (objetos geométricos) en ggplot.
@@ -162,7 +173,7 @@
   Para algo diferente, va a introducir una linea alisada para enfatizar la 
   tendencia dentro de cada tipo de tracción. No es más complicado que ingresar un
   quinto argumento, geom, y con la función c() haga la concatenación de los puntos
-  'point' and la linea alisada 'smooth'. Es decir, geom = c('points', 'smooth').
+  'point' and la linea alisada 'smooth'. Es decir, geom = c('point', 'smooth').
   Inténtalo ahora, nuevamente recuperando el comando anterior con la flecha
   arriba para ahorrar esfuerzo."
   CorrectAnswer: qplot(displ, hwy, data = mpg, color=drv, geom = c("point", "smooth"))
@@ -211,8 +222,8 @@
   trate a la variable como si fuera un factor, con as.factor(mpg$drv). Trate Ud.
   de realizar esta gráfica ahora."
   CorrectAnswer: plot(mpg$hwy, col = as.factor(mpg$drv))
-  AnswerTests: omnitest(correctExpr = "plot(mpg$hwy, col = as.factor(mpg$drv)")
-  Hint: "Teclee plot(mpg$hwy, col = as.factor(mpg$drv) para especificar hwy
+  AnswerTests: omnitest(correctExpr = "plot(mpg$hwy, col = as.factor(mpg$drv))")
+  Hint: "Teclee plot(mpg$hwy, col = as.factor(mpg$drv)) para especificar hwy
   como la variable de graficar, y drv para pintar los colores."
   
 - Class: text
