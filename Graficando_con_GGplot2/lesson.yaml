@@ -37,16 +37,16 @@
 - Class: text
   Output: "El nombre del paquete le aparezca algo torpe en castellano, y tampoco 
   tiene mucho sentido en el inglés. Se lo voy a explicar en breve por si a caso
-  que le ayudara acordarse. La sigla 'GG' se refiere a una Gramática de Graficar, 
-  'plot' 
-  (el nombre de la función famosa) significa trazar o marcar en castellano, y
-  supongo que 2 es un número de versión. Para mayor información váyase a la 
-  página del proyecto http://ggplot2.org."
+  que le ayudara acordarse. La sigla 'GG' se refiere The Grammar of Graphics (una
+  gramática de graficar),  un libro de Leiland Wilkinson de 2005.
+  'Plot' (el nombre de la función famosa) significa trazar o marcar en 
+  castellano, y supongo que 2 es un número de versión. Para mayor información 
+  váyase a la página del proyecto http://ggplot2.org."
 
 - Class: text
   Output: "¿Por qué le estoy contando esta historia? El significado del nombre
-  es importante, porque cuenta lo que pretendía el autor del paquete Dr Hadley
-  Wickham."
+  es importante, porque cuenta lo que pretendía el autor del paquete ggplot2, 
+  Dr Hadley Wickham."
   
 - Class: "Tal vez usted se hubiera enterado del hecho de que varios
   tipos de gráfica en R aceptan argumentos distintos, o realicen distintas 
@@ -61,28 +61,13 @@
   con mayor facilidad. Ojalá le resultara así."
 
 - Class: text
-  Output: "A parte de los objetivos bonitos de los autores del paquete, mi motivo
-principal para introducir este paquete es una compa hace exploración de datos "
+  Output: "Ni siquiera voy a profundizar o parafrasear más los objetivos bonitos
+  de los autores del paquete, sino, se lo he presentado para explotar sus 
+  ventajas en rápidamente realizar vistas de conjuntos de estructura más compleja
+  que hemos visto hasta ahora."
 
 - Class: text
   Output:  The ggplot2 package "is composed of a set of independent components that can be composed in many different ways. ... you can create new graphics that are precisely tailored for your problem." These components include aesthetics which are attributes such as colour, shape, and  size, and geometric objects or geoms such as points, lines, and bars.  
-
-- Class: text
-  Output: Before we delve into details, let's review the other 2 plotting systems.
-
-- Class: mult_question
-  Output: Recall what you know about R's lattice plotting system. Which of the following does NOT apply to it? 
-  AnswerChoices:  Plots are created with a single function call (xyplot, bwplot, etc.); Most useful for conditioning types of plots and putting many panels on one plot; Margins and spacing are set automatically because entire plot is specified at once; Can always add to the plot once it is created
-  CorrectAnswer: Can always add to the plot once it is created
-  AnswerTests: omnitest(correctVal='Can always add to the plot once it is created')
-  Hint: Which choice is the only one which is inconsistent with the other three? 
-
-- Class: mult_question
-  Output: If we told you that ggplot2 combines the best of base and lattice, that would mean it ...?  
-  AnswerChoices: Automatically deals with spacings, text, titles but also allows you to annotate; Like lattice it allows for multipanels but more easily and intuitively; Its default mode makes many choices for you (but you can customize!); All of the others  
-  CorrectAnswer: All of the others
-  AnswerTests: omnitest(correctVal='All of the others')
-  Hint: Which choice is the only one that encompasses the other three? 
 
 - Class: text
   Output: Yes, ggplot2 combines the best of base and lattice. It allows for multipanel (conditioning) plots (as lattice does) but also post facto annotation (as base does), so you can add titles and labels. It uses the low-level grid package (which comes with R) to draw the graphics. As part of its grammar philosophy, ggplot2 plots are composed of aesthetics (attributes such as size, shape, color) and geoms (points, lines, and bars), the geometric objects you see on the plot.
