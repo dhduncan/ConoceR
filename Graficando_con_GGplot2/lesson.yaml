@@ -13,8 +13,8 @@
   denominado GGplot." 
 
 - Class: mult_question
-  Output: "En esta lección verá como hacer las mismas gráficas que ya hubiera
-  hecho con el sistema base de graficar con GGplot2. Usted se va a lanzar
+  Output: "En esta lección verá como hacer gráficas con GGplot2 parecidas a las 
+  que ya hubiera hecho con el sistema base de graficar. Usted se va a lanzar
   de allí, hacia donde sea. ¿Está listo, si o si?"
   AnswerChoices: "Si;Si;Si"
   CorrectAnswer: Si
@@ -75,8 +75,9 @@
   Output: "Bueno, hacemos un ejemplo y luego se lo comento. El paquete 
   ggplot2 tiene dos funciones que son las bestias de carga principales. 
   Empezamos viendo la flexibilidad de la más sencilla denominada 'qplot' 
-  (piense en 'quick plot') con un conjunto de datos 'mpg' que viene con ggplot 
-  mismo. Teclee el comando para revelar la cabeza del conjunto 'mpg' ahora."
+  (piense en 'quick plot' o gráfica rápida) con un conjunto de datos 'mpg' 
+  que viene con ggplot mismo. Teclee el comando para revelar la cabeza del 
+  conjunto 'mpg' ahora."
   CorrectAnswer: head(mpg)
   AnswerTests: omnitest(correctExpr='head(mpg)')
   Hint: Escriba head(mpg) al indicador.
@@ -86,7 +87,7 @@
   modelos de coche fabricados en 1999 y 2008. Realice el comando str con el 
   argumento mpg para que tenga mayor información en el conjunto."
   CorrectAnswer: str(mpg)
-  AnswerTests: omnitest(correctExpr= "str(mpg")
+  AnswerTests: omnitest(correctExpr= "str(mpg)")
   Hint: "Seguro que Ud. se acuerde de esto - debe teclear str(mpg) para
   revelar la estructura del conjunto mpg."
 
