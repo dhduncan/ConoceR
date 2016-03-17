@@ -10,10 +10,10 @@
   Output: "Creo que le hubiera mencionado que hay varios sistemas de graficar
   que los usuarios de R solemos utilizar. Hasta la fecha usted ha sido
   trabajando con el sistema básica, ahora quisiera presentarle otra opción
-  denominado GGplot." 
+  denominado ggplot." 
 
 - Class: mult_question
-  Output: "En esta lección verá como hacer gráficas con GGplot2 parecidas a las 
+  Output: "En esta lección verá como hacer gráficas con ggplot parecidas a las 
   que ya hubiera hecho con el sistema base de graficar. Usted se va a lanzar
   de allí, hacia donde sea. ¿Está listo, si o si?"
   AnswerChoices: "Si;Si;Si"
@@ -23,36 +23,40 @@
 
 - Class: figure
   Output: "En vez de escribirle las razones para presentarle un sistema más de
-  graficar cuando le hubiera costado bastante esfuerzo aprender el otro, le
+  graficar, cuando le hubiera costado bastante esfuerzo aprender el otro, le
   presento la siguiente imagen que muestra lo que ofrece el paquete con pocas
   palabras de código."
   Figure: demo.R
   FigureType: new
 
 - Class: text
-  Output:  "En cambio al sistema base de graficar que esta incluido en cada
-  instalación, GGplot se accede por un paquete adicional. El paquete se llama
+  Output:  "En cambio al sistema base de graficar que está incluido en cada
+  instalación de R, ggplot se accede por un paquete adicional. El paquete se llama
   'ggplot2' y se lo instala por la función install.packages(). Sin embargo, en
-  esta lección, se le hemos instalado ya al inciar la lección."
+  este caso se le hemos instalado ya al inciar la lección."
 
 - Class: text
   Output: "El nombre del paquete le aparezca algo torpe en castellano, y tampoco 
-  tiene mucho sentido en el inglés. Se lo voy a explicar en breve por si a caso
-  que le ayudara acordarse. La sigla 'GG' se refiere The Grammar of Graphics (una
-  gramática de graficar),  un libro de Leiland Wilkinson de 2005.
+  tiene mucho sentido en el inglés. Sin embargo, le explico en breve por si a caso
+  que le ayudara acordarse. La sigla 'GG' se refiere a The Grammar of Graphics 
+  (una gramática de graficar),  un libro de Leiland Wilkinson de 2005.
   'Plot' (el nombre de la función famosa) significa trazar o marcar en 
-  castellano, y supongo que 2 es un número de versión. Para mayor información 
-  váyase a la página del proyecto http://ggplot2.org."
+  castellano, y supongo que 2 es un número de la versión. Para mayor información 
+  váyase a la página del proyecto y paquete http://ggplot2.org."
 
 - Class: text
   Output: "¿Por qué le estoy contando esta historia? El significado del nombre
   es importante, porque cuenta lo que pretendía el autor del paquete ggplot2, 
-  Dr Hadley Wickham."
+  Dr Hadley Wickham (Este hombre es un miembro prominente de la comunidad de 
+  usuarios de R, y algunos otros se llaman a sus paquetes 'The HadleyVerse' en
+  referencia a su influencia que se ve cada vez más grande)."
   
 - Class: text
-  Output: "Tal vez usted se hubiera enterado del hecho de que varios
-  tipos de gráfica en R aceptan argumentos distintos, o realicen distintas 
-  operaciones con argumentos cuyos nombres tienen otra función para otra gráfica.  
+  Output: "Trabajando con las funciones del sisteam básica de graficar en R, t
+  tal vez Ud. se hubiera enterado del hecho de que varios
+  tipos de gráfica en R aceptan argumentos de nombres distintos, o que realicen 
+  distintas operaciones con argumentos cuyos nombres tienen otra función para 
+  otra gráfica.  
   En cambio, ggplot2 presenta una visión alternativa y bastante completa, y
   siendo un paquete aparte, ha logrado un grado de cohesión que no es posible
   con los muchos contribuidores al sistema base."
@@ -63,10 +67,11 @@
   con mayor facilidad. Ojalá le resultara así."
 
 - Class: text
-  Output: "Ni siquiera voy a profundizar o parafrasear más los objetivos bonitos
-  de los autores del paquete, sino, se lo he presentado para que Ud. puede 
-  aprovechar del gran capacidad de rápidamente realizar vistas de conjuntos de 
-  datos con estructura más compleja que hemos visto hasta ahora.  Sin embargo, 
+  Output: "No voy a profundizar o parafrasear más los objetivos bonitos
+  del paquete, sino, se lo he presentado para que Ud. aproveche del gran 
+  capacidad de rápidamente, visualmente analizar conjuntos de 
+  datos con estructura más compleja que los que hemos visto hasta ahora.  
+  Sin embargo, 
   cuando le llegue algo de resentimiento sobre el cambio en las funciones y 
   argumentos, acuérdese que resulta del intento de establecer una grámatica
   coherente para la construcción de gráficas."
@@ -229,9 +234,8 @@
   
 - Class: text
   Output: "Bueno, después de ver las diferencias estructurales en el uso de las
-  funciones plot() del sistema base y de la función sencilla qplot() que 
-  pertenece al paquete ggplot2. Ahora seguimos con qplot para terminar con la 
-  lección."
+  funciones plot() del sistema base y de la función sencilla qplot() del paquete 
+  ggplot2, vamos a seguir con qplot para terminar con la lección."
   
 - Class: cmd_question
   Output: "Con la función qplot también se puede hacer diagramas de caja y 
@@ -239,7 +243,7 @@
   argumentos. Primero ingrese la variable con la cual quiere dividir los datos,
   en este caso drv, y luego especificar la variable que quiere como la variable
   de respuesta que será hwy. El tercer argumento precisa el conjunto de datos que
-  fijamos en mgp. Con el último ingresamos el 'geom' lo cual es el argumento
+  fijamos en mpg. Con el último ingresamos el 'geom' lo cual es el argumento
   que da el tipo de la gráfica. Ponga geom='boxplot' como este cuarto argumento.
   Dese la oportunidad ahora."
   CorrectAnswer: qplot(drv,hwy,data=mpg,geom="boxplot")
