@@ -27,4 +27,24 @@
   encuestaron a 331 lojanos sobre sus conocimientos, manera de involucrarse, 
   y reacciones al proyecto de la Ciclovía Recreativa de Loja. Por medio de esta 
   lección usted va a explorar los resultados de ese estudio."
+  
+- Class: text
+  Output: "Ud. ya ha hecho gráficas con variables cualitativas en el conjunto de
+  datos sobre el número promedio de hijos que tiene la mujer ecuatoriana. Por
+  ejemplo, la región donde vivía la encuestada, con las dos modalidades posibles
+  'urbana' o 'rural'. También la característica sobre alfabetización es una 
+  variable cualitativa. Si tuvieramos los datos crudos del censo ecuatoriano
+  de 2010 pudieramos haber hecho gráficas con esas variables, pero bastamos con
+  este conjunto de la ciclovía de Loja."
+  
+- Class: mult_question
+  Output: "¿Cuándo Ud. usaba las variables cualitativa mencionadas, era como
+  una variable de agrupación o una variable o función de respuesta? 
+  AnswerChoices: "Variables de respuesta; Factores de agrupacion"
+  CorrectAnswer: Factores de agrupacion
+  AnswerTests: omnitest(correctExpr = "Factores de agrupacion")
+  Hint: "Usara región y alfabetización como factores para agrupar, filtrar y 
+  examinar variación en el número de hijos, ¿no cierto? Factores de agrupación 
+  es la respuesta correcta."
 
+  
