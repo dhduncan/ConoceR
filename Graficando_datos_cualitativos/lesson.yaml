@@ -11,8 +11,8 @@
   desde tablas de frecuencias hasta gráficas lindas."
 
 - Class: mult_question
-  Output: "Usted se acuerda que quiere decir la frase cualitativo en el contexto
-  de variables o datos, ¿verdad? ¿Entonces, cuál de las siguientes declaraciones sobre
+  Output: "¿Usted se acuerda de qué quiere decir la frase 'cualitativo' en el contexto
+  de variables o datos, verdad? ¿Entonces, cuál de las siguientes declaraciones sobre
   variables cualitativas es cierta?"
   AnswerChoices: "Sus valores (modalidades) no se puede asociar naturalmente a un número; Sus valores son numéricos; Se puede realizar operaciones algebráicas con ellas"
   CorrectAnswer: Sus valores (modalidades) no se puede asociar naturalmente a un número
@@ -38,13 +38,16 @@
   este conjunto de la ciclovía de Loja."
   
 - Class: mult_question
-  Output: "¿Cuándo Ud. usaba las variables cualitativa mencionadas, era como
+  Output: "¿Cuándo Ud. usaba las variables cualitativas mencionadas, era como
   una variable de agrupación o una variable o función de respuesta? 
   AnswerChoices: "Variables de respuesta; Factores de agrupacion"
   CorrectAnswer: Factores de agrupacion
   AnswerTests: omnitest(correctExpr = "Factores de agrupacion")
   Hint: "Usara región y alfabetización como factores para agrupar, filtrar y 
-  examinar variación en el número de hijos, ¿no cierto? Factores de agrupación 
-  es la respuesta correcta."
+  examinar variación en el número de hijos lo cual era la variable de respuesta.
+  Por lo tanto, factores de agrupación es la respuesta correcta acá."
 
-  
+- Class: cmd_question
+  Output: "¿Cómo debemos comunicar una (sola) variable cualitativa? Pues, 
+  resulta que depende del tipo de la variable que tengamos. En el fondo le
+  había adjuntado unos datos "
