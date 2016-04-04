@@ -1,0 +1,14 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Graficando_con_GGplot2_2
+  Author: David H Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.4.0
+
+- Class: text
+  Output: "¡Hola! En la última lección usted aprendió realizar gráficas mediante
+  la función sencilla 'qplot()'. En esta oportunidad se ampliará su conocimiento
+  y dominio del paquete ggplot2 con la poderosa función 'ggplot()'. No hay nada
+  que temer y no va a creer lo que hiciera al fin de la lección."
+  

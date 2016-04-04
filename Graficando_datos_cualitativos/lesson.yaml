@@ -1,0 +1,30 @@
+- Class: meta
+  Course: ConoceR
+  Lesson: Graficando_datos_cualitativos
+  Author: David H Duncan
+  Type: Standard
+  Organization: Universidad Técnica Particular de Loja
+  Version: 2.4.0
+
+- Class: text
+  Output: "Bienvenidos a este tema en lo cual usted trabajará datos cualitativos,
+  desde tablas de frecuencias hasta gráficas lindas."
+
+- Class: mult_question
+  Output: "Usted se acuerda que quiere decir la frase cualitativo en el contexto
+  de variables o datos, ¿verdad? ¿Entonces, cuál de las siguientes declaraciones sobre
+  variables cualitativas es cierta?"
+  AnswerChoices: "Sus valores (modalidades) no se puede asociar naturalmente a un número; Sus valores son numéricos; Se puede realizar operaciones algebráicas con ellas"
+  CorrectAnswer: Sus valores (modalidades) no se puede asociar naturalmente a un número
+  AnswerTests: omnitest(correctVal = "Sus valores (modalidades) no se puede asociar naturalmente a un número")
+  Hint: "Variables cualitativas tienen categorías que se define segun las 
+  caracteristicas o rasgos de la entidad, aunque pueda que los datos sean 
+  registrados utilizando una escala numérica."
+
+- Class: text
+  Output: "¡Adelante pues! Le comento brevemente la historia de los datos que
+  le presentaré en breves momentos. En enero de 2016, estudiantes de la UTPL 
+  encuestaron a 331 lojanos sobre sus conocimientos, manera de involucrarse, 
+  y reacciones al proyecto de la Ciclovía Recreativa de Loja. Por medio de esta 
+  lección usted va a explorar los resultados de ese estudio."
+
