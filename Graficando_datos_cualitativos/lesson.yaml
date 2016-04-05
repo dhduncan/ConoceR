@@ -56,4 +56,52 @@
   AnswerTests: omnitest(correctExpr = "str(cicLoja)")
   Hint: "¡Usted sabe esto! Justo requiere que se mete el objeto cicLoja dentro
   de los paréntesis de la función str(), y entonces presione Intro."
+
+- Class: mult_question
+  Output: "Acuérdese que los dos tipos de variables cualitativas son las nominales, 
+  que traten de categorías claras y mutuamente exclusivas, y las ordinales que
+  traten de categorías con un órden no ambiguo entre sí. De las variables del
+  conjunto cicLoja en el listado abajo, ¿cuál es una variable cualitativa nominal?"
+  AnswerChoices: Conocimiento; DeAcuerdo; Decada
+  CorrectAnswer: Conocimiento
+  AnswerTests: omnitest(correctVal= 'Conocimiento')
+  Hint: "Década tiene orden por supuesto y la de Acuerdo también es un ejemplo
+  emblemático de una variable nominal, así que la variable nominal entre este
+  listado es la de Conocimiento."
+
+- Class: text
+  Output: "Muy bien, la variable denominada conocimiento tiene dos modalidades o
+  valores posibles, los cuales son  'Sí' o 'No'. Resumimos esa entonces." 
+
+- Class: cmd_question
+  Output: "Una opción común es una diagrama de barras. Pintará una barra para
+  cada modalidad, cuya altura será dado por el número de encuestados quienes la 
+  hubieran escogido. Se hace esta gráfica con la función plot(), metiéndose
+  cicLoja$Conocimiento dentro los paréntesis. ¡Pruébalo!"
+  CorrectAnswer: plot(cicLoja$Conocimiento)
+  AnswerTests: omnitest(correctExpr='plot(cicLoja$Conocimiento)')
+  Hint: "Teclea plot(cicLoja$Conocimiento) y presione INTRO para ver la gráfica."
+
+- Class: cmd_question
+  Output: "Hmmmm a veces sale una gráfica inesperada y es difícil saber si sea
+  un error o no. Acá tenemos dos barras gordísimas de la misma altura. ¿Es cierto
+  eso? A veces valga la pena revisar el resultado de forma más sencilla. La 
+  función 'table()' nos hará una tabulación sencilla de las frecuencias 
+  relativas directamenta a la consola. Recupere el comando para la última gráfica
+  y envuelva a la variable con table() en lugar de plot()."
+  CorrectAnswer: table(cicLoja$Conocimiento)
+  AnswerTests: omnitest(correctExpr='table(cicLoja$Conocimiento)')
+  Hint: El comando que Ud. necesita es table(cicLoja$Conocimiento).
+  
+- Class: text
+  Output: "Ahah, que ¡sí tiene sentido la gráfica! Resulta que por casualidad 
+  había casí el mismo número (165) de personas que conocieron de la ciclovía que 
+  los (166) que no la conocieron. Aunque no se haya dado cuenta, usted acaba de 
+  presenciar algo importante. A veces hay variables tan fácil de resumir que no 
+  hace falta una gráfica, ni una tabla tampoco. La frase que escribí hace un
+  momento bastaría para resumir datos así de sencillo mientras que la gráfica era 
+  tan simétrica que arriesgara causar dudas para un lector. Además, no se podría
+  justificar el uso de tanto espacio en un informe para plasmar ese resultado."
+  
+  
   
