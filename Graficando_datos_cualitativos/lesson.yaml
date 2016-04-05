@@ -39,10 +39,10 @@
   
 - Class: mult_question
   Output: "¿Cuándo Ud. usaba las variables cualitativas mencionadas, era como
-  una variable de agrupación o una variable o función de respuesta? 
-  AnswerChoices: "Variables de respuesta; Factores de agrupacion"
-  CorrectAnswer: Factores de agrupacion
-  AnswerTests: omnitest(correctExpr = "Factores de agrupacion")
+  una variable o factor de agrupación o una variable de respuesta?" 
+  AnswerChoices: "Factores de agrupación; Variables de respuesta"
+  CorrectAnswer: Factores de agrupación
+  AnswerTests: omnitest(correctVal = "Factores de agrupación")
   Hint: "Usara región y alfabetización como factores para agrupar, filtrar y 
   examinar variación en el número de hijos lo cual era la variable de respuesta.
   Por lo tanto, factores de agrupación es la respuesta correcta acá."
