@@ -50,4 +50,10 @@
 - Class: cmd_question
   Output: "¿Cómo debemos comunicar una (sola) variable cualitativa? Pues, 
   resulta que depende del tipo de la variable que tengamos. En el fondo le
-  había adjuntado unos datos "
+  había adjuntado unos datos de la ciclovía como un objeto 'cicLoja'. Dese la
+  oportunidad de revisar la estructura de cicLoja mediante la función str()."
+  CorrectAnswer: str(cicLoja)
+  AnswerTests: omnitest(correctExpr = "str(cicLoja)")
+  Hint: "¡Usted sabe esto! Justo requiere que se mete el objeto cicLoja dentro
+  de los paréntesis de la función str(), y entonces presione Intro."
+  
