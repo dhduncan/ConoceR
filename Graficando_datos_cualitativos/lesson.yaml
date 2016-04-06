@@ -71,7 +71,9 @@
 
 - Class: text
   Output: "Muy bien, la variable denominada conocimiento tiene dos modalidades o
-  valores posibles, los cuales son  'Sí' o 'No'. Resumimos esa entonces." 
+  valores posibles, los cuales son  'Sí' o 'No'. Pueda que preferiríamos una
+  respuesta o otra para alguna razón, pero no hay ninguna orden. Simplemente son
+  diferentes. Vamos a resumir esta variable en una gráfica." 
 
 - Class: cmd_question
   Output: "Una opción común es una diagrama de barras. Pintará una barra para
@@ -86,22 +88,52 @@
   Output: "Hmmmm a veces sale una gráfica inesperada y es difícil saber si sea
   un error o no. Acá tenemos dos barras gordísimas de la misma altura. ¿Es cierto
   eso? A veces valga la pena revisar el resultado de forma más sencilla. La 
-  función 'table()' nos hará una tabulación sencilla de las frecuencias 
-  relativas directamenta a la consola. Recupere el comando para la última gráfica
+  función 'table()' nos hará una tabulación sencilla de las frecuencias (el 
+  número de observaciones o veces que repite cada modalidad) directamenta a la 
+  consola. Recupere el comando para la última gráfica
   y envuelva a la variable con table() en lugar de plot()."
   CorrectAnswer: table(cicLoja$Conocimiento)
   AnswerTests: omnitest(correctExpr='table(cicLoja$Conocimiento)')
   Hint: El comando que Ud. necesita es table(cicLoja$Conocimiento).
   
 - Class: text
-  Output: "Ahah, que ¡sí tiene sentido la gráfica! Resulta que por casualidad 
-  había casí el mismo número (165) de personas que conocieron de la ciclovía que 
-  los (166) que no la conocieron. Aunque no se haya dado cuenta, usted acaba de 
+  Output: "Ahah, que ¡sí tiene sentido la gráfica! Mire el resumen en la consola.
+  Resulta que por casualidad había casí el mismo número (165) de personas que 
+  conocieron de la ciclovía que los (166) que no la conocieron. ¿No cierto?"
+  
+- Class:
+  Output: "Aunque no se haya dado cuenta, usted acaba de 
   presenciar algo importante. A veces hay variables tan fácil de resumir que no 
   hace falta una gráfica, ni una tabla tampoco. La frase que escribí hace un
   momento bastaría para resumir datos así de sencillo mientras que la gráfica era 
   tan simétrica que arriesgara causar dudas para un lector. Además, no se podría
   justificar el uso de tanto espacio en un informe para plasmar ese resultado."
   
+- Class: cmd_text
+  Output: "Para variables cualitativas, esta función table() es muy útil. Se 
+  puede aplicarla para resumenes de observaciones entre ciertos rangos para
+  variables cuantitativas también, per solo necesitamos su capacidad básica de 
+  contar observaciones para cada nivel o modalidad de un factor." 
   
+- Class: cmd_question
+  Output: "Llámela otra vez a table(), esta vez para la variable 'Observador' 
+  (él que encuestó). El formato del comando es igual al anterior, salvo el 
+  nombre de la variable."
+  CorrectAnswer: table(cicLoja$Observador)
+  AnswerTests: omnitest(correctExpr = 'table(cicLoja$Observador)')
+  Hint: "Escriba el comando table(cicLoja$Observador) al indicador para 
+  continuar."
   
+- Class: mult_question
+  Output: "Según entienda Ud. la función table(), ¿qué representan las cifras
+  que resultaron del paso anterior?"
+  AnswerChoices: El número de encuestas hechas por cada observador en el conjunto; El promedio de encuestas de cada observador; Un valor aleatoriamente seleccionado por cada observador
+  CorrectAnswer: El número de encuestas hechas por cada observador en el conjunto
+  AnswerTests: omnitest(correctVal= 'El número de encuestas hechas por cada observador en el conjunto')
+  Hint: "La función table() se informe del número de observaciones, así en este
+  caso el número de encuestas hechas por cada observador que tiene el conjunto 
+  de datos cicLoja."
+
+- Class: text
+  Output: "¿Este resultado tampoco se graficaría verdad? Cada observador tuvo que
+  encuestar a unas 30 personas, así que bastaría notar ese hecho."
