@@ -1,7 +1,14 @@
+.pathtofile <<- function(course_, lesson_, file_){
+	course_path <- tryCatch(swirl:::swirl_courses_dir(),
+           error = function(c) {file.path(find.package("swirl"),"Courses")}
+  )
+  file.path(course_path, course_, lesson_, file_)
+}
+
 # Path to data
-.datapath <- file.path(path.package('swirl'), 'Courses',
-                      'ConoceR', 'Familiarizandose_con_los_datos',
+.datapath <- .pathtofile('ConoceR', 'Familiarizandose_con_los_datos',
                       'plant-data.txt')
+
 # Read in data
 plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
 
