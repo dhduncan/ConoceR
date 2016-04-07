@@ -7,90 +7,90 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "¡Hola! en esta lección, vamos a explorar la anatomía de una gráfica 
+  Output: "¡Hola! En esta lección vamos a explorar la anatomía de una gráfica 
   cualquiera mediante los programas R y swirl. Si acabas de leer este texto, 
   ¡ya estás en ellos!"
 
 - Class: text
-  Output: "Para esta lección, vamos a usar el sistema de gráficas base del R. 
-  Luego, conocerá también a un sistema alternativo denominado GGplot2 que se 
-  ofrece opciones poderosas y convenientes para gráficas exploratorias. ¡No vayas 
-  a creer lo que producirás!"
+  Output: "Para esta lección, vamos a usar el sistema de gráficas base de R. 
+  Más adelante conocerá también un sistema alternativo denominado GGplot2 que 
+  ofrece opciones poderosas y convenientes para realizar gráficas exploratorias. 
+  ¡No podrá creer lo que llegará a producir!"
 
 - Class: text
-  Output: "Sin embargo, empezamos con el sistema base de R. Se puede hacer 
-  gráficas igual de poderosa y hermosa con ello, aunque con menos automatización.
+  Output: "Sin embargo, empezamos con el sistema base de R. Se pueden hacer 
+  gráficas igual de poderosas y hermosas con este sistema, aunque con menos automatización.
   ¡Vámonos, ya!"
 
 - Class: figure
-  Output: "Ojalá haya aparecido una gráfica por allí a la derecha, ¿Si? o ¿Si? 
-  ¿Cuales son los elementos que debe llevar una gráfica así?"
+  Output: "Ojalá haya aparecido una gráfica por allí a la derecha, ¿sí? o ¿sí? 
+  ¿Cuáles son los elementos que debe llevar una gráfica así?"
   Figure: cualquiera.R
   FigureType: new
 
 - Class: mult_question
-  Output: "Empecémanos con los ejes. Los ejes definen el espacio o rango de una 
-  gráfica y lo más común es una gráfica con dos ejes, los cual denominamos el X 
-  y el Y. El X se ubica por convenio en el horizontal. ¿Como se llama la 
-  variable en el eje X de nuestra gráfica acá al lado?"
+  Output: "Empecemos con los ejes. Los ejes definen el espacio o rango de una 
+  gráfica y lo más común es que una gráfica tenga dos ejes, los cuales denominamos X 
+  e Y. El eje X se ubica por convenio en la horizontal. ¿Cómo se llama la 
+  variable representada en el eje X de nuestra gráfica acá al lado?"
   AnswerChoices: "casos; z; valores; no se lo ve"
   CorrectAnswer: casos
   AnswerTests: omnitest(correctVal="casos")
   Hint: "Acuérdese que por convenio el X es el eje horizontal. ¿Qué etiqueta 
-  lleva eso?"
+  lleva?"
 
 - Class: mult_question
-  Output: "En este caso, con una variable sola, el X marca un espacio más o 
-  menos arbitrario, a lo largo de cual se arregló los 9 casos. El eje Y 
-  normalmente lleva la variable destacada, o de respuesta. Esta variable depende
-  o cambia según el caso indicado por el eje X. ¿Cómo se llama el eje Y en esta 
+  Output: "En este caso, con una sola variable, el eje X marca un espacio más o 
+  menos arbitrario, a lo largo de cual se arreglaron los 9 casos. El eje Y 
+  normalmente representa la variable destacada, o de respuesta. Esta variable depende
+  o cambia según el valor indicado por el eje X. ¿Cómo se llama el eje Y en esta 
   gráfica?"
   AnswerChoices: "casos; z; valores; X"
   CorrectAnswer: valores
   AnswerTests: omnitest(correctVal="valores")
-  Hint: "El Y por convenio es el eje vertical."
+  Hint: "El eje Y por convenio es el vertical."
 
 - Class: text
-  Output: "Ya vamos a crear una gráfica semejante, paso por paso, para asegurar 
-  que compartimos una lenguaje común de la anatomía de una gráfica. Sin embargo, 
-  no te preocupes, despues de este ejercicio, jamas volveremos a construir una 
+  Output: "Ahora vamos a crear una gráfica semejante, paso por paso, para asegurar 
+  que compartimos un lenguaje común sobre la anatomía de una gráfica. Sin embargo, 
+  no se preocupe, despues de este ejercicio jamás volveremos a construir una 
   gráfica de tal modo."
 
 - Class: cmd_question
-  Output: "Antes de trazar los ejes, necesitamos unos datos. ¿Te acuerdas de la 
-  lección inicial de R y swirl verdad? Bien, entonces haga un objeto 'v' 
-  compuesta del seguiente conjunto de valores c(2, 4, 0, 5, 3, 8, 6, 5, 4). 
+  Output: "Antes de trazar los ejes, necesitamos unos datos. Se acuerda de la 
+  lección inicial de R y swirl, ¿verdad? Bien, entonces cree un objeto 'v' 
+  compuesto por el siguiente conjunto de valores: c(2, 4, 0, 5, 3, 8, 6, 5, 4). 
   Este \"v\" se podría considerar una variable."
   CorrectAnswer: v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)
   AnswerTests: omnitest(correctVal='v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)')
-  Hint: "¿No te lo acuerdas de la primera lección? 
+  Hint: "¿No se acuerda de la primera lección? 
   Escriba v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4) y pulse Intro. Los espacios no son 
-  obligatorios, pero son una buena costumbre para que tu código sea más facil 
+  obligatorios, pero son una buena costumbre para que su código sea más facil 
   leer."
   
 - Class: figure
-  Output: "Muy bien, vamos a graficarlos. He preparado ya el cuadro para la 
-  gráfica. Ya se la ve en la ventanilla de Plots. Añadé etiquetas que muestran 
-  como el R refiere el espacio fuera del cuadro."
+  Output: "Muy bien, vamos a graficar estos datos. He preparado ya el cuadro para la 
+  gráfica, lo puede ver en la ventanilla de Plots. Añadí etiquetas que muestran 
+  cómo el R refiere el espacio fuera del cuadro."
   Figure: cuadro.R
   FigureType: new
 
 - Class: cmd_question
-  Output: "Acuérdete que los datos son 9 observaciones del valor de ... algo. 
+  Output: "Acuérdese que los datos son 9 observaciones del valor de ... algo. 
   Puesto que ya se ha creado el cuadro a la derecha, añadimos los datos 
-  escribiendo points(v). Házlo ahora mismo y pulse Intro."
+  escribiendo points(v). Hágalo ahora mismo y pulse Intro."
   CorrectAnswer: points(v)
   AnswerTests: omnitest(correctExpr='points(v)')
   Hint: "No hay ningún truco, escriba 'points(v)' para que aparezcan los 9 
-  puntos. Points = puntos, ¿ves?"
+  puntos. Points = puntos, ¿ve?"
 
 - Class: cmd_question
-  Output: "Muy bien ¿no? Ahora vamos a dibujar los ejes, empezando con el X. 
-  Teclee 'axis(side = 1)' para añadir el eje X. ¡Pruebalo ahora!"
+  Output: "Muy bien, ¿no? Ahora vamos a dibujar los ejes, empezando con el X. 
+  Teclee 'axis(side = 1)' para añadir el eje X. ¡Pruébelo ahora!"
   CorrectAnswer: axis(side = 1)
   AnswerTests: omnitest(correctExpr='axis(side = 1)')
-  Hint: "Escriba 'axis(side = 1)' no mas y pulse Intro. Ya se había dado cuenta 
-  que eje = axis en ingles. Side = lado."
+  Hint: "Escriba 'axis(side = 1)' no más y pulse Intro. Ya se habrá dado cuenta 
+  que eje = axis en inglés. Y side = lado."
   
 - Class: cmd_question
   Output: "¿Todo bien hasta aquí? Hmmmm, no lo creo. Ya mencioné que el eje X 
@@ -98,41 +98,41 @@
   nuestra variable v? Teclee v para verlo en la consola."
   CorrectAnswer: v
   AnswerTests: omnitest(correctExpr='v')
-  Hint: "Nuestro objecto o variable v es un vector simple de 9 números y por lo 
-  tanto lleva 1 tipo de información. Lo puedes averiguar por teclear v y pulse 
+  Hint: "Nuestro objeto o variable v es un vector simple de 9 números y por lo 
+  tanto lleva 1 tipo de información. Lo puede averiguar tecleando v y pulsando
   Intro." 
 
 - Class: text
-  Output: "¿Ves que nuestro eje X representa nada más que la posición relativa 
+  Output: "¿Ve que nuestro eje X representa nada más que la posición relativa 
   de cada caso en la lista de valores 'v'? La identidad del caso no nos importa,
   ¿cierto? Sin embargo, los valores en el X pueden distraernos. De hecho, no hay
   que añadir valores al eje X en este caso."
   
 - Class: figure
-  Output: "Perdóneme, pero mejor que empecemos de nuevo. Haya aparecido de nuevo
+  Output: "Perdóneme, pero mejor que empecemos de nuevo. Ha aparecido de nuevo
   el cuadro para la gráfica."
   Figure: cuadro.R
   FigureType: new
 
 - Class:  cmd_question 
-  Output: "Añadir los puntos nuevamente como hiciste hace unos pocos pasos. 
-  ¿Te acuerdas del comando? Si no, hay un atajo útil que uso mucho y que 
-  hubieras conocido en la primera lección. Pulse la flecha arriba hasta aparezca
-  el comando que necesitas para trazar los puntos."
+  Output: "Añada los puntos nuevamente como hizo hace unos pocos pasos. 
+  ¿Se acuerda del comando? Si no, hay un atajo útil que uso mucho y que 
+  ya conoció en la primera lección. Pulse la flecha hacia arriba hasta que aparezca
+  el comando que necesita para trazar los puntos."
   CorrectAnswer: points(v)
   AnswerTests: omnitest(correctExpr='points(v)')
-  Hint: "Lo que buscas es la palabra en inglés para puntos, mas el nombre del 
+  Hint: "Lo que busca es la palabra en inglés para puntos, más el nombre del 
   objeto que lleva los puntos entre paréntesis. 'points(v)' ¿cierto?"
   
 - Class: cmd_question
-  Output: "Muy bien, ahora ponemos un eje más adecuado para esta situación en el
-  X. Requiere unas instrucciones más para anular la opcion que pone R por 
+  Output: "Muy bien, ahora pongamos un eje más adecuado para esta situación en el
+  X. Requiere algunas instrucciones más para anular la opcion que pone R por 
   defecto. Teclee axis(side = 1, at = 1:9, labels = FALSE)."
   CorrectAnswer: axis(side = 1, at = 1:9, labels = FALSE)
   AnswerTests: omnitest(correctExpr='axis(side = 1, at = 1:9, labels = FALSE)')
-  Hint: "Aunque en realidad hay varias maneras de realizar este paso, aqui 
-  dentro de la leccion el codigo proporcionado unicamente te deja adelantar. 
-  Venga, sea conformista para un ratito, escriba axis(side = 1, at = 1:9, 
+  Hint: "Aunque en realidad hay varias maneras de realizar este paso, aquí 
+  dentro de la lección el código proporcionado nos sirve para avanzar. 
+  Venga, sea conformista por un ratito, escriba axis(side = 1, at = 1:9, 
   labels = FALSE) y pulse Intro."
   
 - Class: cmd_question
@@ -140,24 +140,24 @@
   defecto están en nuestro favor. Escriba axis(side = 2) y pulse Intro."
   CorrectAnswer: axis(side = 2)
   AnswerTests: omnitest(correctExpr='axis(side = 2)')
-  Hint: "Escriba axis(side = 2) y pluse Intro. Es inútil resistir."
+  Hint: "Escriba axis(side = 2) y pluse Intro. Es inútil resistirse."
   
 - Class: mult_question
-  Output: "¿Ya hemos llegado? Pues, no, pero casi. ¿Qué falta nuestra gráfica 
-  para cumplir con los requisitos minimos?"
+  Output: "¿Ya hemos llegado? Pues, no, pero casi. ¿Qué le falta a nuestra gráfica 
+  para cumplir con los requisitos mínimos?"
   CorrectAnswer: Etiquetas para los ejes más un título o subtítulo
   AnswerChoices: "Etiquetas para los ejes más un título o subtítulo; Etiquetas 
   para cada eje; Un subtítulo (o 'caption' en inglés); Un título"
   AnswerTests: omnitest(correctVal='Etiquetas para los ejes más un título o subtítulo')
-  Hint: "Piense en el primero ejemplo que hubieras visto en esta lección actual, 
-  llevó título Y etiquetas, verdad? La respuesta correcta es 'Etiquetas para los
+  Hint: "Piense en el primer ejemplo que vimos en esta lección actual, 
+  llevó título y etiquetas, verdad? La respuesta correcta es 'Etiquetas para los
   ejes más un título o subtítulo'."
 
 - Class: cmd_question
-  Output: "¡Vamonos pues! Puesto que estamos construyendo la gráfica paso por 
-  paso, el comando que necesitamos existe para añadir texto al margen. La 
+  Output: "¡Vámonos pues! Puesto que estamos construyendo la gráfica paso por 
+  paso, el comando que necesitamos sirve para añadir texto al margen. La 
   función se denomina mtext(), una sigla para 'margin text'. Seguro que 
-  reconoces un argumento de esta función mtext. Para etiquetar el eje X, teclee 
+  reconoce un argumento de esta función mtext. Para etiquetar el eje X, teclee 
   mtext(text='Casos', side = 1, line = 2) y pulse Intro."
   CorrectAnswer: mtext(text='Casos', side = 1, line = 2)
   AnswerTests: omnitest(correctExpr="mtext(text='Casos', side = 1, line = 2)")
@@ -165,31 +165,32 @@
   como apareció en el texto arriba."
   
 - Class: cmd_question
-  Output: "Y para el eye Y, repite el paso previo, cambiando la etiqueta 'text' 
+  Output: "Y para el eje Y, repita el paso previo, cambiando la etiqueta 'text' 
   a Valores, y el lado para el número adecuado para el eje Y."
   CorrectAnswer: "mtext(text = 'Valores', side=2, line=2)"
   AnswerTests: omnitest(correctExpr="mtext(text = 'Valores', side=2, line=2)")
-  Hint: "Para evitar tecleando, luego de pulsar la flecha arriba para convocar 
-  nuevamente al comando anterior, se puede cambiar los valores para 'side' y 
-  'text' a los sugeridos en las instrucciones. El comando que buscas es 
+  Hint: "Para evitar teclearlo todo, luego de pulsar la flecha hacia arriba para convocar 
+  nuevamente al comando anterior, se pueden cambiar los valores para 'side' y 
+  'text' a los sugeridos en las instrucciones. El comando que busca es 
   mtext(text = 'Valores', side = 2, line = 2)."
 
 - Class: text
-  Output: "Acabas de etiquetar el eje Y, el dependiente. Lo llamamos así 
-  porque el valor en Y depende o pertenece al caso corresponde en X."
+  Output: "Acaba de etiquetar el eje Y, el dependiente. Lo llamamos así 
+  porque el valor que toma la variable en Y depende o pertenece al caso correspondiente 
+  en X."
 
 - Class: cmd_question
-  Output: "Ahora el título. Vamos a llamar la función 'title()', así 
-  title(main = 'Valores de nueve casos independientes'). Pruébalo ahora por 
+  Output: "Ahora el título. Vamos a llamar la función 'title()', así: 
+  title(main = 'Valores de nueve casos independientes'). Pruébelo ahora, por 
   favor."
   CorrectAnswer: title(main = 'Valores de nueve casos independientes')
   AnswerTests: omnitest(correctExpr="title(main = 'Valores de nueve casos independientes')")
   Hint: "Escriba la sugerencia no más (ni menos) y presione Intro." 
 
 - Class: cmd_question
-  Output: "¿Qué piensas, un maratón? Pues, la buena noticia es que no hay que 
+  Output: "¿Qué piensa, un maratón? Pues, la buena noticia es que no hay que 
   construir gráficas así. Normalmente, aquí en el sistema base de gráficas en R,
-  usamos la función 'plot()'. Para ver como sale con el comando más mínimo 
+  usamos la función 'plot()'. Para ver qué resultado se obtiene con el comando más mínimo 
   teclee plot() ingresando nuestro objeto v."
   CorrectAnswer: plot(v)
   AnswerTests: omnitest(correctExpr='plot(v)')
@@ -197,14 +198,14 @@
   todas las opciones por defecto."
   
 - Class: text
-  Output: "Fíjete que R haya etiquetado el eje Y con el nombre del objeto v, y 
-  la palabra 'Index' (índice) como etiqueta para el X. Tampoco proporcionó 
-  ningún título, aunque depende la gráfica R suele hacerlo."
+  Output: "Fíjese que R ha etiquetado el eje Y con el nombre del objeto v, y 
+  la palabra 'Index' (índice) como etiqueta para el X. No proporcionó 
+  ningún título, aunque dependiendo del tipo de gráfica, R suele hacerlo."
 
 - Class: cmd_question
   Output: "No aceptamos estas opciones, así que vamos a ajustar la llamada a la 
   función plot() para reemplazar algunas opciones con elementos de los últimos 
-  pasos. Teclee el siguiente 
+  pasos. Teclee lo siguiente: 
   plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', 
   xlab='Casos', xaxt='n')"
   CorrectAnswer: plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', xlab='Casos', xaxt='n')
@@ -213,36 +214,36 @@
   ylab='Valores', xlab='Casos', xaxt='n') y pulse Intro."
   
 - Class: text
-  Output: "¡Buenazo! ¿no? Si yo fuera tu, guardaría este último pedazo de codigo
+  Output: "¡Buenazo! ¿no? Si yo fuera tú, guardaría este último pedazo de código
   en mi álbum de recortes."
   
 - Class: text
-  Output: "Te explico los elementos o argumentos que hayas especificado para 
-  lograr la gráfica. Ya sabes que v contiene los valores, es nuestra variable o 
-  objeto. Reconocieras el argumento 'main=' del paso cuando hubieras puesto el 
-  título; main = principal. los argumentos 'ylab' y 'xlab' detallan el texto 
-  para etiquetar los ejes Y y X respectivamente. Por último, incluyé xaxt='n' 
+  Output: "Le explico los elementos o argumentos que ha especificado para 
+  lograr la gráfica. Ya sabe que v contiene los valores, es nuestra variable u 
+  objeto. Debería reconocer el argumento 'main=' del paso en el que puso el 
+  título; main = principal. Los argumentos 'ylab' y 'xlab' detallan el texto 
+  para etiquetar los ejes Y y X respectivamente. Por último, incluyó xaxt='n' 
   para que R no dibujara los números arbitrarios en el eje X. Hay muchísmas más 
-  opciones con las cual se puede crear gráficas a medida, pero las opciones por 
-  defecto suelen hacer gráficas adecuadas."
+  opciones con las cuales se pueden crear gráficas a medida, pero las opciones por 
+  defecto suelen producir gráficas adecuadas."
   
 - Class: mult_question
-  Output: "Antes de terminar con este ejercicio, revisamos un poco. ¿Es 
-  necesario que siempre etiquetáramos los ejes, y proporcionáramos un título 
+  Output: "Antes de terminar con este ejercicio, revisemos un poco. ¿Es 
+  necesario que siempre etiquetemos los ejes y proporcionemos un título 
   para cualquier gráfica?"
   AnswerChoices: "Si; No"
   CorrectAnswer: Si
   AnswerTests: omnitest(correctVal='Si')
-  Hint: "La respuesta correcta es que sí, cualquiera gráfica debe llevar estos 
-  elementos, a menos de que lleve un subtítulo (o caption) en lugar del título. 
-  Normalmente, una gráfica debe llevar uno o otro, pero no ambos."
+  Hint: "La respuesta correcta es que sí, cualquier gráfica debe llevar estos 
+  elementos, a menos que lleve un subtítulo (o caption) en lugar del título. 
+  Normalmente, una gráfica debe llevar uno u otro, pero no ambos."
   
 - Class: mult_question
-  Output: "Y normalmente, ¿en cuál eje se pone la variable de respuest o la
+  Output: "Y normalmente, ¿en cuál eje se pone la variable de respuesta o la
   dependiente?"
   AnswerChoices: "No importa; X; Y"
   CorrectAnswer: Y
   AnswerTests: omnitest(correctVal='Y')
-  Hint: "La respuesta correcta es que el eje (o 'axis') Y, aunque si no hay
-  una variable obvia que depende de la otra, se pone la variable en que mas
-  quiere ver la variación."
+  Hint: "La respuesta correcta es en el eje (o 'axis') Y, aunque si no hay
+  una variable obvia que dependa de la otra, en el eje Y se pone la variable 
+  de la que más le interese ver la variación."
