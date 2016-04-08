@@ -66,8 +66,12 @@
 
 - Class: text
   Output: "La forma en que se asigna un valor a un objeto en R es mediante el uso 
-  del operador de asignación, que es sólo un símbolo ''menor que'' seguido de un 
-  signo ''menos''. Es exactamente esto <-"
+  del operador de asignación, que es sólo un símbolo ''menor que'' seguido de 
+<<<<<<< HEAD
+  un signo ''menos''. Es exactamente esto: <-"
+=======
+  un signo ''menos''. Es exactamente esto <-"
+>>>>>>> 728e31bbf7af0a485bba90a1cc1a59871f08532e
 
 - Class: text
   Output: "Piense en el operador de asignación como en una flecha. Usted está 
@@ -130,6 +134,14 @@
   después de las comas en el vector, pero ayuda a que su código se vea menos 
   desordenado y más legible."
 
+# No estoy convencido que esta intervención vale la pena.
+# Quizá en este punto del curso aún no es necesario.
+#- Class: cmd_question
+#  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
+#  CorrectAnswer: ?c
+#  AnswerTests: omnitest(correctExpr='?c')
+#  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
+
 - Class: cmd_question
   Output: "Escriba z para ver su contenido. Verá que los valores impresos no 
   están separados por comas."
@@ -149,7 +161,11 @@
 
 - Class: cmd_question
   Output: "Se pueden utilizar vectores numéricos en expresiones aritméticas. 
+<<<<<<< HEAD
+  Escriba lo siguiente para ver qué pasa: z * 2 + 100."
+=======
   Escriba lo siguiente para ver qué pasa z * 2 + 100."
+>>>>>>> 728e31bbf7af0a485bba90a1cc1a59871f08532e
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
   Hint: "Introduzca z * 2 + 100, sin asignar el resultado a un objeto. El 
@@ -187,7 +203,11 @@
   CorrectAnswer: un vector de longitud 3
   AnswerChoices: "un vector de longitud 3; un solo número (es decir, un vector de longitud 1); un vector de longitud 0 (es decir, un vector vacío)"
   AnswerTests: omnitest(correctVal='un vector de longitud 3')
+<<<<<<< HEAD
+  Hint: "Piense en cómo R manejó la otra operación ''vectorizada'': elemento 
+=======
   Hint: "Piense en cómo R manejó la otra operación ''vectorizada'', elemento 
+>>>>>>> 728e31bbf7af0a485bba90a1cc1a59871f08532e
   por elemento."
 
 - Class: cmd_question
