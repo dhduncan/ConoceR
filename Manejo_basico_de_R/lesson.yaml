@@ -1,46 +1,46 @@
 - Class: meta
   Course: ConoceR
-  Lesson: Basicos_de_manejar_R
-  Author: David H Duncan (en base del trabajo de Nick Carchedi y tradución de Jose Sosa)
+  Lesson: Manejo básico de R
+  Author: David H Duncan (en base al trabajo de Nick Carchedi y tradución de Jose Sosa)
   Type: Standard
   Organization: Universidad Técnica Particular de Loja
   Version: 2.3.1
 
 - Class: text
   Output: "En esta lección, vamos a explorar algunos elementos básicos de la 
-  programación en el lenguaje R. Me imagino que pocos quieran aprender 
-  programación en sí, pero algunas cuestiones básicas son necesarios para que saquen lo
-  mejor de R. Mientras más comodidad tiene con el programa,
-  más atención pueda dirigir a nuestro propósito verdadero de análisis."
+  programación en el lenguaje R. Me imagino que pocos quieren aprender 
+  programación en sí, pero son necesarias algunas cuestiones básicas para que saquen lo
+  mejor de R. Mientras más comodidad tenga con el programa,
+  más atención podrá dirigir a nuestro propósito verdadero de análisis."
 
 - Class: text
   Output: "Antes de empezar, sepa que si en algún momento desea obtener más 
   información (en inglés) sobre un tema concreto relacionado con R, puede 
   escribir help.start() en el indicador >. Se abrirá un menú de recursos (ya 
-  sea dentro o RStudio su navegador web por defecto, dependiendo de su 
+  sea dentro de RStudio o en su navegador web por defecto, dependiendo de su 
   configuración). Como alternativa, una simple búsqueda en Internet a menudo 
-  da la respuesta que estás buscando."
+  da la respuesta que está buscando."
 
 - Class: cmd_question
-  Output: "Ahora, en su forma más simple, R puede ser utilizado como una 
-  calculadora interactiva. Escribe 2 + 2 y pulsa intro."
+  Output: "En su forma más simple, R puede ser utilizado como una 
+  calculadora interactiva. Escriba 2 + 2 y pulse intro."
   CorrectAnswer: 2 + 2
   AnswerTests: omnitest(correctExpr= "2 + 2")
   Hint: "Escribe 2 + 2 y pulsa Intro."
   
 - Class: cmd_question
-  Output: "Como se puede imaginar, todos las operaciones normales de calculador
-  van a funcionar así. Para multiplicar usamos el asterisco, teclea 2 * 2 para
+  Output: "Como puede imaginar, todas las operaciones normales de calculadora
+  van a funcionar así. Para multiplicar usamos el asterisco, teclee 2 * 2 para
   averiguarlo."
   CorrectAnswer: 2 * 2
   AnswerTests: omnitest(correctExpr='2 * 2')
   Hint: "Escribe 2 * 2 y pulsa Intro."
 
 - Class: cmd_question
-  Output: "También se puede levantar números a cualquier poder mediante el uso 
-  del símbolo '^'). Depende su teclado, no se ubicara facilmente. Si no aparece 
-  nada, pulsa space antes de cumplir la combinación de teclas. Vas a buscarlo 
-  ahora mismo para cuadrar 2. Escribe 2^2 y presione Intro."
+  Output: "También se pueden elevar números a cualquier potencia mediante el uso 
+  del símbolo '^'). Dependiendo de su teclado, este símbolo no se ubicará fácilmente. Si 
+  teclea el símbolo no aparece nada, pulse space antes de marcar la combinación de teclas. 
+  Búsquelo ahora para elevar 2 al cuadrado. Escriba 2^2 y presione Intro."
   CorrectAnswer: 2^2
   AnswerTests: omnitest(correctExpr='2^2')
   Hint: "Escribe 2^2 y pulsa Intro."
@@ -52,8 +52,8 @@
   Hint: "Escribe 5 + 7 y pulsa Intro."
 
 - Class: text
-  Output: "Ojo que con estos ejemplos R simplemente imprime el resultado de 12 
-  a la consola por defecto. Sin embargo, R es un lenguaje de programación y a 
+  Output: "Ojo, que con estos ejemplos R simplemente imprime el resultado de 12 
+  en la consola por defecto. Sin embargo, R es un lenguaje de programación y a 
   menudo la razón por la que utiliza un lenguaje de programación, en oposición 
   a una calculadora, es para automatizar algunos procesos o evitar repeticiones 
   innecesarias."
@@ -61,23 +61,23 @@
 - Class: text
   Output: "En este caso, es posible que desee utilizar nuestro resultado de 
   arriba en un segundo cálculo. En lugar de volver a escribir 5 + 7 cada vez 
-  que lo necesitamos, podemos simplemente crear un nuevo objeto que almacena 
+  que lo necesitemos, podemos simplemente crear un nuevo objeto que almacene 
   el resultado."
 
 - Class: text
-  Output: "La forma en que asigna un valor a un objeto en R es mediante el uso 
+  Output: "La forma en que se asigna un valor a un objeto en R es mediante el uso 
   del operador de asignación, que es sólo un símbolo ''menor que'' seguido de 
-  un signo ''menos''. Eso se parece a esto: <-"
+  un signo ''menos''. Es exactamente esto <-"
 
 - Class: text
-  Output: "Piense en el operador de asignación como una flecha. Usted está 
+  Output: "Piense en el operador de asignación como en una flecha. Usted está 
   asignando el valor en el lado derecho de la flecha para el nombre del objeto 
   en el lado izquierdo de la flecha."
 
 - Class: cmd_question
-  Output: "Para asignar el resultado de 5 + 7 a un nuevo objeto llamada x, 
+  Output: "Para asignar el resultado de 5 + 7 a un nuevo objeto llamado x, 
   escriba x <- 5 + 7. Esto puede leerse como 'x toma el valor de 5 más 7'. 
-  Dese una oportunidad ahora."
+  Inténtelo ahora."
   CorrectAnswer: x <- 5 + 7
   AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5')
   Hint: "Escriba x <- 5 + 7. Es importante incluir un único espacio a cada lado 
@@ -86,23 +86,23 @@
     
 - Class: text
   Output: "Se dará cuenta de que R no imprime el resultado de 12 en esta 
-  ocasión. Cuando se utilice el operador de asignación ( \"<-\" ), R asume que 
-  no quieres ver el resultado inmediatamente, sino que tiene la intención de 
-  utilizar el resultado para otra cosa más adelante."
+  ocasión. Cuando utilice el operador de asignación ( \"<-\" ), R asume que 
+  no quiere ver el resultado inmediatamente, sino que tiene la intención de 
+  utilizarlo para otra cosa más adelante."
     
 - Class: cmd_question
   Output: "Para ver el contenido del objeto x, simplemente escriba x y pulse 
-  Intro. Intentalo ahora."
+  Intro. Inténtelo ahora."
   CorrectAnswer: x
   AnswerTests: omnitest(correctExpr='x')
   Hint: Escribe x y pulsa Intro. Esto imprimirá automáticamente el valor de x.
 
 - Class: cmd_question
-  Output: Ahora, almacene el resultado de x - 3 en un objeto llamado nueva y.
+  Output: Ahora, almacene el resultado de x - 3 en un objeto nuevo llamado y.
   CorrectAnswer: y <- x - 3
   AnswerTests: omnitest(correctExpr='y <- x - 3')
-  Hint: "Escriba y <- x - 3 y pulse Intro. Si usted utiliza x - 3 o x-3 es de 
-  preferencia personal, pero es buena costumbre de incluir un espacio a cada 
+  Hint: "Escriba y <- x - 3 y pulse Intro. Se puede utilizar x - 3 o x-3 
+  según prefiera, pero es buena costumbre incluir un espacio a cada 
   lado del operador de asignación."
 
 - Class: cmd_question
@@ -112,25 +112,26 @@
   Hint: "Escriba y y presione Intro."
 
 - Class: text
-  Output: "Ahora, vamos a crear una pequeña colección de números llamados un 
-  vector. Cualquier objeto que contiene datos se denomina una estructura de 
-  datos numéricos y los vectores son de las más simples tipos de estructuras 
+  Output: "Ahora, vamos a crear una pequeña colección de números agrupados en un 
+  vector. Cualquier objeto que contiene datos se denomina como una estructura de 
+  datos numéricos y los vectores son de los tipos más simples de estructuras 
   de datos en R. De hecho, incluso un solo número se considera un vector de 
   longitud uno."
 
 - Class: cmd_question
   Output: "La forma más fácil de crear un vector es con la función c(), que se 
   usa para 'concatenar' o 'combinar'. Para crear un vector que contiene los 
-  números 1.1, 9 y 3.14, escriba c(1.1, 9, 3.14). Pruébalo ahora y guarde el 
+  números 1.1, 9 y 3.14, escriba c(1.1, 9, 3.14). Pruébelo ahora y guarde el 
   resultado en un objeto llamado z."
   CorrectAnswer: z <- c(1.1, 9, 3.14)
   AnswerTests: omnitest(correctExpr='z <- c(1.1, 9, 3.14)')
   Hint: "Ingresando z <- c (1.1, 9, 3.14) asignará el vector (1.1, 9, 3.14) 
-  a un nueva variable llamada z. No es necesario Incluir espacios individuales 
+  a un nueva variable llamada z. No es necesario incluir espacios individuales 
   después de las comas en el vector, pero ayuda a que su código se vea menos 
   desordenado y más legible."
 
 # No estoy convencido que esta intervención vale la pena.
+# Quizá en este punto del curso aún no es necesario.
 #- Class: cmd_question
 #  Output: "En cualquier momento usted puede tener preguntas acerca de una función en particular, puede acceder a los archivos de ayuda incorporada de R a través del comando `?`. Por ejemplo, si desea más información de la función c(), escriba ?c sin los paréntesis que normalmente siguen al nombre de una función. Dese una oportunidad."
 #  CorrectAnswer: ?c
@@ -138,25 +139,25 @@
 #  Hint: "Escriba ?c y pulse Intro. Con ello se abre el archivo de ayuda para la función c()."
 
 - Class: cmd_question
-  Output: "Escriba z para ver su contenido. Verás que los valores impresos no 
-  son separados por comas."
+  Output: "Escriba z para ver su contenido. Verá que los valores impresos no 
+  están separados por comas."
   CorrectAnswer: z
   AnswerTests: omnitest(correctExpr='z')
   Hint: "Escriba z y pulse Intro para ver su contenido."
 
 - Class: cmd_question
-  Output: "Usted puede combinar vectores para hacer un nuevo vector. Crear un 
-  nuevo vector que contiene z, 555, entonces z de nuevo en ese orden. No asigne 
-  este vector a un nuevo objeto, de modo que sólo podemos ver el resultado 
+  Output: "Usted puede combinar vectores para crear un nuevo vector. Cree ahora un 
+  nuevo vector que contenga z, 555, y después z de nuevo en ese orden. No asigne 
+  este vector a un nuevo objeto, de modo que podamos ver el resultado 
   inmediatamente."
   CorrectAnswer: c(z, 555, z)
   AnswerTests: omnitest(correctExpr='c(z, 555, z)')
-  Hint: "Escriba c (z, 555, z). No crear un nuevo objeto. Sólo queremos ver el 
+  Hint: "Escriba c (z, 555, z). No cree un nuevo objeto. Sólo queremos ver el 
   resultado."
 
 - Class: cmd_question
-  Output: "Vectores numéricos se puede utilizar en expresiones aritméticas. 
-  Escriba lo siguiente para ver qué pasa: z * 2 + 100."
+  Output: "Se pueden utilizar vectores numéricos en expresiones aritméticas. 
+  Escriba lo siguiente para ver qué pasa z * 2 + 100."
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
   Hint: "Introduzca z * 2 + 100, sin asignar el resultado a un objeto. El 
@@ -165,60 +166,60 @@
 
 - Class: text
   Output: "En primer lugar, R multiplica cada uno de los tres elementos en z 
-  por 2. Entonces se añadieron 100 a cada elemento para obtener el resultado 
-  que ves arriba."
+  por 2. Después se añaden 100 unidades a cada elemento para obtener el resultado 
+  que ve arriba."
 
 - Class: text
-  Output: "Como ya te decía, otros operadores aritméticos comunes son `+`, 
-  `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para tomar la raíz 
-  cuadrada, utilice la función sqrt() y tomar el valor absoluto, utilice la 
+  Output: "Como decía antes, otros operadores aritméticos comunes son `+`, 
+  `-`, `/` y `^` (donde x ^ 2 significa 'x al cuadrado'). Para obtener la raíz 
+  cuadrada, utilice la función sqrt(), y para obtener el valor absoluto, utilice la 
   función abs()."
 
 - Class: cmd_question
-  Output: "Dese una oportunidad, calcula la raiz quadrado de 100 con la función 
+  Output: "Inténtelo ahora, calcule la raiz cuadrada de 100 con la función 
   sqrt()."
   CorrectAnswer: sqrt(100)
   AnswerTests: omnitest(correctExpr='sqrt(100)')
-  Hint: "no hay que asignar ningún nombre, teclée sqrt(100) no más."
+  Hint: "No hay que asignar ningún nombre, teclee sqrt(100) no más."
 
 - Class: cmd_question
-  Output: "Ahora, tome la raíz cuadrada de z - 1 y asignarlo a un nuevo objeto 
-  llamada mi_sqrt."
+  Output: "Ahora, calcule la raíz cuadrada de z - 1 y asígnela a un nuevo objeto 
+  llamado mi_sqrt."
   CorrectAnswer: mi_sqrt <- sqrt(z - 1)
   AnswerTests: omnitest(correctExpr='mi_sqrt <- sqrt(z - 1)')
   Hint: "Asigne el resultado de sqrt (z - 1) a un objeto llamado mi_sqrt."
 
 - Class: mult_question
-  Output: "Antes de ver el contenido del objeto mí_sqrt, ¿qué crees que 
+  Output: "Antes de ver el contenido del objeto mi_sqrt, ¿qué cree que 
   contiene?"
   CorrectAnswer: un vector de longitud 3
   AnswerChoices: "un vector de longitud 3; un solo número (es decir, un vector de longitud 1); un vector de longitud 0 (es decir, un vector vacío)"
   AnswerTests: omnitest(correctVal='un vector de longitud 3')
-  Hint: "Piensa en cómo R manejó la otra operación ''vectorizada'': elemento 
+  Hint: "Piense en cómo R manejó la otra operación ''vectorizada'', elemento 
   por elemento."
 
 - Class: cmd_question
-  Output: "Imprime el contenido de mi_sqrt."
+  Output: "Imprima el contenido de mi_sqrt."
   CorrectAnswer: mi_sqrt
   AnswerTests: omnitest(correctExpr='mi_sqrt')
-  Hint: "Sólo tienes que escribir mi_sqrt y pulse Intro para ver su valor."
+  Hint: "Sólo tiene que escribir mi_sqrt y pulsar Intro para ver su valor."
 
 - Class: text
-  Output: "Como habrás adivinado, R primero resta 1 de cada elemento de la z, 
-  luego tomó la raíz cuadrada de cada elemento. Esto le deja con un vector de la
+  Output: "Como habrá adivinado, R primero resta 1 de cada elemento de la z, 
+  y luego toma la raíz cuadrada de cada elemento. Esto le deja con un vector de la
   misma longitud que el vector z inicial."
 
 - Class: cmd_question
-  Output: "Ahora, cree un objeto llamado nueva mí_div que obtiene el valor de z 
+  Output: "Ahora, cree un objeto nuevo llamado mi_div que contiene el valor de z 
   dividido por mi_sqrt."
   CorrectAnswer: mi_div <- z / mi_sqrt
   AnswerTests: omnitest(correctExpr='mi_div <- z / mi_sqrt')
-  Hint: "Introduzca mi_div <- z / mi_sqrt. No se requieren los espacios a ambos 
-  lados del signo `/`, pero a menudo puede mejorar la legibilidad haciendo 
-  código aparece más despejado. Al final, es una preferencia personal."
+  Hint: "Introduzca mi_div <- z / mi_sqrt. No se requieren espacios a ambos 
+  lados del signo `/`, pero a menudo puede mejorar la legibilidad haciendo que el
+  código aparezca más despejado. En cualquier caso, es una preferencia personal."
   
 - Class: mult_question
-  Output: "¿Cuál crees que es la declaración verdadera?"
+  Output: "¿Cuál cree que es la frase verdadera?"
   CorrectAnswer: El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...
   AnswerChoices: "El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...; mi_div es un solo número (es decir, un vector de longitud 1); mi_div es indefinido"
   AnswerTests: omnitest(correctVal='El primer elemento de mi_div es igual al primer elemento de z dividido por el primer elemento de mi_sqrt, y así sucesivamente ...')
@@ -226,32 +227,32 @@
   como `+` y `*`."
 
 - Class: cmd_question
-  Output: "Adelante e imprimir el contenido de mi_div."
+  Output: "Imprima ahora el contenido de mi_div."
   CorrectAnswer: mi_div
   AnswerTests: omnitest(correctExpr='mi_div')
   Hint: "Escriba mi_div y pulse Intro para ver su contenido."
   
 - Class: text
-  Output: "Cuando se le presenten dos vectores de la misma longitud, R 
+  Output: "Cuando tenga dos vectores de la misma longitud, R 
   simplemente realiza la operación aritmética especificada (`+`, `-`, `*`, 
   etc.) elemento por elemento. Si los vectores son de diferentes longitudes, 
-  R 'recicla' el vector más corto hasta que es la misma longitud que el vector 
+  R 'recicla' el vector más corto hasta que es de la misma longitud que el vector 
   más largo."
 
 - Class: text
   Output: "Cuando hicimos z * 2 + 100 en nuestro ejemplo anterior, z era un 
-  vector de longitud 3, pero técnicamente 2 y 100 son cada uno de vectores de 
+  vector de longitud 3, pero técnicamente 2 y 100 son cada uno vectores de 
   longitud 1."
 
 - Class: text
-  Output: "Detrás de las escenas, R es reciclar, el 2 para hacerlo un vector 
+  Output: "Lo que hace R sin que lo veamos es reciclar el 2 para hacerlo un vector 
   de 2s y el 100 para hacer un vector de 100s. En otras palabras, cuando usted 
-  pide R para calcular z * 2 + 100, lo que realmente se calcula es z * 
+  pide a R que calcule z * 2 + 100, lo que realmente se calcula es z * 
   c(2, 2, 2) + c(100, 100, 100)."
 
 - Class: cmd_question
   Output: "Para ver otro ejemplo de cómo funciona este vector «reciclado», 
-  trate de sumar c(1, 2, 3, 4) y c(0, 10). No te preocupes por guardar el 
+  trate de sumar c(1, 2, 3, 4) y c(0, 10). No se preocupe por guardar el 
   resultado en un nuevo objeto."
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10)')
@@ -259,65 +260,65 @@
   dos vectores de diferente longitud. No asigne el resultado a un objeto."
 
 - Class: text
-  Output: "Si la longitud del vector más corto no divide uniformemente en la 
-  longitud del vector ya, R se seguirá aplicando el método «reciclado», pero 
-  lanzará una advertencia para hacerle saber algo sospechoso podría estar 
+  Output: "Si la longitud del vector más corto no divide uniformemente a la 
+  longitud del otro vector, R seguirá aplicando el método de «reciclado», pero 
+  lanzará una advertencia para hacerle saber que algo sospechoso podría estar 
   pasando."
 
 - Class: cmd_question
-  Output: "Trate c(1, 2, 3, 4) + c(0, 10, 100) para un ejemplo."
+  Output: "Trate de calcular c(1, 2, 3, 4) + c(0, 10, 100) como ejemplo."
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10, 100)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
-  Hint: "Escriba c(1, 2, 3, 4) + c(0, 10, 100) para ver cómo maneja R la suma 
+  Hint: "Escriba c(1, 2, 3, 4) + c(0, 10, 100) para ver cómo R maneja la suma 
   de dos vectores, cuando la longitud del vector más corto lo repite 
-  uniformemente en la longitud del vector más largo. No te preocupes por 
+  uniformemente en la longitud del vector más largo. No se preocupe por 
   asignar el resultado a un objeto."
 
 - Class: text
-  Output: "Antes de concluir esta lección, me gustaría mostrarte un par de 
+  Output: "Antes de concluir esta lección, me gustaría mostrarle un par de 
   trucos para ahorrar tiempo."
 
 - Class: text
-  Output: "A principios de la lección, z multiplica * 2 + 100. Supongamos que 
-  has cometido un error y querías sumar 1.000 en lugar de 100. Usted 
-  podría volver a escribir la expresión, o ..."
+  Output: "A principios de la lección, z multiplicaba * 2 + 100. Supongamos que 
+  ha cometido un error y quería sumar 1.000 en lugar de 100.  
+  Podría volver a escribir la expresión, o ..."
 
 - Class: cmd_question
-  Output: "En muchos entornos de programación, la tecla flecha hacia arriba 
-  recorre a través de los comandos anteriores. Trate de teclear la flecha 
-  hacia arriba en el teclado hasta que se llegue a este comando (z * 2 + 100), 
-  a continuación, cambiae de 100 a 1000 y pulse Enter. Si la flecha hacia 
-  arriba no funciona para ti, sólo tienes que escribir el comando corregido."
+  Output: "En muchos entornos de programación, la tecla flecha hacia arriba
+  sirve para moverse a través de los comandos anteriores. Trate de pulsar la flecha 
+  hacia arriba en el teclado hasta que llegue a este comando (z * 2 + 100). 
+  A continuación, cambie de 100 a 1000 y pulse Enter. Si la flecha hacia 
+  arriba no le funciona, sólo tiene que escribir el comando corregido."
   CorrectAnswer: z * 2 + 1000
   AnswerTests: omnitest(correctExpr='z * 2 + 1000')
-  Hint: "Si su entorno no admite la función de flecha hacia arriba, y luego 
-  sólo tienes que escribir el comando corregido para seguir adelante."
+  Hint: "Si su entorno no admite la función de flecha hacia arriba, 
+  sólo tiene que escribir el comando corregido para seguir adelante."
 
 - Class: text
   Output: "Por último, vamos a suponer que desea ver el contenido de un objeto 
-  que ha creado anteriormente, pero parece que no puede recordar si usted la 
-  nombró como mi_div o miDiv. Podrías probar ambos y ver lo que funciona, o ..."
+  que ha creado anteriormente, pero parece que no puede recordar si lo 
+  nombró como mi_div o miDiv. Podría probar ambos y ver lo que funciona, o ..."
 
 - Class: cmd_question
   Output: "Puede escribir las dos primeras letras del nombre del objeto, y luego
   presionar la tecla Tab (posiblemente más de una vez). La mayoría de los 
   entornos de programación proporcionará una lista de los objetos que ha creado
-  que comiencen con 'mi'. Esto se llama auto-completado y puede ser muy útil 
-  cuando se tienen muchos objetos en el espacio de trabajo. Dese una oportunidad.
-  (Si el autocompletado no funciona para ti, sólo tienes que escribir mi_div y 
-  pulse Intro.)"
+  que comiencen con esas dos letras, en este caso 'mi'. Esto se llama auto-completado 
+  y puede ser muy útil cuando se tienen muchos objetos en el espacio de trabajo. Inténtelo.
+  (Si el autocompletado no le funciona, sólo tiene que escribir mi_div y 
+  pulsar Intro.)"
   CorrectAnswer: mi_div
   AnswerTests: omnitest(correctExpr='mi_div')
-  Hint: "Si su entorno de programación no soporta auto-realización, sólo tienes 
-  que escribir mi_div y pulse Intro para continuar."
+  Hint: "Si su entorno de programación no soporta auto-realización, sólo tiene 
+  que escribir mi_div y pulsar Intro para continuar."
 
 - Class: text
-  Output: "Pues, felicitaciones, has terminado con esta lección en los básicos
-  de manejar R. Espero que ya te sientas más cómod@ trabajando con ella. Puedes
-  seguir con la siguiente class, experimentar con R, o volver otro día.
+  Output: "Pues, felicitaciones, ha terminado con esta lección sobre manejo básico
+  de R. Espero que ya se sienta más cómod@ trabajando con R. Puede
+  seguir con la siguiente clase, experimentar con R, o volver otro día.
   
-  Esta lección se escribió con el paquete swirl, representa el labor de muchos
-  voluntarios. A mi me gustaría recibir retroalimentación en el tema de que tan
-  útiles son estas lecciones. Por favor, espera hasta que hayas completado varias
+  Esta lección se escribió con el paquete swirl y representa la labor de muchos
+  voluntarios. Me gustaría recibir retroalimentación en el tema de qué tan
+  útiles son estas lecciones. Por favor, espere hasta haber completado varias
   antes de juzgar.  ¡Hasta luego!"
   
