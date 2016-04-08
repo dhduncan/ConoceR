@@ -6,9 +6,11 @@ output: pdf_document
 ---
 
 ```{r, echo=FALSE, results='hide', message=FALSE, comment=FALSE}
-library(knitr)
+require(knitr)
+require(markdown)
 library(swirl)
 source("~/git/ConoceR/Graficando_1/initLesson.R")
+markdownToHTML("Sistema base de graficar.md" options=c('use_xhtml', 'base64_images'))
 ```
 
 Una de las mayores fortalezas de R, en relación con otros lenguajes de programación, es la facilidad con la que podemos crear gráficos con calidad de publicación. En esta lección, usted aprenderá acerca de los gráficos básicos de R.
