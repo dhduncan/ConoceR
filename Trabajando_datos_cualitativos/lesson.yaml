@@ -165,4 +165,15 @@
   este modelo 'with(conjunto, table(variable, variable))'. Inténtelo ahora."
   CorrectAnswer: with(cicLoja, table(Conocimiento, Sexo))
   AnswerTests: omnitest(correctExpr='with(cicLoja, table(Conocimiento, Sexo))')
-  Hint: hint
+  Hint: "La configuracion que necesitaba es with(cicLoja, table(Conocimiento, 
+  Sexo))."
+
+- Class: mult_question
+  Output: "Ya que Ud viera esta tabla un par de veces, dígame si eran las 
+  mujeres o los hombres quienes proporcionalmente más conocían de la ciclovia."
+  AnswerChoices: Hombres; Mujeres
+  CorrectAnswer: Mujeres
+  AnswerTests: omnitest(correctVal = "Mujeres")
+  Hint: "Entre las mujeres más conocían a la ciclovía que no la conciían, 
+  mientras que entre hombres fue al revés. Entonces la respuesta correcta es
+  Mujeres."
