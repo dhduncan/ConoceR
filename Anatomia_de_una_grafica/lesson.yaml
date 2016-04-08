@@ -59,7 +59,7 @@
 - Class: cmd_question
   Output: "Antes de trazar los ejes, necesitamos unos datos. Se acuerda de la 
   lección inicial de R y swirl, ¿verdad? Bien, entonces cree un objeto 'v' 
-  compuesto por el siguiente conjunto de valores: c(2, 4, 0, 5, 3, 8, 6, 5, 4). 
+  compuesto por el siguiente conjunto de valores c(2, 4, 0, 5, 3, 8, 6, 5, 4). 
   Este \"v\" se podría considerar una variable."
   CorrectAnswer: v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)
   AnswerTests: omnitest(correctVal='v <- c(2, 4, 0, 5, 3, 8, 6, 5, 4)')
@@ -180,7 +180,7 @@
   en X."
 
 - Class: cmd_question
-  Output: "Ahora el título. Vamos a llamar la función 'title()', así: 
+  Output: "Ahora el título. Vamos a llamar la función 'title()', así 
   title(main = 'Valores de nueve casos independientes'). Pruébelo ahora, por 
   favor."
   CorrectAnswer: title(main = 'Valores de nueve casos independientes')
@@ -205,7 +205,7 @@
 - Class: cmd_question
   Output: "No aceptamos estas opciones, así que vamos a ajustar la llamada a la 
   función plot() para reemplazar algunas opciones con elementos de los últimos 
-  pasos. Teclee lo siguiente: 
+  pasos. Teclee lo siguiente
   plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', 
   xlab='Casos', xaxt='n')"
   CorrectAnswer: plot(v, main = 'Valores de nueve casos independientes', ylab='Valores', xlab='Casos', xaxt='n')

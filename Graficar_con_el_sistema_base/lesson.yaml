@@ -49,7 +49,7 @@
 
 - Class: text
   Output: "Como se puede ver en la página de ayuda, el conjunto de datos cars 
-  tiene sólo dos variables: la velocidad (speed en mph) y la distancia de 
+  tiene sólo dos variables, la velocidad (speed en mph) y la distancia de 
   frenado (dist en ft). Tenga en cuenta que estos datos son de la década 
   de 1920."
 
@@ -166,7 +166,7 @@
   es porque R fue lo suficientemente inteligente como para saber que el primer 
   elemento (es decir, la primera columna) de cars se debía asignar al argumento 
   x y el segundo elemento al argumento y. Para ahorrar en la tipificación, 
-  la siguiente serie de respuestas serán todas de la forma: trama de datos (cars, ...)
+  la siguiente serie de respuestas serán todas de la forma trama de datos (cars, ...)
   con varios argumentos añadidos."
 
 - Class: text
@@ -210,7 +210,7 @@
 - Class: text
   Output: "Deténgase un momento. Una de las grandes ventajas de RStudio es que mantiene
   las gráficas de la sesión en la memoría. Vea la ventanilla de PLOTS. A la
-  izquierda de ella hay unas flechas: la que indica hacia la izquierda es de color azul 
+  izquierda de ella hay unas flechas, la que indica hacia la izquierda es de color azul 
   y la que indica hacia la derecha es azul bien clarita. 
   
   Su propósito es navegar entre las gráficas de la sesión. Pulse la flecha 
