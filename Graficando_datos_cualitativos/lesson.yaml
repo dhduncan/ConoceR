@@ -62,7 +62,7 @@
   que traten de categorías claras y mutuamente exclusivas, y las ordinales que
   traten de categorías con un órden no ambiguo entre sí. De las variables del
   conjunto cicLoja en el listado abajo, ¿cuál es una variable cualitativa nominal?"
-  AnswerChoices: Conocimiento; DeAcuerdo; Decada
+  AnswerChoices: Conocimiento; Acuerdo; Decada
   CorrectAnswer: Conocimiento
   AnswerTests: omnitest(correctVal= 'Conocimiento')
   Hint: "Década tiene orden por supuesto y la de Acuerdo también es un ejemplo
@@ -126,7 +126,8 @@
   
 - Class: mult_question
   Output: "Según entienda Ud. la función table(), ¿qué representan las cifras
-  que resultaron del paso anterior?"
+  que resultaron del paso anterior en las que se ve los observadores 
+  representados por letras del alfabeto?"
   AnswerChoices: El número de encuestas hechas por cada observador en el conjunto; El promedio de encuestas de cada observador; Un valor aleatoriamente seleccionado por cada observador
   CorrectAnswer: El número de encuestas hechas por cada observador en el conjunto
   AnswerTests: omnitest(correctVal= 'El número de encuestas hechas por cada observador en el conjunto')
@@ -140,4 +141,14 @@
   
 - Class: cmd_question
   Output: "Ya que estamos explorando la funcion de table(), quisiera
-  extender el tema un poquito. "
+  extender el tema un poquito. Podemos cruzar dos tabulas para registrar
+  las frecuencias arregladas por combinaciones de grupos. Dese la oportunidad
+  con los factores Conocimiento y Sexo del conjunto cicLoja. Tiene que
+  proporcionarlos a la función table() seperados por una coma."
+  CorrectAnswer: table(cicLoja$Conocimiento, cicLoja$Sexo)
+  AnswerTests: omnitest(correctExpr = "table(cicLoja$Conocimiento, cicLoja$Sexo)"
+  Hint: "Si Ud. no logró asemblar el comando, lee la instrucción otra vez
+  cuidadosamente. Buscamos la función table() con los dos factores Conocimiento
+  y Sexo seperados por una coma. Sin embargo, si no añademos el objeto cicLoja y
+  el símbolo del dólar, R no reconociera a los factores cicLoja$Conocimiento y
+  cicLoja$Sexo."
