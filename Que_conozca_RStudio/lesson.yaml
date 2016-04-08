@@ -1,155 +1,155 @@
 - Class: meta
   Course: ConoceR
-  Lesson: Que_conozca_RStudio
+  Lesson: Conozca_RStudio
   Author: David H. Duncan
   Type: Standard
   Organization: Universidad Tecnica Particular de Loja
   Version: 2.3.1
 
 - Class: text
-  Output: "En esta lección, conocerás mejor a RStudio. Aunque ningun análisis, 
-  gráfico o resultado que haremos en el curso requiere RStudio, estoy convencido 
-  que la aumentacion y conveniencia que se ofrece vale la pena."
+  Output: "En esta lección conocerá un poco mejor RStudio. Aunque ningún análisis, 
+  gráfico o resultado que hagamos en el curso requiere RStudio, estoy convencido 
+  de que la ampliación que se ofrece vale la pena."
   
 - Class: text
-  Output: "Esta pequeña introducción al programa RStudio te dará lo mínimo 
-  absoluto para que te ubiques y aproveches de lo que se ofrece. Para una 
-  visión más completa, véase a la página web 
+  Output: "Esta pequeña introducción al programa RStudio le dará lo mínimo 
+  necesario para que se ubique y aproveche lo que se ofrece. Para una 
+  visión más completa, véase la página web 
   www.rstudio.com/products/rstudio/features/"
   
 - Class: figure
-  Output: "Espera...Ya estás viendo esta lección desde RStudio, ¿cierto? 
-  Vamos a ver. Debe haber aparecido una imagen a la derecha de la pantalla, 
-  la que es como se ve la interfaz de RStudio por defecto. ¿La ves? 
-  ¿Corresponde al entorno en que te encuentres ahora mismo?"
+  Output: "Espere... Ya está viendo esta lección desde RStudio, ¿cierto? 
+  Vamos a ver. Debe haber aparecido una imagen a la derecha de la pantalla 
+  que es como se ve la interfaz de RStudio por defecto. ¿La ve? 
+  ¿Corresponde al entorno en que se encuentra ahora mismo?"
   Figure: fig1.R
   FigureType: new
 
 - Class: text
-  Output: "Si no corresponde, esta lección no te sirve en este momento. Presione 
-  ESC para terminar la lección. Puedes volver en otro momento cuando tengas 
+  Output: "Si no corresponde, esta lección no le sirve en este momento. Presione 
+  ESC para terminar la lección. Puede volver en otro momento cuando tenga 
   RStudio instalado y abierto."
   
 - Class: text
-  Output: "Vamos a enfocarnos en las ventanillas que se ve in la imagen. Deben 
-  reproducir las ventanillas verdaderas que se ve en el programa. Puede que haya 
-  una diferencia ligera. Puede que veas tres ventanillas en el programa mientras 
-  que hay cuatro en la imagen."
+  Output: "Vamos a enfocarnos en las ventanillas que se ven en la imagen. Deben 
+  reproducir las ventanillas verdaderas que ve en el programa, aunque puede que haya 
+  una diferencia ligera (puede que vea tres ventanillas en el programa mientras 
+  que hay cuatro en la imagen)."
   
 - Class: text
-  Output: "Para que veas algo más parecido, si solo tienes tres ventanillas en 
-  el programa, hagas click en el ícono arriba a la iquierda de una cajita blanca
-  con un plus verde. Escoja la primera opción para crear un nuevo archivo tipo 
-  R Script. Nota se podría realizar lo mismo por teclear CTRL + SHIFT + N."
+  Output: "Para que vea algo más parecido, si solo tiene tres ventanillas en 
+  el programa, haga click en el icono arriba a la iquierda de una cajita blanca
+  con un signo más verde. Escoja la primera opción para crear un nuevo archivo tipo 
+  R Script. Note que se podría realizar lo mismo tecleando CTRL + SHIFT + N."
   
 - Class: text
-  Output: "Otra opción aún sería con menu File > New File > R Script. 
-  Personalmente, no suelo usar el menu, el programa manejo principalmente por 
+  Output: "Otra opción más sería con menu File > New File > R Script. 
+  Personalmente, no suelo usar el menú, ya que manejo el programa principalmente por 
   teclado y ratón."
   
 - Class: mult_question
-  Output: "Bueno, empezamos donde hayas estado trabajando hasta aquí, en la 
-  consola. Como se llama este espacio en inglés?"
+  Output: "Bueno, empecemos por donde ha estado trabajando hasta aquí, en la 
+  consola. ¿Cómo se llama este espacio en inglés?"
   AnswerChoices: "Files; Console; Untitled1; Environment"
   CorrectAnswer: Console
   AnswerTests: omnitest(correctVal='Console')
-  Hint: "La consola es la ventanilla por abajo, a la izquierda. El nombre en 
+  Hint: "La consola es la ventanilla de abajo a la izquierda. El nombre en 
   inglés es muy semejante al español."
 
 - Class: mult_question
-  Output: "A la derecha de la consola varias ventanillas comparten un espacio. 
-  ¿Cómo se llama la ventanilla donde la imagen del interfaz de RStudio surgió?"
+  Output: "A la derecha de la consola hay varias ventanillas que comparten un espacio. 
+  ¿Cómo se llama la ventanilla donde surgió la imagen del interfaz de RStudio?"
   AnswerChoices: "Files; Console; Environment; Plots"
   CorrectAnswer: Plots
   AnswerTests: omnitest(correctVal='Plots')
-  Hint: "¿No lo acertaste? No te preocupes, escoja Plots y pulse Intro para 
+  Hint: "¿No lo acertaste? No se preocupe, escoja Plots y pulse Intro para 
   continuar."
   
 - Class: text
-  Output: "Antes de adelantarnos, nota que en la barra de la ventanilla de Plots 
-  hay botones para Zoom y Export. Pulse cada uno en turno, pueda que luego te 
-  los sirvan."
+  Output: "Antes de adelantarnos, note que en la barra de la ventanilla de Plots 
+  hay botones para Zoom y Export. Pulse cada uno por turno, puede que luego le
+  sirvan."
   
 - Class: text
-  Output: "Hay cuatros ventanillas más con Plots. Desde la derecha entonces, 
-  primero hay Viewer. Olvídete de ella, no alcanzarás a esas alturas durante 
-  este curso.  Luego hay HELP donde se encuentra ayuda en las funciones, 
-  argumentos y paquetes. Meta el cursor en la cajita blanco de la barra de la 
-  ventanilla HELP y empece a teclear algo. Verás una lista de funciones para que 
-  se pueda buscar información y guianza en el uso."
+  Output: "Hay cuatro ventanillas más junto a la de Plots. Desde la derecha, 
+  primero aparece Viewer. Olvídese de ella, no alcanzará a usarla durante 
+  este curso. Luego aparece HELP, donde se encuentra la ayuda de las funciones, 
+  argumentos y paquetes. Coloque el cursor en la cajita blanca de la barra de la 
+  ventanilla HELP y empiece a teclear algo. Verá una lista de funciones sobre las que 
+  se puede buscar información y guía acerca de cómo usarlas."
 
 - Class: cmd_question
-  Output: "Ya conocieras al sistema de HELP en la lección anterior, ¿verdad?
-  A ver, si quieres lanzar el sistema de ayuda en el uso de la función c por
-  ejemplo, ¿qué escribas en la consola?"
+  Output: "Ya conoce el sistema de HELP de la lección anterior, ¿verdad?
+  A ver, si quiere lanzar el sistema de ayuda en el uso de la función c por
+  ejemplo, ¿qué escribiría en la consola?"
   CorrectAnswer: ?c
   AnswerTests: omnitest(correctExpr='?c')
   Hint: "Para cualquier paquete o función, se teclea el símbolo de interrogación
   más el nombre de la función, sin paréntesis. En este caso escriba '?c' y pulse
-  Intro. ¿Ya te acuerdas?"
+  Intro. ¿Ya se acuerda?"
 
 - Class: figure
-  Output: "Volvemos a nuestro próposito pues. A la izquierda de HELP se 
-  encuentra PACKAGES (paquetes). Al hacer click en ella, se ve la lista de 
-  paquetes instalados en tu sistema. Los que están activos tengan un tick a la 
-  izquierda, como se ve en la imagen que haya aparecido hace un segundo en la 
-  ventanilla PLOTS. Tu lista no sea igual, se espera que tuvieras menos paquetes 
-  por ejemplo."
+  Output: "Volvamos a nuestro próposito pues. A la izquierda de HELP se 
+  encuentra PACKAGES (paquetes). Al hacer click en la pestaña, se ve la lista de 
+  paquetes instalados en su sistema. Los que están activos tendrán un tick a la 
+  izquierda, como se ve en la imagen que ha aparecido hace un segundo en la 
+  ventanilla PLOTS. Es probable que su lista no sea igual, seguramente tenga menos 
+  paquetes instalados, por ejemplo."
   Figure: fig2.R
   FigureType: new
 
 - Class: text
-  Output: "Saltandonos la ventanilla PLOTS, que ya conoces, más a la izquierda 
-  aún está FILES. Esta es un explorador y lanzador útil de archivos. Lo útil 
-  que sea, ten claro que el único tipo de archivo que no lanza bien son archivos
-  de datos. Pero imagenes, y archivos de código si se puede."
+  Output: "Saltándonos la ventanilla PLOTS, que ya conoce, más a la izquierda 
+  está FILES. Esta ventanilla es un explorador y lanzador útil de archivos. A pesar de
+  lo útil que es, tenga claro que el único tipo de archivo que no lanza bien son archivos
+  de datos. Pero sí trabaja bien con imágenes y archivos de código."
   
 - Class: text
   Output: "El siguiente paso es importantísimo. Vamos a crear otro archivo de 
-  código, o guión, que te va a servir como un álbum de recortes para código 
-  éxitoso y notas sobre ello. Con el menu FILE, o el botón abajo de ello, elige
+  código, o guión, que le va a servir como un álbum de recortes para almacenar código 
+  éxitoso y notas sobre ello. Con el menu FILE, o el botón que hay justo debajo, elija
   la segunda opción 'R Markdown'."
   
 - Class: figure
-  Output: "Haya aparecido una ventanilla pidiéndote unos detalles igual a ella 
-  que haya acabdo de aparecer como imagen en la ventanilla PLOTS. Pulse Zoom si
-  no lo ves bien. En su ventanilla real, acepta las opciones por defecto, pero 
-  asegure que lleva tu nombre y denomine bien el archivo donde dice 'Untitled'. 
-  Pulse OK y el archivo aparecere en la parte arriba izquierda"
+  Output: "Ha aparecido una ventanilla pidiéndole unos detalles igual a la 
+  que acaba de aparecer como imagen en la ventanilla PLOTS. Pulse Zoom si
+  no lo ve bien. En su ventanilla real, acepte las opciones por defecto, pero 
+  asegure que lleva su nombre y denomine bien el archivo donde dice 'Untitled'. 
+  Pulse OK y el archivo aparecerá en la parte de arriba a la izquierda."
   Figure: fig3.R
   FigureType: new
   
 - Class: text
-  Output: "Guardalo en tu carpeta trabajadora para este curso. Una vez guardado, 
-  pulse el boton Knit HTML para ver lo que pase." 
+  Output: "Guárdalo en tu carpeta de trabajo para este curso. Una vez guardado, 
+  pulse el boton Knit HTML para ver lo que pasa." 
   
 - Class: mult_question
-  Output: "¡Super chevere! 'Knit' significa tejer, y acabaras de tejer una
-  mezcla de codigo para R más texto simple hasta un archivo de HTML. Este se 
+  Output: "¡Súper chévere! 'Knit' significa tejer, y acabas de tejer una
+  mezcla de código para R desde texto simple hasta un archivo de HTML. Esto se 
   denomina programación alfabetizada, o literate programming en inglés.  
   ¡Imagínate la envidia que vas a crear en las fiestas con esto! A propósito, 
-  ¿sabes que significa la sigla HTML?"
+  ¿sabe que significa la sigla HTML?"
   AnswerChoices: "HyperText Markup Language; ¿Hola, Te Molan Langostinos?; Hay Tierra Muy Lindo"     
   CorrectAnswer: HyperText Markup Language
   AnswerTests: omnitest(correctVal='HyperText Markup Language')
   Hint: "¡Espero que eso fuera por falla en teclear!"
   
 - Class: figure
-  Output: "No vas a desarrollar codigo en este archivo, sino guarda código útil
-  y comentarios para un uso futuro. Mejor que conozcas al formato ahora mismo 
-  para que no te asuste luego. Las pocas reglas importantes hayan aparecido en 
+  Output: "No va a desarrollar código en este archivo, sino a guardar código útil
+  y comentarios para un uso futuro. Mejor que conozca el formato ahora mismo 
+  para que no le asuste luego. Unas pocas reglas importantes han aparecido en 
   un imagen a la derecha."
   Figure: fig4.R
   FigureType: new
   
 - Class: cmd_question
-  Output: "Bueno, dos cositas mas antes de despedirnos de esta clase. En la 
-  parte arriba, derecha, hay dos ventanillas mas denominados ENVIRONMENT y 
-  HISTORY. Quieren decir entorno virtual y historia de comandos realizados, 
-  respetivamente. El entorno te muestra los objetos que el programa tiene activo
-  en la memoria, o, en terminos técnicos, el entorno. Asegurate que la 
-  ventanilla ENVIRONMENT esta por delante de HISTORIA por hacer click en el 
-  nombre. Luego vas a crear un objeto 'elProfe' y asignarlo *mí* nombre. Ahora, 
+  Output: "Bueno, dos cositas más antes de despedirnos de esta clase. En la 
+  parte de arriba a la derecha, hay dos ventanillas más denominadas ENVIRONMENT y 
+  HISTORY. Quieren decir entorno virtual e historia de comandos realizados, 
+  respectivamente. El entorno virtual muestra los objetos que el programa tiene activos
+  en la memoria, o, en términos técnicos, en el entorno. Asegúrese de que la 
+  ventanilla ENVIRONMENT está por delante de HISTORY haciendo click en el 
+  nombre. Luego va a crear un objeto llamado 'elProfe' y a asignarle *mi* nombre. Ahora, 
   por favor."
   CorrectAnswer: miNombre <- "David Duncan"
   AnswerTests: omnitest(correctExpr='elProfe <- "David Duncan"')
@@ -157,76 +157,76 @@
 
 - Class: cmd_question
   Output: "Ahora se ve este objeto en la ventanilla ENVIRONMENT, cierto? 
-  Cualquier objeto en el entorno se puede imprimir a la consola tecleando el 
-  nombre no mas. En la consola pues, escriba elProfe para ver el contenido de 
-  tu objeto."
+  Cualquier objeto en el entorno se puede imprimir en la consola tecleando el 
+  nombre no más. En la consola pues, escriba elProfe para ver el contenido de 
+  su objeto."
   CorrectAnswer: elProfe
   AnswerTests: omnitest(correctExpr="elProfe")
   Hint: "Aunque no importa lo que hubieras asignado al objeto elProfe, hay que 
-  teclear 'elProfe' y pulsar Intro para adelantar."
+  teclear 'elProfe' y pulsar Intro para poder continuar."
   
 - Class: cmd_question
-  Output: "Tambien, ya hubieras visto que se puede imprimir una lista de los 
-  objetos en el entorno a la consola tecleando ls(). Pruebalo!"
+  Output: "También, ya habrá visto que se puede imprimir una lista de los 
+  objetos que hay en el entorno a la consola tecleando ls(). ¡Pruébalo!"
   CorrectAnswer: ls()
   AnswerTests: omnitest(correctExpr='ls()')
   Hint: "Escriba ls() y pulse Intro."
   
 - Class: text
-  Output: "Por ultimo, imagínate que hayas escrito un renglon de codigo que 
-  salio bonito, y lo quieres guardar para el futuro. Haz click en el tabulador 
-  HISTORY y escoge un renglón que te guste. Luego, en la barra de esa 
-  ventanilla, pulse 'To Source' y nota que el renglón ahora aparece en tu 
-  documento de código a la izquerda, parte arriba. Convéncete que funciona."  
+  Output: "Por último, imagínese que ha escrito un renglón de código que 
+  salió bonito, y lo quiere guardar para el futuro. Haga click en el tabulador 
+  HISTORY y escoja un renglón que le guste. Luego, en la barra de esa 
+  ventanilla, pulse 'To Source' y note que el renglón ahora aparece en su 
+  documento de código a la izquerda, parte de arriba. Convénzase de que funciona."  
   
 - Class: text
-  Output: "Sin embargo, si solo quieres realizar el renglón de nuevo se puede 
+  Output: "Sin embargo, si solo quiere ejecutar el renglón de nuevo, se puede 
   pulsar 'To Console', para que aparezca en la consola, listo para pulsar Intro.  
-  Claro, si quieres repetir un renglón de hace poco tiempo, mejor uses la flecha
-  arriba para convocar el comando nuevamente."
+  Aunque claro, si lo que quiere es repetir un renglón que usó hace poco tiempo, 
+  mejor use la flecha hacia arriba para convocar el comando nuevamente."
 
 - Class: mult_question
-  Output: "Creo que estás listo para la prueba. ¿Cuál ventanilla te revela los 
-  paquetes que su instancia de R tiene instalada?"
+  Output: "Creo que está listo para la prueba. ¿Cuál es la ventanilla que revela los 
+  paquetes que tiene instalados en R?"
   AnswerChoices: "Packages; Entorno; Viewer; Console"
   CorrectAnswer: Packages
   AnswerTests: omnitest(correctVal='Packages')
-  Hint: "Te acuerdas de como se dice paquetes en inglés?"
+  Hint: "¿Se acuerda de cómo se dice paquetes en inglés?"
   
 - Class: mult_question
-  Output: "Cuando abrimos un nuevo archivo tipo R Markdown, ¿cuál opción debemos 
-  escoger para el formato de producción?"
+  Output: "Cuando abrimos un nuevo archivo tipo R Markdown, ¿qué opción de formato
+  debemos escoger?"
   AnswerChoices: "HTML; PDF; Word; Lápida"
   CorrectAnswer: HTML
   AnswerTests: omnitest(correctVal='HTML')
-  Hint: "En efecto, todos opciones menos Lápida son validas, pero HTML es el 
+  Hint: "En efecto, todas las opciones menos Lápida son validas, pero HTML es la 
   mejor opción para nuestro próposito."
   
 - Class: mult_question 
-  Output: "Para guardar un renglón de código realizado más temprano en tu álbum 
-  de recortes en formato R Markdown, ¿que harías?"
-  AnswerChoices: "Buscarlo en HISTORY y pulsar To Source; Convocarlo nuevamente con la flecha arriba y pulsar Intro; Desplazar el curso hacia arriba en la consola, luego copiar y pegar"
+  Output: "Para guardar un renglón de código que utilizó hace rato en su álbum 
+  de recortes en formato R Markdown, ¿que haría?"
+  AnswerChoices: "Buscarlo en HISTORY y pulsar To Source; Convocarlo nuevamente con la flecha arriba y pulsar Intro; Desplazar el cursor hacia arriba en la consola, luego copiar y pegar"
   CorrectAnswer: Buscarlo en HISTORY y pulsar To Source
   AnswerTests: omnitest(correctVal='Buscarlo en HISTORY y pulsar To Source')
   Hint: "La respuesta que quiero ver es 'Buscarlo en HISTORY y pulsar To Source'.
   Se puede buscar el código en la consola o history y luego copiar y pegar, pero
-  mejor que aprendes esta opción."
+  es mejor que aprenda esta opción."
   
 - Class: mult_question
-  Output: "Veradero o Falso, ¿la ventanilla FILES es un buen lugar para el 
+  Output: "Verdadero o Falso, ¿la ventanilla FILES es un buen lugar para el 
   lanzamiento de archivos de tablas de datos?"
   AnswerChoices: Verdadero; Falso
   CorrectAnswer: Falso
   AnswerTests: omnitest(correctVal="Falso")
-  Hint: "No, es falso. Solo usa esa ventanilla para lanzar imagenes (gráficas, 
-  etc) o archivos de código. Aunque si lanzará muchos archivos de datos, no es 
-  recomendable hacerlo, y tampoco se puede trabajar con ellos de ese modo."
+  Hint: "No, es falso. Solo se usa esa ventanilla para lanzar imágenes (gráficas, 
+  etc.) o archivos de código. Aunque lanzase muchos archivos de datos, no es 
+  recomendable hacerlo a través de esta ventanilla, y tampoco se puede trabajar con ellos de ese modo."
   
 - Class: text
-  Output: "Pues, muy bien, puesto que estés leyendo estas palabras habrías 
+  Output: "Pues, muy bien, puesto que está leyendo estas palabras es que ha
   aguantado esta lección tan seca. Fue necesario, opino yo, aunque quizás no me
-  vayas a creer hasta que pasen unas semanas más."
+  va a creer hasta que pasen unas semanas más."
   
 - Class: text
-  Output: "Cuando te olvidas de la lección, te la puedes revisitar.  Hasta ese
+  Output: "Cuando se olvide de la lección, la puede revisitar. Hasta ese
   momento, espero que tengas una linda semana."
