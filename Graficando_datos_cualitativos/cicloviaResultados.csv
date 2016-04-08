@@ -1,0 +1,332 @@
+Fecha,Hora,Lugar,Observador,Barrio,Decada,Sexo,Conocimiento,ComoConoce,ConoceZP,AsistCiclovia,ComoParticip,ConQuien,CirculaSinCoche,FrecSinCoche,Acuerdo,FrecFuturo,Horario
+17/01/16,11h00-13h09,Parque Bolivar,E,San Pedro,80s,Mujer,Si,Boca a boca,No,No,NA,NA,A pie,NA,Total Acuerdo,NA,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Zamora Huayco,60s,Hombre,Si,Encuentro directo,Si,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+42386,NA,Parque Bolivar,G,Ramon Pinto,90s,Hombre,No,NA,No,No,A pie,Amigos,A pie,Cada día,Acuerdo,Mensual,Tarde
+42386,NA,Parque Bolivar,G,Centro,90s,Mujer,No,NA,No,No,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Celi Roman,60s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,Juan de Salinas,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+17/01/2016,10h00-12h00,Parque Bolivar,D,Pedestal,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Zona del hospital,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Cuarto centenario,80s,Hombre,No,NA,Si,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42386,NA,Parque Bolivar,G,Centro,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+42386,NA,Parque Bolivar,G,Mercadillo,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,Mensual,Tarde
+42386,NA,Parque Bolivar,G,San Jose,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,Nunca,Mañana
+42386,NA,Parque Bolivar,G,Ibarra av Universitaria,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+42386,NA,Parque Bolivar,G,18 de noviembre,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,San Sebastián,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,San Sebastián,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42386,NA,Parque Bolivar,G,Centro,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Desacuerdo,Nunca,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Centro,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Julio Ordoñez,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Mañana
+42384,15h00 -17h00,Loja,J,Motupe,70s,Hombre,Si,Encuentro directo,Si,No,NA,NA,A pie,NA,Total desacuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Colinas Lojanas,90s,Mujer,Si,Boca a boca,No,No,NA,NA,A pie,NA,Total Acuerdo,Mensual,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Yahuarcuna,50s,Hombre,No,Municipio,Si,No,NA,NA,Bus,Cada día,Total Acuerdo,Nunca,Mañana
+42384,14:30h00-18:30h00,Supermaxi,B,Pradera,90s,Mujer,No,Municipio,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+42386,15h00 -17h00,Loja,H,Sauces,90s,Hombre,Si,Municipio,No,A veces,A pie,Sólo,A pie,Cada día,Acuerdo,NA,Mañana
+42019,15h00 -17h00,Loja,I,La Banda,90s,Mujer,Si,Municipio,No,A veces,Bicicleta,Sólo,Bicicleta,Cada día,Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,Independencia,80s,Mujer,Si,Municipio,Si,A veces,Bicicleta,Amigos,A pie,NA,Total Acuerdo,NA,Noche
+42387,15h00 -17h00,Loja,H,Las Pitas,90s,Hombre,Si,Municipio,No,A veces,Bicicleta,Sólo,A pie,NA,Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,70s,Hombre,Si,Municipio,No,A veces,A pie,Sólo,A pie,De vez en cuando,Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,K,Urb. Caminos del Sol,80s,Hombre,Si,Municipio,Si,A veces,Bicicleta,Amigos,Bicicleta,De vez en cuando,Total Acuerdo,De vez en cuando,Noche
+42387,15h00 -17h00,Loja,H,La Paz,90s,Hombre,Si,Municipio,No,A veces,Bicicleta,Familia,Bicicleta,Mensual,Total Acuerdo,Mensual,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Juan de Salinas,60s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,Nunca,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Julio Ordoñez,60s,Hombre,Si,Municipio,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,60s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Cada día,Acuerdo,Mensual,Mañana
+42386,NA,Parque Bolivar,G,Ramon Pinto,80s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Cada día,Desacuerdo,Nunca,Noche
+NA,NA,NA,F,Centro,80s,Hombre,Si,Municipio,Si,No,NA,NA,A pie,Cada día,Acuerdo,Mensual,Tarde
+42386,15h00 -17h00,Loja,H,La Paz,90s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+42387,15h00 -17h00,Loja,H,La Banda,90s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Centro,90s,Hombre,Si,Municipio,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Las Peñas,90s,Mujer,Si,Municipio,Si,No,NA,NA,Bus,Cada día,Acuerdo,De vez en cuando,Mañana
+42019,15h00 -17h00,Loja,I,Las Pitas,90s,Mujer,Si,Municipio,No,No,NA,NA,A pie,Cada día,Desacuerdo,NA,Mañana
+17/01/16,11h00-13h15,Parque Bolivar,E,Cuarto centenario,60s,Hombre,Si,Municipio,No,No,A pie,Familia,A pie,NA,Desacuerdo,Mensual,Tarde
+42386,12h00-13h00,Punzara,A,Isidro Ayora,90s,Mujer,Si,Municipio,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Mañana
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Hombre,Si,Municipio,No,No,NA,NA,A pie,NA,Ni uno ni otro,Mensual,Mañana
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Hombre,Si,Municipio,No,No,NA,NA,A pie,Mensual,Ni uno ni otro,Mensual,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,San Cayetano,40s,Hombre,Si,Municipio,Si,Si,A pie,Sólo,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42384,14h00-17h28,San Sebastian,C,San Pedro,80s,Mujer,Si,Municipio,Si,Si,Bicicleta,Familia,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42386,NA,Parque Bolivar,G,San Sebastián,90s,NA,Si,Municipio,No,Si,A pie,Sólo,A pie,Cada día,Desacuerdo,De vez en cuando,Tarde
+42019,15h00 -17h00,Loja,I,Sauces,90s,Mujer,Si,Municipio,No,Si,Bicicleta,Familia,Bicicleta,Cada día,Total Acuerdo,NA,Mañana
+42384,14h00-17h17,San Sebastian,C,Tierras Coloradas,90s,Mujer,Si,Municipio,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Noche
+42386,15h00 -17h00,Loja,H,Sauces,80s,Hombre,Si,Municipio,No,Si,Bicicleta,Sólo,Bicicleta,NA,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,Sauces,90s,Hombre,Si,Municipio,No,Si,Bicicleta,Sólo,Bicicleta,NA,Acuerdo,NA,Mañana
+17//2016,11H00-13H00,Parque Bolivar,E,Daniel Alvarez,80s,Hombre,Si,Municipio,Si,NA,NA,NA,A pie,NA,Total desacuerdo,De vez en cuando,Noche
+42384,17:45h00-18:30h00,Tebaida,B,La Tebaida,90s,Mujer,No,Boca a boca,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42387,18:00h00-18:30h00,Tebaida,B,La Banda,90s,Hombre,Si,Otro,Si,No,NA,NA,A pie,NA,Total Acuerdo,Mensual,Tarde
+42384,15:00h00-18:30h00,Parque Lineal,B,Daniel Alvarez,90s,Mujer,No,Otro,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Tarde
+42384,17:00h00-18:30h00,"Cancha ""La Tebaida""",B,Época,90s,Hombre,No,Otro,Si,Si,Bicicleta,Amigos,Bicicleta y a pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Zamora Huayco,70s,Mujer,No,Participante,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42386,12h00-13h00,Punzara,A,Chuquiribamba,80s,Hombre,No,Participante,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,NA,Mañana
+42384,15:30h00-18:30h00,Parque Lineal,B,Pradera,90s,Hombre,No,Participante,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42387,18:00h00-18:30h00,Parque de los Enamorados,B,Molinos,90s,Hombre,No,Participante,Si,No,NA,NA,A pie,Cada día,Desacuerdo,Nunca,NA
+42386,12h00-13h00,Punzara,A,Shushuhuaico,80s,Mujer,No,Participante,No,No,NA,NA,Bicicleta,De vez en cuando,Total Acuerdo,De vez en cuando,Mañana
+42384,14h00-17h21,San Sebastian,C,La Banda,60s,Mujer,Si,Participante,Si,A veces,A pie,Amigos,A pie,Cada día,Acuerdo,Mensual,Noche
+17/01/16,11h00-13h18,Parque Bolivar,E,El electrisista,70s,Mujer,Si,Participante,No,A veces,Bicicleta,Familia,Bicicleta,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,18 y colon,80s,Hombre,Si,Participante,No,A veces,Bicicleta,Familia,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Las Peñas,80s,Mujer,Si,Participante,Si,A veces,Bicicleta,Familia,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,Juan de Salinas,90s,Hombre,Si,Participante,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,Las Pitas,80s,Hombre,Si,Participante,No,A veces,Bicicleta,Amigos,Bicicleta,De vez en cuando,Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Pradera,90s,Hombre,Si,Participante,No,A veces,Bicicleta,Amigos,Bicicleta,De vez en cuando,Ni uno ni otro,NA,Mañana
+42384,17:00h00-18:30h00,Universidad Nacional de Loja,B,San Sebastián,80s,Hombre,Si,Participante,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,12h00-13h00,Punzara,A,La Tebaida,90s,Mujer,Si,Participante,Si,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42387,18:00h00-18:30h00,Tebaida,B,Las Palmas,90s,Mujer,Si,Participante,No,No,NA,NA,Bicicleta y a pie,Cada día,Acuerdo,De vez en cuando,Noche
+42386,12h00-13h00,Punzara,A,Tierras Coloradas,90s,Hombre,Si,Participante,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,NA,Noche
+17/01/2016,10h00-12h00,Parque Bolivar,D,Occidental,90s,Hombre,Si,Participante,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Noche
+42384,14h00-17h05,San Sebastian,C,Daniel Alvarez,90s,Hombre,Si,Participante,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,La Paz,90s,Hombre,Si,Participante,Si,Si,Bicicleta,Amigos,Bicicleta,NA,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Plateado Alto,70s,Hombre,Si,Boca a boca,No,No,NA,NA,A pie,Cada día,Acuerdo,Nunca,Mañana
+42384,18:00h00-18:30h00,Parque de los Enamorados,B,Daniel Alvarez,90s,Hombre,No,Prensa,No,No,Bicicleta,Amigos,Bicicleta,Mensual,Total Acuerdo,NA,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Peñon del Oeste,90s,Hombre,No,Prensa,Si,No,NA,NA,A pie,Cada día,Ni uno ni otro,Nunca,Mañana
+42384,14:30h00-18:30h00,Supermaxi,B,San Sebastián,90s,Hombre,No,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Noche
+42384,14:30h00-18:30h00,Supermaxi,B,Argelia,90s,Mujer,No,Prensa,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,Mensual,Mañana
+42385,17:50h00-18:30h00,Tebaida,B,La Tebaida,90s,Hombre,No,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Noche
+42384,14:30h00-18:30h00,Supermaxi,B,La Banda,90s,Hombre,No,Prensa,No,No,NA,NA,A pie y Vehículo,Cada día,Acuerdo,De vez en cuando,NA
+42384,15:00h00-18:30h00,Parque Lineal,B,Estancia del Río,90s,Hombre,No,Prensa,No,No,NA,NA,Otro Vehículo,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42384,17:15h00-18:30h00,Universidad Nacional de Loja,B,Parque Real,90s,Hombre,No,Prensa,Si,No,NA,NA,Otro Vehículo,NA,Total Acuerdo,NA,Mañana
+42384,14h00-17h12,San Sebastian,C,La Banda,60s,Mujer,Si,Prensa,Si,A veces,A pie,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+NA,NA,NA,F,Centro,70s,Mujer,Si,Prensa,Si,A veces,A pie,Familia,A pie,Cada día,Total Acuerdo,NA,Noche
+17/01/16,11h00-13h08,Parque Bolivar,E,Clodoveo,80s,Hombre,Si,Prensa,No,A veces,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42386,12h00-13h00,Punzara,A,Carigan,80s,Mujer,Si,Prensa,No,A veces,A pie,Sólo,A pie,Cada día,Total Acuerdo,De vez en cuando,Tarde
+42384,14h00-17h00,San Sebastian,C,Las Pitas,80s,Mujer,Si,Prensa,Si,A veces,A pie,Familia,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,San Vicente,90s,Hombre,Si,Prensa,No,A veces,Patineta,Sólo,Bicicleta y a pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+42386,NA,Parque Bolivar,G,Época,90s,Hombre,Si,Prensa,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,14h00-17h02,San Sebastian,C,Zamora Huayco,90s,Hombre,Si,Prensa,Si,A veces,A pie,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Noche
+42384,14h00-17h27,San Sebastian,C,Daniel Alvarez,90s,Hombre,Si,Prensa,Si,A veces,A pie,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+17/2016,11h00-13h02,Parque Bolivar,E,Esteban Godoy,90s,Hombre,Si,Prensa,Si,A veces,A pie,Familia,A pie,NA,Total desacuerdo,De vez en cuando,Tarde
+42387,15h00 -17h00,Loja,H,Sauces,90s,Hombre,Si,Prensa,No,A veces,Bicicleta,Familia,Bicicleta,NA,Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,NA,90s,Hombre,Si,Prensa,No,A veces,Bicicleta,Sólo,Bicicleta y a pie,Mensual,Total desacuerdo,De vez en cuando,Tarde
+NA,NA,NA,F,Centro,80s,Hombre,Si,Prensa,No,A veces,A pie,Sólo,A pie,NA,Total Acuerdo,De vez en cuando,Mañana
+42383,15h00 -17h00,Loja,I,La Paz,90s,Mujer,Si,Prensa,Si,A veces,Bicicleta,Sólo,Bicicleta,NA,Total Acuerdo,Mensual,Tarde
+42384,16:00h00-18:30h00,Parque Lineal,B,"Ciudadela ""El electricista""",60s,Mujer,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Carigan,80s,Hombre,Si,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42384,15h00 -17h00,Loja,J,Independencia,80s,Mujer,Si,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Nunca,Tarde
+42384,15h00 -17h00,Loja,J,Motupe,80s,Mujer,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Pucacocha,80s,Mujer,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+NA,NA,NA,F,Centro,80s,Mujer,Si,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42019,15h00 -17h00,Loja,I,Las Pitas,80s,Mujer,Si,Prensa,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+17/01/16,11h00-13h13,Parque Bolivar,E,Clodoveo,90s,Mujer,Si,Prensa,No,No,A pie,Sólo,A pie,Cada día,Desacuerdo,De vez en cuando,Tarde
+42386,12h00-13h00,Punzara,A,Clodoveo,90s,Hombre,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Las Peñas,90s,Hombre,Si,Prensa,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Malacatos,90s,Mujer,Si,Prensa,No,No,NA,NA,A pie,Cada día,Acuerdo,Nunca,Mañana
+NA,NA,NA,F,Centro,90s,Hombre,Si,Prensa,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+42384,16:00h00-18:30h00,Parque Lineal,B,San Pedro,90s,Hombre,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+42384,14:30h00-18:30h00,Supermaxi,B,Conzacola,90s,Hombre,Si,Prensa,Si,No,Bicicleta,Amigos,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,K,La Independencia,50s,Mujer,Si,Prensa,Si,No,NA,NA,A pie,NA,Total Acuerdo,Mensual,Tarde
+42384,15h00 -17h00,Loja,J,Sauces Norte,70s,Mujer,Si,Prensa,No,No,NA,NA,A pie,NA,Ni uno ni otro,Mensual,Tarde
+42386,12h00-13h00,Punzara,A,El electrisista,80s,Hombre,Si,Prensa,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,60s,Mujer,Si,Prensa,No,No,NA,NA,A pie,NA,Total Acuerdo,De vez en cuando,Tarde
+NA,NA,NA,F,Centro,70s,Mujer,Si,Prensa,No,No,NA,NA,A pie,NA,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,Motupe,90s,Mujer,Si,Prensa,No,No,NA,NA,NA,NA,Total Acuerdo,Mensual,Noche
+42386,12h00-13h00,Punzara,A,Carigan,80s,Hombre,Si,Prensa,No,Si,Bicicleta,Amigos,A pie,Cada día,Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Sauces,80s,Hombre,Si,Prensa,Si,Si,A pie,Sólo,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Los Chorrillos,80s,Hombre,Si,Prensa,Si,Si,A pie,Familia,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,17:30h00-18:30h00,Tebaida,B,Ciudadela Zamora,80s,Hombre,Si,Prensa,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Celi Roman,90s,Mujer,Si,Prensa,Si,Si,"A pie, Patines",Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,El Valle,90s,Mujer,Si,Prensa,Si,Si,Bicicleta,Familia,Bicicleta,Cada día,Total Acuerdo,NA,Noche
+17/01/16,11h00-13h25,Parque Bolivar,E,Centro,70s,Mujer,Si,Prensa,No,Si,Bicicleta,Amigos,A pie,NA,Acuerdo,Mensual,Tarde
+42387,15h00 -17h00,Loja,H,Sauces,80s,Hombre,Si,Prensa,No,Si,Bicicleta,Familia,Bicicleta,NA,Total Acuerdo,NA,Mañana
+42387,15h00 -17h00,Loja,H,La Paz,80s,Hombre,Si,Prensa,No,Si,Bicicleta,Sólo,Bicicleta,NA,Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,K,Las Pitas,90s,Hombre,Si,Prensa,No,NA,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,K,Sauces Norte,80s,Mujer,Si,Otro,No,NA,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+17/01/2016,10h00-12h00,Parque Bolivar,D,Lojana de Turismo,90s,Hombre,No,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15:30h00-18:30h00,Parque Lineal,B,Las Palmas,90s,Mujer,No,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42385,18:00h00-18:30h00,Tebaida,B,Pradera,90s,Hombre,No,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42384,15h00 -17h00,Loja,J,Independencia,00s,Hombre,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,14h00-17h19,San Sebastian,C,Rosales,70s,Mujer,Si,Redes Sociales,Si,A veces,A pie,Familia,A pie,Cada día,Acuerdo,NA,Tarde
+42386,NA,Parque Bolivar,G,San Jose,90s,Hombre,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Av Orillas del Zamora,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+42386,NA,Parque Bolivar,G,La Paz,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,Las Pitas,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Sauces Norte,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,El Valle,90s,Hombre,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42387,15h00 -17h00,Loja,H,Las Pitas,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,Bicicleta,Cada día,Acuerdo,NA,Noche
+NA,NA,NA,F,Centro,90s,Hombre,Si,Redes Sociales,Si,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Hombre,Si,Redes Sociales,No,A veces,A pie,Amigos,Bicicleta,Cada día,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Hombre,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,A pie,Cada día,Total Acuerdo,NA,Noche
+NA,NA,NA,F,Centro,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Mujer,Si,Redes Sociales,Si,A veces,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,NA,Noche
+42385,15:00h00-15:30h00,Parque de los Enamorados,B,Daniel Alvarez,90s,Hombre,Si,Redes Sociales,Si,A veces,Bicicleta,Sólo,A pie,Cada día,Total Acuerdo,Mensual,Noche
+42019,15h00 -17h00,Loja,I,Sauces,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,Bicicleta,Cada día,Acuerdo,Mensual,Tarde
+42384,14h00-17h08,San Sebastian,C,Argelia,90s,Mujer,Si,Redes Sociales,Si,A veces,A pie,Familia,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,14h00-17h06,San Sebastian,C,Rosales,90s,Mujer,Si,Redes Sociales,Si,A veces,A pie,Amigos,A pie,Cada día,Acuerdo,NA,Mañana
+42387,15h00 -17h00,Loja,H,La Paz,80s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Familia,A pie,NA,Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,A pie,NA,Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,Las Pitas,90s,Mujer,Si,Redes Sociales,No,A veces,Bicicleta,Familia,A pie,NA,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Hombre,Si,Redes Sociales,No,A veces,Bicicleta,Sólo,A pie,NA,Total Acuerdo,Mensual,Mañana
+42019,15h00 -17h00,Loja,I,La Paz,90s,Hombre,Si,Redes Sociales,Si,A veces,Bicicleta,Amigos,A pie,NA,Ni uno ni otro,Mensual,Mañana
+17/01/16,11h00-13h10,Parque Bolivar,E,Cdl. 8 de diciembre,90s,Mujer,Si,Redes Sociales,NA,A veces,Bicicleta,Familia,No Salgo,NA,Total Acuerdo,NA,Tarde
+17/01/16,11h00-13h11,Parque Bolivar,E,Cdl. 8 de diciembre,80s,Hombre,Si,Redes Sociales,No,No,A pie,Familia,A pie,Cada día,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Sauces Norte,80s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Acuerdo,Nunca,Tarde
+17/01/16,11h00-13h04,Parque Bolivar,E,El electrisista,90s,Hombre,Si,Redes Sociales,No,No,Otros,Sólo,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+42386,12h00-13h00,Punzara,A,El Valle,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Iv Centenario,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,NA,Parque Bolivar,G,San Sebastián,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Belen,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Carigan,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42386,NA,Parque Bolivar,G,Las Peñas,90s,Mujer,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+17/01/2016,10h00-12h00,Parque Bolivar,D,Cid. 8 de diciembre,90s,Hombre,Si,Redes Sociales,Si,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Celi Roman,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Las Pitas,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,Bus,Cada día,Total Acuerdo,NA,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,La Tebaida,90s,Mujer,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42384,14:30h00-18:30h00,Supermaxi,B,Conzacola,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,17:00h00-18:30h00,Universidad Nacional de Loja,B,Esteban Godoy,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,Otro Vehículo,Cada día,Total Acuerdo,Mensual,Mañana
+42383,15h00 -17h00,Loja,I,Las Pitas,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,K,Las Pitas,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+17/01/16,11h00-13h21,Parque Bolivar,E,Daniel Alvarez,NA,NA,Si,Redes Sociales,Si,No,NA,NA,A pie,Cada día,Total desacuerdo,Mensual,Tarde
+17/01/16,11h00-13h20,Parque Bolivar,E,Daniel Alvarez,90s,Mujer,Si,Redes Sociales,No,No,A pie,Familia,A pie,NA,Acuerdo,De vez en cuando,Tarde
+42386,12h00-13h00,Punzara,A,Argelia,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Mañana
+42384,14:30h00-18:30h00,Supermaxi,B,San Sebastián,80s,Mujer,Si,Redes Sociales,No,No,NA,NA,A pie,De vez en cuando,Total desacuerdo,Nunca,Mañana
+42384,16h00-17h00,Parque Bolivar,C,Centro,70s,Hombre,Si,Redes Sociales,Si,No,No,No,Bicicleta,NA,Total Acuerdo,Mensual,Tarde
+17/01/2016,10h00-12h00,Parque Bolivar,D,Juan de Salinas,90s,Hombre,Si,Redes Sociales,No,No,NA,NA,A pie,NA,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Mujer,Si,Redes Sociales,No,No,NA,NA,Bicicleta,NA,Total Acuerdo,NA,Mañana
+42019,15h00 -17h00,Loja,I,La Paz,90s,Mujer,Si,Redes Sociales,Si,No,NA,NA,A pie,NA,Total Acuerdo,De vez en cuando,Mañana
+42384,14h00-17h16,San Sebastian,C,Ciudad alegria,60s,Mujer,Si,Redes Sociales,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,De vez en cuando,Tarde
+42384,14h00-17h23,San Sebastian,C,Zamora Huayco,80s,Mujer,Si,Redes Sociales,Si,Si,Bicicleta,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+42386,12h00-13h00,Punzara,A,San Jose,90s,Mujer,Si,Redes Sociales,Si,Si,Bicicleta y a pie,Amigos,Bicicleta y a pie,Cada día,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,Sauces,90s,Hombre,Si,Redes Sociales,No,Si,Bicicleta,Sólo,Bicicleta,Cada día,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,Sauces,90s,Hombre,Si,Redes Sociales,No,Si,Bicicleta,Familia,Bicicleta,NA,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,La Banda,90s,Hombre,Si,Redes Sociales,No,Si,Bicicleta,Familia,Bicicleta,NA,Acuerdo,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,J,Motupe,90s,Mujer,Si,Redes Sociales,Si,Si,Bicicleta,Familia,Bicicleta,NA,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,K,La Independencia,90s,Hombre,Si,Redes Sociales,Si,Si,Bicicleta,Amigos,Bicicleta,NA,Total Acuerdo,NA,Tarde
+42386,15h00 -17h00,Loja,H,La Banda,90s,Mujer,Si,Redes Sociales,No,Si,Bicicleta,Sólo,Bicicleta,De vez en cuando,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,K,Motupe,80s,Hombre,Si,Redes Sociales,No,NA,NA,NA,A pie,Cada día,Ni uno ni otro,Mensual,Noche
+42019,15h00 -17h00,Loja,I,La Paz,90s,Mujer,Si,Redes Sociales,No,NA,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,K,El Valle,90s,Mujer,Si,Redes Sociales,No,NA,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42384,15h00 -17h00,Loja,K,Las Pitas,90s,Hombre,Si,Redes Sociales,No,NA,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+42384,15h00 -17h00,Loja,K,Motupe,80s,Hombre,Si,Redes Sociales,No,NA,NA,NA,A pie,NA,Desacuerdo,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,K,Sauces Norte,90s,Mujer,Si,Redes Sociales,Si,NA,NA,NA,Bicicleta,NA,Total Acuerdo,Mensual,Mañana
+42386,12h00-13h00,Punzara,A,Clodoveo,90s,Hombre,No,Otro,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Noche
+17/01/2016,10h00-12h00,Parque Bolivar,D,Las Palmas,60s,Mujer,No,Boca a boca,Si,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+17/01/2016,10h00-12h00,Parque Bolivar,D,Quito,60s,Hombre,Si,Boca a boca,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+42384,15h00 -17h00,Loja,K,La Banda,60s,Mujer,Si,Prensa,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,K,La Banda,60s,Hombre,Si,Prensa,Si,No,NA,NA,A pie,NA,Total Acuerdo,De vez en cuando,Mañana
+17/01/2016,10h00-12h00,Parque Bolivar,D,Las Peñas,90s,Hombre,Si,Encuentro directo,No,No,NA,NA,A pie,Cada día,Acuerdo,NA,Tarde
+17/01/16,11h00-13h14,Parque Bolivar,E,San Sebastián,90s,Mujer,Si,Encuentro directo,No,No,No,Sólo,A pie,Cada día,Total desacuerdo,Nunca,Tarde
+42384,15h00 -17h00,Loja,J,La Banda,70s,Mujer,Si,Encuentro directo,No,No,NA,NA,A pie,NA,Total Acuerdo,NA,Tarde
+42386,12h00-13h00,Punzara,A,San Rafael,90s,Hombre,No,NA,Si,No,A pie,Sólo,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,San Vicente,90s,Hombre,No,NA,Si,No,A pie,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,90s,Mujer,No,NA,Si,No,A pie,Amigos,A pie,Cada día,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Zamora,90s,Mujer,No,NA,Si,No,Bicicleta,Familia,Bicicleta,De vez en cuando,Total Acuerdo,NA,Mañana
+17/2016,11h00-13h01,Parque Bolivar,E,Daniel Alvarez,00s,Hombre,No,NA,No,No,NA,Amigos,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42384,14h00-17h22,San Sebastian,C,Pedestal,50s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42384,14h00-17h25,San Sebastian,C,Rosales,50s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,Mensual,Noche
+42384,14h00-17h29,San Sebastian,C,Yahuarcuna,50s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+17/01/16,11h00-13h07,Parque Bolivar,E,Daniel Alvarez,70s,Hombre,No,NA,Si,No,A pie,Familia,A pie,Cada día,Desacuerdo,Mensual,Tarde
+42383,15h00 -17h00,Loja,I,La Banda,70s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+42384,14h00-17h04,San Sebastian,C,Esteban Godoy,70s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42384,14h00-17h26,San Sebastian,C,La Tebaida,70s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Acuerdo,NA,Noche
+42384,14h00-17h18,San Sebastian,C,Daniel Alvarez,70s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Desacuerdo,NA,Noche
+42386,15h00 -17h00,Loja,H,La Paz,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,NA,Mañana
+42386,15h00 -17h00,Loja,H,La Paz,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Tarde
+42387,15h00 -17h00,Loja,H,La Banda,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42386,15h00 -17h00,Loja,H,Las Pitas,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,J,Amable Maria,80s,Mujer,No,NA,NA,No,NA,NA,A pie,Cada día,Total desacuerdo,NA,NA
+42384,15:00h00-18:30h00,Parque Lineal,B,"Ciudadela ""El electricista""",80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42383,15h00 -17h00,Loja,I,La Paz,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42383,15h00 -17h00,Loja,I,Las Pitas,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
+42383,15h00 -17h00,Loja,I,Sauces Norte,80s,Hombre,No,NA,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42384,14h00-17h13,San Sebastian,C,La Banda,80s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Total desacuerdo,Mensual,Noche
+42384,14h00-17h09,San Sebastian,C,Yahuarcuna,80s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+17/01/16,11h00-13h16,Parque Bolivar,E,San Vicente,90s,Mujer,No,NA,No,No,Otros,NA,A pie,Cada día,Desacuerdo,Nunca,Mañana
+17/01/16,11h00-13h17,Parque Bolivar,E,Daniel Alvarez,90s,Mujer,No,NA,Si,No,Otros,NA,A pie,Cada día,Desacuerdo,Nunca,Mañana
+17/2016,11h00-13h03,Parque Bolivar,E,El electrisista,90s,Mujer,No,NA,No,No,A pie,Amigos,A pie,Cada día,Total desacuerdo,Mensual,Mañana
+42386,12h00-13h00,Punzara,A,Sauces,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,NA,Noche
+42386,12h00-13h00,Punzara,A,Estadio R.C,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,NA,Mañana
+42386,12h00-13h00,Punzara,A,Cuarto centenario,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Noche
+42387,15h00 -17h00,Loja,H,La Paz,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Hombre,No,NA,No,No,NA,NA,Moto,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,Nunca,Noche
+42384,17:40h00-18:30h00,Tebaida,B,Los Arupos,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+42384,16:00h00-18:30h00,"Cancha ""La Tebaida""",B,Clodoveo,90s,Hombre,No,NA,No,No,NA,NA,Bicicleta y a pie,Cada día,Total Acuerdo,NA,Tarde
+42384,14:30h00-18:30h00,Supermaxi,B,San Cayetano,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42383,15h00 -17h00,Loja,I,Las Pitas,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,Mensual,Mañana
+42384,14h00-17h15,San Sebastian,C,Argelia,90s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Desacuerdo,Mensual,Mañana
+42384,14h00-17h20,San Sebastian,C,Yahuarcuna,90s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Desacuerdo,Mensual,Mañana
+42384,14h00-17h07,San Sebastian,C,La Tebaida,90s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,Mensual,Tarde
+42384,14h00-17h03,San Sebastian,C,La Banda,90s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Acuerdo,Mensual,Tarde
+42384,14h00-17h01,San Sebastian,C,San Pedro,90s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Acuerdo,Mensual,Mañana
+42384,14h00-17h10,San Sebastian,C,Daniel Alvarez,90s,Hombre,No,NA,No,No,No,No,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+42384,14h00-17h11,San Sebastian,C,Zamora Huayco,90s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Desacuerdo,NA,Tarde
+42384,14h00-17h14,San Sebastian,C,San Pedro,90s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Ni uno ni otro,NA,Mañana
+42384,14h00-17h24,San Sebastian,C,Argelia,90s,Mujer,No,NA,No,No,No,No,A pie,Cada día,Total desacuerdo,Mensual,Mañana
+17//2017,11h00-13h00,Parque Bolivar,E,San Sebastián,70s,Hombre,No,NA,Si,No,Bicicleta,Sólo,Bicicleta,NA,Ni uno ni otro,De vez en cuando,Tarde
+42386,12h00-13h00,Punzara,A,Catamayo-Sanfrancisco,90s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Total Acuerdo,NA,Mañana
+42386,12h00-13h00,Punzara,A,Esteban Godoy,90s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Ni uno ni otro,NA,Mañana
+42386,12h00-13h00,Punzara,A,Nueva Granada,90s,Hombre,No,NA,Si,No,NA,NA,A pie,NA,Total Acuerdo,Nunca,Noche
+42384,15h00 -17h00,Loja,J,Sauces Norte,90s,Mujer,No,NA,NA,No,NA,NA,Otro Vehículo,NA,Desacuerdo,Mensual,Mañana
+42019,15h00 -17h00,Loja,I,La Banda,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,Mensual,Mañana
+42386,15h00 -17h00,Loja,H,Sauces,80s,Hombre,No,NA,No,No,NA,NA,A pie,De vez en cuando,Ni uno ni otro,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,J,Sauces Norte,80s,Hombre,No,NA,Si,No,NA,NA,A pie,De vez en cuando,Ni uno ni otro,De vez en cuando,Mañana
+42019,15h00 -17h00,Loja,I,La Banda,80s,Mujer,No,NA,No,No,NA,NA,A pie,De vez en cuando,Ni uno ni otro,Nunca,NA
+42386,12h00-13h00,Punzara,A,Clodoveo Jaramillo,90s,Mujer,No,NA,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,NA,Mañana
+42386,15h00 -17h00,Loja,H,La Banda,90s,Hombre,No,NA,NA,No,NA,NA,A pie,De vez en cuando,Ni uno ni otro,NA,Mañana
+42386,15h00 -17h00,Loja,H,Sauces,90s,Hombre,No,NA,No,No,NA,NA,A pie,De vez en cuando,Ni uno ni otro,Mensual,Tarde
+42386,15h00 -17h00,Loja,H,Las Pitas,90s,Mujer,No,NA,No,No,NA,NA,A pie,De vez en cuando,Total desacuerdo,Nunca,NA
+42383,15h00 -17h00,Loja,I,La Independencia,80s,Mujer,No,NA,No,No,NA,NA,A pie,Mensual,Total desacuerdo,De vez en cuando,Mañana
+42383,15h00 -17h00,Loja,I,Urb. Caminos del Sol,80s,Mujer,No,NA,No,No,NA,NA,A pie,Mensual,Total desacuerdo,Nunca,Tarde
+42383,15h00 -17h00,Loja,I,Urb. Caminos del Sol,90s,Mujer,No,NA,No,No,NA,NA,A pie,Mensual,Total Acuerdo,Mensual,Mañana
+42383,15h00 -17h00,Loja,I,Las Pitas,80s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Desacuerdo,Mensual,Mañana
+17/01/16,11h00-13h26,Parque Bolivar,E,El electrisista,90s,Mujer,No,NA,No,Si,Bicicleta,Amigos,A pie,De vez en cuando,Total Acuerdo,NA,Mañana
+17/01/16,11h00-13h19,Parque Bolivar,E,Los Geranios,50s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+NA,NA,NA,F,Centro,60s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,Mensual,Noche
+42384,15h00 -17h00,Loja,K,Las Pitas,60s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,Nunca,Noche
+42384,15h00 -17h00,Loja,K,Las Pitas,60s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,Nunca,Noche
+17/01/16,11h00-13h28,Parque Bolivar,E,Los Rosales,70s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,Mensual,Tarde
+17/01/16,11h00-13h06,Parque Bolivar,E,Los Operadores,70s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,La Banda,70s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,NA,NA
+NA,NA,NA,F,Centro,70s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Tarde
+42384,15h00 -17h00,Loja,K,Las Pitas,70s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,K,La Paz,70s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+17/01/16,11h00-13h12,Parque Bolivar,E,Cuarto centenario,80s,Hombre,No,NA,NA,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,J,San Vicente,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,J,El Valle,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,J,Motupe,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+42384,15h00 -17h00,Loja,J,Motupe,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+42384,15h00 -17h00,Loja,J,San Vicente,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,NA
+42384,15h00 -17h00,Loja,J,Sauces Norte,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,NA,NA
+NA,NA,NA,F,Centro,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Mañana
+42019,15h00 -17h00,Loja,I,La Paz,80s,Mujer,No,NA,Si,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42019,15h00 -17h00,Loja,I,La Paz,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Mañana
+42383,15h00 -17h00,Loja,I,Amable Maria,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,Mensual,Noche
+42384,15h00 -17h00,Loja,K,Sauces Norte,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Tarde
+42384,15h00 -17h00,Loja,K,La Banda,80s,Hombre,No,NA,Si,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,K,Jipiro,80s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,K,Urb. Caminos del Sol,80s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+17/01/16,11h00-13h27,Parque Bolivar,E,La Tebaida,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,San Vicente,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,J,La Banda,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Mañana
+42384,15h00 -17h00,Loja,J,El Valle,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,De vez en cuando,Noche
+NA,NA,NA,F,Centro,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,NA,Tarde
+42383,15h00 -17h00,Loja,I,Amable Maria,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Acuerdo,De vez en cuando,Noche
+42383,15h00 -17h00,Loja,I,Amable Maria,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total Acuerdo,NA,Noche
+42384,15h00 -17h00,Loja,K,Amable Maria,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Ni uno ni otro,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,K,Amable Maria,90s,Hombre,No,NA,Si,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Noche
+42384,15h00 -17h00,Loja,K,El Valle,90s,Mujer,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Tarde
+42384,15h00 -17h00,Loja,K,Sauces Norte,90s,Hombre,No,NA,No,No,NA,NA,A pie,Cada día,Total desacuerdo,Nunca,Tarde
+NA,NA,NA,F,Centro,50s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Ni uno ni otro,Nunca,Mañana
+NA,NA,NA,F,Centro,50s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Ni uno ni otro,De vez en cuando,Noche
+17/01/16,11h00-13h22,Parque Bolivar,E,Esteban Godoy,60s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Desacuerdo,Mensual,Noche
+17/01/16,11h00-13h24,Parque Bolivar,E,Esteban Godoy,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Desacuerdo,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,J,La Banda,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Total Acuerdo,Mensual,Noche
+42384,15h00 -17h00,Loja,J,Las Pitas,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Total Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,J,La Paz,90s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Total desacuerdo,Nunca,NA
+42384,15h00 -17h00,Loja,K,La Banda,90s,Hombre,No,NA,No,No,NA,NA,Patineta,NA,Acuerdo,NA,Tarde
+42384,15h00 -17h00,Loja,K,Sauces Norte,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Noche
+17/01/16,11h00-13h05,Parque Bolivar,E,San Cayetano,80s,Hombre,No,NA,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,NA,Mañana
+NA,NA,NA,F,Centro,80s,Hombre,No,NA,No,No,NA,NA,Bicicleta,De vez en cuando,Acuerdo,De vez en cuando,Mañana
+42384,15h00 -17h00,Loja,J,La Banda,90s,Hombre,No,NA,No,No,NA,NA,Bicicleta,De vez en cuando,Total Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,J,La Banda,90s,Mujer,No,NA,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,Mensual,Mañana
+42384,15h00 -17h00,Loja,K,La Banda,90s,Mujer,No,NA,No,No,NA,NA,A pie,De vez en cuando,Total Acuerdo,NA,Tarde
+42019,15h00 -17h00,Loja,I,La Paz,60s,Hombre,No,NA,No,No,NA,NA,A pie,Mensual,Acuerdo,Mensual,Tarde
+42384,15h00 -17h00,Loja,J,La Paz,90s,Hombre,No,NA,No,No,NA,NA,Bicicleta,Mensual,Total Acuerdo,NA,Mañana
+42019,15h00 -17h00,Loja,I,Amable Maria,90s,Hombre,No,NA,Si,No,NA,NA,A pie,Mensual,Total Acuerdo,De vez en cuando,Tarde
+42384,15h00 -17h00,Loja,K,Sauces Norte,90s,Hombre,No,NA,No,No,NA,NA,A pie,Mensual,Acuerdo,De vez en cuando,Mañana
+17/01/16,11h00-13h23,Parque Bolivar,E,San Pedro,80s,Hombre,No,NA,No,No,NA,NA,A pie,De vez en cuando,Acuerdo,Mensual,Mañana
+NA,NA,NA,F,Centro,60s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Tarde
+NA,NA,NA,F,Centro,60s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Mañana
+NA,NA,NA,F,Centro,60s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,Mensual,Noche
+NA,NA,NA,F,Centro,80s,Hombre,No,NA,No,No,NA,NA,A pie,NA,Acuerdo,De vez en cuando,Noche
+NA,NA,NA,F,Centro,80s,Hombre,No,NA,No,No,NA,NA,Otro Vehículo,NA,Total Acuerdo,NA,Tarde
+42383,15h00 -17h00,Loja,I,Amable Maria,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Ni uno ni otro,Mensual,Tarde
+42384,15h00 -17h00,Loja,K,Urb. Caminos del Sol,90s,Mujer,No,NA,No,No,NA,NA,A pie,NA,Desacuerdo,De vez en cuando,Noche
+42384,15h00 -17h00,Loja,K,Sauces Norte,90s,Hombre,Si,Otro,No,NA,NA,NA,A pie,Cada día,Total Acuerdo,De vez en cuando,Mañana
