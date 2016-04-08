@@ -67,7 +67,7 @@
 - Class: text
   Output: "La forma en que se asigna un valor a un objeto en R es mediante el uso 
   del operador de asignación, que es sólo un símbolo ''menor que'' seguido de 
-  un signo ''menos''. Es exactamente esto: <-"
+  un signo ''menos''. Es exactamente esto <-"
 
 - Class: text
   Output: "Piense en el operador de asignación como en una flecha. Usted está 
@@ -157,7 +157,7 @@
 
 - Class: cmd_question
   Output: "Se pueden utilizar vectores numéricos en expresiones aritméticas. 
-  Escriba lo siguiente para ver qué pasa: z * 2 + 100."
+  Escriba lo siguiente para ver qué pasa z * 2 + 100."
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
   Hint: "Introduzca z * 2 + 100, sin asignar el resultado a un objeto. El 
@@ -195,7 +195,7 @@
   CorrectAnswer: un vector de longitud 3
   AnswerChoices: "un vector de longitud 3; un solo número (es decir, un vector de longitud 1); un vector de longitud 0 (es decir, un vector vacío)"
   AnswerTests: omnitest(correctVal='un vector de longitud 3')
-  Hint: "Piense en cómo R manejó la otra operación ''vectorizada'': elemento 
+  Hint: "Piense en cómo R manejó la otra operación ''vectorizada'', elemento 
   por elemento."
 
 - Class: cmd_question
