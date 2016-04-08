@@ -217,7 +217,7 @@
 - Class: mult_question
   Output: "Con variables cuantitativas la función summary() calcula, como 
   condición base, los límites (inferior y superior), los cuartiles 1 y 3, la 
-  mediana y la media. ¿Qué calcula para factores (variables cualitativas)? Pista:
+  mediana y la media. ¿Qué calcula para factores (variables cualitativas)? Una pista.
   Usted vió ejemplos hace unos pasos y los puede revisar deslizando hacia
   arriba en la consola."
   AnswerChoices: "Frecuencia de casos en cada nivel del factor; Lo mismo que calcula para variables cuantitativas; La significación de cada factor"
