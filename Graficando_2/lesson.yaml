@@ -7,156 +7,156 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "Hola, bienvenido a esta lección. En esta vamos a desglosar nuestro
-  tramo de datos del número de hijos y hijas con diagramas de barras y otros 
+  Output: "Hola, bienvenid@ a esta lección en la que vamos a desglosar nuestro
+  tramo de datos del número de hijos e hijas con diagramas de barras y otros 
   tipos aliados."
 
 - Class: text
-  Output: "Dejamos la última lección despues de haber resumido nuestra variable
-  del número de hijos y hijas que tuvo una mujer ecuatoriana de promedio en 2010
-  por dos tipos de gráfica, o dos y media si cuenta con el stripchart. Estas
-  resumenes dejaron las provincias anónimas, y de esta manera pudimos enfocar en
+  Output: "Si recuerdan, en la última lección resumimos nuestra variable sobre
+  el número de hijos e hijas que tuvo una mujer ecuatoriana en promedio en 2010
+  utilizando dos tipos de gráfica, o dos y medio si cuenta con el stripchart. Estos
+  resúmenes dejaron las provincias anónimas, y de esta manera pudimos enfocarnos en
   la variación en los promedios del número de hijos."
 
 - Class: cmd_question
   Output: "Para empezar, podemos realizar una gráfica tipo diagrama de barras
-  facilmente por ingresar nuestro objeto resumen$hijos como el argumento 'height'
-  a la función barplot(). Despues de ingresar hijos como height, se puedo 
-  especificar el argumento 'names.arg = resumen$region'. Acuérdese que siempre
-  hay que separar argumentos de funciones con una coma. Dese la oportunidad de
-  crear el barplot que le comenté arriba."
+  fácilmente ingresando nuestro objeto resumen$hijos con el argumento 'height'
+  en la función barplot(). Después de ingresar hijos con height, se puede 
+  especificar el argumento 'names.arg = resumen$region'. Recuerde que siempre
+  hay que separar los argumentos de las funciones con una coma. Pruebe ahora a
+  crear el barplot que le acabo de comentar."
   CorrectAnswer: barplot(height = resumen$hijos, names.arg = resumen$region)
   AnswerTests: omnitest(correctExpr="barplot(resumen$hijos, names.arg = resumen$region)")
-  Hint: "En la función barplot(), ingrese primero resumen$hijos para el argumento
-  height (significa 'altura' de la barra) y resumen$region para el argumento 
+  Hint: "En la función barplot(), ingrese primero resumen$hijos con el argumento
+  height (significa 'altura' de la barra) y resumen$region con el argumento 
   names.arg."
 
 - Class: text_question
-  Output: "Hmmm, esta gráfica no se agrada mucho, no se puede leer muchos de los
-  nombres de las provincias. ¿Se acuerda Usted como se llama el argumento para 
+  Output: "Hmmm, esta gráfica no es muy agradable, no se pueden leer muchos de los
+  nombres de las provincias. ¿Se acuerda de cómo se llama el argumento para 
   girar las etiquetas o valores de los ejes? Es algo irónico que con este tipo
-  de gráfica los números del eje Y salieron bueno por defecto mientras que los
+  de gráfica los números del eje Y salieron bien por defecto mientras que los
   nombres en el eje X no. Bueno, ¿cómo se llama el argumento que necesitamos
-  entonces? Escriba las letras no más, sin o  el símbolo = o un valor. ¡Intente
+  entonces? Escriba las letras no más, sin el símbolo = ni un valor. ¡Intente
   contestar!"
   CorrectAnswer: "las"
   AnswerTests: omnitest(correctVal='las')
   Hint: "El nombre del argumento es 'las', escíbalo sin comillas para seguir."
 
 - Class: text
-  Output: "Le comento como funciona este argumento 'las'. Tome nota en el álbum
-  de recortes para su propia referencia. Acepta cuatro valores posibles 
-  {0, 1, 2, 3}. Por defecto el adjuste es en 0, lo que hace que las etiquetas de
-  los ejes corren en paralelo con los ejes. El argumento las = 1 hace que las
-  etiquetas salen en el plano horizontal para los dos ejes, como usted vió en 
+  Output: "Le comento cómo funciona este argumento 'las'. Tome nota en el álbum
+  de recortes para tenerlo como referencia. Acepta cuatro valores posibles 
+  {0, 1, 2, 3}. Por defecto el ajuste es en 0, lo que hace que las etiquetas de
+  los ejes corran en paralelo con los ejes. El argumento las = 1 hace que las
+  etiquetas salgan en el plano horizontal para los dos ejes, como ya vio en 
   lecciones anteriores. En cambio las = 2 arregla que las etiquetas sean 
-  perpendiculares a los ejes y por último las = 3 arreglaría las etiquetas
+  perpendiculares a los ejes y por último las = 3 arreglaría que las etiquetas
   fueran todas en el plano vertical."
 
 - Class: cmd_question
   Output: "¿Entendido? A ver, recupere usted el comando para el barplot y añada 
-  un argumento con las para girar las etiquetas. Queremos que las etiquetas del 
-  eje Y no cambien, pero las de el eje X si giraran. Ponga un argumento con las
-  que cree vaya a realizar este cambio."
+  un argumento con 'las' para girar las etiquetas. Queremos que las etiquetas del 
+  eje Y no cambien, pero sí las de el eje X. Ponga el argumento con 'las'
+  que crea que va a realizar este cambio."
   CorrectAnswer: barplot(resumen$hijos, names.arg = resumen$region, las=2)
   AnswerTests: omnitest(correctExpr="barplot(resumen$hijos, names.arg = resumen$region, las=2)")
-  Hint: "Queremos que en cada eje, las etiquetas corren perpendicular al eje,
-  así que podemos descartar las opciones 1 y 3. Queremos añadir a la última
-  llamada a barplot() que las = 2."
+  Hint: "Queremos que en cada eje, las etiquetas corran perpendiculares al eje,
+  así que podemos descartar las opciones 1 y 3. Queremos añadir las = 2 a la última
+  llamada a barplot()."
 
 - Class: cmd_question
   Output: "Pues, mejor, pero con etiquetas largas como estos nombres de las
   provincias suele ser mejor girar la gráfica misma. Recupere la última llamada
-  y añadir el argumento horiz = TRUE, para que las barras salgan en horizontal."
+  y añada el argumento horiz = TRUE, para que las barras salgan en horizontal."
   CorrectAnswer: barplot(resumen$hijos, names.arg = resumen$region, las=2, horiz = TRUE)
   AnswerTests: omnitest(correctExpr="barplot(resumen$hijos, names.arg = resumen$region, las=2, horiz = TRUE)")
-  Hint: "Añada horiz = TRUE despues de una coma al final de la llamada recuperada,
-  o se podría teclear de zero barplot(resumen$hijos, names.arg = resumen$region, 
+  Hint: "Añada horiz = TRUE después de una coma al final de la llamada recuperada,
+  o se podría teclear de cero barplot(resumen$hijos, names.arg = resumen$region, 
   las=2, horiz = TRUE)."
 
 - Class: cmd_question
   Output: "Eso tampoco funcionó, ¿verdad? Con etiquetas tan largas hay que hacer
-  algo más drástico. Vamos a adjustar a las márgenes del espacio de la gráfica
-  por teclear el siguiente comando par(mar=c(4, 10, 4, 2)) en el indicador, 
-  aparte de la llamada a la gráfica."
+  algo más drástico. Vamos a ajustar los márgenes del espacio de la gráfica
+  tecleando el siguiente comando par(mar=c(4, 10, 4, 2)) en el indicador, 
+  fuera de la llamada a la gráfica."
   CorrectAnswer: par(mar=c(4, 10, 4, 2))
   AnswerTests: omnitest(correctExpr="par(mar=c(4, 10, 4, 2))")
   Hint: "Escriba par(mar=c(4, 10, 4, 2)) en el indicador y presione INTRO."
   
 - Class: text
-  Output: "Le explico como funciona la cosa. En el sistema base de graficar, la 
-  en que nos encontramos de momento, la función 'par' (para parÁMETROS) controla
-  algunas adjustes importantes. El argumento 'mar' (para márgenes) tal vez es
-  lo más útil entre ellos. Con este comando usted cambiara las margenes 
-  desde sus valores por defect de (5, 4, 4, 2), el órden de los valores sigue el
-  modelo que hubiera visto en la lección Anatomía de una gráfica (parte inferior,
-  izquierda, parte superior, derecha). Con el último comando usted hubiera 
-  quitado una unidad de la parte inferior, añadido 6 unidades a la izquierda 
+  Output: "Le explico cómo funciona la cosa. En el sistema base para graficar, en 
+  el que nos encontramos de momento, la función 'par' (para parÁMETROS) controla
+  algunos ajustes importantes. El argumento 'mar' (para márgenes) tal vez es
+  el más útil entre ellos. Con este comando podrá cambiar los márgenes 
+  desde sus valores por defecto de (5, 4, 4, 2). El orden de los valores sigue el
+  modelo que debería haber visto en la lección Anatomía de una gráfica (parte inferior,
+  izquierda, parte superior, derecha). Así, con el último comando que acaba de teclear 
+  ha quitado una unidad de la parte inferior, añadido 6 unidades a la izquierda 
   para acomodar las etiquetas, y dejado los demás en paz."
   
 - Class: cmd_question
-  Output: "Ahora usted puede recuperar la última llamada a barplot() y repetirla
-  sin cambiar nada más que el argumento 'las' a las = 1. Ahora si, queremos que
+  Output: "Ahora puede recuperar la última llamada a barplot() y repetirlo
+  sin cambiar nada más que el argumento 'las' a las = 1. Ahora sí, queremos que
   las etiquetas de ambos ejes sean horizontales."
   CorrectAnswer: barplot(resumen$hijos, names.arg = resumen$region, las=1, horiz = TRUE)
   AnswerTests: omnitest(correctExpr="barplot(resumen$hijos, names.arg = resumen$region, las=1, horiz = TRUE)")
-  Hint: "Recuperar el código para el barplot y arregla todos los argumentos
+  Hint: "Recupere el código para el barplot y arregle todos los argumentos
   según este ejemplo barplot(resumen$hijos, names.arg = resumen$region, 
   las=1, horiz = TRUE)."
 
 - Class: text
-  Output: "Depende el tamaño de la pantalla que usted tiene, puede que todavía 
-  se la vea apretada. Haga click en ZOOM para convencerse que no es nada 
-  grave. Se puede arrastrar la ventanilla PLOTS para que ella tenga mas espacio,
-  pero no lo hagas tanto que apretara a la consola."
+  Output: "Dependiendo del tamaño de la pantalla que tenga, puede que todavía 
+  se vea la gráfica apretada. Haga click en ZOOM para convencerse que no es nada 
+  grave. Puede arrastrar la ventanilla PLOTS para que tenga más espacio,
+  pero no la arrastre tanto que apriete a la consola."
 
 - Class: mult_question
-  Output: "La grafica ya esta mucho mejor, pero nos queda un problema muy común
-  que afecta el poder de la gráfica contar su historia. Acuérdese a las gráficas
-  de la última lección, ¿estuvo muy facil leer el rango de valores de ellas, 
-  verdad? ¿Le parece más difícil ahora? ¿Cómo son ordenadas las provincias?"
-  AnswerChoices: "alfabeticamente; aleatoriamente; geograficamente"
-  CorrectAnswer: alfabeticamente
-  AnswerTests: omnitest(correctVal="alfabeticamente")
-  Hint: "No importa si usted empieza arriba o abajo, no se puede escapar la 
-  conclusión que el órden sigue el alfabeto."
+  Output: "La gráfica ya está mucho mejor, pero nos queda un problema muy común
+  que afecta al poder de la gráfica para contar su historia. Acuérdese de las gráficas
+  de la última lección, estuvo muy fácil leer su rango de valores, 
+  ¿verdad? ¿Le parece más difícil ahora? ¿Cómo están ordenadas las provincias?"
+  AnswerChoices: "alfabéticamente; aleatoriamente; geográficamente"
+  CorrectAnswer: alfabéticamente
+  AnswerTests: omnitest(correctVal="alfabéticamente")
+  Hint: "No importa si usted empieza arriba o abajo, no se le puede escapar la 
+  conclusión de que el orden sigue el alfabeto."
 
 - Class: cmd_question
-  Output: "Supongo que este orden podria ser util para ubicar rapidamente una 
+  Output: "Supongo que este orden podría ser útil para ubicar rápidamente una 
   cierta provincia, pero compárelo con el efecto de ordenar las provincias por 
-  el valor de la variable de respuesta, el número de hijos y hijas. Vamos
-  a cambiar la llamada a la función barplot para controlar el órden, como sigue
+  el valor de la variable de respuesta, el número de hijos e hijas. Vamos
+  a cambiar la llamada a la función barplot para controlar el orden, como sigue
   'with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, 
-  horiz = TRUE, las=1))'. Hágalo, en seguida se lo explico a usted."
+  horiz = TRUE, las=1))'. Hágalo, en seguida se lo explico."
   CorrectAnswer: with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, horiz = TRUE, las=1))
   AnswerTests: omnitest(correctExpr="with(resumen[order(resumen[,2]), ], barplot(hijos, names.arg = region, horiz = TRUE, las=1))")
-  Hint: "Escriba el código según las instrucciones para seguir, todas las comas y 
+  Hint: "Escriba el código según las instrucciones para poder seguir, todas las comas y 
   corchetes son muy importantes."
 
 - Class: text
-  Output: "No sé como se siente usted, pero a mi me tranquilizó los ojos este 
-  cambio, aunque todavía el producto podría ser mejorado. Ya se puede leer mejor
-  las etiquetas y también el rango de valores.  Creo yo que podemos dejar esta
+  Output: "No sé como se siente, pero a mí me tranquilizó la vista este 
+  cambio, aunque todavía podría mejorarse el producto. Ya se pueden leer mejor
+  las etiquetas y también el rango de valores. Creo que podemos dejar esta
   gráfica acá, aunque le toca a usted añadir etiquetas y títulos para completarla."
   
 - Class: cmd_question
-  Output: "Vamos a comparar una opción más antes de partir. Pero antes de eso, 
-  quiero que vea el efecto del último comando que usted ha hecho en la gráfica 
-  esta. Teclee este parte del comando solo resumen[order(resumen[,2]), ] y
+  Output: "Vamos a comparar una opción más antes de irnos. Pero antes de eso, 
+  quiero que vea el efecto del último comando que ha añadido en esta gráfica. 
+  Teclee solamente este parte del comando resumen[order(resumen[,2]), ] y
   presione INTRO."
   CorrectAnswer: resumen[order(resumen[,2]), ]
   AnswerTests: omnitest(correctExpr="resumen[order(resumen[,2]), ]")
-  Hint: "Teclee o pegar resumen[order(resumen[,2]), ] no más y presione INTRO."
+  Hint: "Teclee o pegue resumen[order(resumen[,2]), ] no más y presione INTRO."
 
 - Class: cmd_question
   Output: "Este comando no es nada transparente ¿verdad?. Dice a R algo como... 
   con todo el objeto 'resumen', ordénelo por la segunda columna en sí. 
-  Un comando equivalente, tal vez más de facil leer sería 
-  'resumen[with(resumen, order(hijos)), ]'. En sí, ninguno de ellos afectará un
-  cambio permanente a nuestro tramo de datos, sino una reconfiguración temporal
-  de conveniencia. Para hacer la pŕoxima y final gráfica más sencilla realizar, 
-  vamos a guardar una versión del tramo con este órden por número de hijos y 
-  hijas. Solo hay que asignar el último comando su propio nombre, así
+  Un comando equivalente, tal vez más fácil de leer sería 
+  'resumen[with(resumen, order(hijos)), ]'. En sí, ninguno de ellos supondrá un
+  cambio permanente para nuestro tramo de datos, sino una reconfiguración temporal
+  de conveniencia. Para hacer que la pŕoxima y última gráfica sea más sencilla de 
+  realizar, vamos a guardar una versión del tramo de datos ordenado por número de 
+  hijos e hijas. Solo hay que asignar un nombre al último comando, así
   resumenOrd <- resumen[with(resumen, order(hijos)), ]. Pruébelo, el resultado
   aparecerá en la ventanilla ENVIRONMENT."
   CorrectAnswer: resumenOrd <- resumen[with(resumen, order(hijos)), ]
@@ -164,64 +164,64 @@
   Hint: "Escriba resumenOrd <- resumen[with(resumen, order(hijos)), ] y presione INTRO."
 
 - Class: cmd_question
-  Output: "He guardado lo mejor para el fin. En el vídeo de principios en que
-  le destaqué algunos heroes del campo de visualización de datos, mencioné 
-  William Cleveland. Según los principios de la percepcion humana, él desarolló
-  una alternativa a la digrama de barras la que lleva su nombre 'Cleveland Plot'.
-  En R, con nuestro conjunto reordenado podemos realizarlo así
+  Output: "He guardado lo mejor para el final. En el vídeo del principio en que
+  le destaqué algunos héroes del campo de la visualización de datos, mencioné a
+  William Cleveland. Según los principios de la percepción humana, él desarrolló
+  una alternativa al diagrama de barras que lleva su nombre 'Cleveland Plot'.
+  En R, con nuestro conjunto de datos reordenado, podemos realizarlo así
   dotchart(x = resumenOrd$hijos, labels = resumenOrd$region). Pruébelo, puede
-  que le quitara las ganas de hacer diagramas de barras para toda la vida."
+  que le quite las ganas de hacer diagramas de barras para toda la vida."
   CorrectAnswer: dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)
   AnswerTests: omnitest(correctExpr= "dotchart(x = resumenOrd$hijos, labels = resumenOrd$region)")
   Hint: "Teclee dotchart(x = resumenOrd$hijos, labels = resumenOrd$region) y
-  presione INTRO, usted tendra que añadir las etiquetas luego, y solo."
+  presione INTRO, usted tendrá que añadir las etiquetas luego, y solo."
 
 - Class: mult_question
-  Output: "Para mi, esta gráfica es lo mejor de las opciones para comunicar este
-  resumen de información. Los valores sobresaltean mejor de ella que de una 
-  tabla de valores, y también comunica su contenido mejor que la diagrama de 
+  Output: "Para mí, está gráfica es la mejor de las opciones para comunicar este
+  resumen de información. Los valores sobresalen mejor que en una 
+  tabla de valores, y también comunica su contenido mejor que un diagrama de 
   barras. ¿Por qué? Pues, el diseño de esta gráfica cumple un par de principios 
-  de presentación algo sútiles, pero influyen el impacto de la gráfica. Escoja 
-  la opción entre las siguientes que no sería un principio importante que cumple
-  esta gráfica comparado con la diagrama de barras."
-  AnswerChoices: "Se favorece presentaciones horizontales ; Mantenga una buena razón de la información proporcionada a la tinta utilizada; No refiera a cero si el valor no es especialmente referente"
-  CorrectAnswer: "Se favorece presentaciones horizontales"
-  AnswerTests: omnitest(correctVal="Se favorece presentaciones horizontales")
-  Hint: "Aunque muchas presentaciones se aprovechen de una orientación horizontal
+  de presentación algo sutiles, pero que influyen en su impacto. Escoja 
+  la opción entre las siguientes que no indica un principio importante que cumple
+  esta gráfica comparado con un diagrama de barras."
+  AnswerChoices: "Se prefieren presentaciones horizontales ; Mantiene una buena razón de la información proporcionada frente a la tinta utilizada; No se refiera a cero si el valor no es especialmente referente"
+  CorrectAnswer: "Se prefieren presentaciones horizontales"
+  AnswerTests: omnitest(correctVal="Se prefieren presentaciones horizontales")
+  Hint: "Aunque muchas presentaciones se aprovechan de una orientación horizontal,
   no es un principio general reconocido. Así que la respuesta correcta - el 
-  principio falso - es que se favorece presentaciones horizontales."
+  principio falso - es que se prefieren presentaciones horizontales."
 
 - Class: text
-  Output: "Esta presentación es mucho mas ligera, ¿no cree? El cambio hasta 
-  puntos resulta en un impacto estético más agradable, pero los lineas débiles 
-  del fondo habilitan que un lector pueda sacar el valor para una cierta 
-  provincia. Opino yo que se gana mucho y se pierde nada."
+  Output: "Esta presentación es mucho más ligera, ¿no cree? El cambio a 
+  puntos produce un impacto estético más agradable, pero las líneas débiles 
+  del fondo facilitan que un lector pueda obtener el valor para una cierta 
+  provincia. Yo opino que se gana mucho y no se pierde nada."
   
 - Class: mult_question
-  Output: "Si usted quisiera cambiar los puntos de esta gráfica hasta circulos 
-  llenados o solidos, o triangulos o lo que sea, ¿cuál argumento ajustaría?"
+  Output: "Si usted quisiera cambiar los puntos de esta gráfica a círculos 
+  rellenos o sólidos, o triángulos o lo que sea, ¿qué argumento ajustaría?"
   AnswerChoices: "pch; las; mar; ninguno de ellos"
   CorrectAnswer: pch
   AnswerTests: omnitest(correctVal= "pch")
-  Hint: "La respuesta correcta es pch, lo que quiere decir pLOTTING chARACTER, o
-  , tal vez, carácter de trazar o marcar podría ser una tradución al español."
+  Hint: "La respuesta correcta es pch, lo que quiere decir pLOTTING chARACTER, o,
+  tal vez, carácter de trazado o marcado podría ser una tradución al español."
 
 - Class: text
-  Output: "Pues, usted acaba de completar dos lecciones en resumir una variable
-  sola, primero el numero de hijos y hijas, la variable cuantitativa sola, y
-  luego variación en ella por provincia de El Ecuador es decir, un resumen por
-  una variable categorica. Para ella usamos una diagrama de barras y on dotchart(),
-  lo que es más parecida a una diagrama de barras que una diagram de dispersión."
+  Output: "Pues, acaba de completar dos lecciones para resumir una variable
+  sola, primero el número de hijos e hijas, la variable cuantitativa sola, y
+  luego su variación por provincias del Ecuador es decir, un resumen por
+  una variable categórica. Para ello usamos un diagrama de barras y un dotchart(),
+  que es más parecido a un diagrama de barras que un diagrama de dispersión."
 
 - Class: text
-  Output: "Tal vez le hubiera dado cuenta que cada vez le dejo más comandos 
-  para cumplir, títulos, etiquetas, etcétera.  Espero que usted esté
-  experimentando con los comandos, con los diseños, y que muy pronto empezara de 
-  jugar con sus propios tramos de datos sea por su propio interés o tal vaz en
+  Output: "Tal vez se haya dado cuenta de que cada vez le dejo más comandos 
+  para cumplir, títulos, etiquetas, etcétera.  Espero que esté
+  experimentando con los comandos, con los diseños, y que muy pronto empiece a 
+  jugar con sus propios tramos de datos, ya sea por su propio interés o tal vez en
   trabajos para otras materias."
 
 - Class: text
-  Output: "Esto es todo para esta lecciòn. No se olvide guardar y anotar pedazos
-  de código en su álbum de recortes digital. La idea es que estos pedazos sean 
-  útiles para usted en un futuro, y por eso, sea sabio que no solo pegar el 
-  código sino anotarlo también según convenga.  Le espero un buen día."
+  Output: "Esto es todo en esta lección. No se olvide de guardar y anotar pedazos
+  de código en su álbum de recortes digital. La idea es que estos pedazos le sean 
+  útiles en un futuro, y por eso, sea sabio y no pegue solamente el código, 
+  coméntelo también según convenga. Que tenga un buen día."
