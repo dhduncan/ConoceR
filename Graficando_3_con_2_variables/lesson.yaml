@@ -7,172 +7,171 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "¡Hola! Bienvenid@ a esta tercer lección de graficar. Usted va a 
-  hacer más gráficas con pares de variables en esta lección."
+  Output: "¡Hola! Bienvenid@ a esta tercera lección sobre cómo graficar. En esta
+  lección va a aprender cómo hacer gráficas con pares de variables."
   
 - Class: text
-  Output: "Espero que se siente cada vez más cómod@ con el uso de R, y que ya 
-  tiene su álbum de recortes creciendo con ejemplos de código útil para 
-  realizar sus propias presentaciones. Muy pronto, usted tiene que presentar 
+  Output: "Espero que se sienta cada vez más cómod@ con el uso de R, y que su 
+  álbum de recortes vaya creciendo con ejemplos de código útil para 
+  realizar sus propias presentaciones. Muy pronto tendrá que presentar 
   una obra propia a sus compañeros como tarea de calificación."
   
 - Class: figure
   Output: "Antes de empezar, quería enseñarle una característica de R que no
-  se he comentado todavía. En la última lección usted utilizara unos argumentos
-  a la función par() para cambiar las dimensiones de las margenes externas para
-  acomodar los nombres de las provincias de El Ecuador.  Acabara de aparecer una
-  imagen de cuatro gráficas en la ventanilla PLOTS que demuestra el uso de un
-  argumento que divide el espacio en filas y columnas para acomodar gráficas
-  múltiples."
+  le he comentado todavía. En la última lección utilizamos unos argumentos
+  de la función par() para cambiar las dimensiones de los márgenes externos para
+  acomodar los nombres de las provincias del Ecuador. Acaba de aparecer una
+  imagen de cuatro gráficas en la ventanilla PLOTS que muestra el uso de un
+  argumento que divide el espacio en filas y columnas para acomodar múltiples
+  gráficas."
   Figure: mfrow.R
   FigureType: new
 
 - Class:  cmd_question
-  Output: "El argumento que utilicé fue mfrow() lo cual es otro argumento muy
-  útil de par(). No tengo ni idea porque el argumento se denominó mfrow, pero,
-  por si a caso que le ayude recordarlo, digamos que es una sigla para Matriz 
-  de  Figuras por ROWs (filas). En el indicador (>) teclée par(mfrow = c(2,2)).
+  Output: "El argumento que utilicé fue mfrow(), que es otro argumento muy
+  útil de la función par(). No tengo ni idea de por qué el argumento se denomina 
+  mfrow, pero por si acaso le ayuda a recordarlo, digamos que es una sigla para Matriz 
+  de Figuras por ROWs (filas). En el indicador (>) teclee par(mfrow = c(2,2)).
   Se lo explico en seguida."
   CorrectAnswer: par(mfrow = c(2,2))
   AnswerTests: omnitest(correctExpr="par(mfrow = c(2,2))")
-  Hint: "Teclée par(mfrow = c(2,2)), y en el próximo diálogo se lo explicaré."
+  Hint: "Teclee par(mfrow = c(2,2)), y en el próximo diálogo se lo explicaré."
 
 - Class: text
-  Output: "La instrucción que usted acaba de darle a R es que divida
-  el espacio de una salida grafica en partes iguales; la parte 'c(2, 2)' 
-  especifica el numero de filas (2), luego el numero de columnas (2) (pudieran
-  haber sido otros valores, y se podría volver el adjuste a 'c(1,1)' para
+  Output: "La instrucción que acaba de darle a R es que divida
+  el espacio de una salida gráfica en partes iguales; la parte 'c(2, 2)' 
+  especifica el número de filas (2), luego el número de columnas (2) (podrían
+  haber sido otros valores, y se podría volver el ajuste a 'c(1,1)' para
   que R imprima una gráfica en la ventanilla entera).
   La parte del argumento ROW (fila) refleja que R va a llenar este espacio por 
-  filas, empezando con el espacio superior a la izquierda. Existe un argumento
-  muy parecido mfcol() que llenara los espacios por columnas. Sin embargo, 
-  puesto que usted controla el orden de realizar las graficas, no importa tanto
-  cual escoge usted. Yo siempre uso mfrow()."
+  filas, empezando con el espacio superior izquierdo. Existe un argumento
+  muy parecido mfcol() que llenaría los espacios por columnas. Sin embargo, 
+  puesto que usted controla el orden de realizar las gráficas, no importa tanto
+  cuál escoja. Yo siempre uso mfrow()."
   
 - Class: cmd_question
-  Output: "Muy bien, ahora, usted va a reproducir la imagen de las cuatro
-  gráficas. Ya usted estableció el espacio con mfrow(), necesita generar unos
-  datos. Escriba k <- rnorm(20) para crear un objeto k que tomara 20 números
+  Output: "Muy bien, ahora va a tener que reproducir la imagen de las cuatro
+  gráficas. Ya estableció el espacio con mfrow(), necesita generar unos
+  datos. Escriba k <- rnorm(20) para crear un objeto k que tomará 20 números
   aleatorios de una distribución normal (simétrica, con media 0)."
   CorrectAnswer: k <- rnorm(20)
   AnswerTests: omnitest(correctExpr="k <- rnorm(20)")
-  Hint: "Usted necesita este objeto para dar las siguientes instrucciones a R.
-  Teclée k <- rnorm(20) para continuar."
+  Hint: "Necesita este objeto para dar las siguientes instrucciones a R.
+  Teclee k <- rnorm(20) para continuar."
 
 - Class: cmd_question
-  Output: "Eche un vistazo a los datos antes de graficarlos por teclear 'k', el
+  Output: "Eche un vistazo a los datos antes de graficarlos tecleando 'k', el
   nombre del objeto."
   CorrectAnswer: k
   AnswerTests: omnitest(correctExpr="k")
-  Hint: "Siempre es una buena práctica visualizar los datos antes de graficar,
+  Hint: "Siempre es una buena práctica visualizar los datos antes de graficarlos,
   así que ingrese k y presione INTRO."
 
 - Class: cmd_question
-  Output: "Haga la primera gráfica, la cual va a 
-  aparecer en la parte superior a la izquierda, por ingresar este comando 
-  plot(k, type = 'p').  De hecho, type = 'p' es la condición base del argumento
-  type (tipo) pero usted va a declararlo para ver la comparación con lo que 
-  sigue. Dese la oportunidad ahora."
+  Output: "Haga la primera gráfica, que aparecerá en la parte superior
+  izquierda, ingresando este comando plot(k, type = 'p').
+  De hecho, type = 'p' es la condición base del argumento
+  type (tipo) pero lo va a escribir para ver la comparación con lo que 
+  sigue. Inténtelo ahora."
   CorrectAnswer: plot(k, type = 'p')
   AnswerTests: omnitest(correctExpr= "plot(k, type = 'p')")
   Hint: "Escriba plot(k, type = 'p') y pulse INTRO para continuar."
 
 - Class: mult_question
-  Output: "Acuérdese que el comando para dividir el espacio era mfrow, y esto
-  impliclara una secuencia particular de llenar el espacio. ¿Dónde se espera
-  que aparecerá la siguiente gráfica entonces?"
-  AnswerChoices: "A la derecha de la que ya esta; Por debajo de la que ya esta; En la posición diagonal, por abajo a la derecha"
-  CorrectAnswer: A la derecha de la que ya esta
-  AnswerTests: omnitest(correctVal="A la derecha de la que ya esta")
-  Hint: "mfrow() va a llenar los espacios por filas (rows en inglés), así se
-  espera que la próxima aparezca a la derecha de la gráfica previa."
+  Output: "Recuerde que el comando para dividir el espacio era mfrow, y esto
+  implicaba una secuencia particular de llenado del espacio. ¿Dónde espera
+  entonces que aparezca la siguiente gráfica?"
+  AnswerChoices: "A la derecha de la que ya está; Debajo de la que ya está; En la diagonal, abajo a la derecha"
+  CorrectAnswer: A la derecha de la que ya está
+  AnswerTests: omnitest(correctVal="A la derecha de la que ya está")
+  Hint: "mfrow() va a llenar los espacios por filas (rows en inglés), así que se
+  espera que la próxima gráfica aparezca a la derecha de la gráfica previa."
 
 - Class: cmd_question
-  Output: "Ya verá usted. Escriba plot(k, type = 'l') para realizar la siguiente
-  gráfica. Fíjese que el comando es lo mismo que usted realizó para la última
-  gráfica, a parte del cambio de la 'p' de puntos para la 'l' de linea."
+  Output: "Ya verá. Escriba plot(k, type = 'l') para realizar la siguiente
+  gráfica. Fíjese que el comando es el mismo que ya utilizó para realizar la última
+  gráfica, aparte del cambio de la 'p' de puntos para la 'l' de línea."
   CorrectAnswer: plot(k, type = 'l')
   AnswerTests: omnitest(correctExpr="plot(k, type = 'l')")
-  Hint: "Este comando hará la gráfica de los mismos datos, pero ahora con  una
-  linea."
+  Hint: "Este comando hará una gráfica con los mismos datos, pero ahora usando una
+  línea."
 
 - Class: cmd_question
-  Output: "Ahora la tercera. Tome nota que con esta sería de gráficas usa usted
-  el mismo conjunto de 20 valores, solo está cambiando la instrucción a R sobre
-  el tipo de gráfica. La siguiente es con 'b' para both, o amBos tipos, puntos
-  y lineas juntos. Teclée plot(k, type = 'b')."
+  Output: "Ahora la tercera. Tome nota que con esta serie de gráficas estamos usando
+  siempre el mismo conjunto de 20 valores. Lo único que estamos cambiando es la instrucción 
+  sobre el tipo de gráfica. La siguiente será con 'b' para both, es decir, para que use tanto 
+  puntos como líneas juntos. Teclee plot(k, type = 'b')."
   CorrectAnswer: plot(k, type = 'b')
   AnswerTests: omnitest(correctExpr="plot(k, type = 'b')")
   Hint: "¿Se equivocó en teclear plot(k, type = 'b')? Inténtelo otra vez."
 
 - Class: cmd_question
-  Output: "Por la última gráfica de este juego, teclée plot(k, type = 'h'). Esta
+  Output: "Para la última gráfica de este juego, teclee plot(k, type = 'h'). Esto
   produce una gráfica tipo histograma (aunque hay valores negativos que no se 
-  esperaría de una histograma clásica) que toma el valor 0 como referencia de 
-  donde las lineas salen hacia los destinos de cada valor del objeto k. Tal vez
-  mi explicación tendrá mas sentido cuando la hayas visto. Dese la oportunidad
-  como el susodicho comando plot(k, type = 'h')."
+  esperaría en un histograma clásico) que toma el valor 0 como referencia para que desde 
+  ahí salgan las líneas hacia los destinos de cada valor del objeto k. Tal vez
+  mi explicación tenga más sentido cuando la haya visto. Inténtelo utilizando
+  el susodicho comando plot(k, type = 'h')."
   CorrectAnswer: plot(k, type = 'h')
   AnswerTests: omnitest(correctExpr="plot(k, type = 'h')")
-  Hint: "Esta es la última gráfica de esta imagen, teclée plot(k, type = 'h') y 
+  Hint: "Esta es la última gráfica de esta imagen, teclee plot(k, type = 'h') y 
   presione INTRO para continuar."
 
 - Class: text
-  Output: "A mi la función plot() me parece muy flexible. Creo que la impressión
-  distinta de cada gráfica destaca la importancia de pensar en cuales
-  objetos se escoge para gráficar un conjunto de valores. El cambio de puntos
-  para la linea inmediatamente da un sentido de dirección y significado a la
+  Output: "A mí la función plot() me parece muy flexible. Creo que la impresión
+  de distintos tipos de gráfica destaca la importancia de pensar en qué
+  objetos se escogen para gráficar un conjunto de valores. El cambio de puntos
+  por una línea inmediatamente da un sentido de dirección y significado a la
   nube de valores, pero precisamente por eso no es necesariamente una buena
-  opción, si dirección no hay en los datos en sí. De igual manera, la última
-  gráfica en el estilo de histograma afecta un cambio algo radical a la gráfica
-  en que sugiere que el valor 0 es una referencia muy importante."
+  opción si no hay dirección en los datos en sí. De igual manera, la última
+  gráfica tipo histograma produce un cambio algo radical a la gráfica que
+  sugiere que el valor 0 es una referencia muy importante."
 
 - Class: cmd_question
-  Output: "Es importante darse cuenta que cambios a la función par() permanecen
-  en la sesión. Por ejemplo, nuevos gráficas aparecieran según esta misma
-  secuencia de arriba y izquierda, luego arriba derecho, luego abajo y izquierda,
-  etcétera. Para reinicar todos los ajustes de la función par a sus condiciones
-  de base, se puede teclear dev.off(). Este comando quiere decir algo como 
-  'apague el dispositivo gráfico'. El dispositivo, tanto como los ajustes, se 
-  refresca al recibir una nueva instrucción para graficar. Dese la oportunidad
-  ahora, teclée dev.off()."
+  Output: "Es importante darse cuenta de que los cambios que se realizan a la 
+  función par() permanecen en la sesión. Por ejemplo, si hacemos nuevas gráficas,
+  aparecerán siguiendo esta misma secuencia, primero arriba a la izquierda, luego arriba 
+  a la derecha, luego abajo a la izquierda, etc. Para devolver todos los ajustes de la 
+  función par a sus condiciones iniciales, se puede teclear dev.off(). Este comando quiere 
+  decir algo así como 'apague el dispositivo gráfico'. El dispositivo, así como los ajustes, se 
+  actualiza al recibir una nueva instrucción para graficar. Inténtelo ahora,
+  teclée dev.off()."
   CorrectAnswer: dev.off()
   AnswerTests: omnitest(correctExpr="dev.off()")
   Hint: "dev.off() - lo que significa 'device off' - es lo que usted tiene que 
-  teclear para seguir con la lecciòn."
+  teclear para seguir con la lección."
 
 - Class: text
-  Output: "Si usted quiere revisar el estado de los ajustes de par() en algún
-  momento, se puede teclear par() no más, con los paréntesis vacios. Esto imprime 
-  una lista de los ajustes de cada argumento que acepta la función par. Cabe 
-  señalar que hay argumentos que controlan detalles dentro del par pero su uso 
+  Output: "Si quiere revisar el estado de los ajustes de par() en algún momento,
+  puede teclear par() no más, con los paréntesis vacíos. Esto imprime una lista de
+  los ajustes que se han aplicado a cada argumento que acepta la función par. Cabe 
+  señalar que hay argumentos que controlan detalles dentro de par, pero su uso 
   no es muy común. Para leer lo que hace cada argumento, se puede teclear ?par
-  en el indicador sin paréntesis. Pero ahora, debemos seguir con gráficas
+  en el indicador sin paréntesis. Pero ahora, debemos seguir con las gráficas
   de dos variables."
 
 - Class: text
-  Output: "Como usted sabe, existen miles de opciones para hacer 
-  una gráfica. En esta lección, igual que en las lecciones anteriores, le voy
-  a enseñar una acá, y más en el vídeo. 
-  Podemos conversar en opciones para ejemplos propios que tengan
-  ustedes en el curso. Todo depende de su propósito o la idea que usted quiera 
-  probar con una gráfica o  presentación. Sin un propósito o destino, se puede 
-  jugar y tal vez le saltara algo lindo, pero siempre es más fácil adelantarse 
-  cuando tenga un propósito."
+  Output: "Como ya sabe, existen miles de opciones para hacer una gráfica. 
+  En esta lección, igual que en las lecciones anteriores, le voy a enseñar 
+  una nueva opción por acá, y más en el vídeo. Si quieren, podemos conversar sobre 
+  distintas opciones para graficar ejemplos propios que tengan
+  ustedes en el curso. Todo depende de su propósito o la idea que quieran 
+  probar con una gráfica o presentación. Sin un propósito claro, se puede 
+  jugar y tal vez surja algo lindo, pero siempre es más fácil adelantarse 
+  cuando tenga un propósito concreto."
 
 - Class: cmd_question
-  Output: "De hecho, usted ya hiciera una gráfica de dos variables cuando hizo
-  el diagrama de cajas con los datos del número de hijos y hijas que tiene la
-  mujer de promedio de cada provincia de El Ecuador, separados por 
-  alfabetización.  Seguimos con ese conjunto de datos, que hubiera cargado
-  en el fondo cuando usted lanzó la lección actual. Para ubicarse, reproduzca 
-  la gráfica del número de hijos y hijas condicionado en alfabetización con 
+  Output: "De hecho, usted ya hizo una gráfica de dos variables cuando construyó
+  el diagrama de cajas con los datos del número de hijos e hijas que tiene la
+  mujer promedio en cada provincia del Ecuador, organizados por nivel de 
+  alfabetización. Seguimos con ese conjunto de datos, que debería haberse cargado
+  en R cuando lanzó la lección actual. Para ubicarse, reproduzca 
+  la gráfica del número de hijos e hijas en función del grado de alfabetización con 
   este comando boxplot(detalle$hijos ~ detalle$leer.escr)."
   CorrectAnswer: boxplot(detalle$hijos ~ detalle$leer.escr)
   AnswerTests: omnitest(correctExpr="boxplot(detalle$hijos ~ detalle$leer.escr)")
   Hint: "Aunque faltan los elementos obligatorios de títulos y etiquetas 
-  informativas, basta teclear boxplot(detalle$hijos ~ detalle$leer.escr) de
-  momento."
+  informativas, de momento basta con teclear boxplot(detalle$hijos ~ detalle$leer.escr)."
   
 - Class: mult_question
   Output: "Espere, ¿esta gráfica es la misma que usted hizo unas lecciones atrás,
@@ -180,76 +179,76 @@
   AnswerChoices: "No; Si"
   CorrectAnswer: No
   AnswerTests: omnitest(correctVal="No")
-  Hint: "Esta gráfica tiene las mismas dos cajas que usted vio hace una 
+  Hint: "Esta gráfica tiene las mismas dos cajas que usted vio hace unas 
   lecciones, pero también tiene una caja a la izquierda 'juntos' que resume el 
   promedio global para cada provincia del país."
 
 - Class: text
   Output: "La diferencia no es en el código o comandos para la gráfica, sino en
-  el conjunto de datos. Tenemos categorias adicionales en este caso, etiquetadas
-  'juntos', que nos proporcionan resumenes. En esta gráfica vemos un resumen, y 
+  el conjunto de datos. En este caso tenemos categorías adicionales, etiquetadas como
+  'juntos', que nos proporcionan resúmenes. En esta gráfica vemos un resumen, y 
   una subdivisión por alfabetización. Pero hay más aún en estos datos."
   
 - Class: cmd_question
-  Output: "Para revelar un poco más del detalle, teclee el siguiente 
+  Output: "Para revelar información más detallada, teclee el siguiente 
   'with(detalle, boxplot(hijos~area*leer.escr))'. No se asuste de la
   introducción de 'with( , )', es un formato alternativo para evitar el uso del
-  nombre del conjunto y el $ (detalle$). Escríbalo de arriba para visulaizar este
-  paso ahora."
+  nombre del conjunto y el $ (detalle$). Escriba ahora lo de arriba para visulaizar 
+  este paso."
   CorrectAnswer: with(detalle, boxplot(hijos~area*leer.escr))
   AnswerTests: omnitest(correctExpr="with(detalle, boxplot(hijos~area*leer.escr))")
-  Hint: "Envolví el comando arriba con comillas para señalar que el argumento
-  with() era incluido, pero no debe usted ingresarlas acá en el indicador. Teclée
+  Hint: "Escribí el comando de arriba entre comillas para señalar que el argumento
+  with() estaba incluido, pero ahora no debe ingresarlas acá en el indicador. Teclee
   with(detalle, boxplot(hijos~area*leer.escr)) no más."
   
 - Class: cmd_question
-  Output: "Pffff, ¿qué tenemos acá? Pues, hacemos una cosa, le sugiero un cambio
-  que le va a ayudar entender el contenido y luego me vaya a proponer, con los 
-  compañeros en el espacio de foro, unos mejores para esta gráfica para que su 
-  cuento salte. Gire las etiquetas del eje X por ingresar las=2, después de una
-  coma, antes de los dos paréntesis de cierre al final del comando que utilizó 
-  para realizar la gráfica actual. Recuperar ese comando y ingrese el cambio 
+  Output: "Pffff, ¿qué tenemos acá? Pues, hagamos una cosa, le sugiero un cambio
+  que le va a ayudar a entender el contenido y luego me va a proponer junto con los 
+  compañeros en el espacio de foro, unas mejoras para esta gráfica. 
+  Gire las etiquetas del eje X ingresando las=2, después de una coma,
+  antes de los dos paréntesis de cierre al final del comando que utilizó 
+  para realizar la gráfica actual. Recupere ese comando e ingrese el cambio 
   mencionado."
   CorrectAnswer: with(detalle, boxplot(hijos~area*leer.escr, las = 2))
   AnswerTests: omnitest(correctExpr="with(detalle, boxplot(hijos~area*leer.escr, las=2))")
   Hint: "El comando debe terminar así with(detalle, boxplot(hijos~area*leer.escr, las = 2))."
 
 - Class: text
-  Output: "Cabe indicarle el sintaxis del comando. Con ello pedimos 
-  los datos de 'hijos', la variable dependiente, divido por las combinaciones de 'area'
-  (urbana, rural, y juntos (combinados)) y 'leer.escr' (SI sabe, NO lo sabe, y 
+  Output: "Voy a explicarle la sintaxis del comando. Con ello pedimos 
+  los datos de 'hijos', la variable dependiente, dividido por las combinaciones de 'area'
+  (urbana, rural, y juntos (combinados)) y 'leer.escr' (SI sabe, NO sabe, y 
   juntos (combinados)). El asterisco o símbolo de multiplicación * es lo que
-  manda que R grafica las combinaciones de area por leer.escr."
+  indica a R que debe graficar las combinaciones de area por leer.escr."
 
 - Class: mult_question
-  Output: "¿Ya tiene claro que quiere decir las etiquetas provisionales que 
+  Output: "¿Ya tiene claro qué quieren decir las etiquetas provisionales que 
   ha puesto el programa según el código? Tenemos datos de los promedios por 
-  las provincias de todo el páis etiqueteados como 'juntos.juntos'. Luego dos
-  cajas cuya contenido respectivamente los promedios de cada provincia según 
-  pertenecen a àreas urbanas o rurales. Luego, tres gráficas para las partes de 
-  la muestra en cuanto si supo leer y escribir, o que si no lo supo. Para
-  probar si me explico, déjeme preguntarle algo específico. ¿Escoja una las
-  siguientes interpretaciones NO sea correcta?"
-  AnswerChoices: "Algunas cajas tienen varios valores por provincia según el contexto; Cada caja se constituyó de un valor para cada provincia; Cada valor de promedio que compone cada caja representa más o menos mujeres según el contexto"
+  las provincias de todo el páis etiquetados como 'juntos.juntos'. Luego dos
+  cajas que contienen respectivamente los promedios de cada provincia según 
+  pertenezcan a áreas urbanas o rurales. Luego, tres gráficas para las partes de 
+  la muestra que indican si sabían leer y escribir, o si no sabían. Para
+  probar si me explico, déjeme preguntarle algo específico. Escoja la interpretación
+  de entre las siguientes que NO sea correcta."
+  AnswerChoices: "Algunas cajas tienen varios valores por provincia según el contexto; Cada caja se elaboró con un valor para cada provincia; Cada valor promedio que compone cada caja representa más o menos mujeres según el contexto"
   CorrectAnswer: Algunas cajas tienen varios valores por provincia según el contexto
   AnswerTests: omnitest(correctVal="Algunas cajas tienen varios valores por provincia según el contexto")
   Hint: "Solo hay un valor por provincia en cada caja, aunque el número de
-  mujeres a que se representa ese punto cambia según el contexto."
+  mujeres a que representa ese punto cambia según el contexto."
 
 - Class: text
-  Output: "Al pensar en como se podría mejorar la gráfica, no se debe limitar a 
-  los cambios que usted sabe realizar ya, sino se puede sugerir cualquier idea 
-  que le ocurra. Se podría jugar con las posibilidades directamente en R mismo,
-  o se podría empezar con un croquis con un lapiz y una hoja de papel, como 
+  Output: "Al pensar en cómo se podría mejorar la gráfica, no debe limitarse a 
+  los cambios que ya sabe realizar, sino que puede sugerir cualquier idea que
+  se le ocurra. Podría jugar con las posibilidades directamente en R, o
+  podría empezar dibujando un croquis con un lápiz y una hoja de papel, como 
   suelo hacer yo. ¿Tal vez sería mejor en gráficas aparte?"
 
 - Class: text
   Output: "Pues, dejamos esta lección acá, depués de un paso más en un análisis
-  exploratorio de este conjunto de datos interesantes de El Ecuador. Tengo ganas
+  exploratorio de este conjunto de datos interesantes del Ecuador. Tengo ganas
   de ver sus propios experimentos con gráficas y presentaciones, ¡y en el próximo
-  módulo usted tendrá una gran oportunidad de mostrar un poco de sus propios
+  módulo ya tendrán la gran oportunidad de mostrar un poco de sus propios
   talentos y gustos!"
 
 - Class: text
-  Output: "Hasta la próxima vez que nos vemos en linea, le deseo mucho éxito en
-  todos los labores académicos."
+  Output: "Hasta la próxima vez que nos veamos en línea, le deseo mucho éxito en
+  todas las labores académicas."
