@@ -13,7 +13,7 @@
 
 # Make path to csv available to user
 path2csv1 <- .pathtofile('ConoceR',
-                       'Dominio_de_datos_1',
+                       'Graficando_datos_cualitativos',
                        'ciclovia.csv')
 
 # Create datasets for user. We don't advertise that we're
