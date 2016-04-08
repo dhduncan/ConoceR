@@ -1,6 +1,6 @@
 - Class: meta
   Course: ConoceR
-  Lesson: Graficando_datos_cualitativos
+  Lesson: Trabajando_datos_cualitativos
   Author: David H Duncan
   Type: Standard
   Organization: Universidad Técnica Particular de Loja
@@ -101,7 +101,7 @@
   Resulta que por casualidad había casí el mismo número (165) de personas que 
   conocieron de la ciclovía que los (166) que no la conocieron. ¿No cierto?"
   
-- Class:
+- Class: text
   Output: "Aunque no se haya dado cuenta, usted acaba de 
   presenciar algo importante. A veces hay variables tan fácil de resumir que no 
   hace falta una gráfica, ni una tabla tampoco. La frase que escribí hace un
@@ -109,7 +109,7 @@
   tan simétrica que arriesgara causar dudas para un lector. Además, no se podría
   justificar el uso de tanto espacio en un informe para plasmar ese resultado."
   
-- Class: cmd_text
+- Class: text
   Output: "Para variables cualitativas, esta función table() es muy útil. Se 
   puede aplicarla para resumenes de observaciones entre ciertos rangos para
   variables cuantitativas también, per solo necesitamos su capacidad básica de 
@@ -148,7 +148,21 @@
   CorrectAnswer: table(cicLoja$Conocimiento, cicLoja$Sexo)
   AnswerTests: omnitest(correctExpr = "table(cicLoja$Conocimiento, cicLoja$Sexo)"
   Hint: "Si Ud. no logró asemblar el comando, lee la instrucción otra vez
-  cuidadosamente. Buscamos la función table() con los dos factores Conocimiento
+  cuidadosamente. Necesita la función table() con los dos factores Conocimiento
   y Sexo seperados por una coma. Sin embargo, si no añademos el objeto cicLoja y
   el símbolo del dólar, R no reconociera a los factores cicLoja$Conocimiento y
   cicLoja$Sexo."
+
+- Class: text
+  Output: "Muy bien, aunque sería mejor que la table tuviera etiquetas para las 
+  variables ya que 'Sí' y 'No' no son muy llamativos aparte. Como siempre, hay 
+  varias opciones. Se puede cambiar el comando anterior para que salgan como 
+  etiquetas los nombres de las variables. Hará eso primero."
+  
+- Class: cmd_question
+  Output: "Ud. va a cambiar la configuración del último comando. En vez de 
+  proporcionar las variables con el formato conjunto$variable, configúrelo según
+  este modelo 'with(conjunto, table(variable, variable))'. Inténtelo ahora."
+  CorrectAnswer: with(cicLoja, table(Conocimiento, Sexo))
+  AnswerTests: omnitest(correctExpr='with(cicLoja, table(Conocimiento, Sexo))')
+  Hint: hint
