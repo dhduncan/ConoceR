@@ -148,7 +148,7 @@
   dos gráficas una por encima de otra para comunicar aspectos distintos de los
   datos. A este diagrama de cajas le vamos a añadir un tipo denominado 
   'stripchart', y la función para crearlo es stripchart(). Usted va a llamar a esta función
-  con 6 argumentos. Acá está el código entero, deténgase un ratito para observarlo:
+  con 6 argumentos. Acá está el código entero, deténgase un ratito para observarlo
   stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, 
   vertical = TRUE, pch=19). Le comento los elementos en seguida."
   CorrectAnswer: stripchart(resumen$hijos, method = 'jitter', jitter = 0.1, add = TRUE, vertical = TRUE, pch=19)
@@ -171,7 +171,7 @@
 - Class: text
   Output: "No me soprendería si usted está pensando que todo esto es demasiado
   detallado. Pero, fíjese, con estos dos elementos gráficos juntos se puede
-  aprovechar mensaje de resumen que ofrece la caja y bigote, pero a la vez 
+  aprovechar el mensaje de resumen que ofrece la caja y bigote, pero a la vez 
   se ve el número de valores y su distribución bruta. En efecto, combina lo bueno
   de las dos primeras vistas que hemos visto. Podemos dejar esta gráfica en su
   estado actual, una vez que acabemos de añadir las etiquetas necesarias."
@@ -189,7 +189,7 @@
 - Class: cmd_question
   Output: "Si no cabe en la ventanilla, haga click en ZOOM, justo arriba de la
   gráfica para verla más bonita. Podríamos declarar nuestra fuente de datos añadiéndola
-  como subtítulo, otra vez con la función title. Trate de hacerlo así: 
+  como subtítulo, otra vez con la función title. Trate de hacerlo así 
   title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')."
   CorrectAnswer: title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')
   AnswerTests: omnitest(correctExpr= "title(sub = 'Fuente > VII Censo de Poblacion y VI de Vivienda 2010')")
@@ -249,10 +249,10 @@
   Output: "Con eso, usted ha terminado la lección. No se olvide de trasladar el
   código que le parezca útil a su álbum de recortes. En esta lección hemos visto
   una manera muy buena de resumir una variable cuantitativa de forma atractiva
-  e informativa. En la siguiente, usted jugará con opciones para revelar la 
+  e informativa. En la siguiente, usted jugará con distintas opciones para revelar la 
   identidad de las provincias y hacer contrastes con factores de agrupación que
   puedan ayudar a explicar los patrones en el número de hijos e hijas entre las
   mujeres ecuatorianas."
   
 - Class: text
-  Output: "Hasta la proxima lección, tenga usted un buen día."
+  Output: "Hasta la próxima lección, tenga usted un buen día."
