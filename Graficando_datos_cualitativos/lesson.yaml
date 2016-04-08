@@ -136,4 +136,8 @@
 
 - Class: text
   Output: "¿Este resultado tampoco se graficaría verdad? Cada observador tuvo que
-  encuestar a unas 30 personas, así que bastaría notar ese hecho."
+  encuestar a unas 30 personas, así que bastaría comunicar ese hecho en una frase."
+  
+- Class: cmd_question
+  Output: "Ya que estamos explorando la funcion de table(), quisiera
+  extender el tema un poquito. "
