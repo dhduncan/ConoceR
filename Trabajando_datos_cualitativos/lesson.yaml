@@ -177,3 +177,32 @@
   Hint: "Entre las mujeres más conocían a la ciclovía que no la conciían, 
   mientras que entre hombres fue al revés. Entonces la respuesta correcta es
   Mujeres."
+
+- Class: text
+  Output: "Le voy a presentar preguntas de interpretación muy a menudo. Quédese
+  pendiente de ellas, la habilidad de interpretar presentaciones de datos es 
+  tan importante como realizarlas. Ahora, ¿para qué le tengo realizando tablas
+  acá?"
+  
+- Class: cmd_question
+  Output: "Le enseño manejar tablas por la función table() porque muchas de las 
+  gráficas útiles de combinaciones de variables cualitativas se construye
+  mediante una tabulación. Por ejemplo, mire que pasa al envolver la función 
+  table() con la función plot(). Recupere el último comando que Ud. usó para 
+  tabular Sexo y Conocimiento, y cambiarlo para meter plot() alrededor de todo
+  lo que contiene table()."
+  CorrectAnswer: with(cicLoja, plot(table(Sexo, Conocimiento)))
+  AnswerTests: omnitest(correctExpr = "with(cicLoja, plot(table(Sexo, Conocimiento)))")
+  Hint: "Teclea with(cicLoja, plot(table(Sexo, Conocimiento))) para continuar."
+
+- Class: text
+  Output: "¿Ha visto una grafica asi antes? Pues, no se ve mucho, pero para
+  combinaciones de variables cualitativas son bastante buenas. Fijese que la 
+  grafica cuenta la misma historia que conto la tabla -- claro, son los mismos
+  datos -- pero en esta forma se ve el patron de forma inmediata. Sin embargo, 
+  para alguien que no conozca a la forma, vale la pena detenerse un rato para
+  pensarlo."
+
+- Class: text
+  Output: "Tenemos un mosaico de cuatro rectangulos, cada uno representa un 
+  valor de la tabla que vimos hace unos momentos."
