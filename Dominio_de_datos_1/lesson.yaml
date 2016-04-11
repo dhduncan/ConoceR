@@ -7,27 +7,27 @@
   Version: 2.3.1
 
 - Class: text
-  Output: "¡Hola, buenas! En esta lección, aprenderá crear y manipular conjuntos 
-  de datos, codificar a variables categóricas, y guardar su trabajo en un
+  Output: "¡Hola, buenas! En esta lección, aprenderá a crear y manipular conjuntos 
+  de datos, codificar variables categóricas, y guardar su trabajo en un
   archivo. ¿Listo?"
 
 - Class: text
-  Output: "Antes de empezar, confirma que Ud esté en su proyecto de RStudio.
-  Arriba, a la derecha, verá una caja de azul claro y a su lado debe aparecer
+  Output: "Antes de empezar, confirme que está en su proyecto de RStudio.
+  Arriba, a la derecha, verá una caja de color azul claro y a su lado debe aparecer
   el nombre de su proyecto. Si ve (none), significa que no esta en el proyecto
-  y Ud debería abrirlo del menu <<File>> antes de continuar."
+  y por tanto debería abrirlo en el menu <<File>> antes de continuar."
   
 - Class: cmd_question
-  Output: "Luego, teclea 'getwd()' (de <<get wORKING dIRECTORY>>) en la consola 
-  para confirmar de otra manera en donde esté trabajando."
+  Output: "Una vez abierto, teclee 'getwd()' (de <<get wORKING dIRECTORY>>) en la consola 
+  para confirmar de otra manera en qué directorio o carpeta está trabajando."
   CorrectAnswer: getwd()
   AnswerTests: omnitest(correctExpr='getwd()')
-  Hint: "Por favor escriba 'getwd()' y pulse Intro." 
+  Hint: "Por favor, escriba 'getwd()' y pulse Intro." 
 
 - Class: text
   Output: "En realidad, la decisión de establecer un espacio de proyecto en
-  RStudio es uno de las mas importantes para facilitar el manejo de sus datos
-  y archivos muchos."
+  RStudio es una de las más útiles para facilitar el manejo de múltiples
+  ficheros de datos y archivos."
 
 - Class: text
   Output: "La dirección que sale 
@@ -35,162 +35,162 @@
   por encima de la ventanilla FILES. ¿Todo bien? Adelante, pues."
 
 - Class: text
-  Output: "La primera cosa que querramos hacer es introducir un
-  conjunto de datos que están almacenados en un archivo digital. Por lo tanto, 
-  empezamos en esta lección ampliando las opciones que hay."
+  Output: "La primera cosa que queremos hacer es cargar un
+  conjunto de datos que está almacenado en un archivo digital. Por lo tanto, 
+  empezamos en esta lección ampliando las opciones que hay para abrir datos en R."
 
 - Class: mult_question
-  Output: "En lecciones y vídeos pasados usted hubiera visto comandos para la
+  Output: "En lecciones y vídeos pasados hemos visto comandos para la
   importación de datos al entorno de R. ¿Cuál de los siguientes ha visto en
   módulos anteriores?"
-  AnswerChoices: "*.csv (valores seperados por comas); *.kmz (keyhole markup language); Microsoft Access base de datos"
-  CorrectAnswer: "*.csv (valores seperados por comas)"
-  AnswerTests: omnitest(correctVal="*.csv (valores seperados por comas)")
-  Hint: "De este listado, usted solo hubiera visto comandos para leer datos
-  almacenados en el formato csv - valores seperados por comas - en este curso." 
+  AnswerChoices: "*.csv (valores separados por comas); *.kmz (keyhole markup language); Microsoft Access base de datos"
+  CorrectAnswer: "*.csv (valores separados por comas)"
+  AnswerTests: omnitest(correctVal="*.csv (valores separados por comas)")
+  Hint: "De este listado, solo ha visto comandos para leer datos
+  almacenados en el formato csv - valores separados por comas - en este curso." 
 
 - Class: text
-  Output: "También, usted puede utilizar la función 'read.table()' para leer 
-  datos que ya están en formato de filas y columnas, incluso archivos tipo csv. 
-  La diferencia es en los ajustes, las cual se ha ajustado al tipo csv para la
-  función read.csv(). De hecho, read.csv usa read.table en el fondo.
-  R puede ubicar el archivo con su ruta de archivo, o bien, si el archivo 
-  está ubicado en su carpeta de trabajo, podemos llamarlo directamente así."
+  Output: "También se puede utilizar la función 'read.table()' para leer datos que ya
+  están en formato de filas y columnas, incluyendo archivos tipo csv. La diferencia
+  entre esta función y la función read.csv() está en los ajustes, que corresponden al
+  tipo de archivo csv para la función read.csv(). De hecho, read.csv usa read.table como
+  función de base. R puede ubicar el archivo de datos siguiendo la ruta para encontrarlo, o bien, 
+  si el archivo está ubicado en su carpeta de trabajo, se le puede llamar directamente."
 
 - Class: cmd_question
-  Output: "Vamos a leer unos datos alamacenados en formato csv mediante el comando  
-  read.table(path2csv1, header=TRUE, sep=','). Dese la oportunidad ahora 
+  Output: "Vamos a leer unos datos almacenados en formato csv mediante el comando  
+  read.table(path2csv1, header=TRUE, sep=','). Inténtelo ahora 
   mismo."
   CorrectAnswer: read.table(path2csv1, header=TRUE, sep=',')
   AnswerTests: omnitest(correctExpr= "read.table(path2csv1, header=TRUE, sep=',')")
-  Hint: "Escriba el comando precisamente como aparece arriba. Aunque puede ser
-  tedioso, cada argumento a la función tiene su propósito para lograr que los 
-  datos aterricen salvos y sanos para el análisis en R."
+  Hint: "Escriba el comando exactamente como aparece arriba. Aunque puede ser
+  tedioso, cada argumento de la función tiene su propósito para lograr que los 
+  datos aterricen sanos y salvos para su análisis en R."
   
 - Class: text
-  Output: "¿Qué paso? Si ejecutamos la orden así, R lo hace, y por defecto 
-  imprime los resultados. Ya lo supo, ¿no? Ha acabado de pasarle un monton de datos rapidísimo, lo
-  cual significa que R entendiera el comando, pero no retiene nada vigente
-  en memoría de lo que salió.  Tiene que darlo un nombre, ¿verdad?"
+  Output: "¿Qué pasó? Si ejecutamos la orden así, R lo hace, y por defecto 
+  imprime los resultados. Ya lo supo, ¿no? Acaba de ver pasar un montón de datos rapidísimo,
+  lo cual significa que R entendió el comando, pero que no ha retenido nada de lo que
+  salió en su memoria. Para eso tendría que darle un nombre, ¿verdad?"
   
 - Class: cmd_question
-  Output: "Cuando querremos conservar datos para trabajarlos, necesitamos 
-  atribuirlo un nombre con '<-' para que R lo asigne una ubicación en el entorno
-  de trabajo y se acordará que el objeto está. Vamos a llamarle a este conjunto
-  'cicLoja' porque son datos acerca del proyecto de la ciclovia de Loja.  Ahora, 
-  Recupere el comando con read.csv pero esta vez ponga el nombre y el símbolo 
-  de asignación delante de él."
+  Output: "Cuando queramos conservar datos para trabajarlos, necesitamos 
+  atribuirles un nombre usando '<-' para que R les asigne una ubicación en el entorno
+  de trabajo y se acuerde de que el objeto está ahí. Vamos a llamar 'cicLoja' a este
+  conjunto de datos, porque son datos acerca del proyecto de la ciclovia de Loja. Ahora, 
+  recupere el comando con read.csv, pero esta vez ponga el nombre que hemos dicho y el símbolo 
+  de asignación delante."
   CorrectAnswer: cicLoja <- read.table(path2csv1, header=TRUE, sep=',')
   AnswerTests: omnitest(correctExpr= "cicLoja <- read.table(path2csv1, header=TRUE, sep=',')")
-  Hint: "No hacen falta pistas creo, vuelve al diálogo para hallar la respuesta."
+  Hint: "Creo que no hacen falta pistas, vuelva al diálogo para hallar la respuesta."
 
 - Class: cmd_question
-  Output: "Pues, ¿Funcionó ese mando? Podemos revisar el encabezado de la tabla,
+  Output: "Pues, ¿funcionó ese comando? Podemos revisar el encabezado de la tabla,
   las primeras seis filas utilizando la función head(). Siempre vale la pena
-  echar un vistazo a una muestra del conjunto."
+  echar un vistazo a una muestra del conjunto de datos que acabamos de cargar."
   CorrectAnswer: head(cicLoja)
   AnswerTests: omnitest(correctExpr= 'head(cicLoja)')
-  Hint: "En los parentesis de la función, escriba el nombre de su objeto no más, 
+  Hint: "En los paréntesis de la función, escriba el nombre de su objeto no más, 
   así head(cicLoja)."
 
 - Class: text
-  Output: "De mi opinión, la idea con esta lección es enseñarle lo mínimo
-  posible de un par de opciones, así que no pienso en explicar en detalle cada
-  argumento que usted hubiera teclead en el último paso. En breve, después del
-  nombre y dirección del archivo, llevó un argumento 'header =' que pregunta si 
-  los datos vienen encabezados (TRUE) o no (FALSE)..." 
+  Output: "En mi opinión, la idea de esta lección es enseñarle lo mínimo posible
+  acerca de un par de opciones para leer datos, así que no voy a explicar en detalle cada
+  argumento que ha tecleado en el último paso. Brevemente, después del
+  nombre y dirección del archivo, puso un argumento 'header =' que pregunta si 
+  los datos vienen con encabezados (TRUE) o no (FALSE)..." 
 
 - Class: text
-  Output: "Luego, 'sep=' pregunta por 
-  la caracter que sepera los valores del archivo. Ya que nuestro datos son
-  separados por comas (.csv) informamos a R de este hecho de forma muy directa 
+  Output: "Luego, 'sep=' pregunta por el carácter que separa los valores del archivo.
+  Nuestros datos están separados por comas, ya que se trata de un archivo .csv, y con este
+  argumento 'sep=' informamos a R de este hecho de forma muy directa 
   ','."
 
 - Class: mult_question
-  Output: "Volviéndonos al tema de los archivos de datos separados por comas, 
-  tal vez usted acabara de darse cuenta de un inconveniente sencillo pero 
-  importante con el 
-  formato debido a diferencias en las costumbres de notación númerica entre el 
-  inglés y el castellano.  ¿Cuál de los siguientes podría ser el inconveniente?"
+  Output: "Volviendo al tema de los archivos de datos separados por comas, 
+  tal vez acabe de darse cuenta de un inconveniente sencillo pero 
+  importante relacionado con el formato de los datos
+  debido a diferencias en las costumbres de notación númerica entre el 
+  inglés y el castellano. ¿Cuál de los siguientes podría ser el inconveniente?"
   AnswerChoices: "El estándar para indicar decimales en castellano es con la coma; CSV en castellano sería VCS; En castellano los números son más grandes"
   CorrectAnswer: El estándar para indicar decimales en castellano es con la coma
   AnswerTests: omnitest(correctVal="El estándar para indicar decimales en castellano es con la coma")
   Hint: "Demasiado fácil, ¿no? Un inconveniente podría ser que mientras que en 
-  muchos paises y idiomas se indica decimales con el punto, en castellano se los
-  señala con la coma. En realidad, todo depende de los adjustes de su computadora
-  y programas demás que intervenieran en el proceso. He visto problemas en 
-  algunas ocasiones y que todo funciona sin problema en otras. Lo importante es 
-  que usted esté consciente de la posibilidad." 
+  muchos países e idiomas los decimales se indican con el punto, en castellano se
+  señalan con la coma. En realidad, todo depende de los ajustes de su computadora
+  y de los demás programas que intervengan en el proceso. He visto problemas en 
+  algunas ocasiones, pero también que todo funciona perfectamente en otras. Lo 
+  importante es que sea consciente de la existencia de esta posibilidad." 
 
 - Class: text
   Output: "Insisto, la función 'read.csv()' es más sencilla que 'read.table()',
-  pero exige que los datos sean formateados de una manera especifica. Una vez 
-  entendido este formato, mucha gente eligirá 'read.csv()'. En este caso, la
-  llamada hubiera sido cicLoja <- read.csv('ciclovia.csv')."
+  pero exige que los datos estén formateados de una manera específica. Una vez 
+  entendido este formato, mucha gente elegirá 'read.csv()'. En este caso, la
+  llamada correcta sería cicLoja <- read.csv('ciclovia.csv')."
 
 - Class: text
-  Output: "Mientras que tecleara el comando con read.table hubiera ojeado los
-  muchos argumentos que acepta la función read.table( ) aparte de los que usted
-  hubiera ejecutado. Basta mencionar acá que brinda un nivel de control en todos 
-  los ajustes que quizas le sirva algún día."
+  Output: "Mientras que tecleaba el comando con read.table es posible que haya ojeado
+  los muchos argumentos que acepta la función read.table( ) aparte de los que
+  ha ejecutado. Basta mencionar acá que esta función brinda un nivel de control elevado 
+  para todos los ajustes que quizás le sirva algún día."
 
 - Class: cmd_question
-  Output: "Un momento de práctica antes de continuar, tenemos un objeto de datos,
-  debemos arrojar una gráfica o resumen de algún tipo. Eche un vistazo a las
-  variables con str(cicLoja) ya mismo."
+  Output: "Un momento de práctica antes de continuar. Tenemos un objeto de datos y
+  queremos ver una gráfica o resumen de los datos de algún tipo. Eche un vistazo a las
+  variables con str(cicLoja) ahora."
   CorrectAnswer: str(cicLoja)
   AnswerTests: omnitest(correctExpr= "str(cicLoja)")
-  Hint: "Teclee el comando precisamente como aparece al fin del diálogo para 
+  Hint: "Teclee el comando exactamente como aparece al final del diálogo para 
   continuar."
   
 - Class: text
-  Output: "Le comento en breve lo que tenemos acá con este conjunto. Los datos son
-  de encuestas de 331 lojanos en el mes de enero 2016. Las encuestas ses debe al 
+  Output: "Le comento en breve lo que tenemos acá con este conjunto. Los datos proceden
+  de encuestas de 331 lojanos realizadas en el mes de enero 2016. Las encuestas se deben al 
   trabajo de estudiantes de la UTPL en la asignatura de bioestadística. R
   identifó correctamente que la mayoría de las variables son categorías, o 
-  factores en terminos más técnicos. Eche un vistazo a una gráfica del número de
-  personas encuestados según la década de su nacimiento. Usted va a resumir la
+  factores en términos más técnicos. Eche un vistazo a una gráfica del número de
+  personas encuestadas según la década de su nacimiento. Para ello tiene que resumir la
   variable Decada."
 
 - Class: cmd_question
-  Output: "Haga una gráfica sencilla de las frecuencias, el número de personas
-  en cada década. ¿Cómo va usted a sumar las frecuencias? Pues, R se lo hace muy fácil, 
-  pero lo voy a realizar en dos pasos. Primero, hay una función 'table( )' con 
-  la cual puede contar frecuencias para factores. Teclee table(cicLoja$Decada) 
-  al indicador para ver el resultado."
+  Output: "Haga una gráfica sencilla representando las frecuencias del número de personas
+  que nacieron en cada década. ¿Cómo va a sumar las frecuencias? Pues, R lo hace muy fácil, 
+  pero lo vamos a realizar en dos pasos. Primero, hay una función 'table( )' con 
+  la cual se pueden contar las frecuencias para distintos factores. Teclee table(cicLoja$Decada) 
+  en la consola para ver el resultado."
   CorrectAnswer: table(cicLoja$Decada)
   AnswerTests: omnitest(correctExpr= "table(cicLoja$Decada)")
-  Hint: "Escriba el comando asì no más table(cicLoja$Decada), averiguando que 
-  tecleara minúsculas y mayúsculas según convenga."
+  Hint: "Escriba el comando así no más table(cicLoja$Decada), teniendo cuidado para 
+  teclear las minúsculas y mayúsculas según convenga."
 
 - Class: text
-  Output: "¿Qué se ve en ese resultado? Me parece que la gran mayoría de los encuestados
-  eran jovenes quienes nacieron en los 90. Bueno, tal vez mis estudiantes eran 
+  Output: "¿Qué se ve en este resultado? Me parece que la gran mayoría de los encuestados
+  eran jóvenes que nacieron en los 90. Bueno, tal vez mis estudiantes estarían 
   más cómodos encuestando a sus pares, o tal vez estos datos reflejan la
-  estructura de la población lojana?"
+  estructura de la población lojana."
   
 - Class: cmd_question
   Output: "Lo bonito es que se puede pasar el último comando entero directamente a la
-  función plot() para graficar los datos. ¡Dese la oportunidad ahora!"
+  función plot() para graficar los datos. ¡Inténtelo ahora!"
   CorrectAnswer: plot(table(cicLoja$Decada))
   AnswerTests: omnitest(correctExpr= "plot(table(cicLoja$Decada))")
-  Hint: "Insisto, puede teclear o pegar el último comando table(cicLoja$Decada)
+  Hint: "Insisto, teclee o pegue el último comando table(cicLoja$Decada)
   directamente entre los paréntesis de plot() para crear 
-  plot(table(cicLoja$Decada)). ¡Pruébalo!"
+  plot(table(cicLoja$Decada)). ¡Pruébelo!"
   
 - Class: text
-  Output: "Para mí, esto es una gráfica elegante y sencilla, y no me hace falta
-  ni color ni 3 dimensiones ni nada. Pero ... hmmm, hay un pequeño inconveniente. 
+  Output: "Para mí, esta es una gráfica elegante y sencilla, y no me hace falta
+  ni color, ni 3 dimensiones, ni nada. Pero... hmmm, hay un pequeño inconveniente. 
   Aunque R reconoció que las variables del conjunto eran factores, no sabe si 
-  tiene orden o no. En este caso tenemos la década '00s' (2000s) primero en el eje X, 
-  cuando debe aparecer después de los 90."
+  tienen orden o no. En este caso tenemos la década '00s' (2000s) primero en el eje X, 
+  cuando debería aparecer después de los 90."
 
 - Class: cmd_question
-  Output: "Puede resolver esto sin problema. Usted va a utilizar la función 
-  factor() para definir la variable Década nuevamente.  Siga este ejemplo
+  Output: "Puede resolver esto sin problema. Vamos a utilizar la función 
+  factor() para definir la variable Década nuevamente. Siga este ejemplo
   directamente nuevoDecada <- factor(cicLoja$Decada, 
-  levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Con ello, usted
-  dara R la información acerca del orden de los niveles del factor."
+  levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Con ello, estamos
+  dando a R la información acerca del orden de los niveles del factor."
   CorrectAnswer: nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))
   AnswerTests: omnitest(correctExpr= "nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))")
   Hint: "Teclee esto nuevoDecada <- factor(cicLoja$Decada, levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s'))."
@@ -198,91 +198,91 @@
 - Class: cmd_question
   Output: "Ahora el modo más sencillo comprobar el resultado sería repetir la 
   gráfica. Recupere el comando para la gráfica, pero en lugar de 
-  cicLoja$Decada usted ingresará nuevoDecada."
+  cicLoja$Decada, ingrese nuevoDecada."
   CorrectAnswer: plot(table(nuevoDecada))
   AnswerTests: omnitest(correctExpr = "plot(table(nuevoDecada))")
   Hint: "Necesita recuperar o teclear el comando plot(table()) otra vez, pero
   esta vez pondrá el nuevo objeto nuevoDecada entre los paréntesis."
 
 - Class: text
-  Output: "El esquéleto de esta gráfica ya se ve bien, así digo yo por lo menos.
-  La mayoría de los encuestados nacieron en los 90, unos pocos más jovenes aún,
-  con una proporción disminuyendo mientras mayor fueran los encuestados. A me mi
-  gusta como esquéleto. Sin embargo, no lleva los elementos obligatorios, ¿verdad?"
+  Output: "El esqueleto de esta gráfica ya se ve bien, o eso creo.
+  La mayoría de los encuestados nacieron en los 90, hay unos pocos aún más jóvenes,
+  y la proporción disminuye cuanto mayores son los encuestados. A mí me
+  gusta como esqueleto. Sin embargo, no lleva los elementos obligatorios, ¿verdad?"
   
 - Class: text
-  Output: "Faltan etiquetas más informativas, y un título cómo mínimo, y hay 
-  muchos cambios estéticos que se pudiera haber realizado. Si esta fuera su gráfica para un informe o una conversación con
+  Output: "Faltan etiquetas más informativas y un título como mínimo, y hay 
+  muchos cambios estéticos que se podrían realizar. Si esta fuera su gráfica para un informe o una conversación con
   alguien, espero que no fallara en añadir los elementos imprescindibles." 
   
 - Class: text
-  Output: "Usted debe terminar este ejemplo a su satisfacción fuera de la lección 
-  en su álbum de recortes."
+  Output: "Para comprobarlo, debe terminar este ejemplo a su gusto fuera de la lección 
+  y almacenarlo en su álbum de recortes."
   
 - Class: text
-  Output: "¿Fue todo esto un callejón sin salida? ¡De ninguna manera!
-  Usted acaba de aprender como utilizar la función factor() para 
-  codificar variables ordinales (las que tengan un orden específico). Con este
-  truco puede asegurar que sus tablas y gráficas salgan correctas sin la 
-  necesidad de ordenar elementos manualmente."
+  Output: "¿Todo esto fue un callejón sin salida? ¡De ninguna manera!
+  Acaba de aprender cómo utilizar la función factor() para 
+  codificar variables ordinales (las que tienen un orden específico). Con este
+  truco puede asegurarse de que sus tablas y gráficas salgan en el orden correcto 
+  sin la necesidad de tener que ordenar los elementos manualmente."
 
 - Class: cmd_question
   Output: "Creo que es buena práctica adjuntar nuevas variables al conjunto
-  principal. Hay muchas opciones para realizarlo. Una de ellas es la función
-  cbind() para atar las columnas. Con ella se puede atar nuevoDecada a cicLoja,
-  así cicLoja <- cbind(cicLoja, nuevoDecada). Dese la oportunidad ahora."
+  principal. Hay muchas opciones para realizarlo. Una de ellas es usar la función
+  cbind() para unir columnas. Con esta función se puede unir nuevoDecada a cicLoja,
+  así cicLoja <- cbind(cicLoja, nuevoDecada). Inténtelo ahora."
   CorrectAnswer: cicLoja <- cbind(cicLoja, nuevoDecada)
   AnswerTests: omnitest(correctExpr= "cicLoja <- cbind(cicLoja, nuevoDecada)")
-  Hint: "¿Usted se está hundiendo en comandos nuevos? - no se olvide guardarlos 
-  en su álbum de recortes para usted mismo en un futuro. En este caso, teclee 
+  Hint: "¿Se está perdiendo un poco entre tantos comandos nuevos? - No se olvide de guardarlos 
+  en su álbum de recortes para recordarlos en un futuro. En este caso, teclee 
   cicLoja <- cbind(cicLoja, nuevoDecada)"
 
 - Class: text
-  Output: "En realidad, hay una opción lograra todo esto en un paso. Usted
-  pudiera haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, 
+  Output: "En realidad, hay una opción que lograría todo esto en un paso.
+  Podríamos haber tecleado cicLoja$nuevoDecada <- factor(cicLoja$Decada, 
   levels = c('40s', '50s', '60s', '70s', '80s', '90s', '00s')). Fíjese que solo
-  he añadido cicLoja$ al principio del mismo comando usted utilizó. 
-  En aquel momento la variable nuevoDecada no existiera, pero se la hubiera 
-  creado en el mismo acto de ordenar los niveles de las décadas. ¿Me explico?"
+  hemos añadido cicLoja$ al principio del mismo comando que utilizamos antes. 
+  En aquel momento la variable nuevoDecada no existía, pero con este comando se habría 
+  creado a la vez que ordenamos los niveles de las décadas. ¿Me explico?"
   
 - Class: text
-  Output: "Un pequeño paso más en esta tema. Entienda que estos cambios que usted
-  ha hecho son vigentes o toman su efecto dentro de la sesión actual, pero al
-  salir, cesan de existir hasta que vuelva a repetir los comandos.  Sin embargo,
-  puede guardar el objeto como un archivo para que sea disponible a otras
+  Output: "Un pequeño paso más sobre este tema. Entienda que estos cambios que acabamos
+  de hacer están vigentes o hacen efecto dentro de la sesión actual, pero al
+  salir, dejan de existir hasta que volvamos a repetir los comandos. Sin embargo,
+  podemos guardar el objeto como un archivo para que esté disponible para otros
   programas."
 
 - Class: cmd_question
-  Output: "En el proceso de importación hay read.csv() y read.table(), igual,
-  para exportar o guardar objetos hay write.csv() y write.table(). Usted va a 
-  llamar a la función write.csv() para guardar un archivo nuevo con estos datos.
+  Output: "Hemos visto que para importar datos podemos usar read.csv() y read.table(). Del
+  mismo modo, para exportar o guardar objetos podemos usar write.csv() y write.table().
+  Llame ahora a la función write.csv() para guardar un archivo nuevo con estos datos.
   Escriba write.csv(x = cicLoja,  file = 'miCicLoja.csv') para almacenar el
   objeto como otro archivo tipo csv."
   CorrectAnswer:  write.csv(x = cicLoja,  file = 'miCicLoja.csv')
   AnswerTests: omnitest(correctExpr = "write.csv(x = cicLoja,  file = 'miCicLoja.csv')")
-  Hint: "En esta función el nombre del objeto en el entorno es el 'x', y luego
-  se proporciona el nombre destino para el archivo"
+  Hint: "En esta función, el argumento 'x' lleva el nombre que hemos dado al objeto que contiene 
+  los datos en el entorno de R, y luego se proporciona el nombre de destino para el archivo"
 
 - Class: text
-  Output: "Con los pasos de esta lección usted ya hubiera aprendido unas técnicas
-  y trucos útiles. Sin embargo, hemos metido solomente un dedito en el agua hasta
-  ahora.  Quiero abrirle unas ventanas o portales al mundo enorme de
-  posibilidades en este campo, para que tenga una idea de ellas, pero nos
+  Output: "Con los pasos de esta lección creo que ha aprendido algunas técnicas
+  y trucos útiles. Sin embargo, hasta ahora solamente hemos metido un dedito en 
+  el agua. Quiero abrirle unas ventanas o portales al mundo enorme de posibilidades
+  que existen en este campo, para que tenga una idea de ellas, pero nos
   bastará con un puñado de técnicas para practicar. Próximadas paradas - copiar y
-  pegar, y uniendo conjuntos por variables en común."
+  pegar, y unir conjuntos de datos por variables que tengan en común."
   
 - Class: cmd_question
-  Output: "Por último, algo para divertirse. No hemos pasado mucho tiempo con las
-  funciones básicas de programación en R, pero en este paso usted va a conocer
-  la función rep() para repetir.  Es de gran utilidad cuando queremos crear una
-  variable nueva. En esta occassión, por meter una llamada a esta función rep dentro
-  de otra a la misma, se puede simular cosas interesantes y ridículas. 
-  Teclee el siguiente
+  Output: "Por último, algo para divertirse. No hemos dedicado mucho tiempo a las
+  funciones básicas de programación en R, pero en este paso va a conocer
+  la función rep() para repetir. Es de gran utilidad cuando queremos crear una
+  variable nueva. En esta ocasión, incluyendo una llamada a esta función rep dentro
+  de otra a la misma función, se pueden simular cosas interesantes y ridículas. 
+  Teclee lo siguiente
   rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)"
   CorrectAnswer: rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)
   AnswerTests: omnitest(correctExpr = "rep(c(rep('We wish you a Merry Christmas', 3), 'and a Happy New Year.'), 5)")
-  Hint: "Usted adivine lo que viene, siga luchando, solo le queda este comando
-  para terminar la lección actual. Copie y pegue del diálogo arriba si no le
+  Hint: "Adivine lo que viene... siga luchando, sólo le queda este comando
+  para terminar la lección actual. Copie y pegue el diálogo arriba si no le
   sale."
 
 - Class: text
