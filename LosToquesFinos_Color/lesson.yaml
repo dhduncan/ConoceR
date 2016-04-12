@@ -7,91 +7,91 @@
   Version: 2.2.21
 
 - Class: text
-  Output: "Bienvenidos a la sessión. En esta oportunidad usted explorará las
-  opciones con color en el sistema básico de graficar en R. Cuando digo en R, 
-  espero que usted esté trabajando en RStudio siempre para este curso."
+  Output: "Bienvenidos a esta nueva sesión. En esta ocasión exploraremos las
+  opciones de color en el sistema básico para graficar en R. Cuando digo en R, 
+  espero que esté trabajando en RStudio siempre durante este curso."
 
 - Class: text
-  Output: "Ya que usted conoce a R, no le va a sorprender que hay muchas maneras
-  de trabajar con color, y incluso unos paquetes con paladares alternativos. Nos
-  quedamos con los básicos en esta sessión."
+  Output: "Ya que va conociendo R, no le sorprenderá que haya muchas maneras
+  de trabajar con color, e incluso que haya paquetes con paletas de color alternativas.
+  En esta sesión nos quedaremos con las básicas."
 
 - Class: cmd_question
-  Output: "R tiene nombrado 657 colores, y se puede llamar a ellos por su nombre,
-  o varias codificaciones de color como hexadecimal o RGB valores. Para ver la 
-  lista de los colores, teclee colors(). Dese la oportunidad ahora."
+  Output: "R tiene 657 colores identificados, y se les puede llamar por su nombre,
+  o bien utilizar codificaciones de color como la hexadecimal o los valores RGB. Para ver la 
+  lista de colores, teclee colors(). Pruébelo ahora."
   CorrectAnswer: colors()
   AnswerTests: omnitest(correctExpr="colors()")
-  Hint: "Tecléelo, esto no le va a dolor"
+  Hint: "Tecléelo, no le va a doler."
 
 - Class: figure
-  Output: "En la ventanilla de PLOTS hubiera aparecido, o empezado de aparecer,
+  Output: "En la ventanilla de PLOTS debe haber aparecido, o empezado a aparecer,
   una representacíon de los 657 colores ordenados por tonalidad, saturación, y 
   valor."
   Figure: StowersColor.R
   FigureType: new
 
 - Class: text
-  Output: "Esta tabla se cita mucho en las fuentes en linea de R. Usted puede
-  consultarla, y otras configuraciones útiles, en esa página 
-  http://research.stowers-institute.org/efg/R/Color/Chart/index.htm. Si usted
+  Output: "Esta tabla se cita mucho en las fuentes en lónea de R. Puede
+  consultarla, así como otras configuraciones útiles, en esta página 
+  http://research.stowers-institute.org/efg/R/Color/Chart/index.htm. Si
   encuentra un recurso semejante en castellano, ¡compártalo con nosotros por el
   foro!"
 
 - Class: cmd_question
-  Output: "Muy bien, ¿pero como le va a ayudar esto? Pues, con el código numérico
-  que se ve en la tabla de colores, se puede llamar al nombre del color en su
-  gráfica. A mi me llama la atención el color número 642, así vamos a conocerlo.
-  Ya hemos visto que el objeto que almacena los colores se llama colors(),
-  ¿verdad? Pues a este comando vamos a especificar el número del color que 
-  queremos destacar en corchetes cuadrados [], así colors()[642]. Inténtelo."
+  Output: "Muy bien, ¿pero cómo le va a ayudar esto? Pues, con el código numérico
+  que se ve en la tabla de colores, se puede averiguar el nombre del color que está 
+  usando en sus gráficas. A mí me llama la atención el color número 642, así que vamos a 
+  conocerlo. Ya hemos visto que el objeto que almacena los colores se llama colors(),
+  ¿verdad? Pues vamos a especificar en este comando el número del color que 
+  queremos destacar entre corchetes [], así colors()[642]. Inténtelo."
   CorrectAnswer: colors()[642]
   AnswerTests: omnitest(correctExpr='colors()[642]')
   Hint: "Aunque le parezca un poco torpe, este comando pide el color con índice
-  642 de todos los colores."
+  642 de entre todos los colores posibles."
 
 - Class: text_question
-  Output: "¿Como se llama ese color entonces? Escriba el nombre en ingles que
-  hubiera aparecido en la consola, sin las comillas."
+  Output: "¿Como se llama ese color entonces? Escriba el nombre en inglés que
+  haya aparecido en la consola, sin las comillas."
   CorrectAnswer: violetred1
   AnswerTests: omnitest(correctVal='violetred1')
-  Hint: "Teclee el nombre del color no más para avanzar al próximo paso."
+  Hint: "Teclee el nombre del color no más para poder avanzar."
 
 - Class: text
-  Output: "OK, ahora Ud. va a llamar este color para reconstruir la gráfica que vimos
+  Output: "OK, ahora vamos a llamar a este color para reconstruir la gráfica que vimos
   en el vídeo de las opiniones de la gente de Bogotá sobre sus vidas. Las
-  primeras cifras de la gráfica superior fueron 51 % en 2011 quienes creyeron 
-  que su nivel de vida ha mejorado en los 5 años anteriores, comparado con 54.2%
-  en 2014."
+  primeras cifras de la gráfica superior representaban el porcentaje de personas que
+  creían que su nivel de vida había mejorado en los 5 últimos años, y fueron 51 % en 2011 
+  y 54.2% en 2014."
 
 - Class: cmd_question
-  Output: "Primero con el color que sale por defecto,
-  proporcione usted los siguientes argumentos a la función barplot(). Primero
+  Output: "En primer lugar, con el color que sale por defecto,
+  proporcione los siguientes argumentos a la función barplot(). Primero
   tiene que especificar la altura (height) de las barras así height=c(51, 54.2),
   y luego un argumento para los nombres (etiquetas) de las barras, así
-  names.arg=c('2011', '2014'). Envuelve los dos argumentos en la función
+  names.arg=c('2011', '2014'). Incluya los dos argumentos en la función
   barplot(), seperados por una coma, para empezar."
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))
   AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))")
   Hint: "Lo que necesitaba era barplot(height = c(51, 54.2), names.arg = c('2011', '2014'))" 
 
 - Class: cmd_question
-  Output: "Usted va a añadir ese color 'violetred1' entonces. Como hicieron ellos de la 
-  oficina del alcalde de Bogotá, queremos que sobresale 2014, así que dejarémos
-  2011 en gris. Recupere el comando anterior y despues de una coma, modifique la
-  llamada a barplot() con el siguiente col = c('grey', 'violetred1')"
+  Output: "Ahora vamos a añadir ese color 'violetred1'. Como hicieron los miembros de la 
+  oficina del alcalde de Bogotá, queremos que llame la atención 2014, así que dejaremos
+  2011 en gris. Recupere el comando anterior y después de una coma, modifique la
+  llamada a barplot() con lo siguiente col = c('grey', 'violetred1')"
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))
   AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))")
-  Hint: "Ya que añadió lo del color, la función debiera haber salido así
+  Hint: "Puesto que añadió lo del color, la función debería haber salido así
   barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'))"
 
 - Class: cmd_question
-  Output: "En este momento podríamos reproducir el efecto del corte del eje que 
-  hicieron ellos de la oficina del alcalde. ¿Se acuerde que tan fuerte parecía 
-  la diferencia entre 2011 y 2014 en su gráfica? Se lo hace por introducir otro
-  argumento ylim = c(49, 55) - ya que estos fueron los limites de su versión
-  de la gráfica, pero también tenemos que ingresar otra argumento xpd=FALSE. 
-  Inténtelo usted, recupere el último comando otra vez y añádale los dos
+  Output: "Ahora podríamos reproducir el efecto del corte del eje que 
+  hicieron los miembros de la oficina del alcalde. ¿Se acuerda qué tan fuerte parecía 
+  la diferencia entre 2011 y 2014 en su gráfica? Esto se hace añadiendo otro
+  argumento ylim = c(49, 55) - ya que estos fueron los límites de su versión
+  de la gráfica, pero también tenemos que ingresar otro argumento xpd=FALSE. 
+  Inténtelo, recupere el último comando otra vez y añádale los dos
   argumentos mencionados."
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c("2011", "2014"), col = c("grey", "violetred1"), ylim = c(49,55), xpd = FALSE)
   AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
@@ -99,27 +99,27 @@
   names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylim = c(49,55), xpd = FALSE)"
 
 - Class: cmd_question
-  Output: "¡Vaya cambiazo, verdad! Esta versión es más llamativa, pero no es
-  una buena practica, así vamos a quitar los últimos dos argumentos con los 
-  cual cambiara el eje Y. Lo que si usted debe introducir en el comando son las
-  etiquetas para los ejes. En este paso usted debe quitar los argumentos a ylim
-  y xpd, y añadir ylab='porcentage de encuestados' y xlab = 'Año de la encuesta'."
+  Output: "¡Vaya cambiazo!, ¿verdad? Esta versión es más llamativa, pero no es
+  una buena práctica, así que vamos a quitar los últimos dos argumentos con los 
+  que cambiamos el eje Y. Lo que sí debemos introducir en el comando son las
+  etiquetas para los ejes. En este paso debe quitar los argumentos ylim y xpd,
+  y en su lugar añadir ylab='Porcentaje de encuestados' y xlab = 'Año de la encuesta'."
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')
   AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
-  Hint: "Despues de los cambios de este paso, la función es así
+  Hint: "Después de los cambios en este paso, la función debe quedar así
   barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey',
-  'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')"
+  'violetred1'), ylab='Porcentaje de encuestados', xlab='Año de la encuesta')"
 
 - Class: text
-  Output: "Bueno, le desvié un poco con esto de la escala del eje Y, regresamos
-  al tema de color. A propósito, si a usted le gustaría destacar diferencias
-  pequeñas como vemos en este ejemplo, toca seleccionar un gráfico de puntos."
+  Output: "Bueno, le desvié un poco con esto de la escala del eje Y, regresemos
+  al tema de color. A propósito, para destacar diferencias
+  pequeñas como vemos en este ejemplo, hay que seleccionar un gráfico de puntos."
 
 - Class: cmd_question
-  Output: "De hecho, hay una manera aún más sencillo para introducir un juego
-  limitado de colores dentro de gráficas.  R tiene un paladar de 8 colores que
-  se puede llamar por el número. Usted los hubiera visto en el vídeo en la 
-  gráfica bien fea mía. Se los puede ver por teclear el siguiente 
+  Output: "De hecho, hay una manera aún más sencilla para introducir un juego
+  limitado de colores dentro de las gráficas. R tiene una paleta de 8 colores que
+  se puede llamar por el número. Usted los debe haber visto en el vídeo en la 
+  gráfica mía bien fea. Se los puede ver tecleando lo siguiente 
   barplot(1:8, col=1:8)."
   CorrectAnswer: barplot(1:8, col=1:8)
   AnswerTests: omnitest(correctExpr='barplot(1:8, col=1:8)')
@@ -127,110 +127,110 @@
 
 - Class: text
   Output: "A propósito, algunos de los expertos en visualización opinan
-  diferente en la cuestión de cuál color es más fiable cuando le toca añadir
+  diferente acerca de la cuestión sobre qué color es más fiable cuando hay que añadir
   color para destacar algo. En sus libros Edward Tufte propone rojo, pero ayer
-  vi un autor opinando que para pantallas y fuentes del internet, azul suele
-  ser la mejor opción.  Yo no tengo opiniones fuertes en este asunto, aunque 
-  supongo en mi práctica voy con rojo. Rojo se llama con col=2, y azul con col=4."
+  vi un autor opinando que para pantallas y fuentes de Internet, la mejor opción
+  suele ser azul. Yo no tengo opiniones fuertes en este asunto, aunque supongo que
+  en mi práctica voy con rojo. Para usar el rojo se usa col=2, y para el azul col=4."
 
 - Class: text
-  Output: "Ojo - estos numeros no tienen nada que ver con los
+  Output: "Ojo - estos números no tienen nada que ver con los
   índices de los colores en la tabla completa de colores que usted vio antes.
-  Por ejemplo el índice para blanco en la tabla completa era 1, así que lo llamara
-  por col=colors()[1], mientras que 1 en esta serie limitada de colores llama al 
-  color negro, y con el sintaxis col=1."
+  Por ejemplo el índice para blanco en la tabla completa era 1, así que lo llamaría
+  usando col=colors()[1], mientras que el 1 en esta serie limitada de 8 colores llama al 
+  color negro y con la sintaxis col=1."
 
 - Class: cmd_question
-  Output: "Una aplicación super útil en R es asignar color por una variable de
-  agrupación o factor. En el fondo le hemos cargado un conjunto 'detalle' que lleva los
-  datos del número promedio de hijos y hijas que tenían las ecuatorianas según
-  el censo de 2010.  Confirme que está vigente en la sessión con head(detalle)."
+  Output: "Una aplicación súper útil en R es asignar el color usando una variable de
+  agrupación o factor. Hemos cargado en R un conjunto de datos 'detalle' que contiene los
+  datos del número promedio de hijos e hijas que tenían las ecuatorianas según
+  el censo de 2010. Confirme que este objeto está vigente en la sesión con head(detalle)."
   CorrectAnswer: head(detalle)
   AnswerTests: omnitest(correctExpr='head(detalle)')
-  Hint: "Este paso siempre es una buena idea para orientarnos en un objeto de 
+  Hint: "Este paso siempre es una buena idea para recordar cómo era un objeto de 
   datos. Escriba head(detalle) y presione INTRO."
 
 - Class: cmd_question
-  Output: "En este paso usted va a graficar todos los valores en el conjunto,
-  pero especificar que el color siga la variable area. Area es la variable que
-  cuenta si la encuestada pertencía de una zona urbana o rural.  Así se hace
-  with(detalle, plot(hijos, col = area)). Dese la oportunidad."
+  Output: "En este paso vamos a graficar todos los valores que hay en el conjunto de datos,
+  pero especificando que el color siga la variable área. Esta variable tiene en
+  cuenta si la encuestada pertencía a una zona urbana o rural. Se hace así
+  with(detalle, plot(hijos, col = area)). Inténtelo."
   CorrectAnswer: with(detalle, plot(hijos, col = area))
   AnswerTests: omnitest(correctExpr='with(detalle, plot(hijos, col = area))')
   Hint: "No hay trucos acá, escriba with(detalle, plot(hijos, col = area)) para
-  ver los puntos pintados según la variable area."
+  ver los puntos pintados según la variable área."
 
 - Class: text
-  Output: "Para entender esta vista de los datos, hay que acordarse que en este
-  conjunto tenemos datos promedios por cada provinicia de El Ecuador, y luego 
-  desglosados por alfabetización y la zona, rural o urbana."
+  Output: "Para entender esta vista de los datos, hay que acordarse de que en este
+  conjunto tenemos datos promedio por cada provinicia del Ecuador, y luego 
+  desglosados por nivel de alfabetización y por zona, rural o urbana."
 
 - Class: cmd_question
-  Output: "¿Le parece que añadimos unas anotaciones a esta gráfica? Empezamos
-  con unas palabras. Todos las gráficas y por lo tanto lo que podemos añadir 
-  como anotaciones necesita información sobre las coordinadas de forma precisa
-  o, bajo ciertas condiciones, vaga. Añada las palabras ¿cuál color va con cuál
-  nivel de área?.  Este texto va entre comillas con el argumento labels=''. 
-  También, usted tiene que especificar un lugar. Digamos que x sea 150, e y 
-  sea 4. Ensamblar estos detalles dentro la función text() ahora en el indicador
+  Output: "¿Le parece si añadimos unas anotaciones a esta gráfica? Empecemos
+  con unas palabras. Todas las gráficas, y por lo tanto todo lo que podemos añadir 
+  como anotaciones, necesitan información sobre las coordenadas de forma precisa,
+  aunque bajo ciertas condiciones esta información puede ser vaga. Añada las palabras ¿cuál color va 
+  con cuál nivel de área?. Este texto va entre comillas con el argumento labels=''. 
+  También tenemos que especificar un lugar para colocar este texto. Digamos que x sea 150, e y 
+  sea 4. Ensamble ahora estos detalles dentro de la función text() en el indicador
   de RStudio."
   CorrectAnswer: text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')
   AnswerTests: omnitest(correctExpr='text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')', correctVal=VAL)
-  Hint: "¿Exijo cada vez más de usted verdad?  Ensámblelo así 
+  Hint: "Cada vez le exijo más, ¿verdad? Ensámblelo así 
   text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?'), aunque
-  el orden dentro de la función no importa."
+  el orden de los argumentos dentro de la función no importa."
   
 - Class: text
-  Output: "Si usted quiere romper lineas en el texto, hay que ingresar la
-  combinación \n en el lugar donde quiere que divide el texto.  Le sugierso que
-  experimenta con las opciones de más del función text(), los cuales brindan
+  Output: "Si quiere dividir el texto en dos renglones, hay que ingresar la
+  combinación \n en el lugar donde quiera que lo divida. Le sugiero que
+  experimente con el resto de opciones de la función text(), las cuales brindan
   un nivel de contro muy fino."
 
 - Class: text
-  Output: "Usted reconocerá que algunos técnicas, como lo de añadir texto, 
-  podrían hacerse con igual o mayor facilidad en un programa de terceros. Sin 
+  Output: "Reconocerá que algunas técnicas, como la de añadir texto, 
+  podrían hacerse con igual o mayor facilidad en otro programa diferente. Sin 
   embargo, no hace daño aprenderlas en R."
 
 - Class: cmd_question
-  Output: "Si usted quisiera añadir una linea para destacar algún umbral en 
-  la gràfica, hay varias opciones. Se puede utilizar la función abline() cuya nombre 
-  quiere decir trace una linea entre a y b.  Imagínese que queremos isladar el
-  primer tercio (más o menos) del espacio, donde hay las mujeres que no sabían
-  leer ni escribir. La función abline() tiene hace más cosas, pero ahora solo
-  queremos pedir que nos añade una linea vertical alrededor de donde 77 en el
-  eje X. Teclee abline(v=77) entonces, para una linea v para vertical."
+  Output: "Si ahora quisiera añadir una línea para destacar algún umbral en 
+  la gráfica, hay varias opciones. Se puede utilizar la función abline(), cuyo nombre 
+  quiere decir trace una línea entre a y b. Imagínese que queremos aislar el
+  primer tercio (más o menos) del espacio, donde aparecen las mujeres que no sabían
+  leer ni escribir. La función abline() hace más cosas, pero ahora sólo
+  queremos pedir que nos añada una línea vertical alrededor del valor 77 en el
+  eje X. Teclee abline(v=77), indicando la v para que la línea sea vertical."
   CorrectAnswer: abline(v=77)
   AnswerTests: omnitest(correctExpr='abline(v=77)')
   Hint: "El comando que quiere es abline(v = 77)."
 
 - Class: text
-  Output: "Super sencillo verdad? Para lineas horizontales haríamos algo muy
-  parecido, aunque con h en lugar de v."
+  Output: "Súper sencillo, ¿verdad? Para líneas horizontales haríamos algo muy
+  parecido, aunque indicando h en lugar de v."
 
 - Class: cmd_question
-  Output: "Para especificar una linea que empieza y termina donde usted quiera,
-  utilzamos segments(). Esta función require más argumentos, porque tenemos que
-  proporcionar las coordinadas en las dimensiones x y y. Sería más facíl entender
-  con un ejemplo. Digamos que quiero trazar una linea que empieza en nuestra
-  recta vertical en 77 y va en el plano horizontal hasta 200 en la altura que
-  cabiera los datos de las alfabetizadas, y los datos para alfabetizadas y no
-  alfabetizadas juntas. Lo voy a hacer mas gruesa también con lwd=. La receta 
+  Output: "Para especificar una línea que empiece y termine donde usted quiera,
+  utilizamos segments(). Esta función requiere más argumentos, porque tenemos que
+  proporcionar las coordenadas en las dimensiones x e y. Sería más fácil de entender
+  con un ejemplo. Digamos que quiero trazar una línea que empieza en nuestra
+  recta vertical en el valor 77 y va en el plano horizontal hasta 200, para que
+  quepan los datos de las alfabetizadas, y los datos para alfabetizadas y no
+  alfabetizadas juntas. La voy a hacer más gruesa también con lwd=. La receta 
   es así segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)"
   CorrectAnswer: segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)
   AnswerTests: omnitest(correctExpr='segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)')
-  Hint: "Averigue que tenga los elementos bien escritos, y los argumentos seperados
+  Hint: "Compruebe que tiene los elementos bien escritos, y los argumentos separados
   con comas. El comando es segments(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2)."
 
 - Class: text
-  Output: "Ya se hubiera dado cuenta que con esta función puede dibujar una
-  linea entre cualquier par de puntos en el espacio que establece el cuadro."
+  Output: "Ya se habrá dado cuenta de que con esta función puede dibujar una
+  línea entre cualquier par de puntos en el espacio que establece el cuadro de la gráfica."
 
 - Class: cmd_question
-  Output: "Claro, le he hecho crear un pequeño disastre acá, metiendo estos
-  elementos sin razón. Sin embargo, la idea es que usted aprenderá la técnica
-  y lugeo la puede aplicar en un contexto donde tiene sentido. Siguemos, ¿no?
+  Output: "Claro, le he hecho crear un pequeño desastre acá, añadiendo estos
+  elementos sin razón. Sin embargo, la idea es que usted aprenda la técnica
+  y luego la pueda aplicar en un contexto donde tenga sentido. Seguimos, ¿no?
   Para flechas, los argumentos son parecidos a los de segments, aunque tenemos
-  que meter unos más para la forma del punto de la flecha. Pruebe esto
+  que meter uno más para la forma del punto de la flecha. Pruebe esto
   arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)"
   CorrectAnswer: arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)
   AnswerTests: omnitest(correctExpr= "arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5)")
@@ -238,16 +238,16 @@
   arrows(x0= 77, x1=200, y0 = 3.2, y1 = 3.2, lwd=2, length = 0.5) para avanzar"
 
 - Class: text
-  Output: "Lo que usted necesita más que nada es practicar. Le animo practicar
-  en un espiritu de diversión y aventura. Si no le sale algo, inténtelo de otra
-  manera, o escriba en el foro sobre su inconveniente.  Con el R, siempre hay 
-  varias maneras de lograr cualquier cosa, y el internet es una fuente muy rica
-  de buen consejos y ejemplos hechos."
+  Output: "Lo que ahora necesita más que nada es practicar. Le animo a practicar
+  con un espíritu de diversión y aventura. Si no le sale algo, inténtelo de otra
+  manera, o escriba en el foro sobre su inconveniente. Con R siempre hay 
+  varias maneras de lograr cualquier cosa, y además Internet es una fuente muy rica
+  con buenos consejos y ejemplos hechos."
 
 - Class: text
-  Output: "Note que muchos de los ejemplos dentro de estas lecciones no llevan
-  los elementos imprescindibles de etiquetas para los ejes con unidades de
-  medida, títulos, etcétera.  Lo hacemos así para enfocarle en lo nuevo de la
+  Output: "Note que muchos de los ejemplos dentro de estas lecciones no llevan los
+  elementos imprescindibles de toda gráfica, es decir, las etiquetas para los ejes con 
+  unidades de medida, títulos, etcétera. Lo hacemos así para que se centre en lo nuevo de la
   lección, y para que los comandos sean más ligeros. Sin embargo, sus obras 
-  siempre deben llevar estos elementos.  Pues, seguro que le he quedado con
+  siempre deben llevar estos elementos. Pues, seguro que se ha quedado con
   dudas, pero ¡por eso tenemos el foro! Nos vemos allí."
