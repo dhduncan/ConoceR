@@ -7,19 +7,19 @@
   Version: 2.4.0
 
 - Class: text
-  Output: "Bienvenidos a este tema en lo cual usted trabajará datos cualitativos,
+  Output: "Bienvenidos a este tema en el cual trabajarán datos cualitativos,
   desde tablas de frecuencias hasta gráficas lindas."
 
 - Class: mult_question
-  Output: "¿Usted se acuerda de qué quiere decir la frase 'cualitativo' en el contexto
-  de variables o datos, verdad? ¿Entonces, cuál de las siguientes declaraciones sobre
+  Output: "Se acuerda de qué quiere decir la frase 'cualitativo' en el contexto
+  de variables o datos, ¿verdad? Entonces, ¿cuál de las siguientes declaraciones sobre
   variables cualitativas es cierta?"
-  AnswerChoices: "Sus valores (modalidades) no se puede asociar naturalmente a un número; Sus valores son numéricos; Se puede realizar operaciones algebráicas con ellas"
-  CorrectAnswer: Sus valores (modalidades) no se puede asociar naturalmente a un número
-  AnswerTests: omnitest(correctVal = "Sus valores (modalidades) no se puede asociar naturalmente a un número")
-  Hint: "Variables cualitativas tienen categorías que se define segun las 
-  caracteristicas o rasgos de la entidad, aunque pueda que los datos sean 
-  registrados utilizando una escala numérica."
+  AnswerChoices: "Sus valores (modalidades) no se pueden asociar naturalmente a un número; Sus valores son numéricos; Se pueden realizar operaciones algebráicas con ellas"
+  CorrectAnswer: Sus valores (modalidades) no se pueden asociar naturalmente a un número
+  AnswerTests: omnitest(correctVal = "Sus valores (modalidades) no se pueden asociar naturalmente a un número")
+  Hint: "Las variables cualitativas tienen categorías que se definen según las 
+  caracteristicas o rasgos de la entidad, aunque puede que los datos se 
+  registren utilizando una escala numérica."
 
 - Class: text
   Output: "¡Adelante pues! Le comento brevemente la historia de los datos que
@@ -34,148 +34,148 @@
   ejemplo, la región donde vivía la encuestada, con las dos modalidades posibles
   'urbana' o 'rural'. También la característica sobre alfabetización es una 
   variable cualitativa. Si tuvieramos los datos crudos del censo ecuatoriano
-  de 2010 pudieramos haber hecho gráficas con esas variables, pero bastamos con
+  de 2010 podríamos haber hecho gráficas con esas variables, pero nos basta con
   este conjunto de la ciclovía de Loja."
   
 - Class: mult_question
-  Output: "¿Cuándo Ud. usaba las variables cualitativas mencionadas, era como
+  Output: "Cuando usaba las variables cualitativas mencionadas, ¿era como
   una variable o factor de agrupación o una variable de respuesta?" 
   AnswerChoices: "Factores de agrupación; Variables de respuesta"
   CorrectAnswer: Factores de agrupación
   AnswerTests: omnitest(correctVal = "Factores de agrupación")
-  Hint: "Usara región y alfabetización como factores para agrupar, filtrar y 
-  examinar variación en el número de hijos lo cual era la variable de respuesta.
+  Hint: "Usaba región y alfabetización como factores para agrupar, filtrar y 
+  examinar variación en el número de hijos, que era la variable de respuesta.
   Por lo tanto, factores de agrupación es la respuesta correcta acá."
 
 - Class: cmd_question
   Output: "¿Cómo debemos comunicar una (sola) variable cualitativa? Pues, 
-  resulta que depende del tipo de la variable que tengamos. En el fondo le
-  había adjuntado unos datos de la ciclovía como un objeto 'cicLoja'. Dese la
+  resulta que depende del tipo de variable que tengamos. En el fondo le
+  he adjuntado unos datos de la ciclovía como un objeto 'cicLoja'. Dese la
   oportunidad de revisar la estructura de cicLoja mediante la función str()."
   CorrectAnswer: str(cicLoja)
   AnswerTests: omnitest(correctExpr = "str(cicLoja)")
-  Hint: "¡Usted sabe esto! Justo requiere que se mete el objeto cicLoja dentro
-  de los paréntesis de la función str(), y entonces presione Intro."
+  Hint: "¡Usted sabe esto! Solo tiene que meter el objeto cicLoja dentro
+  de los paréntesis de la función str(), y entonces presionar Intro."
 
 - Class: mult_question
   Output: "Acuérdese que los dos tipos de variables cualitativas son las nominales, 
-  que traten de categorías claras y mutuamente exclusivas, y las ordinales que
-  traten de categorías con un órden no ambiguo entre sí. De las variables del
+  que tratan de categorías claras y mutuamente exclusivas, y las ordinales, que
+  tratan de categorías con un orden no ambiguo entre sí. De las variables del
   conjunto cicLoja en el listado abajo, ¿cuál es una variable cualitativa nominal?"
   AnswerChoices: Conocimiento; Acuerdo; Decada
   CorrectAnswer: Conocimiento
   AnswerTests: omnitest(correctVal= 'Conocimiento')
-  Hint: "Década tiene orden por supuesto y la de Acuerdo también es un ejemplo
-  emblemático de una variable nominal, así que la variable nominal entre este
+  Hint: "Década tiene orden, por supuesto, y Acuerdo también es un ejemplo
+  emblemático de una variable ordinal, así que la variable nominal entre este
   listado es la de Conocimiento."
 
 - Class: text
   Output: "Muy bien, la variable denominada conocimiento tiene dos modalidades o
-  valores posibles, los cuales son  'Sí' o 'No'. Pueda que preferiríamos una
-  respuesta o otra para alguna razón, pero no hay ninguna orden. Simplemente son
+  valores posibles, los cuales son 'Sí' o 'No'. Puede que preferiramos una
+  respuesta u otra por alguna razón, pero no hay ningún orden. Simplemente son
   diferentes. Vamos a resumir esta variable en una gráfica." 
 
 - Class: cmd_question
-  Output: "Una opción común es una diagrama de barras. Pintará una barra para
-  cada modalidad, cuya altura será dado por el número de encuestados quienes la 
-  hubieran escogido. Se hace esta gráfica con la función plot(), metiéndose
-  cicLoja$Conocimiento dentro los paréntesis. ¡Pruébalo!"
+  Output: "Una opción común es un diagrama de barras. Pintará una barra para
+  cada modalidad, cuya altura será dada por el número de encuestados que la 
+  hubieran escogido. Esta gráfica se hace con la función plot(), escribiendo
+  cicLoja$Conocimiento dentro los paréntesis. ¡Pruébelo!"
   CorrectAnswer: plot(cicLoja$Conocimiento)
   AnswerTests: omnitest(correctExpr='plot(cicLoja$Conocimiento)')
-  Hint: "Teclea plot(cicLoja$Conocimiento) y presione INTRO para ver la gráfica."
+  Hint: "Teclee plot(cicLoja$Conocimiento) y presione INTRO para ver la gráfica."
 
 - Class: cmd_question
-  Output: "Hmmmm a veces sale una gráfica inesperada y es difícil saber si sea
+  Output: "Hmmmm a veces sale una gráfica inesperada y es difícil saber si es
   un error o no. Acá tenemos dos barras gordísimas de la misma altura. ¿Es cierto
-  eso? A veces valga la pena revisar el resultado de forma más sencilla. La 
+  eso? A veces vale la pena revisar el resultado de forma más sencilla. La 
   función 'table()' nos hará una tabulación sencilla de las frecuencias (el 
-  número de observaciones o veces que repite cada modalidad) directamenta a la 
+  número de observaciones o veces que se repite cada modalidad) directamenta en la 
   consola. Recupere el comando para la última gráfica
   y envuelva a la variable con table() en lugar de plot()."
   CorrectAnswer: table(cicLoja$Conocimiento)
   AnswerTests: omnitest(correctExpr='table(cicLoja$Conocimiento)')
-  Hint: El comando que Ud. necesita es table(cicLoja$Conocimiento).
+  Hint: El comando que necesita es table(cicLoja$Conocimiento).
   
 - Class: text
-  Output: "Ahah, que ¡sí tiene sentido la gráfica! Mire el resumen en la consola.
-  Resulta que por casualidad había casí el mismo número (165) de personas que 
-  conocieron de la ciclovía que los (166) que no la conocieron. ¿No cierto?"
+  Output: "Ajá, ¡sí que tiene sentido la gráfica! Mire el resumen en la consola.
+  Resulta que por casualidad había casi el mismo número (165) de personas que 
+  conocían sobre la ciclovía que las (166) que no la conocían. ¿No es cierto?"
   
 - Class: text
-  Output: "Aunque no se haya dado cuenta, usted acaba de 
-  presenciar algo importante. A veces hay variables tan fácil de resumir que no 
+  Output: "Aunque no se haya dado cuenta, acaba de 
+  presenciar algo importante. A veces hay variables tan fáciles de resumir que no 
   hace falta una gráfica, ni una tabla tampoco. La frase que escribí hace un
-  momento bastaría para resumir datos así de sencillo mientras que la gráfica era 
-  tan simétrica que arriesgara causar dudas para un lector. Además, no se podría
+  momento bastaría para resumir datos así de sencillos, mientras que la gráfica era 
+  tan simétrica que podría causar dudas para un lector. Además, no se podría
   justificar el uso de tanto espacio en un informe para plasmar ese resultado."
   
 - Class: text
   Output: "Para variables cualitativas, esta función table() es muy útil. Se 
-  puede aplicarla para resumenes de observaciones entre ciertos rangos para
-  variables cuantitativas también, per solo necesitamos su capacidad básica de 
+  puede aplicar también para obtener resúmenes de observaciones entre ciertos rangos
+  para variables cuantitativas, pero solo necesitamos su capacidad básica de 
   contar observaciones para cada nivel o modalidad de un factor." 
   
 - Class: cmd_question
-  Output: "Llámela otra vez a table(), esta vez para la variable 'Observador' 
-  (él que encuestó). El formato del comando es igual al anterior, salvo el 
+  Output: "Llame otra vez a table(), esta vez para la variable 'Observador' 
+  (el que encuestó). El formato del comando es igual al anterior, salvo el 
   nombre de la variable."
   CorrectAnswer: table(cicLoja$Observador)
   AnswerTests: omnitest(correctExpr = 'table(cicLoja$Observador)')
-  Hint: "Escriba el comando table(cicLoja$Observador) al indicador para 
+  Hint: "Escriba el comando table(cicLoja$Observador) en el indicador para 
   continuar."
   
 - Class: mult_question
-  Output: "Según entienda Ud. la función table(), ¿qué representan las cifras
-  que resultaron del paso anterior en las que se ve los observadores 
+  Output: "Según entiende la función table(), ¿qué representan las cifras
+  que resultaron del paso anterior en las que se ven los observadores 
   representados por letras del alfabeto?"
   AnswerChoices: El número de encuestas hechas por cada observador en el conjunto; El promedio de encuestas de cada observador; Un valor aleatoriamente seleccionado por cada observador
   CorrectAnswer: El número de encuestas hechas por cada observador en el conjunto
   AnswerTests: omnitest(correctVal= 'El número de encuestas hechas por cada observador en el conjunto')
-  Hint: "La función table() se informe del número de observaciones, así en este
+  Hint: "La función table() informa del número de observaciones, en este
   caso el número de encuestas hechas por cada observador que tiene el conjunto 
   de datos cicLoja."
 
 - Class: text
-  Output: "¿Este resultado tampoco se graficaría verdad? Cada observador tuvo que
+  Output: "Este resultado tampoco se graficaría, ¿verdad? Cada observador tuvo que
   encuestar a unas 30 personas, así que bastaría comunicar ese hecho en una frase."
   
 - Class: cmd_question
   Output: "Ya que estamos explorando la funcion de table(), quisiera
-  extender el tema un poquito. Podemos cruzar dos tabulas para registrar
-  las frecuencias arregladas por combinaciones de grupos. Dese la oportunidad
+  extender el tema un poquito. Podemos cruzar dos tablas para registrar
+  las frecuencias organizadas por combinaciones de grupos. Dese la oportunidad
   con los factores Conocimiento y Sexo del conjunto cicLoja. Tiene que
-  proporcionarlos a la función table() seperados por una coma."
+  proporcionarlos a la función table() separados por una coma."
   CorrectAnswer: table(cicLoja$Conocimiento, cicLoja$Sexo)
   AnswerTests: omnitest(correctExpr = "table(cicLoja$Conocimiento, cicLoja$Sexo)"
-  Hint: "Si Ud. no logró asemblar el comando, lee la instrucción otra vez
+  Hint: "Si no logró ejecutar el comando, lea la instrucción otra vez
   cuidadosamente. Necesita la función table() con los dos factores Conocimiento
-  y Sexo seperados por una coma. Sin embargo, si no añademos el objeto cicLoja y
-  el símbolo del dólar, R no reconociera a los factores cicLoja$Conocimiento y
+  y Sexo separados por una coma. Sin embargo, si no añadimos el objeto cicLoja y
+  el símbolo del dólar, R no reconoce a los factores cicLoja$Conocimiento y
   cicLoja$Sexo."
 
 - Class: text
-  Output: "Muy bien, aunque sería mejor que la table tuviera etiquetas para las 
-  variables ya que 'Sí' y 'No' no son muy llamativos aparte. Como siempre, hay 
+  Output: "Muy bien, aunque sería mejor que la tabla tuviera etiquetas para las 
+  variables, ya que 'Sí' y 'No' no son muy llamativos. Como siempre, hay 
   varias opciones. Se puede cambiar el comando anterior para que salgan como 
-  etiquetas los nombres de las variables. Hará eso primero."
+  etiquetas los nombres de las variables. Vamos a hacer eso primero."
   
 - Class: cmd_question
-  Output: "Ud. va a cambiar la configuración del último comando. En vez de 
+  Output: "Vamos a cambiar la configuración del último comando. En vez de 
   proporcionar las variables con el formato conjunto$variable, configúrelo según
   este modelo 'with(conjunto, table(variable, variable))'. Inténtelo ahora."
   CorrectAnswer: with(cicLoja, table(Conocimiento, Sexo))
   AnswerTests: omnitest(correctExpr='with(cicLoja, table(Conocimiento, Sexo))')
-  Hint: "La configuracion que necesitaba es with(cicLoja, table(Conocimiento, 
+  Hint: "La configuración que necesitaba es with(cicLoja, table(Conocimiento, 
   Sexo))."
 
 - Class: mult_question
-  Output: "Ya que Ud viera esta tabla un par de veces, dígame si eran las 
-  mujeres o los hombres quienes proporcionalmente más conocían de la ciclovia."
+  Output: "Puesto que ya ha visto esta tabla un par de veces, dígame si eran las 
+  mujeres o los hombres quienes proporcionalmente conocían más sobre la ciclovia."
   AnswerChoices: Hombres; Mujeres
   CorrectAnswer: Mujeres
   AnswerTests: omnitest(correctVal = "Mujeres")
-  Hint: "Entre las mujeres más conocían a la ciclovía que no la conciían, 
-  mientras que entre hombres fue al revés. Entonces la respuesta correcta es
+  Hint: "Entre las mujeres había más que conocían a la ciclovía que las que no la conocían, 
+  mientras que entre los hombres fue al revés. Entonces la respuesta correcta es
   Mujeres."
 
 - Class: text
@@ -185,24 +185,24 @@
   acá?"
   
 - Class: cmd_question
-  Output: "Le enseño manejar tablas por la función table() porque muchas de las 
-  gráficas útiles de combinaciones de variables cualitativas se construye
-  mediante una tabulación. Por ejemplo, mire que pasa al envolver la función 
-  table() con la función plot(). Recupere el último comando que Ud. usó para 
-  tabular Sexo y Conocimiento, y cambiarlo para meter plot() alrededor de todo
+  Output: "Le enseño a manejar tablas con la función table() porque muchas de las 
+  gráficas útiles de combinaciones de variables cualitativas se construyen
+  mediante una tabulación. Por ejemplo, mire qué pasa al envolver la función 
+  table() con la función plot(). Recupere el último comando que usó para 
+  tabular Sexo y Conocimiento, y cámbielo para escribir plot() alrededor de todo
   lo que contiene table()."
   CorrectAnswer: with(cicLoja, plot(table(Sexo, Conocimiento)))
   AnswerTests: omnitest(correctExpr = "with(cicLoja, plot(table(Sexo, Conocimiento)))")
-  Hint: "Teclea with(cicLoja, plot(table(Sexo, Conocimiento))) para continuar."
+  Hint: "Teclee with(cicLoja, plot(table(Sexo, Conocimiento))) para continuar."
 
 - Class: text
-  Output: "¿Ha visto una grafica asi antes? Pues, no se ve mucho, pero para
-  combinaciones de variables cualitativas son bastante buenas. Fijese que la 
-  grafica cuenta la misma historia que conto la tabla -- claro, son los mismos
-  datos -- pero en esta forma se ve el patron de forma inmediata. Sin embargo, 
-  para alguien que no conozca a la forma, vale la pena detenerse un rato para
+  Output: "¿Ha visto alguna gráfica así antes? Pues, no se ven mucho, pero para
+  combinaciones de variables cualitativas son bastante buenas. Fíjese que la 
+  gráfica cuenta la misma historia que contó la tabla -- claro, son los mismos
+  datos -- pero en esta forma se ve el patrón de forma inmediata. Sin embargo, 
+  para alguien que no conozca la forma, vale la pena detenerse un rato para
   pensarlo."
 
 - Class: text
-  Output: "Tenemos un mosaico de cuatro rectangulos, cada uno representa un 
+  Output: "Tenemos un mosaico de cuatro rectángulos, cada uno de los cuales representa un 
   valor de la tabla que vimos hace unos momentos."
