@@ -138,15 +138,96 @@
 - Class: text
   Output: "Este resultado tampoco se graficaría, ¿verdad? Cada observador tuvo que
   encuestar a unas 30 personas, así que bastaría comunicar ese hecho en una frase."
+
+- Class: text
+  Output: "Le enseño a manejar tablas con la función table() porque muchas de las 
+  gráficas útiles de combinaciones de variables cualitativas se construyen
+  mediante una tabulación."
+
+- Class: cmd_question
+  Output: "Por ejemplo, se usa la función table() para hacer el infamoso diagrama
+  de sectores, también conocido como diagrama de círculo o en inglés 'pie'. Ya
+  que no hace falta graficar esa última tabla, podemos experimentar con otra. 
+  Produzca una tabla para resumir la variable FrecFuturo, la cual registra lo que
+  pretendían los encuestados en cuanto la frecuencia de participar en la 
+  ciclovía en un futuro. Recupere la función table() y cambiar la variable a
+  FrecFuturo."
+  CorrectAnswer: table(cicLoja$FrecFuturo)
+  AnswerTests: omnitest(correctExpr = "table(cicLoja$FrecFuturo)")
+  Hint: "Revise la instrucción e inténtelo otra vez."
+
+- Class: mult_question
+  Output: "¿Cuál respuesta recibió mayor apoyo?"
+  AnswerChoices: De vez en cuando; Mensual; Nunca
+  CorrectAnswer: De vez en cuando
+  AnswerTests: omnitest(correctVal = "De vez en cuando")
+  Hint: "Se dice que una ventaja de los diagramas de sectores es que son muy
+  faciles de entender. La respuesta con mayor apoyo corresponderá al sectore más
+  grande.  ¿Cuál respuesta tuvo más apoyo según la tabla arriba?"
+
+- Class: text
+  Output: "¡Excelente! Adelante pues, vamos a realizar este diagrama."
+
+- Class: cmd_question
+  Output: "Para plasmar la tabla como un diagrama de sectores o circulo 
+  envuelve el último comando -- con lo cual hiciera la tabla -- en la función
+  pie(). Dese la oportunidad ahora."
+  CorrectAnswer: pie(table(cicLoja$FrecFuturo))
+  AnswerTests: omnitest(correctExpr = "pie(table(cicLoja$FrecFuturo))")
+  Hint: "Revise la instrucción e inténtelo otra vez. Tome el comando 
+  table(cicLoja$FrecFuturo) y envuélvelo todo en la función pie()."
+  
+- Class: text
+  Output: "Hace poco encontré a un artículo corto con unas pautas útiles para 
+  el buen uso de diagramas de sectores. Se lo encuentra en 
+  'http://www.randalolson.com/2016/03/24/the-correct-way-to-use-pie-charts/'. Vamos
+  a registrar nuestro diagrama de sectores para asegurarnos que cumple con los 
+  tres principios más importantes que destacó el autor del artículo Randall Olson."
+  
+- Class: text
+  Output: "Primero dice que la regla dorada es que los sectores del diagrama 
+  tienen que sumar al entero. ¿Qué quiere decir eso?"
+  
+- Class:  text 
+  Púes, si tuvieramos una variable con, digamos, unas 10 modalidades, no sería 
+  aceptable que compusieramos un diagrama de sectores unicamente con los 5 que 
+  más nos interesaba. En este caso estamos bien, hemos compuesto el gráfico con 
+  la respuesta de todos los encuestados."
+
+- Class: text
+  Output: "Lo que sí se puede hacer si solo nos interesa los 5 respuestas más 
+  comunes es unir los de más en una categoría denominada 'otro', o algo parecido,
+  que respresenta todas las respuestas de maś.
+  Sin embargo, tal grupo debe ser compuesto de categorías más pequeñas que la 
+  mas pequeña de ellas que hemos plasmado aparte."
+  
+- Class: text
+  Output: "De hecho, el segundo principio que nos ofrece Randal Olson en su 
+  blog es que debemos comprimir las categorías hasta tener alrededor de 
+  '3 o menos'. Entonces, nuestro ejemplo también cumple con este principio, ya 
+  que consta de solo tres respuestas.  En el caso de que tuvieramos más, 
+  nos tocaría pensar en como combinarlas de manera justificable - o tal vez 
+  escoger otro tipo de diagrama."
+  
+- Class: text
+  Output: "Este segundo principio podría escribirse como si hay mas de 5
+  categorías, ¡olvídeselo!"
   
 - Class: cmd_question
-  Output: "Ya que estamos explorando la funcion de table(), quisiera
+  Output: "El último de las pautas de Olson es que el diagrama debe empezar 
+  arriba a las 12 horas porque nuestra inclinación como lectores funciona así.
+  Acá nos queda un poco de trabajo porque nuestro gráfico no empieza en las 
+  12h00. Recuperamos el mismo código con lo cual hicimos el gráfico para 
+  acordarnos de su contenido. !No pulse INTRO todavía!"
+  
+- Class: cmd_question
+  Output: "Ya que hemos experimentado algo con la funcion de table(), quisiera
   extender el tema un poquito. Podemos cruzar dos tablas para registrar
   las frecuencias organizadas por combinaciones de grupos. Dese la oportunidad
   con los factores Conocimiento y Sexo del conjunto cicLoja. Tiene que
   proporcionarlos a la función table() separados por una coma."
   CorrectAnswer: table(cicLoja$Conocimiento, cicLoja$Sexo)
-  AnswerTests: omnitest(correctExpr = "table(cicLoja$Conocimiento, cicLoja$Sexo)"
+  AnswerTests: omnitest(correctExpr = "table(cicLoja$Conocimiento, cicLoja$Sexo)")
   Hint: "Si no logró ejecutar el comando, lea la instrucción otra vez
   cuidadosamente. Necesita la función table() con los dos factores Conocimiento
   y Sexo separados por una coma. Sin embargo, si no añadimos el objeto cicLoja y
@@ -185,9 +266,7 @@
   acá?"
   
 - Class: cmd_question
-  Output: "Le enseño a manejar tablas con la función table() porque muchas de las 
-  gráficas útiles de combinaciones de variables cualitativas se construyen
-  mediante una tabulación. Por ejemplo, mire qué pasa al envolver la función 
+  Output: "Por ejemplo, mire qué pasa al envolver la función 
   table() con la función plot(). Recupere el último comando que usó para 
   tabular Sexo y Conocimiento, y cámbielo para escribir plot() alrededor de todo
   lo que contiene table()."
@@ -205,4 +284,15 @@
 
 - Class: text
   Output: "Tenemos un mosaico de cuatro rectángulos, cada uno de los cuales 
-  representa un valor de la tabla que vimos hace unos momentos."
+  representa un valor de la tabla que vimos hace unos momentos. Es una tabla de 
+  contingencia del nivel de acuerdo que exista la ciclovía, con el modo por 
+  lo cual el encuestado se enteró de la misma."
+  
+- Class: text
+  Output: "El ancho en horizontal de las columnas de rectangulos indica la 
+  proporción de los encuestados en cada nivel de Acuerdo. La altura en vertical 
+  de un rectangulo da el aporte proporcional de cada modo de enterarse en grupo 
+  de encuestados correspondiente. Lineas discontinuas representan una 
+  combinación desocupado, es decir ninguna persona en cierto grupo escogió cierta
+  respuesta."
+  
