@@ -72,8 +72,8 @@
 - Class: text
   Output: "Muy bien, la variable denominada conocimiento tiene dos modalidades o
   valores posibles, los cuales son 'Sí' o 'No'. Puede que preferiramos una
-  respuesta u otra por alguna razón, pero no hay ningún orden. Simplemente son
-  diferentes. Vamos a resumir esta variable en una gráfica." 
+  respuesta u otra por alguna razón, pero no hay ningún orden objetivo. 
+  Simplemente son diferentes. Vamos a resumir esta variable en una gráfica." 
 
 - Class: cmd_question
   Output: "Una opción común es un diagrama de barras. Pintará una barra para
@@ -204,5 +204,5 @@
   pensarlo."
 
 - Class: text
-  Output: Tenemos un mosaico de cuatro rectángulos, cada uno de los cuales representa un 
-  valor de la tabla que vimos hace unos momentos."
+  Output: "Tenemos un mosaico de cuatro rectángulos, cada uno de los cuales 
+  representa un valor de la tabla que vimos hace unos momentos."
