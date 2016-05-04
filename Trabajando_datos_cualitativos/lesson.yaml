@@ -161,9 +161,7 @@
   AnswerChoices: De vez en cuando; Mensual; Nunca
   CorrectAnswer: De vez en cuando
   AnswerTests: omnitest(correctVal = "De vez en cuando")
-  Hint: "Se dice que una ventaja de los diagramas de sectores es que son muy
-  faciles de entender. La respuesta con mayor apoyo corresponderá al sectore más
-  grande.  ¿Cuál respuesta tuvo más apoyo según la tabla arriba?"
+  Hint: "¿Cuál respuesta tuvo más apoyo según la tabla arriba?"
 
 - Class: text
   Output: "¡Excelente! Adelante pues, vamos a realizar este diagrama."
@@ -178,7 +176,7 @@
   table(cicLoja$FrecFuturo) y envuélvelo todo en la función pie()."
   
 - Class: text
-  Output: "Hace poco encontré a un artículo corto con unas pautas útiles para 
+  Output: "Hace poco se publicó un blog con pautas útiles para 
   el buen uso de diagramas de sectores. Se lo encuentra en 
   'http://www.randalolson.com/2016/03/24/the-correct-way-to-use-pie-charts/'. Vamos
   a registrar nuestro diagrama de sectores para asegurarnos que cumple con los 
@@ -189,7 +187,7 @@
   tienen que sumar al entero. ¿Qué quiere decir eso?"
   
 - Class:  text 
-  Púes, si tuvieramos una variable con, digamos, unas 10 modalidades, no sería 
+  Output: "Púes, si tuvieramos una variable con, digamos, unas 10 modalidades, no sería 
   aceptable que compusieramos un diagrama de sectores unicamente con los 5 que 
   más nos interesaba. En este caso estamos bien, hemos compuesto el gráfico con 
   la respuesta de todos los encuestados."
@@ -213,12 +211,44 @@
   Output: "Este segundo principio podría escribirse como si hay mas de 5
   categorías, ¡olvídeselo!"
   
-- Class: cmd_question
+- Class: text
   Output: "El último de las pautas de Olson es que el diagrama debe empezar 
-  arriba a las 12 horas porque nuestra inclinación como lectores funciona así.
-  Acá nos queda un poco de trabajo porque nuestro gráfico no empieza en las 
-  12h00. Recuperamos el mismo código con lo cual hicimos el gráfico para 
-  acordarnos de su contenido. !No pulse INTRO todavía!"
+  arriba a las 12 horas. Cuando digo las 12h00 estamos pensando en el circulo
+  como si fuera la cara de un reloj.  ¿Por qué en las 12h00? Pues, porque nuestra
+  inclinación como lectores funciona así.  ¡Ya verá!"
+  
+- Class: cmd_question
+  Output: "Acá nos queda un poco de trabajo porque nuestro gráfico no empieza en 
+  las 12h00, ¿verdad. Recuperamos el mismo código con lo cual hicimos el gráfico 
+  para acordarnos de su contenido. !No pulse INTRO todavía! A final del comando, 
+  antes del cierre final, ingrese la coma y presione la tecla TAB. Le aparece el
+  listado de argumentos que quedan disponibles para la función pie(). Estamos
+  buscando un argumento que nos permita adjustar el ángulo donde empiezan los
+  sectores. Se llama init.angle, para ángulo de iniciar. Añade ese argumento 
+  igual al valor 0."
+  CorrectAnswer: pie(table(cicLoja$FrecFuturo), init.angle=0)
+  AnswerTests: omnitest(correctExpr = "pie(table(cicLoja$FrecFuturo), init.angle=0)")
+  Hint: "El comando que Ud necesita es pie(table(cicLoja$FrecFuturo), init.angle=0)."
+
+- Class: cmd_question
+  Output: "Hmmm el diagrama de sectores no cambió, ¿verdad? Esto quiere decir 
+  que por defecto ese argumento init.angle lleva el valor 0, y por lo tanto lo que 
+  Ud acaba de añadir no afectó ningún cambio. Tenemos que cambiar el valor otra
+  vez. Según el archivo de help para esta función, por defecto el diagrama
+  empezara en las 15h00, y, como vemos, va contra el reloj. Entonces, debemos
+  cambiar el valor a 90 para que el diagrama empiece a las 12h00. Dese la 
+  oportunidad ahora."
+  CorrectAnswer: pie(table(cicLoja$FrecFuturo), init.angle=90)
+  AnswerTests: omnitest(correctExpr = "pie(table(cicLoja$FrecFuturo), init.angle=90)")
+  Hint: "Recupere el último comando y cambia el 0 para 90 para adelantarse."
+
+- Class: text
+  Output: "Pues allí está, el diagrama de sectores hecho en R. Fuera de esta
+  lección Ud debe experimentar con los argumentos demás a la función pie(), en 
+  particular 'col' para ajustar los colores, y 'labels' para especificar las 
+  etiquetas. Le animo empezar con unos datos super sencillos, por ejemplo 
+  pie(x = c(64, 36)). Pero, eso sería para otro momento, ya mismo tenemos que
+  seguir con la gira de datos cualitativos."
   
 - Class: cmd_question
   Output: "Ya que hemos experimentado algo con la funcion de table(), quisiera
@@ -268,11 +298,11 @@
 - Class: cmd_question
   Output: "Por ejemplo, mire qué pasa al envolver la función 
   table() con la función plot(). Recupere el último comando que usó para 
-  tabular Sexo y Conocimiento, y cámbielo para escribir plot() alrededor de todo
+  tabular Conocimiento y Sexo, y cámbielo para escribir plot() alrededor de todo
   lo que contiene table()."
-  CorrectAnswer: with(cicLoja, plot(table(Sexo, Conocimiento)))
-  AnswerTests: omnitest(correctExpr = "with(cicLoja, plot(table(Sexo, Conocimiento)))")
-  Hint: "Teclee with(cicLoja, plot(table(Sexo, Conocimiento))) para continuar."
+  CorrectAnswer: with(cicLoja, plot(table(Conocimiento, Sexo)))
+  AnswerTests: omnitest(correctExpr = "with(cicLoja, plot(table(Conocimiento, Sexo)))")
+  Hint: "Teclee with(cicLoja, plot(table(Conocimiento, Sexo))) para continuar."
 
 - Class: text
   Output: "¿Ha visto alguna gráfica así antes? Pues, no se ven mucho, pero para
@@ -285,14 +315,29 @@
 - Class: text
   Output: "Tenemos un mosaico de cuatro rectángulos, cada uno de los cuales 
   representa un valor de la tabla que vimos hace unos momentos. Es una tabla de 
-  contingencia del nivel de acuerdo que exista la ciclovía, con el modo por 
-  lo cual el encuestado se enteró de la misma."
+  contingencia de estado de conocimiento o no del proyecto de la ciclovía, 
+  organizado por el sexo del encuestado."
   
 - Class: text
-  Output: "El ancho en horizontal de las columnas de rectangulos indica la 
-  proporción de los encuestados en cada nivel de Acuerdo. La altura en vertical 
-  de un rectangulo da el aporte proporcional de cada modo de enterarse en grupo 
-  de encuestados correspondiente. Lineas discontinuas representan una 
-  combinación desocupado, es decir ninguna persona en cierto grupo escogió cierta
-  respuesta."
+  Output: "El ancho en horizontal de las columnas indica el resultado con lo
+  cual empezamos esta lección. La proporción de los encuestados que conocían 
+  de la ciclovía es casí igual a la de gente que la desconocía. La altura en 
+  vertical de un rectangulo da el aporte proporcional de cada sexo en ese grupo
+  de respuesta.  Acá vemos por la mayor altura de la fila de Hombres que en total
+  hubo más hombres en la muestra. Sin embargo, entre los generos, vemos que 
+  mientras que la mayoría de hombres no conocían de la ciclovía, mas mujeres sí
+  la conocían que desconocían."
   
+- Class: cmd_question
+  Output: "Hay que prestar atención al principio para leer un gráfico así, pero 
+  su encanto es que se puede plasmar tablas mucho mas complejas.  Me despido de
+  Ud con lo siguiente. Reclicamos la estructura del último comando pero vamos
+  a meter dos variables con más categorías, Acuerdo y ComoConoce. Inténtalo
+  ahora."
+  CorrectAnswer: with(cicLoja, plot(table(Acuerdo, ComoConoce)))
+  AnswerTests: omnitest(correctExpr = "with(cicLoja, plot(table(Acuerdo, ComoConoce)))")
+  Hint: "Con la misma estructura del gráfico anterior quiere sustituir las 
+  variables Acuerdo y ComoConoce para Sexo y Conocimiento respectivamente."
+
+- Class: text
+  Output: "¡Disfrútelo!"
