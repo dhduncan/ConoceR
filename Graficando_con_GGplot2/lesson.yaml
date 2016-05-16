@@ -138,7 +138,7 @@
 - Class:  text
   Output: "Ahora, digamos que queremos realizar de nuevo el mismo diagrama, aunque
   con colores que respresenten un factor que nos pueda ayudar a entender la
-  variación de mejor manera.
+  variación de mejor manera."
 
 - Class:  cmd_question
   Output: "Vamos a pintar los colores correspondientes a los niveles del factor drv, 
