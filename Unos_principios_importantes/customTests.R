@@ -15,32 +15,6 @@ equiv_val <- function(correctVal){
   
 }
 
-omnitest <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE, eval_for_class=as.logical(NA)){
-  e <- get("e", parent.frame())
-  # Trivial case
-  if(is.null(correctExpr) && is.null(correctVal))return(TRUE)
-  # If eval_for_class is not specified, default to customTests$EVAL_FOR_CLASS.
-  # If the latter is not set, default to TRUE.
-  if(is.na(eval_for_class)){
-    if(exists("EVAL_FOR_CLASS", customTests)){
-      eval_for_class <- isTRUE(customTests$EVAL_FOR_CLASS)
-    } else {
-      eval_for_class <- TRUE
-    }
-  }
-  # If eval_for_class is TRUE, create a parent environment for that in
-  # in which evaluations for class are to be made.
-  eval_env <- if(eval_for_class){
-    cleanEnv(e$snapshot)
-  } else {
-    NULL
-  }
-  # Testing for correct expression only
-  if(!is.null(correctExpr) && is.null(correctVal)){
-    err <- try({
-      good_expr <- parse(text=correctExpr)[[1]]
-      ans <- is_robust_match(good_expr, e$expr, eval_for_class, eval_env)
-    }, silent=TRUE)
 #     print(paste("In omnitest ans is ",ans))
     if (is(err, "try-error")) {
       return(expr_identical_to(correctExpr))
