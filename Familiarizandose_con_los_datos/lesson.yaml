@@ -147,7 +147,7 @@
 
 - Class: text
   Output: "summary() proporciona una salida diferente para cada variable, 
-  dependiendo de su clase. Para los datos numéricos como Precip_Mín, summary() 
+  dependiendo de su clase. Para los datos numéricos como Precip_Min, summary() 
   muestra el mínimo, primer cuartil, la mediana, la media, el tercer cuartil, 
   y el máximo. Estos valores nos ayudan a entender cómo se distribuyen los 
   datos."
