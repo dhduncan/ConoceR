@@ -17,7 +17,7 @@ plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
 plants <- plants[, !(names(plants) %in% .cols2rm)]
 
 # Make names pretty
-names(plants) <- c('Nombre_científico', 'Duracion', 'Periodo_crecimiento',
+names(plants) <- c('Nombre_cientifico', 'Duracion', 'Periodo_crecimiento',
                    'Color_follaje', 'pH_Min', 'pH_Max',
                    'Precip_Min', 'Precip_Max',
                    'Tolerancia_de_sombra', 'Temp_Min_F')
