@@ -105,7 +105,7 @@
   etiquetas para los ejes. En este paso debe quitar los argumentos ylim y xpd,
   y en su lugar añadir ylab='Porcentaje de encuestados' y xlab = 'Año de la encuesta'."
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')
-  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')")
   Hint: "Después de los cambios en este paso, la función debe quedar así
   barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey',
   'violetred1'), ylab='Porcentaje de encuestados', xlab='Año de la encuesta')"
@@ -175,7 +175,7 @@
   sea 4. Ensamble ahora estos detalles dentro de la función text() en el indicador
   de RStudio."
   CorrectAnswer: text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')
-  AnswerTests: omnitest(correctExpr='text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')', correctVal=VAL)
+  AnswerTests: omnitest(correctExpr="text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?')")
   Hint: "Cada vez le exijo más, ¿verdad? Ensámblelo así 
   text(x=150, y=4, labels='¿cuál color va con cuál nivel de área?'), aunque
   el orden de los argumentos dentro de la función no importa."
