@@ -1,0 +1,30 @@
+---
+title: "albumDeRecortes"
+author: "David H Duncan"
+date: "May 19, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Mis primeros gráficos con datos cualitativos 
+
+Podemos teclear libremente 
+
+```{r los datos}
+# acá podemos anotar
+respuestas <- c("repuesta A", "repuesta B", "respuesta C")
+frec <- c(17, 52, 100-sum(17+52))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+
