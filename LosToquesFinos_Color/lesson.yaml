@@ -94,7 +94,7 @@
   Inténtelo, recupere el último comando otra vez y añádale los dos
   argumentos mencionados."
   CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c("2011", "2014"), col = c("grey", "violetred1"), ylim = c(49,55), xpd = FALSE)
-  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  AnswerTests: omnitest(correctExpr='barplot(height = c(51, 54.2), names.arg = c("2011", "2014"), col = c("grey", "violetred1"), ylim = c(49,55), xpd = FALSE)')
   Hint: "Ahora la función es así barplot(height = c(51, 54.2), 
   names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylim = c(49,55), xpd = FALSE)"
 
