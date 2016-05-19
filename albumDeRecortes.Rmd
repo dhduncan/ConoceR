@@ -19,12 +19,15 @@ respuestas <- c("repuesta A", "repuesta B", "respuesta C")
 frec <- c(17, 52, 100-sum(17+52))
 ```
 
-## Including Plots
+## Gráficas
 
-You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+pie(rev(sort(c(17,52,30))), labels = respuestas)
+
+barplot(frec)
+
+dotchart(rev(sort(frec)))
 ```
 
 
