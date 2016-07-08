@@ -3,7 +3,7 @@ Lecciones en español para la enseñanza del análisis exploratorio de datos en 
 
 Para instalar el paquete swirl y poder seguir las lecciones interactivas del curso “ConoceR”, sigan los siguientes pasos cuidadosamente:
 
-## 1. Actualizar R (para tener una versión luego de 3.2.4 está bien). 
+## 1. Actualizar R (para tener una versión luego de 3.2.4). 
 Para ello, del siguiente enlace (https://cran.r-project.org/) descargue R para Linux, Mac o Windows, dependiendo del sistema operativo de su computadora:
 
 Tras la descarga, vaya a la carpeta donde guardaron la aplicación (R-3.3.0revised-win.exe o semejante) y ejecútela, seleccionando las opciones por defecto para la instalación.
