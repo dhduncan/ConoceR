@@ -35,7 +35,7 @@ a. Escriba en la consola `install_course_github("dhduncan","ConoceR")`, poniendo
 b. Si tras probar esta opción obtienen un mensaje de error (que aparecerá en inglés), intente la opción para usuarios de Windows, abajo:
 
 ### Windows
-c. De esta misma página (https://github.com/dhduncan/ConoceR), arriba a la derecha, descargue el curso en formato comprimido (zip) y guárdelo en el escritorio:
+c. De esta misma página (https://github.com/dhduncan/ConoceR), arriba a la derecha donde [Clone or Download], descargue el curso en formato comprimido (zip) y guárdelo en el escritorio:
 
 d. Una vez descargado, descompriman *al escritorio mismo* (botón derecho > WinRAR (o su equivalente) > Extraer aquí). Obtiene así una carpeta que se llama ConoceR-Master la cual es producto de descomprimir.  (Ojo que lo mas seguro es que lo descomprima a su escritorio para evitar que Windows le bloque en el siguiente paso.)
 
