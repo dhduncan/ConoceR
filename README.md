@@ -68,7 +68,8 @@ Cuando Ud vuelva a una sesión nueva de R, tiene que volver a repetir los siguie
 
 1. Cargue el paquete swirl `require(swirl)` o `library(swirl)`.
 2. Escoja el mismo idioma `select_language()` (si empieza con otro idioma, no le reconoce el usuario y empezará de nuevo hasta que vuelva con el idioma original)
-3. El menú le presentará lecciones sin terminar, o el menú principal si saliera entre lecciones.
+3. Lance la sesión de swirl `swirl()`, ingresando su usuario antes establecido. 
+4. El menú le presentará lecciones sin terminar, o el menú principal si saliera entre lecciones.
 
 
 
