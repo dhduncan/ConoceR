@@ -53,9 +53,9 @@ ___
 Importante:
 
 *Para algunos usuarios de Windows a pesar de que hubiera seguido los pasos detalladamente, quede un mensaje de error sugiriendo que la instalación fallara.*   Al surgir tal error, Ud debe intentar lanzar swirl y el curso ConoceR mediante el siguiente paso porque pueda que el "error" no afecta nada.
-
 ___
-Para comenzar
+
+## Para comenzar
 
 Para comenzar con las lecciones, simplemente teclee `swirl()` en la consola de RStudio y pulse [Intro]. Comenzarán una serie de diálogos y de instrucciones que tendrá que ir siguiendo para poder ir avanzando con las lecciones.
 
