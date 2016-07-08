@@ -35,29 +35,28 @@ a. Escriba en la consola `install_course_github("dhduncan","ConoceR")`, poniendo
 b. Si tras probar esta opción obtienen un mensaje de error (que aparecerá en inglés), intente la opción para usuarios de Windows, abajo:
 
 ### Windows
-c. En este siguiente enlace (https://github.com/dhduncan/ConoceR), descarguen el curso en formato comprimido (zip) y guárdenlo en el escritorio:
+c. De esta misma página (https://github.com/dhduncan/ConoceR), arriba a la derecha, descargue el curso en formato comprimido (zip) y guárdelo en el escritorio:
 
-d. Una vez descargado, descompriman (botón derecho > WinRAR (o su equivalente) > Extraer aquí). Obtienen así una carpeta que se llama ConoceR-Master la cual es producto de descomprimir. 
+d. Una vez descargado, descompriman *al escritorio mismo* (botón derecho > WinRAR (o su equivalente) > Extraer aquí). Obtiene así una carpeta que se llama ConoceR-Master la cual es producto de descomprimir.  (Ojo que lo mas seguro es que lo descomprima a su escritorio para evitar que Windows le bloque en el siguiente paso.)
 
-e. Ojo que lo mas seguro es que lo descomprima a su escritorio para evitar que Windows le bloque en el siguiente paso.
+e. Registre esa carpeta descomprimida. Si dentro de ella se encuentra otra carpeta "ConoceR" debe copiar esa y su contenido al escritorio.  
 
-f. Registren esa carpeta descomprimida. Si dentro de ella se encuentra otra carpeta "ConoceR" debe copiar esa y su contenido al escritorio.  
+Pues bien, tienen que revisar que el nombre de la carpeta es únicamente ConoceR, y dentro de ella hay una estructura de carpetas y archivos. 
 
-Pues bien, tienen que revisar que el nombre de la carpeta es únicamente ConoceR, y dentro de ella hay una estructura parecida a la imagen abajo. 
+e. Tras esto, vuelvan a RStudio, tecleen en la consola `install_course_directory("C:XXXXX/ConoceR")` y pulsen Intro. Desde luego, donde **XXXXX** va la ruta para llegar a la carpeta que acaba de obtener en el paso anterior y a la que acaba de cambiar el nombre.
 
-e. Tras esto, vuelvan a RStudio, tecleen en la consola install_course_directory("C:XXXXX/ConoceR") y pulsen Intro. Observen que donde XXXXX va la ruta para llegar a la carpeta que acaban de obtener en el paso anterior y a la que acaban de cambiar el nombre.
+Vea también que la barra oblicua tiene que ir hacia la derecha, así: **/**. Al indicar rutas de acceso a carpetas en Windows, la barra oblicua aparece hacia la izquierda: \, con lo que tendría que cambiarlas al indicar la ruta en R.
 
-Vean también que la barra oblicua tiene que ir hacia la derecha, así: /. Al indicar rutas de acceso a carpetas en Windows, la barra oblicua aparece hacia la izquierda: \, con lo que tendrían que cambiarlas al indicar la ruta en R.
-
-Una vez hecho esto, R les debe dar un mensaje indicando que el curso se instaló con éxito. Si es así, ya están listos para comenzar sus lecciones.
+Una vez hecho esto, R le debe dar un mensaje indicando que el curso se instaló con éxito. Si es así, ya está listo para comenzar sus lecciones.
 
 ___
 Importante:
 
-para algunos usuarios de Windows a pesar de que hubiera seguido los pasos detalladamente, quede un mensaje de error sugiriendo que la instalación fallara.   Al surgir tal error, Ud debe intentar lanzar swirl y el curso ConoceR porque pueda que "ese error" no afecta nada.
+*Para algunos usuarios de Windows a pesar de que hubiera seguido los pasos detalladamente, quede un mensaje de error sugiriendo que la instalación fallara.*   Al surgir tal error, Ud debe intentar lanzar swirl y el curso ConoceR mediante el siguiente paso porque pueda que el "error" no afecta nada.
 
 ___
 Para comenzar
 
-Para comenzar con las lecciones, simplemente tecleen swirl() en la consola de RStudio y pulsen Intro. Comenzarán una serie de diálogos y de instrucciones que tendrán que ir siguiendo para poder ir avanzando con las lecciones.
+Para comenzar con las lecciones, simplemente teclee `swirl()` en la consola de RStudio y pulse [Intro]. Comenzarán una serie de diálogos y de instrucciones que tendrá que ir siguiendo para poder ir avanzando con las lecciones.
 
+Al terminar los dialogos, el curso ConoceR le aparecerá en el menú principal.
