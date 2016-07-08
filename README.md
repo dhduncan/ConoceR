@@ -57,6 +57,19 @@ ___
 
 ## Para comenzar
 
-Para comenzar con las lecciones, simplemente teclee `swirl()` en la consola de RStudio y pulse [Intro]. Comenzarán una serie de diálogos y de instrucciones que tendrá que ir siguiendo para poder ir avanzando con las lecciones.
+Para comenzar con las lecciones, simplemente teclee `swirl()` en la consola de RStudio y pulse [Intro]. Comenzarán una serie de diálogos y de instrucciones que tendrá que ir siguiendo para poder ir avanzando con las lecciones.  
+
+**¡Presta antención!, ya que la manera de salir guardando el progreso dentro de lecciones por acabar se encuentran allí.**
 
 Al terminar los dialogos, el curso ConoceR le aparecerá en el menú principal.
+
+## Cuando vuelva
+Cuando Ud vuelva a una sesión nueva de R, tiene que volver a repetir los siguientes elementos del procedimiento arriba:
+
+1. Cargue el paquete swirl `require(swirl)` o `library(swirl)`.
+2. Escoja el mismo idioma `select_language()` (si empieza con otro idioma, no le reconoce el usuario y empezará de nuevo hasta que vuelva con el idioma original)
+3. El menú le presentará lecciones sin terminar, o el menú principal si saliera entre lecciones.
+
+
+
+
