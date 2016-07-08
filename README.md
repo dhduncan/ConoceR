@@ -63,7 +63,7 @@ Para comenzar con las lecciones, simplemente teclee `swirl()` en la consola de R
 
 Al terminar los dialogos, el curso ConoceR le aparecerá en el menú principal.
 
-## 6. Cuando vuelva
+## 6. Para la próxima vez (cuando Ud vuelva)
 Cuando Ud vuelva a una sesión nueva de R, tiene que volver a repetir los siguientes elementos del procedimiento arriba:
 
 1. Cargue el paquete swirl `require(swirl)` o `library(swirl)`.
