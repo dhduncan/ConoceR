@@ -73,7 +73,7 @@
   con estructura más compleja que los que hemos visto hasta ahora.  
   Sin embargo, 
   cuando sienta algo de resentimiento sobre el cambio en las funciones y 
-  argumentos, acuérdese que resulta del intento de establecer una grámatica
+  argumentos, acuérdese que resulta del intento de establecer una gramática
   coherente para la construcción de gráficas."
 
 - Class: cmd_question
@@ -123,7 +123,7 @@
   usuario de los detalles que va procesando en el fondo." 
 
 - Class: mult_question
-  Output: "En el caso actual tenemos un digrama de dispersión sencillo, y bien 
+  Output: "En el caso actual tenemos un diagrama de dispersión sencillo, y bien 
   hecho, ¿verdad? Nos proporcionó etiquetas en los ejes, de las cuales 
   podemos averiguar que el primer argumento de la función se tomó como la variable
   X y el segundo como el Y. Con esta gráfica queríamos echar un vistazo a 
@@ -137,7 +137,7 @@
   
 - Class:  text
   Output: "Ahora, digamos que queremos realizar de nuevo el mismo diagrama, aunque
-  con colores que respresenten un factor que nos pueda ayudar a entender la
+  con colores que representen un factor que nos pueda ayudar a entender la
   variación de mejor manera."
 
 - Class:  cmd_question
@@ -215,7 +215,7 @@
 - Class: text
   Output: "¿Qué demuestra este diagrama? Siempre y cuando no proporcionemos 
   ningún argumento para 'x', qplot traza los valores de la única variable (la Y)
-  en el orden en que aparecen en el conjunto de datos. Ya hemoms visto lo mismo con la
+  en el orden en que aparecen en el conjunto de datos. Ya hemos visto lo mismo con la
   función plot del sistema base, por ejemplo cuando hicimos la primera gráfica 
   del número de hijos por provincia."
 
@@ -271,7 +271,7 @@
   Output: "Bueno, pasemos a ver cómo trata qplot() a los histogramas. Como 
   recordará, los histogramas muestran la frecuencia de una variable sola, con
   o sin agrupación por algún factor. 
-  Empecemos con un ejempo sencillo, usando como primer argumento la variable de la cual
+  Empecemos con un ejemplo sencillo, usando como primer argumento la variable de la cual
   quiere plasmar las frecuencias de valores. Seguimos graficando la variable
   hwy, así que el primer argumento será hwy. Entonces, como ya sabrá, tiene que
   especificar el objeto que contiene los datos con data = mgp."
@@ -408,7 +408,7 @@
 - Class: cmd_question
   Output: 'Ahora vamos a ver el uso de facets con el diagrama de dispersión. 
   Podría recuperar el penúltimo comando, el anterior a introducir el 
-  argumento binwidth. O, empiece de nuevo, como sigue":" Los primeros dos
+  argumento binwidth. O, empiece de nuevo, como sigue. Los primeros dos
   argumentos son displ (la variable de desplazamiento con la cual empezemos 
   esta lección) y hwy, nuestra variable de ahorro de combustible. Luego va
   el argumento de siempre para los datos, y por último el de las facetas ". ~ drv".
