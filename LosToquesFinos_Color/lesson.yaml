@@ -104,8 +104,8 @@
   que cambiamos el eje Y. Lo que sí debemos introducir en el comando son las
   etiquetas para los ejes. En este paso debe quitar los argumentos ylim y xpd,
   y en su lugar añadir ylab='Porcentaje de encuestados' y xlab = 'Año de la encuesta'."
-  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')
-  AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentage de encuestados', xlab='Año de la encuesta')")
+  CorrectAnswer: barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentaje de encuestados', xlab='Año de la encuesta')
+  AnswerTests: omnitest(correctExpr="barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey', 'violetred1'), ylab='Porcentaje de encuestados', xlab='Año de la encuesta')")
   Hint: "Después de los cambios en este paso, la función debe quedar así
   barplot(height = c(51, 54.2), names.arg = c('2011', '2014'), col = c('grey',
   'violetred1'), ylab='Porcentaje de encuestados', xlab='Año de la encuesta')"
